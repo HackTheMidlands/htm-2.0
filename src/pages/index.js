@@ -1,25 +1,46 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import Layout from '../components/layout/layout'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import get from 'lodash/get';
+import Helmet from 'react-helmet';
+import Layout from '../components/layout/layout';
 
-class RootIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+// Styles
+import style from './index.module.scss';
+
+// Components
+import { HeroHeader } from '../components/hero-header/hero-header';
+import { Button } from '../components/button/button';
+
+const Index = (props) => {
+    // Get the site title from the page data
+    const siteTitle = get(props, 'data.site.siteMetadata.title');
 
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <h1>Home page</h1>
-        </div>
-      </Layout>
-    )
-  }
-}
+        <Layout location={props.location}>
+            <div style={{ background: '#fff' }}>
+                <Helmet title={siteTitle} />
+                <HeroHeader className={style.header}>
+                    <Grid fluid>
+                        <Row center="xs">
+                            <Col xs={8}>
+                                <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat
+                                </p>
+                                <Button theme="orange">Get involved</Button>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </HeroHeader>
+            </div>
+        </Layout>
+    );
+};
 
-export default RootIndex
+export default Index;
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -28,48 +49,5 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
   }
-`
+`;

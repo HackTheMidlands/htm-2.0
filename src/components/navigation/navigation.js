@@ -41,13 +41,16 @@ const navigationItems = [
 ];
 
 const Navigation = () => (
-    <Grid>
-        <Row>
-            <Col xs={12}>
-                <nav role="navigation" className={styles.navigation}>
 
+
+    <nav role="navigation" className={styles.navigation}>
+
+        <Grid fluid>
+            <Row between="xs" middle="xs">
+                <Col>
                     <img className={styles.logo} src={Logo} alt="Logo" />
-
+                </Col>
+                <Col style={{ display: 'flex', justifyContent: 'center' }}>
                     <ul className={styles.navigationList}>
                         { navigationItems.map(({ displayName, routerLink, link }) => (
                             <li className={styles.navigationItem}>
@@ -60,16 +63,18 @@ const Navigation = () => (
                             </li>
                         )) }
                     </ul>
-
+                </Col>
+                <Col>
                     <div className={styles.button}>
                         <Button theme="whiteOutline">
                             See events
                         </Button>
                     </div>
-                </nav>
-            </Col>
-        </Row>
-    </Grid>
+                </Col>
+            </Row>
+        </Grid>
+
+    </nav>
 );
 
 export default Navigation;
