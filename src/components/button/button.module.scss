@@ -1,0 +1,28 @@
+@import "../../styles/helpers/font-size";
+@import "../../styles/helpers/make-property";
+
+.button {
+  border: none;
+  outline: none;
+  @include make-property('font-size', 18px);
+  @include make-property('border-radius', 5px);
+  padding: 8px 22px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.orange {
+  color: white;
+  background-color: var(--orange);
+}
+.whiteSolid {
+  color: var(--orange);
+  background: white;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .08);
+}
+.whiteOutline {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}

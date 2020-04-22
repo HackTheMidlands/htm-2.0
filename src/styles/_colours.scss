@@ -1,0 +1,11 @@
+$colours: (
+  "primary": #449AFD,
+  "secondary": #3B66FA,
+  "orange": #FF7365
+);
+
+:root {
+  @each $colour, $value in $colours {
+    --#{$colour}: #{$value}
+  }
+}
