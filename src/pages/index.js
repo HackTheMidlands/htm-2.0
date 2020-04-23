@@ -11,6 +11,7 @@ import style from './index.module.scss';
 // Components
 import { HeroHeader } from '../components/hero-header/hero-header';
 import { Button } from '../components/button/button';
+import { IndexFeatures } from '../components/index-features/index-features'
 
 const Index = (props) => {
     // Get the site title from the page data
@@ -18,8 +19,9 @@ const Index = (props) => {
 
     return (
         <Layout location={props.location}>
-            <div style={{ background: '#fff' }}>
+            <div>
                 <Helmet title={siteTitle} />
+
                 <HeroHeader className={style.header}>
                     <Grid fluid>
                         <Row center="xs">
@@ -35,6 +37,10 @@ const Index = (props) => {
                         </Row>
                     </Grid>
                 </HeroHeader>
+
+                <IndexFeatures />
+
+
             </div>
         </Layout>
     );

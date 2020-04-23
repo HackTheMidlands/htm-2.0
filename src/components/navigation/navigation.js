@@ -46,7 +46,7 @@ const Navigation = () => (
     <nav role="navigation" className={styles.navigation}>
 
         <Grid fluid>
-            <Row between="xs" middle="xs">
+            <Row between="xs" middle="xs" style={{ marginLeft: 0, marginRight: 0 }}>
                 <Col>
                     <img className={styles.logo} src={Logo} alt="Logo" />
                 </Col>
