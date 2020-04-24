@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="423.613" height="79.878" viewBox="0 0 423.613 79.878">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #b5d8ff;
+      }
+
+      .cls-2 {
+        fill: #b5d8ff;
+      }
+    </style>
+  </defs>
+  <g id="Group_31" data-name="Group 31" transform="translate(0.966 -2405.97)">
+    <path id="Path_23" data-name="Path 23" class="cls-1" d="M-.887,2357.37s92.917-14.944,184.751,39.244,131.788,46.289,204.508,0" transform="translate(0 51)"/>
+    <path id="Icon_ionic-md-paper-plane" data-name="Icon ionic-md-paper-plane" class="cls-2" d="M3.375,19.048l8.36,3.136,1.041,10.441L18,25.313l7.313,7.313,7.313-29.25ZM24.11,27.907l-5.829-5.871L26.36,10.688,13.613,20.377l-4.83-1.744L29.243,7.65Z" transform="translate(392.898 2410.036) rotate(19)"/>
+  </g>
+</svg>

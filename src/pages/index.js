@@ -11,8 +11,36 @@ import style from './index.module.scss';
 // Components
 import { HeroHeader } from '../components/hero-header/hero-header';
 import { Button } from '../components/button/button';
-import { IndexFeatures } from '../components/index-features/index-features'
-import { MissionBlock } from '../components/mission-block/mission-block'
+import { IndexFeatures } from '../components/index-features/index-features';
+import { MissionBlock } from '../components/mission-block/mission-block';
+import { UpcomingEvents } from '../components/upcoming-events/upcoming-events';
+
+const events = [
+    {
+        name: 'HTM 5.0',
+        featureImage: 'https://images.unsplash.com/photo-1587597132606-dbb2322f6660?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+        dateFrom: '24/10/20',
+        dateTo: '26/10/20',
+        link: '/',
+        location: 'Millennium Point',
+    },
+    {
+        name: 'HTM 5.0',
+        featureImage: 'https://images.unsplash.com/photo-1587597132606-dbb2322f6660?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+        dateFrom: '24/10/20',
+        dateTo: '26/10/20',
+        link: '/',
+        location: 'Millennium Point',
+    },
+    {
+        name: 'HTM 5.0',
+        featureImage: 'https://images.unsplash.com/photo-1587597132606-dbb2322f6660?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+        dateFrom: '24/10/20',
+        dateTo: '26/10/20',
+        link: '/',
+        location: 'Millennium Point',
+    },
+];
 
 const Index = (props) => {
     // Get the site title from the page data
@@ -42,6 +70,8 @@ const Index = (props) => {
                 <IndexFeatures />
 
                 <MissionBlock />
+
+                <UpcomingEvents events={events} />
 
             </div>
         </Layout>

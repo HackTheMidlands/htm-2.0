@@ -1,0 +1,36 @@
+section.section {
+  margin-bottom: 50px;
+  padding-top: 27px;
+  background-size: 50% 34%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+
+}
+
+.title {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.flyingMail {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 30vw;
+}
+
+.wavyLine {
+  position: absolute;
+  right: 0;
+  top: 120px;
+  width: 20vw;
+}
+
+.wave {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  z-index: 1;
+}
