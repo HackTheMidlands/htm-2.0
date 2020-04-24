@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="190" height="190" viewBox="0 0 190 190">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b5fccb;
+      }
+
+      .cls-2 {
+        filter: url(#Subtraction_4);
+      }
+    </style>
+    <filter id="Subtraction_4" x="0" y="0" width="190" height="190" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-color="#31ff73" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="Subtraction_4-2" data-name="Subtraction 4" class="cls-1" d="M57.5,115a57.232,57.232,0,0,1-32.149-9.82,57.668,57.668,0,0,1-20.833-25.3,57.425,57.425,0,0,1,5.3-54.531,57.667,57.667,0,0,1,25.3-20.833,57.425,57.425,0,0,1,54.531,5.3,57.668,57.668,0,0,1,20.833,25.3,57.424,57.424,0,0,1-5.3,54.531,57.669,57.669,0,0,1-25.3,20.833A57.139,57.139,0,0,1,57.5,115Zm0-82.965a25.384,25.384,0,1,0,9.912,2A25.3,25.3,0,0,0,57.5,32.035Z" transform="translate(37.5 37.5)"/>
+  </g>
+</svg>

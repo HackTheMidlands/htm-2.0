@@ -12,6 +12,7 @@ import style from './index.module.scss';
 import { HeroHeader } from '../components/hero-header/hero-header';
 import { Button } from '../components/button/button';
 import { IndexFeatures } from '../components/index-features/index-features'
+import { MissionBlock } from '../components/mission-block/mission-block'
 
 const Index = (props) => {
     // Get the site title from the page data
@@ -40,6 +41,7 @@ const Index = (props) => {
 
                 <IndexFeatures />
 
+                <MissionBlock />
 
             </div>
         </Layout>

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+@import "variables";
 
 @import "../styles/helpers/make-property";
 
 html {
-  font-size: 16px;
+  font-size: $baseFontSize;
 }
 
 body {
@@ -26,6 +27,7 @@ h2 {
   @include make-property('font-size', 45px);
   font-weight: 700;
   margin-bottom: 1rem;
+  @include make-property('line-height', 58px);
 }
 
 h3 {
