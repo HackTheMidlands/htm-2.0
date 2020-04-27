@@ -1,3 +1,5 @@
+@import "./variables";
+
 body {
   color: #373F49;
   background: var(--background);
@@ -24,4 +26,14 @@ a {
   margin: 0 auto;
   padding-left: 85px !important;
   padding-right: 85px !important;
+
+  @media screen and (max-width: $mdBreakpointMin)  {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+  @media screen and (max-width: $smBreakpointMin)  {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }

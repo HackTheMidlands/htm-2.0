@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="97" height="97" viewBox="0 0 97 97">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #80a4f4;
+        stroke-width: 9px;
+        opacity: 0.363;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        filter: url(#Ellipse_14);
+      }
+    </style>
+    <filter id="Ellipse_14" x="0" y="0" width="97" height="97" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#608df2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <g id="Ellipse_14-2" data-name="Ellipse 14" class="cls-1" transform="translate(22.5 22.5)">
+      <circle class="cls-2" cx="26" cy="26" r="26"/>
+      <circle class="cls-3" cx="26" cy="26" r="21.5"/>
+    </g>
+  </g>
+</svg>
