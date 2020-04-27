@@ -53,7 +53,7 @@ const Navigation = () => (
                 <Col style={{ display: 'flex', justifyContent: 'center' }}>
                     <ul className={styles.navigationList}>
                         { navigationItems.map(({ displayName, routerLink, link }) => (
-                            <li className={styles.navigationItem}>
+                            <li className={styles.navigationItem} key={displayName}>
                                 { routerLink && (
                                     <Link to={link}>{displayName}</Link>
                                 )}

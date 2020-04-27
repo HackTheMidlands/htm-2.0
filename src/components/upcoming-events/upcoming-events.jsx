@@ -66,6 +66,7 @@ export const UpcomingEvents = ({ title, events }) => (
                     name, featureImage, dateFrom, dateTo, location, link,
                 }, index, array) => (
                     <Col
+                        key={name}
                         xs={12}
                         sm={12}
                         md={calculateColWidth(array.length, 'md')}

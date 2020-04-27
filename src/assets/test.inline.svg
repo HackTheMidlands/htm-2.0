@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #3dd085;
+      }
+
+      .cls-1 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #c9ffe4;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="45" height="45" transform="translate(334 1255)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_12" data-name="Group 12" transform="translate(-306 -1227)">
+    <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-2" width="100" height="100" rx="10" transform="translate(306 1227)"/>
+    <g id="Mask_Group_1" data-name="Mask Group 1" class="cls-3">
+      <g id="books-solid" transform="translate(334 1255)">
+        <path id="Path_3" data-name="Path 3" class="cls-4" d="M12,9.75v-3A.75.75,0,0,0,11.25,6H.75A.75.75,0,0,0,0,6.75v3Zm0,0"/>
+        <path id="Path_4" data-name="Path 4" class="cls-4" d="M0,11.25V36H12V11.25ZM9,21H3a.75.75,0,0,1-.75-.75v-6A.75.75,0,0,1,3,13.5H9a.75.75,0,0,1,.75.75v6A.75.75,0,0,1,9,21Zm0,0"/>
+        <path id="Path_5" data-name="Path 5" class="cls-4" d="M0,40.5v3.75A.75.75,0,0,0,.75,45h10.5a.75.75,0,0,0,.75-.75V40.5Zm0,0"/>
+        <path id="Path_6" data-name="Path 6" class="cls-4" d="M0,37.5H12V39H0Zm0,0"/>
+        <path id="Path_7" data-name="Path 7" class="cls-4" d="M13.5,37.5h9.75V39H13.5Zm0,0"/>
+        <path id="Path_8" data-name="Path 8" class="cls-4" d="M23.249,3V.75A.75.75,0,0,0,22.5,0H14.25a.75.75,0,0,0-.75.75V3Zm0,0"/>
+        <path id="Path_9" data-name="Path 9" class="cls-4" d="M13.5,8.25h9.75V36H13.5Zm0,0"/>
+        <path id="Path_10" data-name="Path 10" class="cls-4" d="M13.5,40.5v3.75a.75.75,0,0,0,.75.75H22.5a.75.75,0,0,0,.75-.75V40.5Zm0,0"/>
+        <path id="Path_11" data-name="Path 11" class="cls-4" d="M13.5,4.5h9.75V6.75H13.5Zm0,0"/>
+        <path id="Path_12" data-name="Path 12" class="cls-4" d="M24.731,15.531l.4,1.541,12.7-3.387-.4-1.541Zm0,0"/>
+        <path id="Path_13" data-name="Path 13" class="cls-4" d="M31,39.557,43.7,36.17l-.8-3.083-12.7,3.387Zm0,0"/>
+        <path id="Path_14" data-name="Path 14" class="cls-4" d="M42.517,31.635l-4.3-16.5-12.7,3.387,4.3,16.5Zm0,0"/>
+        <path id="Path_15" data-name="Path 15" class="cls-4" d="M24.353,14.08l12.7-3.387-1.077-4.13a.767.767,0,0,0-.922-.54l-11.25,3a.755.755,0,0,0-.533.915Zm0,0"/>
+        <path id="Path_16" data-name="Path 16" class="cls-4" d="M44.079,37.621l-12.7,3.387.895,3.429a.752.752,0,0,0,.353.458A.724.724,0,0,0,33,45a.871.871,0,0,0,.195-.022l11.25-3a.756.756,0,0,0,.533-.915Zm0,0"/>
+      </g>
+    </g>
+  </g>
+</svg>

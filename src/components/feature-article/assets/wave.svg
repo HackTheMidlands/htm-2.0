@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1365.115" height="666.082" viewBox="0 0 1365.115 666.082">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .cls-2 {
+        stroke: #d8e8ff;
+      }
+
+      .cls-3 {
+        stroke: #c4d9f8;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.484" y1="0.827" x2="0.48" y2="0.064" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f0f6ff"/>
+      <stop offset="1" stop-color="#d8e8ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_186" data-name="Group 186" transform="translate(0 -3628.003)">
+    <path id="Path_24" data-name="Path 24" class="cls-1" d="M1365.115,1747.089s-280.68,76.594-688.607,0-676.508,0-676.508,0v530H1365.115Z" transform="translate(0 2017)"/>
+    <g id="Group_185" data-name="Group 185">
+      <path id="Path_25" data-name="Path 25" class="cls-2" d="M377.939,3696.562s-56,4.691-171.837-18.5-125.679-61.9-125.679-61.9" transform="translate(66.587 37.766)"/>
+      <g id="Icon_feather-book-open" data-name="Icon feather-book-open" transform="translate(127.499 3630.436) rotate(-14)">
+        <path id="Path_26" data-name="Path 26" class="cls-3" d="M3,4.5H9.028a4.019,4.019,0,0,1,4.019,4.019V22.583a3.014,3.014,0,0,0-3.014-3.014H3Z"/>
+        <path id="Path_27" data-name="Path 27" class="cls-3" d="M28.046,4.5H22.019A4.019,4.019,0,0,0,18,8.519V22.583a3.014,3.014,0,0,1,3.014-3.014h7.032Z" transform="translate(-4.954)"/>
+      </g>
+    </g>
+  </g>
+</svg>

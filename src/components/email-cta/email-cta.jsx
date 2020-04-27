@@ -12,10 +12,10 @@ import PropTypes from 'prop-types';
 import style from './email-cta.module.scss';
 
 // Image imports
-import EmailIcon from './assets/email-icon.svg';
-import DotGrid from './assets/dot-grid.svg';
-import GreenTriangle from './assets/green-triangle.svg';
-import CircleImage from './assets/circle.svg';
+import EmailIcon from './assets/email-icon.inline.svg';
+import DotGrid from './assets/dot-grid.inline.svg';
+import GreenTriangle from './assets/green-triangle.inline.svg';
+import CircleImage from './assets/circle.inline.svg';
 
 /**
  * MissionBlock component
@@ -29,15 +29,15 @@ export const EmailCta = (props) => {
             <Grid fluid>
                 <Row>
                     <Col xs={12} sm={10} smOffset={1} style={{ position: 'relative' }}>
-                        <img src={DotGrid} className={style.dotGrid} alt="Dot grid" />
+                        <DotGrid className={style.dotGrid} />
                         <div className={style.emailBox}>
-                            <img className={style.emailIcon} src={EmailIcon} alt="Email icon" />
+                            <EmailIcon className={style.emailIcon} />
                             <h2 className={style.title}>Never miss out on new from Us</h2>
                             <input className={style.input} type="text" placeholder="Enter email" />
                             <button className={style.button} type="submit">Subscribe</button>
                         </div>
-                        <img src={GreenTriangle} className={style.greenTriangle} alt="Dot grid" />
-                        <img src={CircleImage} className={style.circleImage} alt="Dot grid" />
+                        <GreenTriangle className={style.greenTriangle} />
+                        <CircleImage className={style.circleImage} />
                     </Col>
                 </Row>
             </Grid>

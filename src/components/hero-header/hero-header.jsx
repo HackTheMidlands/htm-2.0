@@ -13,13 +13,9 @@ export const HeroHeader = ({
 }) => (
     <header className={classNames([style.header, className])} style={{ height, backgroundImage: `url('${image}')` }}>
         <img src={ShapeBackgroundImage} className={style.shapeBackground} alt="Shape background" />
-        <Grid fluid>
-            <Row>
-                <Col xs={12} style={{ zIndex: 1 }}>
-                    { children }
-                </Col>
-            </Row>
-        </Grid>
+        <div style={{ position: 'relative' }}>
+          { children }
+        </div>
         <img src={WaveBottomImage} className={style.wave} alt="Wave at bottom" />
     </header>
 );

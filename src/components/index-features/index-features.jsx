@@ -54,7 +54,7 @@ export const IndexFeatures = (props) => {
                 </Row>
                 <Row around="sm">
                     { features.map(({ icon, title, body }) => (
-                        <Col xs={12} sm={6} md={3} lg={2}>
+                        <Col xs={12} sm={6} md={3} lg={2} key={title}>
                             <div className={style.feature}>
                                 <img src={icon} alt={title} className={style.icon} />
                                 <h4 className={style.title}>{title}</h4>

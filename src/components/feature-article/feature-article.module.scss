@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+section.featureSection {
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.title {
+
+}
+
+.body {
+  padding-bottom: 15px;
+}
+
+.textCol{
+  padding-top: 80px;
+  @media screen and (max-width: $lgBreakpointMin) {
+    order: 2;
+    padding-top: 10px;
+  }
+}
+
+.articleCol {
+  @media screen and (max-width: $lgBreakpointMin) {
+    order: 1;
+  }
+}
