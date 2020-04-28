@@ -16,6 +16,7 @@ import { Video } from '../../components/video/video';
 import { EventIntroStatistics } from '../../components/event-intro-statistics/event-intro-statistics';
 import { EventInfo } from '../../components/event-info/event-info';
 import { IconCard } from '../../components/icon-card/icon-card';
+import { EventLocation } from '../../components/event-location/event-location'
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -115,12 +116,13 @@ const HackathonTemplate = (props) => (
                                   <IconCard key={title} body={body} icon={icon} title={title} />
                               </Col>
                             ))}
-
                         </Row>
                     </Col>
                 </Row>
             </Grid>
         </EventInfo>
+
+        <EventLocation />
 
     </Layout>
 );

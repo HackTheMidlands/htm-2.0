@@ -15,7 +15,7 @@ import { IndexFeatures } from '../components/index-features/index-features';
 import { MissionBlock } from '../components/mission-block/mission-block';
 import { UpcomingEvents } from '../components/upcoming-events/upcoming-events';
 import { EmailCta } from '../components/email-cta/email-cta';
-import { FeatureArticle } from '../components/feature-article/feature-article'
+import { FeatureArticle } from '../components/feature-article/feature-article';
 
 const events = [
     {
