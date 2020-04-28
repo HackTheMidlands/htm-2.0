@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+.intro {
+  margin: 220px 0;
+}
+
+.title {
+
+}
+
+.body {
+
+}
+
+.textCol {
+  @media screen and (max-width: $lgBreakpointMin) {
+    order: 2;
+  }
+}
+
+.bubblesCol {
+  @media screen and (max-width: $lgBreakpointMin) {
+    order: 1;
+    & > div {
+      left: 0;
+      transform: unset;
+    }
+
+    ul {
+      display: inline-flex;
+
+      li:nth-child(2) {
+        margin-top: -80px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+section.eventSection {
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 100px auto;
+  position: relative;
+}
+
+.textCol {
+  padding-top: 30px;
+  @media screen and (max-width: $lgBreakpointMin) {
+    order: 2;
+  }
+}
+
+.content {
+  margin-top: 100px;
+  @media screen and (max-width: $lgBreakpointMin) {
+    margin-top: 30px;
+  }
+}
+
+.image {
+  border-radius: 20px;
+  display: inline-flex;
+}
+
+.imageTwo {
+  width: 40%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+.imageThree {
+  @media screen and (max-width: $lgBreakpointMin) {
+    height: 30vw;
+    object-fit: cover;
+  }
+}
+
+.imageCol {
+  @media screen and (max-width: $lgBreakpointMin) {
+    order: 1;
+  }
+}
+
+.imageColOne {
+  margin-top: -40px;
+  text-align: right;
+
+  @media screen and (max-width: $lgBreakpointMin) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px ;
+    img {
+      width: 48%;
+      height: 100%;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  position: absolute;
+  top: -26px;
+  z-index: 0;
+}

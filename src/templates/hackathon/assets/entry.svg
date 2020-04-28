@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85">
+  <g id="Group_91" data-name="Group 91" transform="translate(-489 -2567)">
+    <rect id="Rectangle_27" data-name="Rectangle 27" width="85" height="85" rx="10" transform="translate(489 2567)" fill="#f5b0d0"/>
+    <path id="Icon_awesome-door-open" data-name="Icon awesome-door-open" d="M45.7,32.813H39.844V8.309a3.574,3.574,0,0,0-3.516-3.622h-8.2V9.375h7.031V37.5H45.7a1.172,1.172,0,0,0,1.172-1.172V33.984A1.172,1.172,0,0,0,45.7,32.813ZM22.869.074,8.807,3.717A2.414,2.414,0,0,0,7.031,6.073V32.813H1.172A1.172,1.172,0,0,0,0,33.984v2.344A1.172,1.172,0,0,0,1.172,37.5H25.781V2.43A2.364,2.364,0,0,0,22.869.074Zm-3.533,21.02c-.97,0-1.758-1.05-1.758-2.344s.787-2.344,1.758-2.344,1.758,1.05,1.758,2.344S20.306,21.094,19.336,21.094Z" transform="translate(508.813 2590.75)" fill="#d03d81"/>
+  </g>
+</svg>
