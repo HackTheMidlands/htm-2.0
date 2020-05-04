@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import style from './event-info.module.scss';
 
 // Image imports
-import DiagonalLine from './assets/diagonal-line.inline.svg';
+import DiagonalLine from './assets/diagonal-line.svg';
 import EventPicOne from './assets/evebt-pic-one.jpg';
 import EventPicTwo from './assets/event-pic-two.jpg';
 import EventPicThree from './assets/event-pic-three.jpg';
@@ -25,7 +25,7 @@ import EventPicThree from './assets/event-pic-three.jpg';
  */
 export const EventInfo = ({ title, body, children }) => (
     <section className={style.eventSection}>
-        <DiagonalLine className={style.line} />
+        <img src={DiagonalLine} className={style.line} alt="Diagonal line" />
         <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
             <Row>
                 <Col lg={5} className={style.textCol}>

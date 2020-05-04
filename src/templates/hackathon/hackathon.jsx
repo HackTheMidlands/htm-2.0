@@ -16,7 +16,8 @@ import { Video } from '../../components/video/video';
 import { EventIntroStatistics } from '../../components/event-intro-statistics/event-intro-statistics';
 import { EventInfo } from '../../components/event-info/event-info';
 import { IconCard } from '../../components/icon-card/icon-card';
-import { EventLocation } from '../../components/event-location/event-location'
+import { EventLocation } from '../../components/event-location/event-location';
+import { TestimonialSliderSection } from '../../components/testimonial-slider-section/testimonial-slider-section'
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -55,6 +56,27 @@ const eventDetails = [
         icon: EntryRequirementsIcon,
         title: 'Entry Requirements',
         body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.',
+    },
+];
+
+const testimonials = [
+    {
+        name: 'Mark Kingham',
+        source: 'Hack 2019',
+        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet',
+    },
+    {
+        name: 'Greg Walls',
+        source: 'Hack 2019',
+        image: 'https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
+        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet',
+    },
+    {
+        name: 'Ed Whitworth',
+        source: 'Hack 2019',
+        image: 'https://images.unsplash.com/photo-1552072805-2a9039d00e57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
+        body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet',
     },
 ];
 
@@ -123,6 +145,8 @@ const HackathonTemplate = (props) => (
         </EventInfo>
 
         <EventLocation />
+
+        <TestimonialSliderSection testimonials={testimonials} />
 
     </Layout>
 );

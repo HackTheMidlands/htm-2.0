@@ -1,0 +1,57 @@
+.box {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .04);
+  position: relative;
+}
+
+.header {
+  height: 85px;
+  background: rgb(59,102,250);
+  background: linear-gradient(45deg, rgba(59,102,250,1) 0%, rgba(68,154,253,1) 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 25px;
+  margin-bottom: 140px;
+  border-radius: 10px 10px 0 0;
+}
+
+.image {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  object-fit: cover;
+  transform: scale(0);
+}
+
+.name {
+  margin: 10px auto 0 auto;
+}
+
+.source {
+  margin: 0;
+}
+
+.content {
+  padding: 0 20px 20px 20px;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+  transform: translate(50%, -50%);
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 23px;
+  }
+}
