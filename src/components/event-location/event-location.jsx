@@ -54,7 +54,7 @@ export const EventLocation = ({ title, address, nearbyStations }) => (
                             <p>{ address }</p>
                         </li>
                         { nearbyStations.map((station) => (
-                            <li className={style.locationItem}>
+                            <li className={style.locationItem} key={station}>
                                 <StationIcon className={style.icon} />
                                 <p dangerouslySetInnerHTML={{ __html: station }} />
                             </li>

@@ -66,6 +66,7 @@ export const TestimonialSliderSection = ({ title, testimonials }) => {
                                     }])}
                                     style={{ '--bubble': generateBorder(bubbleNumberOne), '--bubble-two': generateBorder(bubbleNumberTwo) }}
                                     onClick={() => setActiveIndex(index)}
+                                    key={name}
                                 >
                                     <img src={image} alt={name} />
                                 </li>

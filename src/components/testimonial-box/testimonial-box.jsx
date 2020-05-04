@@ -1,7 +1,5 @@
 // Module Imports
 import React, { useEffect, useState, useRef } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 // Helper imports
@@ -28,7 +26,6 @@ export const TestimonialBox = ({
 }) => {
     const imageRef = useRef(null);
     useEffect(() => {
-        console.dir(imageRef.current);
         imageRef.current.style = {
             transition: 'all 0s ease',
             transform: 'scale(0)',
@@ -58,7 +55,12 @@ export const TestimonialBox = ({
 };
 
 // Prop definitions
-TestimonialBox.propTypes = {};
+TestimonialBox.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
+    children: PropTypes.any.isRequired,
+};
 
 // Default props
 TestimonialBox.defaultProps = {};

@@ -134,7 +134,7 @@ const HackathonTemplate = (props) => (
                     <Col lg={10} lgOffset={1}>
                         <Row>
                             { eventDetails.map(({ icon, title, body }) => (
-                              <Col sm={12} md={6} className={style.eventDetailItem}>
+                              <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
                                   <IconCard key={title} body={body} icon={icon} title={title} />
                               </Col>
                             ))}
