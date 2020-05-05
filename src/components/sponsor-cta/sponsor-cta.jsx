@@ -33,7 +33,7 @@ export const SponsorCta = (props) => (
                     <Button theme="orange" name="Sponsor sign up" onClick={() => navigate('/sponsor-us')}>Sponsor us</Button>
                 </Col>
                 <Col sm={10} smOffset={1} md={6} mdOffset={0} lg={5} lgOffset={1} className={style.imageCol}>
-                    <img src={SponsorImage} alt="Sponsor image" className={style.image} />
+                    <img src={SponsorImage} alt="Illustration of two people using a computer" className={style.image} />
                 </Col>
             </Row>
         </Grid>

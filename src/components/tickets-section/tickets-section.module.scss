@@ -1,0 +1,34 @@
+section.section {
+  position: relative;
+  margin-top: 200px;
+  padding-top: 130px;
+  background-size: 95% 45%;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.diagonal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 300px;
+}
+
+.greenCircle, .dotGrid {
+  position: absolute;
+}
+
+.dotGrid {
+  top: 100px;
+  left: 20vw
+}
+
+.greenCircle {
+  right: 22vw;
+  top: 60px;
+}

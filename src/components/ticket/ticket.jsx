@@ -1,0 +1,93 @@
+// Module Imports
+import React from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import moment from 'moment';
+
+// Helper imports
+
+// Component imports
+import { Button } from '../button/button';
+
+// Style imports
+import style from './ticket.module.scss';
+
+// Image imports
+import TicketEndRight from './assets/ticket-end-right.svg';
+import TicketEndLeft from './assets/ticket-end-left.svg';
+import TicketActive from './assets/ticket-active.inline.svg';
+import TicketLocked from './assets/ticket-locked.inline.svg';
+
+/**
+ * Ticket component
+ * @param ticketName
+ * @param releaseDate
+ * @param expireDate
+ * @param link
+ * @param state
+ * @returns {*}
+ * @constructor
+ */
+export const Ticket = ({
+    ticketName, releaseDate, expireDate, link, state,
+}) => {
+    state = expireDate.isBefore(moment()) ? 'finished' : releaseDate.isAfter(moment()) ? 'locked' : state;
+    return (
+        <div
+            className={classNames([style.ticket, {
+                [`${style.locked}`]: state === 'locked',
+            }])}
+            onClick={() => window.location.href = link}
+        >
+            <div className={style.ticketBody}>
+                <div className={style.icon}>
+                    { state === 'active' ? <TicketActive /> : <TicketLocked /> }
+                </div>
+                <div className={style.ticketInfo}>
+                    <p>{ ticketName }</p>
+                    <span>Releasing: { releaseDate.format('D/M/YY@hh:mm a') }</span>
+                </div>
+                { ['active', 'sold out', 'finished'].indexOf(state) !== -1
+        && (
+            <div className={classNames([style.pill], {
+                [`${style.live}`]: state === 'active',
+            }, {
+                [`${style.soldOut}`]: state === 'sold out',
+            }, {
+                [`${style.finished}`]: state === 'finished',
+            })}
+            >
+                <p>
+                    { state === 'active' ? 'LIVE' : state === 'sold out' ? 'SOLD OUT' : 'FINISHED'}
+                </p>
+            </div>
+        )}
+
+                <div className={style.ticketEndRight} style={{ backgroundImage: `url(${TicketEndRight})` }} />
+            </div>
+            <div className={style.dashedLine} />
+            <div className={style.ticketAction}>
+                <div className={style.ticketEndLeft} style={{ backgroundImage: `url(${TicketEndLeft})` }} />
+                <Button theme="orange" name="Get tickets" onClick={() => window.location.href = link}>
+                    Get tickets
+                </Button>
+            </div>
+        </div>
+    );
+};
+
+export const ticketPropTypes = {
+    ticketName: PropTypes.string.isRequired,
+    releaseDate: PropTypes.instanceOf(moment).isRequired,
+    expireDate: PropTypes.instanceOf(moment).isRequired,
+    link: PropTypes.string.isRequired,
+    state: PropTypes.oneOf(['active', 'locked', 'sold out']),
+};
+
+// Prop definitions
+Ticket.propTypes = {
+    ...ticketPropTypes,
+};
+
+// Default props
+Ticket.defaultProps = {};

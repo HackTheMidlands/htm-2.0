@@ -4,6 +4,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Helmet from 'react-helmet';
 import get from 'lodash/get';
 import Img from 'gatsby-image';
+import moment from 'moment';
 
 // Style import
 import style from './hackathon.module.scss';
@@ -20,6 +21,7 @@ import { EventLocation } from '../../components/event-location/event-location';
 import { TestimonialSliderSection } from '../../components/testimonial-slider-section/testimonial-slider-section';
 import { SponsorsSection } from '../../components/sponsors-section/sponsors-section';
 import { SponsorCta } from '../../components/sponsor-cta/sponsor-cta';
+import { TicketsSection } from '../../components/tickets-section/tickets-section'
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -144,6 +146,30 @@ const partners = [
     },
 ];
 
+const tickets = [
+    {
+        ticketName: 'Wave One',
+        releaseDate: moment().subtract(30, 'days'),
+        expireDate: moment().subtract(10, 'days'),
+        state: 'sold out',
+        link: 'https://google.com',
+    },
+    {
+        ticketName: 'Wave Two',
+        releaseDate: moment().subtract(10, 'days'),
+        expireDate: moment().subtract(1, 'days'),
+        state: 'active',
+        link: 'https://google.com',
+    },
+    {
+        ticketName: 'Wave Three',
+        releaseDate: moment().subtract(2, 'days'),
+        expireDate: moment().add(30, 'days'),
+        state: 'active',
+        link: 'https://google.com',
+    },
+];
+
 /**
  * Hackathon template
  * @param props
@@ -215,6 +241,8 @@ const HackathonTemplate = (props) => (
         <SponsorsSection goldTier={gold} silverTier={silver} bronzeTier={bronze} partners={partners} />
 
         <SponsorCta />
+
+        <TicketsSection tickets={tickets} />
 
     </Layout>
 );

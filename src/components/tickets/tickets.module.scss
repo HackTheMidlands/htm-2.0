@@ -1,0 +1,6 @@
+.ticket {
+  margin-bottom: 24px;
+  @media screen and (max-width: 650px) {
+    margin-bottom: 40px;
+  }
+}
