@@ -21,7 +21,8 @@ import { EventLocation } from '../../components/event-location/event-location';
 import { TestimonialSliderSection } from '../../components/testimonial-slider-section/testimonial-slider-section';
 import { SponsorsSection } from '../../components/sponsors-section/sponsors-section';
 import { SponsorCta } from '../../components/sponsor-cta/sponsor-cta';
-import { TicketsSection } from '../../components/tickets-section/tickets-section'
+import { TicketsSection } from '../../components/tickets-section/tickets-section';
+import { FaqSection } from '../../components/faq-section/faq-section'
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -170,6 +171,25 @@ const tickets = [
     },
 ];
 
+const qa = [
+    {
+        question: 'What is HackTheMidlands?',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas maecenas pharetra. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Amet consectetur adipiscing elit ut aliquam purus. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Sed pulvinar proin gravida hendrerit. Scelerisque eu ultrices vitae auctor eu. Nullam vehicula ipsum a arcu cursus vitae. Vivamus at augue eget arcu dictum varius duis at consectetur. Nec ultrices dui sapien eget mi proin sed libero. Vel fringilla est ullamcorper eget. Hendrerit dolor magna eget est lorem ipsum dolor. Quisque id diam vel quam elementum pulvinar etiam non. Bibendum est ultricies integer quis auctor.',
+    },
+    {
+        question: 'What is HackTheMidlands?',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas maecenas pharetra. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Amet consectetur adipiscing elit ut aliquam purus. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Sed pulvinar proin gravida hendrerit. Scelerisque eu ultrices vitae auctor eu. Nullam vehicula ipsum a arcu cursus vitae. Vivamus at augue eget arcu dictum varius duis at consectetur. Nec ultrices dui sapien eget mi proin sed libero. Vel fringilla est ullamcorper eget. Hendrerit dolor magna eget est lorem ipsum dolor. Quisque id diam vel quam elementum pulvinar etiam non. Bibendum est ultricies integer quis auctor.',
+    },
+    {
+        question: 'What is HackTheMidlands?',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas maecenas pharetra. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Amet consectetur adipiscing elit ut aliquam purus. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Sed pulvinar proin gravida hendrerit. Scelerisque eu ultrices vitae auctor eu. Nullam vehicula ipsum a arcu cursus vitae. Vivamus at augue eget arcu dictum varius duis at consectetur. Nec ultrices dui sapien eget mi proin sed libero. Vel fringilla est ullamcorper eget. Hendrerit dolor magna eget est lorem ipsum dolor. Quisque id diam vel quam elementum pulvinar etiam non. Bibendum est ultricies integer quis auctor.',
+    },
+    {
+        question: 'What is HackTheMidlands?',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas maecenas pharetra. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Amet consectetur adipiscing elit ut aliquam purus. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Sed pulvinar proin gravida hendrerit. Scelerisque eu ultrices vitae auctor eu. Nullam vehicula ipsum a arcu cursus vitae. Vivamus at augue eget arcu dictum varius duis at consectetur. Nec ultrices dui sapien eget mi proin sed libero. Vel fringilla est ullamcorper eget. Hendrerit dolor magna eget est lorem ipsum dolor. Quisque id diam vel quam elementum pulvinar etiam non. Bibendum est ultricies integer quis auctor.',
+    },
+];
+
 /**
  * Hackathon template
  * @param props
@@ -243,6 +263,8 @@ const HackathonTemplate = (props) => (
         <SponsorCta />
 
         <TicketsSection tickets={tickets} />
+
+        <FaqSection questions={qa} />
 
     </Layout>
 );
