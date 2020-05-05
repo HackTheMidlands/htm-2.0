@@ -82,4 +82,7 @@ section.section {
   right: -60px;
   bottom: -30px;
   z-index: 1;
+  @media screen and (max-width: $mdBreakpointMin) {
+    right: 0;
+  }
 }

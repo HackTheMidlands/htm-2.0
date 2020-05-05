@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+section.section {
+  margin: 50px auto;
+}
+
+.image {
+  max-width: 400px;
+}
+
+.imageCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: $mdBreakpointMin) {
+    order: 1;
+    align-items: flex-start;
+  }
+}
+
+.textCol {
+  @media screen and (max-width: $mdBreakpointMin) {
+    order: 2;
+  }
+}

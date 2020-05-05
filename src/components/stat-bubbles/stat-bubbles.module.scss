@@ -1,4 +1,5 @@
 @import "../../styles/helpers/make-property";
+@import "../../styles/variables";
 
 .container {
   display: inline-block;
@@ -16,6 +17,9 @@
   li:nth-child(1) {
     margin-left: 170px;
     display: inline-flex;
+    @media screen and (max-width: $lgBreakpointMin) {
+      margin-left: 0;
+    }
   }
 
   li:nth-child(2) {
