@@ -22,7 +22,8 @@ import { TestimonialSliderSection } from '../../components/testimonial-slider-se
 import { SponsorsSection } from '../../components/sponsors-section/sponsors-section';
 import { SponsorCta } from '../../components/sponsor-cta/sponsor-cta';
 import { TicketsSection } from '../../components/tickets-section/tickets-section';
-import { FaqSection } from '../../components/faq-section/faq-section'
+import { FaqSection } from '../../components/faq-section/faq-section';
+import { StayConnectedSection } from '../../components/stay-connected-section/stay-connected-section'
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -265,6 +266,8 @@ const HackathonTemplate = (props) => (
         <TicketsSection tickets={tickets} />
 
         <FaqSection questions={qa} />
+
+        <StayConnectedSection />
 
     </Layout>
 );

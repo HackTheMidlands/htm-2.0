@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+section.section {
+  background-color: #E8EFFF;
+  padding: 50px 0;
+}
+
+.icons {
+
+}
+
+.textCol {
+  @media screen and (max-width: $mdBreakpointMin){
+    order: 2;
+  }
+}
+
+.imageCol {
+  @media screen and (max-width: $mdBreakpointMin){
+    order: 1;
+  }
+}
