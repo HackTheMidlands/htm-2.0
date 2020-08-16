@@ -4,7 +4,7 @@
   position: relative;
   background-color: white;
   margin: 43px 0 0 43px;
-  padding: 14px 14px 14px 65px;
+  padding: 14px 14px 14px 70px;
 }
 
 .icon {
@@ -14,10 +14,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 10px;
 }
 
 .title {
-  margin: -13px auto 0 auto;
+  margin: -5px auto 0 auto;
 }
 
 .body {
