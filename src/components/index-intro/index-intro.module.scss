@@ -1,6 +1,10 @@
 @import "../../styles/variables";
 .intro {
   margin: 100px auto 200px auto;
+
+  @media screen and (max-width: 600px){
+    margin: 100px auto 150px auto;
+  }
 }
 
 .textBlock {
@@ -34,6 +38,10 @@
   @media screen and (max-width: $mdBreakpointMin){
     top: -10vw;
     left: 0;
+  }
+
+  @media screen and (max-width: 580px){
+    width: 100px;
   }
 }
 

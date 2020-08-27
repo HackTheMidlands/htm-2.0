@@ -211,10 +211,10 @@ const qa = [
 const Index = (props) => (
     <Layout>
 
-        <HeroHeader style={{ paddingBottom: '500px' }}>
+        <HeroHeader>
             <Grid>
                 <Row>
-                    <Col xs={12} sm={8} smOffset={2}>
+                    <Col xs={12} sm={10} smOffset={1}>
                         <h1 className={style.headerTitle}>HTM 5.0</h1>
                         <ul className={style.eventInfoList}>
                             <li className={style.eventInfoListItem}>

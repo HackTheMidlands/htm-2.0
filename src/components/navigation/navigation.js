@@ -50,23 +50,23 @@ const Navigation = () => (
                 <Col>
                     <img className={styles.logo} src={Logo} alt="Logo" />
                 </Col>
-                <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                    <ul className={styles.navigationList}>
-                        { navigationItems.map(({ displayName, routerLink, link }) => (
-                            <li className={styles.navigationItem} key={displayName}>
-                                { routerLink && (
-                                    <Link to={link}>{displayName}</Link>
-                                )}
-                                { !routerLink && (
-                                    <a href={link} target="_self">{displayName}</a>
-                                )}
-                            </li>
-                        )) }
-                    </ul>
-                </Col>
+                {/*<Col style={{ display: 'flex', justifyContent: 'center' }}>*/}
+                {/*    <ul className={styles.navigationList}>*/}
+                {/*        { navigationItems.map(({ displayName, routerLink, link }) => (*/}
+                {/*            <li className={styles.navigationItem} key={displayName}>*/}
+                {/*                { routerLink && (*/}
+                {/*                    <Link to={link}>{displayName}</Link>*/}
+                {/*                )}*/}
+                {/*                { !routerLink && (*/}
+                {/*                    <a href={link} target="_self">{displayName}</a>*/}
+                {/*                )}*/}
+                {/*            </li>*/}
+                {/*        )) }*/}
+                {/*    </ul>*/}
+                {/*</Col>*/}
                 <Col>
                     <div className={styles.button}>
-                        <Button theme="orange">
+                        <Button theme="orange" size="small">
                             See events
                         </Button>
                     </div>

@@ -1,3 +1,4 @@
+@import "../styles/variables";
 .headerTitle {
   text-align: center;
 }
@@ -12,6 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+    }
 
     svg {
       width: 18px;
@@ -41,6 +46,12 @@
 .featureVideo {
   margin-top: -330px;
   margin-bottom: 50px;
+  @media screen and (max-width: 800px) {
+    margin-top: -200px;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: -100px;
+  }
 }
 
 .intro {
