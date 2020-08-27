@@ -16,6 +16,7 @@ import DiagonalLine from './assets/diagonal-line.svg';
 import EventPicOne from './assets/evebt-pic-one.jpg';
 import EventPicTwo from './assets/event-pic-two.jpg';
 import EventPicThree from './assets/event-pic-three.jpg';
+import UnicornGif from '../../assets/gifs/unicorn.gif';
 
 /**
  * MissionBlock component
@@ -29,7 +30,8 @@ export const EventInfo = ({ title, body, children }) => (
         <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
             <Row>
                 <Col lg={5} className={style.textCol}>
-                    <h2>{ title }</h2>
+                    <img src={UnicornGif} className={style.unicornGif} />
+                    <h2 className={style.title}>{ title }</h2>
                     <p>{ body }</p>
                 </Col>
                 <Col lg={7} className={style.imageCol}>

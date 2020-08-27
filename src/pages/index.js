@@ -20,6 +20,7 @@ import { SponsorCta } from '../components/sponsor-cta/sponsor-cta';
 import { TicketsSection } from '../components/tickets-section/tickets-section';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
+import { IndexIntro } from '../components/index-intro/index-intro'
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -39,6 +40,11 @@ const sources = [
         type: 'video/mp4',
     },
 ];
+
+const intro = {
+    title: '<mark>Learn</mark>, <mark>build</mark> and <mark>share</mark> your amazing ideas in a welcoming community',
+    body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.'
+};
 
 const eventDetails = [
     {
@@ -239,10 +245,12 @@ const Index = (props) => (
             </Grid>
         </section>
 
-        <EventIntroStatistics
-            statOne={{ statistic: '300+', text: 'Attendees' }}
-            statTwo={{ statistic: '400', text: 'Projects made' }}
-        />
+        {/*<EventIntroStatistics*/}
+        {/*    statOne={{ statistic: '300+', text: 'Attendees' }}*/}
+        {/*    statTwo={{ statistic: '400', text: 'Projects made' }}*/}
+        {/*/>*/}
+
+        <IndexIntro title={intro.title} body={intro.body} />
 
         <EventInfo>
             <Grid>

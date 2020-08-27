@@ -16,6 +16,7 @@ import GoldMedal from './assets/gold.png';
 import BronzeMedal from './assets/bronze.png';
 import SilverMedal from './assets/silver.png';
 import PartnerMedal from './assets/partner.inline.svg';
+import SparkleGif from '../../assets/gifs/sparkles.gif'
 
 const calculateGridCols = (tier) => tier.map(() => '1fr').join(' ');
 
@@ -27,6 +28,7 @@ export const SponsorsSection = ({
         <Grid fluid>
             <Row>
                 <Col xs={12}>
+                    <img src={SparkleGif} className={style.sparkleGif} />
                     <h2 className={style.title}>Our Sponsors</h2>
                 </Col>
             </Row>

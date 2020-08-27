@@ -10,6 +10,7 @@ section.section {
 .title {
   text-align: center;
   margin-bottom: 65px;
+  margin-top: 20px;
 }
 
 .gold, .silver, .bronze, .partners {
@@ -76,4 +77,9 @@ $gridGap: 10px;
   width: 100px;
   height: 100px;
   margin: auto;
+}
+
+.sparkleGif {
+  margin: auto;
+  width: 150px;
 }

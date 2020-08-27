@@ -15,6 +15,14 @@ section.eventSection {
   }
 }
 
+.title {
+  margin-top: 10px;
+}
+
+.unicornGif {
+  width: 100px;
+}
+
 .content {
   margin-top: 100px;
   @media screen and (max-width: $lgBreakpointMin) {

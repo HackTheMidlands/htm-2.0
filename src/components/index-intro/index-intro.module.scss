@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+.intro {
+  margin: 100px auto 200px auto;
+}
+
+.textBlock {
+  margin-top: -15vw;
+  position: relative;
+
+  @media screen and (max-width: $lgBreakpointMin) {
+    margin-top: -10vw;
+  }
+
+  @media screen and (max-width: $mdBreakpointMin) {
+    margin-top: 12vw;
+  }
+
+}
+
+.title {
+  text-transform: capitalize;
+  mark {
+    background-color: transparent;
+    color: var(--primary);
+  }
+}
+
+.partyGif {
+  position: absolute;
+  top: -8vw;
+  left: 12vw;
+  width: 120px;
+
+  @media screen and (max-width: $mdBreakpointMin){
+    top: -10vw;
+    left: 0;
+  }
+}
+
+.heartGif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  @media screen and (max-width: $mdBreakpointMin){
+    width: 120px;
+  }
+}
+
+.smileHeart {
+  position: absolute;
+  top: -10vw;
+  right: 0;
+  width: 100px;
+  @media screen and (max-width: $mdBreakpointMin){
+    top: -30vw;
+  }
+}
