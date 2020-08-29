@@ -13,8 +13,8 @@ import style from './video.module.scss';
 
 // Image imports
 import VideoDotGrid from './assets/video-dot-grid.svg';
-import Play from './assets/play.inline.svg';
 
+import Play from './assets/play.inline.svg';
 /**
  * MissionBlock component
  * @param props
@@ -37,25 +37,39 @@ export const Video = ({
         setPlaying(false);
     };
 
+    const stopVideo = () => {
+        setPlaying(false);
+        videoRef.current.pause();
+    };
+
     return (
-        <div className={classNames([style.videoWrapper, { [`${style.playing}`]: playing }])}>
-            <div onClick={playButtonClick} style={{ opacity: playing ? 0 : 1 }}>
-                <Play className={style.play} />
+        <>
+            <div className={classNames([style.videoWrapper, { [`${style.playing}`]: playing }])}>
+                <div onClick={playButtonClick} style={{ opacity: playing ? 0 : 1 }}>
+                    <Play className={style.play} />
+                </div>
+                <video
+                    ref={videoRef}
+                    className={style.video}
+                    autoPlay={autoPlay}
+                    controls={controls || playing}
+                    onPause={onVideoPause}
+                >
+                    { sources.map(({ src, type }) => (
+                        <source key={src} src={src} type={type} />
+                    ))}
+                    { unsupportedText }
+                </video>
+                <div className={style.dotGrid} style={{ backgroundImage: `url('${VideoDotGrid}')`, opacity: playing ? 0 : 1, pointerEvents: playing ? 'none' : 'all' }} />
             </div>
-            <video
-                ref={videoRef}
-                className={style.video}
-                autoPlay={autoPlay}
-                controls={controls || playing}
-                onPause={onVideoPause}
-            >
-                { sources.map(({ src, type }) => (
-                    <source key={src} src={src} type={type} />
-                ))}
-                { unsupportedText }
-            </video>
-            <div className={style.dotGrid} style={{ backgroundImage: `url('${VideoDotGrid}')`, opacity: playing ? 0 : 1, pointerEvents: playing ? 'none' : 'all' }} />
-        </div>
+            <p
+                className={classNames([style.closeText, {
+                    [`${style.showCloseText}`]: playing,
+                }])}
+                onClick={stopVideo}
+            >Close Video
+            </p>
+        </>
     );
 };
 

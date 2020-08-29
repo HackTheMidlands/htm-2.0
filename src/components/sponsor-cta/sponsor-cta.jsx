@@ -29,8 +29,7 @@ export const SponsorCta = (props) => (
         <Grid fluid>
             <Row middle="xs">
                 <Col sm={10} smOffset={1} md={6} mdOffset={0} className={style.textCol}>
-                    <img src={RevolvingHearts} className={style.hearts} />
-                    <h2 className={style.title}>Fancy sponsoring something special and showing some <span><HeartImage /></span>?</h2>
+                    <h2 className={style.title}>Fancy sponsoring something special and showing some <span><img src={RevolvingHearts} className={style.hearts} /></span>?</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     <Button theme="orange" name="Sponsor sign up" onClick={() => navigate('/sponsor-us')}>Sponsor us</Button>
                 </Col>

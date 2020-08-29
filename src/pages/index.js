@@ -161,26 +161,26 @@ const partners = [
 
 const tickets = [
     {
-        ticketName: 'Wave One',
+        ticketName: 'HTM 2020 Virtual',
         releaseDate: moment().subtract(30, 'days'),
-        expireDate: moment().subtract(10, 'days'),
-        state: 'sold out',
-        link: 'https://google.com',
-    },
-    {
-        ticketName: 'Wave Two',
-        releaseDate: moment().subtract(10, 'days'),
-        expireDate: moment().subtract(1, 'days'),
+        expireDate: moment().add(10, 'days'),
         state: 'active',
         link: 'https://google.com',
     },
-    {
-        ticketName: 'Wave Three',
-        releaseDate: moment().subtract(2, 'days'),
-        expireDate: moment().add(30, 'days'),
-        state: 'active',
-        link: 'https://google.com',
-    },
+    // {
+    //     ticketName: 'Wave Two',
+    //     releaseDate: moment().subtract(10, 'days'),
+    //     expireDate: moment().subtract(1, 'days'),
+    //     state: 'active',
+    //     link: 'https://google.com',
+    // },
+    // {
+    //     ticketName: 'Wave Three',
+    //     releaseDate: moment().subtract(2, 'days'),
+    //     expireDate: moment().add(30, 'days'),
+    //     state: 'active',
+    //     link: 'https://google.com',
+    // },
 ];
 
 const qa = [

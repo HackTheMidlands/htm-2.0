@@ -27,6 +27,10 @@ $shadow: 0 0 15px rgba(0, 0, 0, .08);
   @media screen and (max-width: 650px) {
     border-radius: 27px;
     margin-right: 0;
+    height: auto;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 40px 20px;
   }
 }
 
@@ -57,20 +61,28 @@ $shadow: 0 0 15px rgba(0, 0, 0, .08);
       width: 45px;
     }
   }
+  @media screen and (max-width: 420px) {
+    display: none;
+  }
 }
 
 .ticketInfo {
   margin-left: 20px;
-  p, span {
+  & > p, span {
     margin: 0;
   }
-  p {
+  & > p {
     @include make-property('font-size', 30px);
     @include make-property('line-height', 23px);
   }
   span {
     @include make-property('font-size', 18px);
     color: #A6AEC4;
+    p {
+      margin: 0;
+      line-height: 22px;
+      margin-top: 5px;
+    }
   }
 }
 
@@ -154,4 +166,17 @@ $shadow: 0 0 15px rgba(0, 0, 0, .08);
 .finished {
   background-color: #3DD861;
   box-shadow: 0 0 20px rgba(61, 216, 97, .3);
+}
+
+.external {
+  display: none;
+  flex: 1;
+  text-align: right;
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
 }

@@ -67,7 +67,7 @@ const Navigation = () => (
                 <Col>
                     <div className={styles.button}>
                         <Button theme="orange" size="small">
-                            See events
+                            Get Tickets
                         </Button>
                     </div>
                 </Col>

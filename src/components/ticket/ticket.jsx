@@ -17,6 +17,7 @@ import TicketEndRight from './assets/ticket-end-right.svg';
 import TicketEndLeft from './assets/ticket-end-left.svg';
 import TicketActive from './assets/ticket-active.inline.svg';
 import TicketLocked from './assets/ticket-locked.inline.svg';
+import TicketExternal from './assets/external.inline.svg';
 
 /**
  * Ticket component
@@ -32,12 +33,22 @@ export const Ticket = ({
     ticketName, releaseDate, expireDate, link, state,
 }) => {
     state = expireDate.isBefore(moment()) ? 'finished' : releaseDate.isAfter(moment()) ? 'locked' : state;
+
+    /**
+     * Navigates the user to the ticket link
+     */
+    const navigateToLink = () => {
+        if (state !== 'locked') {
+            window.open(link, '_newtab');
+        }
+    };
+
     return (
         <div
             className={classNames([style.ticket, {
                 [`${style.locked}`]: state === 'locked',
             }])}
-            onClick={() => window.location.href = link}
+            onClick={navigateToLink}
         >
             <div className={style.ticketBody}>
                 <div className={style.icon}>
@@ -45,30 +56,32 @@ export const Ticket = ({
                 </div>
                 <div className={style.ticketInfo}>
                     <p>{ ticketName }</p>
-                    <span>Releasing: { releaseDate.format('D/M/YY@hh:mm a') }</span>
+                    <span><p>Releasing: { releaseDate.format('D/M/YY@hh:mm a') }</p></span>
+                </div>
+                <div className={style.external} onClick={navigateToLink}>
+                    <TicketExternal />
                 </div>
                 { ['active', 'sold out', 'finished'].indexOf(state) !== -1
-        && (
-            <div className={classNames([style.pill], {
-                [`${style.live}`]: state === 'active',
-            }, {
-                [`${style.soldOut}`]: state === 'sold out',
-            }, {
-                [`${style.finished}`]: state === 'finished',
-            })}
-            >
-                <p>
-                    { state === 'active' ? 'LIVE' : state === 'sold out' ? 'SOLD OUT' : 'FINISHED'}
-                </p>
-            </div>
-        )}
-
+                    && (
+                        <div className={classNames([style.pill], {
+                            [`${style.live}`]: state === 'active',
+                        }, {
+                            [`${style.soldOut}`]: state === 'sold out',
+                        }, {
+                            [`${style.finished}`]: state === 'finished',
+                        })}
+                        >
+                            <p>
+                                { state === 'active' ? 'LIVE' : state === 'sold out' ? 'SOLD OUT' : 'FINISHED'}
+                            </p>
+                        </div>
+                    )}
                 <div className={style.ticketEndRight} style={{ backgroundImage: `url(${TicketEndRight})` }} />
             </div>
             <div className={style.dashedLine} />
             <div className={style.ticketAction}>
                 <div className={style.ticketEndLeft} style={{ backgroundImage: `url(${TicketEndLeft})` }} />
-                <Button theme="orange" name="Get tickets" onClick={() => window.location.href = link}>
+                <Button theme="orange" name="Get tickets" onClick={navigateToLink}>
                     Get tickets
                 </Button>
             </div>
