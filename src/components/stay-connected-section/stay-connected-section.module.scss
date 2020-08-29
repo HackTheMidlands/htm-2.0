@@ -28,3 +28,12 @@ section.section {
 .title {
   margin-top: 10px;
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  & > a {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}

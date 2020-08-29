@@ -33,6 +33,8 @@ import EntryRequirementsIcon from './assets/entry.svg';
 
 import DemoVideo from '../components/video/assets/example-video.mp4';
 import HTMVideo from '../assets/hero-video.mp4';
+import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon'
+import Discord from '../assets/img/discord-white.svg'
 
 const sources = [
     {
@@ -229,6 +231,9 @@ const Index = (props) => (
                         <div className={style.headerButtons}>
                             <Button theme="orange">Get tickets</Button>
                             <Button theme="whiteSolid">Sponsor</Button>
+                            <a href="https://discord.gg/kx9azme" target="_blank" style={{ textDecoration: 'none' }}>
+                                <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0">Join Discord</ButtonWithIcon>
+                            </a>
                         </div>
                     </Col>
                 </Row>
