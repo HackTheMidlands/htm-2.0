@@ -48,7 +48,7 @@ export const Footer = (props) => (
         <Grid>
             <Row between="xs" className={style.header} middle="xs">
                 <Col xs className={style.newsletter}>
-                    <h4>Join our newsletter</h4>
+                    <h4>HackTheMidlands</h4>
                 </Col>
                 <Col xs>
                     <ul className={style.socialIcons}>
