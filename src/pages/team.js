@@ -126,7 +126,7 @@ const Team = () => (
                     { teamMembers.map(({
                         image, name, nickname, position,
                     }) => (
-                        <Col lg={3} style={{ marginBottom: '20px' }}>
+                        <Col lg={3} md={6} sm={12} style={{ marginBottom: '20px' }}>
                             <TeamCard image={image} name={name} nickname={nickname} position={position} />
                         </Col>
                     ))}
