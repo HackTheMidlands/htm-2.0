@@ -27,7 +27,7 @@ import GreenCircle from './assets/green-circle.inline.svg';
  * @constructor
  */
 export const TicketsSection = ({ tickets }) => (
-    <section className={style.section} style={{ backgroundImage: `url(${BackgroundShapes})` }}>
+    <section id="tickets" className={style.section} style={{ backgroundImage: `url(${BackgroundShapes})` }}>
         <img src={DiagonalLine} alt="Diagonal background graphic" className={style.diagonal} />
         <Grid fluid style={{ position: 'relative', zIndex: 1 }}>
             <Row>

@@ -56,7 +56,7 @@ export const Ticket = ({
                 </div>
                 <div className={style.ticketInfo}>
                     <p>{ ticketName }</p>
-                    <span><p>Releasing: { releaseDate.format('D/M/YY@hh:mm a') }</p></span>
+                    <span><p>Releasing: { releaseDate.format('DD/MM/YY@hh:mm a') }</p></span>
                 </div>
                 <div className={style.external} onClick={navigateToLink}>
                     <TicketExternal />

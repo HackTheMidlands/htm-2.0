@@ -25,7 +25,7 @@ import SmileWithHeart from '../../assets/gifs/smiling_face_with_hearts.gif';
  * @constructor
  */
 export const IndexIntro = ({ title, body }) => (
-    <Grid fluid className={style.intro}>
+    <Grid fluid className={style.intro} id="mission">
         <Row>
             <Col lg={7} md={9} sm={12} style={{ position: 'relative' }}>
                 <img src={HexGrid} className={style.hex} alt="Hexagon grid" />

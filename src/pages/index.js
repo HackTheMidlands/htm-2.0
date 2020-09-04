@@ -130,7 +130,7 @@ const partners = [
 const tickets = [
     {
         ticketName: 'HTM 2020 Virtual',
-        releaseDate: moment().subtract(30, 'days'),
+        releaseDate: moment('04/09/2020'),
         expireDate: moment().add(2, 'months'),
         state: 'active',
         link: 'https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070',
@@ -196,8 +196,12 @@ const Index = (props) => (
                             </li>
                         </ul>
                         <div className={style.headerButtons}>
-                            <Button theme="orange">Get tickets</Button>
-                            <Button theme="whiteSolid">Sponsor</Button>
+                            <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank">
+                                <Button theme="orange">Get tickets</Button>
+                            </a>
+                            <a href="/sponsorship.pdf" target="_blank">
+                                <Button theme="whiteSolid">Sponsor</Button>
+                            </a>
                             <a href="https://discord.gg/kx9azme" target="_blank" style={{ textDecoration: 'none' }}>
                                 <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0" border="2px solid #4f66bd">Join Discord</ButtonWithIcon>
                             </a>

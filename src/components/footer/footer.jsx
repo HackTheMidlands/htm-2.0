@@ -22,23 +22,19 @@ const socialIcons = [
     {
         name: 'Twitter',
         icon: TwitterIcon,
-        link: 'https://twitter.com',
+        link: 'https://twitter.com/HackTheMidlands',
     },
     {
         name: 'Facebook',
         icon: FacebookIcon,
-        link: 'https://facebook.com',
+        link: 'https://www.facebook.com/hackthemidlands',
     },
     {
         name: 'Discord',
         icon: DiscordIcon,
-        link: 'https://discord.com',
+        link: 'https://discord.gg/kx9azme',
     },
-    {
-        name: 'Instagram',
-        icon: InstagramIcon,
-        link: 'https://instagram.com',
-    },
+
 ];
 
 /**
@@ -70,22 +66,18 @@ export const Footer = (props) => (
                 <Col lg={3}>
                     <h4 className={style.listTitle}>Company</h4>
                     <ul className={style.list}>
+                        <li><Link to="/team">The Team</Link></li>
                         <li><Link to="/#mission">Mission</Link></li>
-                        <li><Link to="/#community">Community</Link></li>
-                        <li><Link to="/#events">Events</Link></li>
-                        <li><Link to="/blog">Read</Link></li>
                         <li><Link to="/sponsor">Sponsor</Link></li>
                     </ul>
                 </Col>
                 <Col lg={3}>
-                    <h4 className={style.listTitle}>Events</h4>
+                    <h4 className={style.listTitle}>Event</h4>
                     <ul className={style.list}>
-                        <li><Link to="/events/htm-5-0">HTM 5.0</Link></li>
-                        <li><Link to="/events/local-hack-day">Local Hack Day</Link></li>
+                        <li><Link to="/#tickets">Tickets</Link></li>
+                        <li><Link to="/#faq">FAQ</Link></li>
+                        <li><Link to="/#community">Community</Link></li>
                     </ul>
-                </Col>
-                <Col lg={6}>
-                    <h4 className={style.listTitle}>Social</h4>
                 </Col>
             </Row>
         </Grid>

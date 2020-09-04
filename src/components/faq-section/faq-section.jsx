@@ -35,7 +35,7 @@ export const FaqSection = ({ questions }) => {
     };
 
     return (
-        <section className={style.section}>
+        <section className={style.section} id="faq">
             <Grid fluid>
                 <Row>
                     <Col lg={12}>

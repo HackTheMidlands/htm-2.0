@@ -27,7 +27,7 @@ import Twitter from '../../assets/img/twitter-white.svg';
  * @constructor
  */
 export const StayConnectedSection = (props) => (
-    <section className={style.section}>
+    <section className={style.section} id="community">
         <Grid fluid>
             <Row middle="xs">
                 <Col xs={10} xsOffset={1} md={6} mdOffset={0} className={style.textCol}>

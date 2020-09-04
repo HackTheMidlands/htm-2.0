@@ -24,6 +24,10 @@
     }
 
   }
+  
+  @media screen and (max-width: 660px) {
+    padding-top: 10px;
+  }
 }
 
 .logo {
@@ -37,4 +41,18 @@
 
 }
 
+.badge {
+  //left: 50%;
+  //transform: translateX(-50%);
+  display:block;
+  max-width:100px;
+  min-width:60px;
+  position:fixed;
+  top:0;
+  right: 20px;
+  z-index:10000;
+  @media screen and (max-width: 874px) {
+    display: none;
+  }
+}
 
