@@ -16,12 +16,17 @@ import GoldMedal from './assets/gold.png';
 import BronzeMedal from './assets/bronze.png';
 import SilverMedal from './assets/silver.png';
 import PartnerMedal from './assets/partner.inline.svg';
-import SparkleGif from '../../assets/gifs/sparkles.gif'
+import DigitalMedal from './assets/digital.png';
+import SparkleGif from '../../assets/gifs/sparkles.gif';
 
 const calculateGridCols = (tier) => tier.map(() => '1fr').join(' ');
 
+const ComingSoon = ({ tier }) => (
+    <p className={style.comingSoon}>More {tier} sponsors coming soon!</p>
+);
+
 export const SponsorsSection = ({
-    goldTier, silverTier, bronzeTier, partners,
+    goldTier, silverTier, bronzeTier, digitalTier, partners,
 }) => (
     <section className={style.section}>
 
@@ -39,12 +44,17 @@ export const SponsorsSection = ({
                         <h2>Gold</h2>
                     </div>
                     <div className={style.gold}>
-                        { goldTier.map((sponsor) => (
+                        { goldTier.length > 0 && goldTier.map((sponsor) => (
                             <div>
-                                <img src={sponsor.image} alt={sponsor.name} />
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={sponsor.image} alt={sponsor.name} />
+                                </a>
                             </div>
                         ))}
                     </div>
+                    { goldTier.length === 0 && (
+                      <ComingSoon tier="gold" />
+                    )}
                 </Col>
             </Row>
             <Row>
@@ -54,11 +64,16 @@ export const SponsorsSection = ({
                         <h2>Silver</h2>
                     </div>
                     <div className={style.silver}>
-                        { silverTier.map((sponsor) => (
-                          <div>
-                              <img src={sponsor.image} alt={sponsor.name} />
-                          </div>
+                        { silverTier.length > 0 && silverTier.map((sponsor) => (
+                            <div>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={sponsor.image} alt={sponsor.name} />
+                                </a>
+                            </div>
                         ))}
+                        { silverTier.length === 0 && (
+                          <ComingSoon tier="silver" />
+                        )}
                     </div>
                 </Col>
             </Row>
@@ -69,11 +84,36 @@ export const SponsorsSection = ({
                         <h2>Bronze</h2>
                     </div>
                     <div className={style.bronze} style={{ gridTemplateColumns: bronzeTier.length < 4 ? '1fr '.repeat(bronzeTier.length) : '1fr' }}>
-                        { bronzeTier.map((sponsor) => (
-                          <div>
-                              <img src={sponsor.image} alt={sponsor.name} />
-                          </div>
+                        { bronzeTier.length > 0 && bronzeTier.map((sponsor) => (
+                            <div>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={sponsor.image} alt={sponsor.name} />
+                                </a>
+                            </div>
                         ))}
+                        { bronzeTier.length === 0 && (
+                          <ComingSoon tier="bronze" />
+                        )}
+                    </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12}>
+                    <div className={style.sectionTitle}>
+                        <img src={DigitalMedal} alt="Digital Medal" className={style.medal} />
+                        <h2>Digital</h2>
+                    </div>
+                    <div className={style.bronze} style={{ gridTemplateColumns: bronzeTier.length < 4 ? '1fr '.repeat(bronzeTier.length) : '1fr' }}>
+                        { digitalTier.length > 0 && digitalTier.map((sponsor) => (
+                            <div>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={sponsor.image} alt={sponsor.name} />
+                                </a>
+                            </div>
+                        ))}
+                        { digitalTier.length === 0 && (
+                          <ComingSoon tier="digital" />
+                        )}
                     </div>
                 </Col>
             </Row>
@@ -84,11 +124,16 @@ export const SponsorsSection = ({
                         <h2>Partners</h2>
                     </div>
                     <div className={style.partners}>
-                        { partners.map((sponsor) => (
-                          <div>
-                              <img src={sponsor.image} alt={sponsor.name} />
-                          </div>
+                        { partners.length > 0 && partners.map((sponsor) => (
+                            <div>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={sponsor.image} alt={sponsor.name} />
+                                </a>
+                            </div>
                         ))}
+                        { partners.length === 0 && (
+                          <ComingSoon tier="partner" />
+                        )}
                     </div>
                 </Col>
             </Row>
@@ -108,6 +153,7 @@ SponsorsSection.propTypes = {
     goldTier: PropTypes.arrayOf(sponsorPropTypes),
     silverTier: PropTypes.arrayOf(sponsorPropTypes),
     bronzeTier: PropTypes.arrayOf(sponsorPropTypes),
+    digitalTier: PropTypes.arrayOf(sponsorPropTypes),
     partners: PropTypes.arrayOf(sponsorPropTypes),
 };
 
@@ -117,4 +163,5 @@ SponsorsSection.defaultProps = {
     silverTier: null,
     bronzeTier: null,
     partners: null,
+    digitalTier: null,
 };

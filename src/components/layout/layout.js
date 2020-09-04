@@ -5,7 +5,7 @@ import Container from '../container/container';
 import Navigation from '../navigation/navigation';
 import { Footer } from '../footer/footer'
 
-class Template extends React.Component {
+class Layout extends React.Component {
     render() {
         const { location, children } = this.props;
         let header;
@@ -25,4 +25,4 @@ class Template extends React.Component {
     }
 }
 
-export default Template;
+export default Layout;

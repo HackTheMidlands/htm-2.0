@@ -30,7 +30,7 @@ export const SponsorCta = (props) => (
             <Row middle="xs">
                 <Col sm={10} smOffset={1} md={6} mdOffset={0} className={style.textCol}>
                     <h2 className={style.title}>Fancy sponsoring something special and showing some <span><img src={RevolvingHearts} className={style.hearts} /></span>?</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>Without the help of our sponsors HackTheMidlands simply would not be possible. Our sponsors are wonderful, have loads of experience and are here to help! We will be releasing more sponsors as we get closer to the event, and if you're interested in becoming a sponsor for HackTheMidlands 2020 then please register your interest below</p>
                     <Button theme="orange" name="Sponsor sign up" onClick={() => navigate('/sponsor-us')}>Sponsor us</Button>
                 </Col>
                 <Col sm={10} smOffset={1} md={6} mdOffset={0} lg={5} lgOffset={1} className={style.imageCol}>

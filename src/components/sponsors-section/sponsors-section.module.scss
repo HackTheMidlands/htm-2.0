@@ -66,6 +66,7 @@ $gridGap: 10px;
   }
   img {
     max-width: 180px;
+    max-height: 120px;
   }
 }
 
@@ -82,4 +83,8 @@ $gridGap: 10px;
 .sparkleGif {
   margin: auto;
   width: 150px;
+}
+
+.comingSoon {
+  text-align: center;
 }

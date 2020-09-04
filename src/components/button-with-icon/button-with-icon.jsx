@@ -20,9 +20,9 @@ import style from './button-with-icon.module.scss';
  * @constructor
  */
 export const ButtonWithIcon = ({
-    name, icon, color, backgroundColor, children, onClick,
+    name, icon, color, backgroundColor, border, children, onClick,
 }) => (
-    <button className={style.button} onClick={onClick} style={{ color, backgroundColor }}>
+    <button className={style.button} onClick={onClick} style={{ color, backgroundColor, border }}>
         <img src={icon} alt={name} className={style.icon} />
         <div className={style.divider} style={{ backgroundColor: color }} />
         <p className={style.text} style={{ color }}>{ children }</p>
@@ -35,6 +35,7 @@ ButtonWithIcon.propTypes = {
     icon: PropTypes.string.isRequired,
     color: PropTypes.string,
     backgroundColor: PropTypes.string,
+    border: PropTypes.string,
     onClick: PropTypes.func,
 };
 
@@ -43,4 +44,5 @@ ButtonWithIcon.defaultProps = {
     color: 'white',
     backgroundColor: '#FF7365',
     onClick: () => null,
+    border: 'none',
 };

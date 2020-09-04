@@ -33,7 +33,7 @@ export const StayConnectedSection = (props) => (
                 <Col xs={10} xsOffset={1} md={6} mdOffset={0} className={style.textCol}>
                     <img src={Penguin} className={style.gif} />
                     <h2 className={style.title}>Get involved with us</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p>We’ll be posting all of our updates over on our socials so be sure to give us a follow, and join the Discord server to participate 💖 We’ll see you there! ✨</p>
                     <div className={style.buttons}>
                         <a href="https://discord.gg/kx9azme" target="_blank" style={{ textDecoration: 'none' }}>
                             <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0">Join Discord</ButtonWithIcon>
