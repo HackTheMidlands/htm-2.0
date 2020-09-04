@@ -59,7 +59,9 @@ const Navigation = () => (
         <Grid fluid>
             <Row between="xs" middle="xs" style={{ marginLeft: '3vw', marginRight: '3vw' }}>
                 <Col>
-                    <img className={styles.logo} src={Logo} alt="Logo" />
+                    <Link to="/">
+                        <img className={styles.logo} src={Logo} alt="Logo" />
+                    </Link>
                 </Col>
                 {/* <Col style={{ display: 'flex', justifyContent: 'center' }}> */}
                 {/*    <ul className={styles.navigationList}> */}
