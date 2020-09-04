@@ -58,7 +58,7 @@ const eventDetails = [
     {
         icon: DiscordSquareIcon,
         title: 'Participate with Discord',
-        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://google.com/join">join the server</a> to get involved.',
+        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.com/invite/kx9azme" target="_blank">join the server</a> to get involved.',
         colour: 'rgba(114, 137, 218, .5)',
     },
     // {
