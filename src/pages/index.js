@@ -45,7 +45,7 @@ const sources = [
 
 const intro = {
     title: '<mark>Learn</mark>, <mark>build</mark> and <mark>share</mark> your amazing ideas in a welcoming community',
-    body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.'
+    body: 'Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process.',
 };
 
 const eventDetails = [
@@ -102,22 +102,48 @@ const gold = [
     },
     {
         image: 'https://www.bjss.com/wp-content/uploads/BJSS-870x460.png',
-        name: 'sponsor',
+        name: 'BJSS',
         link: 'https://bjss.com',
+    },
+    {
+        image: '/sponsors/majestic.png',
+        name: 'Majestic',
+        link: 'https://majestic.com',
     },
 ];
 
-const silver = [];
+const silver = [
+    {
+        image: '/sponsors/northrop-grumman.png',
+        name: 'Northrop Grumman',
+        link: 'https://www.northropgrumman.com/',
+    },
+    {
+        image: '/sponsors/20i.svg',
+        name: '20i',
+        link: 'https://www.20i.com/',
+    },
+    {
+        image: '/sponsors/capgemini.png',
+        name: 'Capgemini',
+        link: 'https://www.capgemini.com/',
+    },
+];
 
-const bronze = [];
-
-const digital = [
+const bronze = [
+    {
+        image: '/sponsors/fusion-meetup.png',
+        name: 'Fusion Meetup',
+        link: 'https://www.meetup.com/Fusion-Technology-Meetup-Birmingham/',
+    },
     {
         image: 'https://raw.githubusercontent.com/ukmadlz/ukmadlz.github.io/02bab2c5e1b57f67adf916c234a63e4de27a5e02/assets/images/mike-elsmore.svg',
         name: 'Mike Elsmore',
         link: 'https://elsmore.me/',
     },
 ];
+
+const digital = [];
 
 const partners = [
     {

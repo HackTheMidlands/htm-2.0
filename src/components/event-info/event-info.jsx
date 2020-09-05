@@ -32,7 +32,6 @@ export const EventInfo = ({ title, body, children }) => (
                 <Col lg={5} className={style.textCol}>
                     <img src={UnicornGif} className={style.unicornGif} />
                     <h2 className={style.title}>{ title }</h2>
-                    <p>Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process.</p>
                     <p>During the event, people aged 14+ of all skill levels (you don't have to be a professional or a student! Just be lovely, passionate and interested in tech!) will come together to share ideas, and create new and awesome projects! (Not sure what a hackathon is? MLH have a great explanation <a href="https://mlh.io/faq#what-is-a-hackathon" target="_blank">here</a>).</p>
                 </Col>
                 <Col lg={7} className={style.imageCol}>
