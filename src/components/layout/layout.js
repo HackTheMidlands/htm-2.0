@@ -36,6 +36,7 @@ const Layout = (props) => {
                 <meta property="twitter:title" content="HackTheMidlands 5.0" />
                 <meta property="twitter:description" content="Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process." />
                 <meta property="twitter:image" content="http://hackthemidlands.com/images/hackthemidlands-facebook.jpg" />
+                <link rel="shortcut icon" href="/images/favicon.ico" />
             </Helmet>
             <Navigation />
             {children}

@@ -22,7 +22,7 @@ import Play from './assets/play.inline.svg';
  * @constructor
  */
 export const Video = ({
-    sources, autoPlay, controls, unsupportedText,
+    sources, poster, autoPlay, controls, unsupportedText,
 }) => {
     const videoRef = useRef();
 
@@ -54,6 +54,7 @@ export const Video = ({
                     autoPlay={autoPlay}
                     controls={controls || playing}
                     onPause={onVideoPause}
+                    poster={poster}
                 >
                     { sources.map(({ src, type }) => (
                         <source key={src} src={src} type={type} />
@@ -79,6 +80,7 @@ Video.propTypes = {
         src: PropTypes.string,
         type: PropTypes.string,
     })).isRequired,
+    poster: PropTypes.string,
     autoPlay: PropTypes.bool,
     controls: PropTypes.bool,
     unsupportedText: PropTypes.string,
@@ -89,4 +91,5 @@ Video.defaultProps = {
     autoPlay: false,
     controls: true,
     unsupportedText: 'Your browser was unable to play this video.',
+    poster: '',
 };

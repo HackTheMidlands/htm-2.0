@@ -43,6 +43,8 @@ const sources = [
     },
 ];
 
+const poster = '/images/cover.jpg';
+
 const intro = {
     title: '<mark>Learn</mark>, <mark>build</mark> and <mark>share</mark> your amazing ideas in a welcoming community',
     body: 'Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process.',
@@ -52,7 +54,7 @@ const eventDetails = [
     {
         icon: TimeIcon,
         title: 'Date & Time',
-        body: 'The event will run online via Discord between the 24th - 26th October 2020. Don\'t miss out!',
+        body: 'The event will run online via Discord between the 22nd - 26th October 2020. Don\'t miss out!',
         colour: 'rgba(165, 254, 162, .5)',
     },
     {
@@ -241,7 +243,7 @@ const Index = (props) => (
             <Grid>
                 <Row>
                     <Col lg={8} lgOffset={2}>
-                        <Video sources={sources} controls={false} />
+                        <Video sources={sources} poster={poster} controls={false} />
                     </Col>
                 </Row>
             </Grid>
