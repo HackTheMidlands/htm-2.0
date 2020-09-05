@@ -26,6 +26,8 @@ import Liam from './assets/htm-people/LiamSorta.jpg';
 import Likkan from './assets/htm-people/LikkanChung.jpg';
 import Tom from './assets/htm-people/TomGoodman.jpg';
 import Will from './assets/htm-people/WillRussell.jpg';
+import Avery from './assets/htm-people/AveryCunningham.jpg';
+import Jacob from './assets/htm-people/JaconWilson.jpg';
 
 const teamMembers = [
     {
@@ -105,6 +107,18 @@ const teamMembers = [
         name: 'Hugh Wells',
         nickname: 'King Crab',
         position: 'Logistics',
+    },
+    {
+        image: Avery,
+        name: 'Avery Cunningham',
+        nickname: 'Token Engineer',
+        position: 'Outreach',
+    },
+    {
+        image: Jacob,
+        name: 'Jacob Wilson',
+        nickname: 'Bowtie Zealot',
+        position: 'Publicity Officer',
     },
 ];
 
