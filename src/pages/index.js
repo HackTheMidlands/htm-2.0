@@ -98,6 +98,11 @@ const testimonials = [
 
 const gold = [
     {
+        image: '/sponsors/majestic.png',
+        name: 'Majestic',
+        link: 'https://majestic.com',
+    },
+    {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Capital_One_logo.svg/1200px-Capital_One_logo.svg.png',
         name: 'Capital One',
         link: 'https://capitalone.com',
@@ -106,11 +111,6 @@ const gold = [
         image: 'https://www.bjss.com/wp-content/uploads/BJSS-870x460.png',
         name: 'BJSS',
         link: 'https://bjss.com',
-    },
-    {
-        image: '/sponsors/majestic.png',
-        name: 'Majestic',
-        link: 'https://majestic.com',
     },
 ];
 

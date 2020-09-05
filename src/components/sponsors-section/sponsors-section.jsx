@@ -97,26 +97,26 @@ export const SponsorsSection = ({
                     </div>
                 </Col>
             </Row>
-            <Row>
-                <Col xs={12}>
-                    <div className={style.sectionTitle}>
-                        <img src={DigitalMedal} alt="Digital Medal" className={style.medal} />
-                        <h2>Digital</h2>
-                    </div>
-                    <div className={style.bronze} style={{ gridTemplateColumns: bronzeTier.length < 4 ? '1fr '.repeat(bronzeTier.length) : '1fr' }}>
-                        { digitalTier.length > 0 && digitalTier.map((sponsor) => (
-                            <div>
-                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={sponsor.image} alt={sponsor.name} />
-                                </a>
-                            </div>
-                        ))}
-                        { digitalTier.length === 0 && (
-                          <ComingSoon tier="digital" />
-                        )}
-                    </div>
-                </Col>
-            </Row>
+            {/*<Row>*/}
+            {/*    <Col xs={12}>*/}
+            {/*        <div className={style.sectionTitle}>*/}
+            {/*            <img src={DigitalMedal} alt="Digital Medal" className={style.medal} />*/}
+            {/*            <h2>Digital</h2>*/}
+            {/*        </div>*/}
+            {/*        <div className={style.bronze} style={{ gridTemplateColumns: bronzeTier.length < 4 ? '1fr '.repeat(bronzeTier.length) : '1fr' }}>*/}
+            {/*            { digitalTier.length > 0 && digitalTier.map((sponsor) => (*/}
+            {/*                <div>*/}
+            {/*                    <a href={sponsor.link} target="_blank" rel="noopener noreferrer">*/}
+            {/*                        <img src={sponsor.image} alt={sponsor.name} />*/}
+            {/*                    </a>*/}
+            {/*                </div>*/}
+            {/*            ))}*/}
+            {/*            { digitalTier.length === 0 && (*/}
+            {/*              <ComingSoon tier="digital" />*/}
+            {/*            )}*/}
+            {/*        </div>*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
