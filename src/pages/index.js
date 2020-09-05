@@ -156,7 +156,7 @@ const partners = [
 const tickets = [
     {
         ticketName: 'HTM 2020 Virtual',
-        releaseDate: moment('04/09/2020'),
+        releaseDate: moment('07/09/2020 12:00:00', 'DD/MM/YYYY hh:mm:ss'),
         expireDate: moment().add(2, 'months'),
         state: 'active',
         link: 'https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070',

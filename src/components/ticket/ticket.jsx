@@ -33,6 +33,7 @@ export const Ticket = ({
     ticketName, releaseDate, expireDate, link, state,
 }) => {
     state = expireDate.isBefore(moment()) ? 'finished' : releaseDate.isAfter(moment()) ? 'locked' : state;
+    console.log(releaseDate.format())
 
     /**
      * Navigates the user to the ticket link
