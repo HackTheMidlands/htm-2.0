@@ -107,11 +107,11 @@ const gold = [
         name: 'Capital One',
         link: 'https://capitalone.com',
     },
-    {
-        image: 'https://www.bjss.com/wp-content/uploads/BJSS-870x460.png',
-        name: 'BJSS',
-        link: 'https://bjss.com',
-    },
+    // {
+    //     image: 'https://www.bjss.com/wp-content/uploads/BJSS-870x460.png',
+    //     name: 'BJSS',
+    //     link: 'https://bjss.com',
+    // },
 ];
 
 const silver = [
