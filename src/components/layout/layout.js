@@ -22,15 +22,6 @@ const Layout = (props) => {
     return (
         <Container>
             <Helmet>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177286572-1" />
-                <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments)}
-                    gtag('js', new Date());
-
-                    gtag('config', 'UA-177286572-1');
-                </script>
-
                 <title>{title}</title>
                 <title>HackTheMidlands 5.0</title>
                 <meta name="title" content="HackTheMidlands 5.0" />
