@@ -31,6 +31,6 @@ Run a production build into `./public`. The result is ready to be put on any sta
 
 Run a production build into `./public` and publish the site to GitHub pages.
 
-### `yarn run cleanup-repository`
+### `npm run cleanup-repository`
 
 Removes all dependencies, scripts and data from the installation script.
