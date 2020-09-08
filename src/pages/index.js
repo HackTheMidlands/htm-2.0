@@ -60,7 +60,7 @@ const eventDetails = [
     {
         icon: DiscordSquareIcon,
         title: 'Participate with Discord',
-        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.com/invite/kx9azme" target="_blank">join the server</a> to get involved.',
+        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
         colour: 'rgba(114, 137, 218, .5)',
     },
     // {
@@ -230,7 +230,7 @@ const Index = (props) => (
                             <a href="/sponsorship.pdf" target="_blank">
                                 <Button theme="whiteSolid">Sponsor</Button>
                             </a>
-                            <a href="https://discord.gg/kx9azme" target="_blank" style={{ textDecoration: 'none' }}>
+                            <a href="https://discord.gg/hackthemidlands" target="_blank" style={{ textDecoration: 'none' }}>
                                 <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0" border="2px solid #4f66bd">Join Discord</ButtonWithIcon>
                             </a>
                         </div>
