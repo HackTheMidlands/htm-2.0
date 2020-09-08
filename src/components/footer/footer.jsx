@@ -32,7 +32,7 @@ const socialIcons = [
     {
         name: 'Discord',
         icon: DiscordIcon,
-        link: 'https://discord.gg/kx9azme',
+        link: 'https://discord.gg/hackthemidlands',
     },
 
 ];

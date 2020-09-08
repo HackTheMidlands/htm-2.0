@@ -35,7 +35,7 @@ export const StayConnectedSection = (props) => (
                     <h2 className={style.title}>Get involved with us</h2>
                     <p>We’ll be posting all of our updates over on our socials so be sure to give us a follow, and join the Discord server to participate 💖 We’ll see you there! ✨</p>
                     <div className={style.buttons}>
-                        <a href="https://discord.gg/kx9azme" target="_blank" style={{ textDecoration: 'none' }}>
+                        <a href="https://discord.gg/hackthemidlands" target="_blank" style={{ textDecoration: 'none' }}>
                             <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0">Join Discord</ButtonWithIcon>
                         </a>
                         <a href="https://www.facebook.com/hackthemidlands" target="_blank" style={{ textDecoration: 'none' }}>
