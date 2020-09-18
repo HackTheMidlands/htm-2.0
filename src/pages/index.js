@@ -130,13 +130,18 @@ const silver = [
         name: 'Capgemini',
         link: 'https://www.capgemini.com/',
     },
+    {
+        image: '/sponsors/kainos.png',
+        name: 'Kainos',
+        link: 'https://www.kainos.com/',
+    },
 ];
 
 const bronze = [
     {
         image: '/sponsors/fusion-meetup.png',
         name: 'Fusion Meetup',
-        link: 'https://www.meetup.com/Fusion-Technology-Meetup-Birmingham/',
+        link: 'https://thefusionhub.co.uk/',
     },
     {
         image: 'https://raw.githubusercontent.com/ukmadlz/ukmadlz.github.io/02bab2c5e1b57f67adf916c234a63e4de27a5e02/assets/images/mike-elsmore.svg',
@@ -152,6 +157,16 @@ const partners = [
         image: 'https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.svg',
         name: 'sponsor',
         link: 'https://mlh.io',
+    },
+    {
+        image: 'https://github.com/CSSUoB/resources/raw/master/logo/CSS%20Logo%20-%20Colour%20-%20Background%20-%20Bold.svg',
+        name: 'sponsor',
+        link: 'https://cssbham.com/',
+    },
+    {
+        image: '/sponsors/gdn_blue.png',
+        name: 'sponsor',
+        link: 'https://gdn.gg/',
     },
 ];
 
