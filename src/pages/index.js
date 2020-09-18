@@ -153,6 +153,11 @@ const bronze = [
         name: 'Mike Elsmore',
         link: 'https://elsmore.me/',
     },
+    {
+        image: '/sponsors/Chambers_of_Commerce.png',
+        name: 'Chambers of Commerce',
+        link: '/',
+    },
 ];
 
 const digital = [];
