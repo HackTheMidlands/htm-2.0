@@ -98,6 +98,11 @@ const testimonials = [
 
 const gold = [
     {
+        image: '/sponsors/bcs.png',
+        name: 'BCS Birmingham',
+        link: 'https://www.bcs.org/membership/member-communities/birmingham-branch',
+    },
+    {
         image: '/sponsors/majestic.png',
         name: 'Majestic',
         link: 'https://majestic.com',
