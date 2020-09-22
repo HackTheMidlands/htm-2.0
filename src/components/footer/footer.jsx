@@ -81,7 +81,7 @@ export const Footer = (props) => (
                 </Col>
             </Row>
             <Row className={style.cic}>
-                <span>HackTheMidlands is a private limited company (company number 12166335) limited by guarantee without share capital.</span>
+                <span>HackTheMidlands is a private limited company (company number <Link to="https://beta.companieshouse.gov.uk/company/12166335">12166335</Link>) limited by guarantee without share capital.</span>
             </Row>
         </Grid>
     </footer>
