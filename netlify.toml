@@ -3,6 +3,7 @@
   to = "https://forms.gle/LP9eHToXeds7GzrXA"
   status = 301
 
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
