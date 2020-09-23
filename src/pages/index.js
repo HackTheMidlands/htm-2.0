@@ -255,6 +255,9 @@ const Index = (props) => (
                             <a href="/sponsorship.pdf" target="_blank">
                                 <Button theme="whiteSolid">Sponsor</Button>
                             </a>
+                            <a href="/speak" target="_blank">
+                                <Button theme="whiteSolid">Speak</Button>
+                            </a>
                             <a href="https://discord.gg/hackthemidlands" target="_blank" style={{ textDecoration: 'none' }}>
                                 <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0" border="2px solid #4f66bd">Join Discord</ButtonWithIcon>
                             </a>
