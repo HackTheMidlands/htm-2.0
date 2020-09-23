@@ -1,4 +1,8 @@
 [[redirects]]
+  from = "/speak"
+  to = "https://forms.gle/LP9eHToXeds7GzrXA"
+  status = 301
+
   from = "/*"
   to = "/index.html"
   status = 200
