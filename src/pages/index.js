@@ -164,14 +164,14 @@ const partners = [
         link: 'https://cssbham.com/',
     },
     {
-        image: '/sponsors/gdn_blue.png',
-        name: 'sponsor',
-        link: 'https://gdn.gg/',
-    },
-    {
         image: '/sponsors/DSC_UOB.png',
         name: 'sponsor',
         link: 'https://dsc.community.dev/university-of-birmingham/',
+    },
+    {
+        image: '/sponsors/gdn_blue.png',
+        name: 'sponsor',
+        link: 'https://gdn.gg/',
     },
 ];
 
