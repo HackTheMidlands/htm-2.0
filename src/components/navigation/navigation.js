@@ -47,7 +47,7 @@ const Navigation = () => (
         <a
             className={styles.badge}
             id="mlh-trust-badge"
-            href="https://mlh.io/seasons/eu-2021/events?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
+            href="https://mlh.io/seasons/2021/events"
             target="_blank"
         >
             <img
