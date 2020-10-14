@@ -140,14 +140,14 @@ const silver = [
         name: 'Kainos',
         link: 'https://www.kainos.com/',
     },
-];
-
-const bronze = [
     {
         image: '/sponsors/fusion-meetup.png',
         name: 'Fusion Meetup',
         link: 'https://thefusionhub.co.uk/',
     },
+];
+
+const bronze = [
     {
         image: 'https://raw.githubusercontent.com/ukmadlz/ukmadlz.github.io/02bab2c5e1b57f67adf916c234a63e4de27a5e02/assets/images/mike-elsmore.svg',
         name: 'Mike Elsmore',

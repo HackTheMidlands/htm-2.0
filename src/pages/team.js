@@ -100,7 +100,7 @@ const teamMembers = [
         image: Jon,
         name: 'Jon Freer',
         nickname: 'Stream God',
-        position: 'Stream Content / Production',
+        position: 'Production Lead',
     },
     {
         image: Hugh,
