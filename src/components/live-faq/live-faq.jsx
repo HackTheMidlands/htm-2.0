@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Masonary from 'masonry-layout';
 
 // Helper imports
 
@@ -20,12 +19,20 @@ import Background from './assets/background.svg';
 
 export const LiveFaq = ({ cards }) => {
     const gridRef = useRef(null);
+    const initialLoad = useRef(true);
 
     useEffect(() => {
-        if (gridRef.current && typeof window !== 'undefined') {
+        if (initialLoad.current && gridRef.current && typeof window !== 'undefined') {
+            let Masonary;
+            try {
+                Masonary = require('masonry-layout');
+            } catch (e) {
+                console.error(e);
+            }
             new Masonary(gridRef.current, {
                 itemSelector: '.masonary-item',
             });
+            initialLoad.current = false;
         }
     }, []);
 

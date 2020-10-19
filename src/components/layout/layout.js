@@ -6,6 +6,7 @@ import main from '../../styles/main.scss';
 import Container from '../container/container';
 import Navigation from '../navigation/navigation';
 import { Footer } from '../footer/footer';
+import { Seo } from '../seo/seo'
 
 
 const Layout = (props) => {
@@ -21,23 +22,7 @@ const Layout = (props) => {
 
     return (
         <Container>
-            <Helmet>
-                <title>{title}</title>
-                <title>HackTheMidlands 5.0</title>
-                <meta name="title" content="HackTheMidlands 5.0" />
-                <meta name="description" content="Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://hackthemidlands.com/" />
-                <meta property="og:title" content="HackTheMidlands 5.0" />
-                <meta property="og:description" content="Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process." />
-                <meta property="og:image" content="http://hackthemidlands.com/images/hackthemidlands-facebook.jpg" />
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://hackthemidlands.com/" />
-                <meta property="twitter:title" content="HackTheMidlands 5.0" />
-                <meta property="twitter:description" content="Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process." />
-                <meta property="twitter:image" content="http://hackthemidlands.com/images/hackthemidlands-facebook.jpg" />
-                <link rel="shortcut icon" href="/images/favicon.ico" />
-            </Helmet>
+            <Seo />
             <Navigation />
             {children}
             <Footer />

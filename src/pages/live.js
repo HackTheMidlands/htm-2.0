@@ -16,6 +16,7 @@ import { LiveCountdown } from '../components/live-countdown/live-countdown';
 import { LiveDiscord } from '../components/live-discord/live-discord';
 import { Timeline } from '../components/timeline/timeline';
 import { LiveFaq } from '../components/live-faq/live-faq';
+import { Seo } from '../components/seo/seo'
 
 
 // Image imports
@@ -68,6 +69,8 @@ const companyLogos = [
  */
 const Live = (props) => (
     <main className={style.page}>
+        <Seo title="HTM 5.0 Live" />
+
         <LiveNavBar />
 
         <LivePageHeader />

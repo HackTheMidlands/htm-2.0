@@ -207,7 +207,7 @@ const qa = [
  */
 const Index = (props) => (
     <Layout>
-
+        <Seo />
         <HeroHeader>
             <Grid>
                 <Row>
