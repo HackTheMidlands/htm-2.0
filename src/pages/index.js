@@ -183,6 +183,11 @@ const partners = [
         name: 'sponsor',
         link: 'https://gdn.gg/',
     },
+    {
+        image: '/sponsors/echoAR.png',
+        name: 'echoAR',
+        link: 'https://www.echoar.xyz/',
+    },
 ];
 
 const tickets = [
