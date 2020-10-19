@@ -22,7 +22,7 @@ export const LiveFaq = ({ cards }) => {
     const gridRef = useRef(null);
 
     useEffect(() => {
-        if (gridRef.current) {
+        if (gridRef.current && typeof window !== 'undefined') {
             new Masonary(gridRef.current, {
                 itemSelector: '.masonary-item',
             });
