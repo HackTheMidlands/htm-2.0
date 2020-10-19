@@ -22,12 +22,10 @@ export const LiveFaq = ({ cards }) => {
     const initialLoad = useRef(true);
 
     useEffect(() => {
-        if (initialLoad.current && gridRef.current && typeof window !== 'undefined') {
+        if (initialLoad.current && gridRef.current) {
             let Masonary;
-            try {
+            if (typeof window !== 'undefined') {
                 Masonary = require('masonry-layout');
-            } catch (e) {
-                console.error(e);
             }
             new Masonary(gridRef.current, {
                 itemSelector: '.masonary-item',
