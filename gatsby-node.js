@@ -46,3 +46,18 @@
 //         );
 //     });
 // };
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+    if (stage === 'build-html') {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /masonry-layout/,
+                        use: loaders.null(),
+                    },
+                ],
+            },
+        });
+    }
+};
