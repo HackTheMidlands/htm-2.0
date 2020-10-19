@@ -57,7 +57,7 @@ export const LiveCountdown = ({ countdownToDate }) => {
                 </Col>
             </Row>
             <Row>
-                <Col lg={8} lgOffset={2}>
+                <Col lg={8} lgOffset={2} md={12} mdOffset={0}>
                     <div className={styles.countdown}>
                         <div className={styles.days}>
                             <h1>{ countdown.days }</h1>

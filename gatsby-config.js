@@ -53,5 +53,11 @@ module.exports = {
             },
         },
         `gatsby-optional-chaining`,
+        {
+            resolve: 'gatsby-plugin-load-script',
+            options: {
+                src: 'https://player.twitch.tv/js/embed/v1.js',
+            },
+        },
     ],
 };

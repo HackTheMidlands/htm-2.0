@@ -1,8 +1,6 @@
 // Module Imports
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 // Helper imports
 
@@ -30,12 +28,30 @@ const sources = [
  * @constructor
  */
 export const LivePageHeader = (props) => {
+    const firstLoad = useRef(true);
+
+    const initTwitch = () => {
+        new window.Twitch.Player("twitch-embed", {
+            width: '100%',
+            height: '100%',
+            channel: 'jacksepticeye',
+        });
+    };
+
+    useEffect(() => {
+
+        if (firstLoad.current && typeof window !== 'undefined' && window.Twitch) {
+            initTwitch();
+            firstLoad.current = false;
+        }
+    }, []);
     return (
         <header className={styles.header} style={{ backgroundImage: `url(${Background})` }}>
-
             <div className={styles.video}>
                 <h1 className={styles.featureTextTop}>HTM 5.0</h1>
-                <Video sources={sources} className={styles.videoComponent} />
+                <div className={styles.embed}>
+                    <div id="twitch-embed" style={{ height: '100%' }} />
+                </div>
                 <h1 className={styles.featureTextBottom}>LIVE</h1>
             </div>
         </header>

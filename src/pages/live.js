@@ -16,7 +16,7 @@ import { LiveCountdown } from '../components/live-countdown/live-countdown';
 import { LiveDiscord } from '../components/live-discord/live-discord';
 import { Timeline } from '../components/timeline/timeline';
 import { LiveFaq } from '../components/live-faq/live-faq';
-import { Seo } from '../components/seo/seo'
+import { Seo } from '../components/seo/seo';
 
 
 // Image imports
@@ -67,41 +67,43 @@ const companyLogos = [
  * @returns {*}
  * @constructor
  */
-const Live = (props) => (
-    <main className={style.page}>
-        <Seo title="HTM 5.0 Live" />
+const Live = (props) => {
+    return (
+        <main className={style.page}>
+            <Seo title="HTM 5.0 Live" />
 
-        <LiveNavBar />
+            <LiveNavBar />
 
-        <LivePageHeader />
+            <LivePageHeader />
 
-        <section className={style.section}>
-            <LogoStrip logos={companyLogos} />
-        </section>
+            <section className={style.section}>
+                <LogoStrip logos={companyLogos} />
+            </section>
 
 
-        <section className={style.section}>
-            <LiveCountdown countdownToDate={dateTo} />
-        </section>
+            <section className={style.section}>
+                <LiveCountdown countdownToDate={dateTo} />
+            </section>
 
-        <section className={style.section}>
-            <LiveHeaderText text="Join Us" />
-            <LiveDiscord />
-        </section>
+            <section className={style.section}>
+                <LiveHeaderText text="Join Us" />
+                <LiveDiscord />
+            </section>
 
-        <section className={style.section}>
-            <LiveHeaderText text="Challenges" />
-        </section>
+            <section className={style.section}>
+                <LiveHeaderText text="Challenges" />
+            </section>
 
-        <section className={style.section}>
-            <LiveHeaderText text="Timeline" />
-            <Timeline />
-        </section>
+            <section className={style.section}>
+                <LiveHeaderText text="Timeline" />
+                <Timeline />
+            </section>
 
-        <section className={style.section}>
-            <LiveFaq cards={faqData} />
-        </section>
-    </main>
-);
+            <section className={style.section}>
+                <LiveFaq cards={faqData} />
+            </section>
+        </main>
+    );
+};
 
 export default Live;
