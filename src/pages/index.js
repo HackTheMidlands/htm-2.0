@@ -20,7 +20,7 @@ import { SponsorCta } from '../components/sponsor-cta/sponsor-cta';
 import { TicketsSection } from '../components/tickets-section/tickets-section';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
-import { IndexIntro } from '../components/index-intro/index-intro'
+import { IndexIntro } from '../components/index-intro/index-intro';
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -207,7 +207,6 @@ const qa = [
  */
 const Index = (props) => (
     <Layout>
-        <Seo />
         <HeroHeader>
             <Grid>
                 <Row>
