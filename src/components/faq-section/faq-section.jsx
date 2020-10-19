@@ -14,7 +14,7 @@ import style from './faq-section.module.scss';
 // Image imports
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

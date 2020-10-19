@@ -1,0 +1,42 @@
+@import "../../styles/helpers/make-property";
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days, .hours, .minutes, .seconds {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+  h1 {
+    color: var(--primary);
+    @include make-property('font-size', 100px);
+    font-weight: 800;
+    margin: 0 auto 30px auto;
+    text-shadow: 0 0 25px rgba(#449AFD, .3);
+  }
+  p {
+    margin: 0;
+    @include make-property('font-size', 20px);
+    color: white;
+    opacity: .7;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-align: center;
+  }
+}
+
+.title {
+  @include make-property('font-size', 20px);
+  color: white;
+  letter-spacing: 5px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}

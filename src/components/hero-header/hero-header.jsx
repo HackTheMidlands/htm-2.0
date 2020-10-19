@@ -9,7 +9,7 @@ import WaveBottomImage from './assets/wave.svg';
 import ShapeBackgroundImage from './assets/shape-background.svg';
 
 /**
- * Hero header component
+ * Hero header components
  * @param children
  * @param image
  * @param height

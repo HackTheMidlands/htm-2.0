@@ -21,7 +21,7 @@ import PinkTriangle from './assets/pink-triangle.inline.svg';
 import GreenCircle from './assets/green-circle.inline.svg';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

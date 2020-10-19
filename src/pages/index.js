@@ -33,8 +33,8 @@ import EntryRequirementsIcon from './assets/entry.svg';
 
 import DemoVideo from '../components/video/assets/example-video.mp4';
 import HTMVideo from '../assets/hero-video.mp4';
-import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon'
-import Discord from '../assets/img/discord-white.svg'
+import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
+import Discord from '../assets/img/discord-white.svg';
 
 const sources = [
     {

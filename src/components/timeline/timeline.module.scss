@@ -1,0 +1,29 @@
+.timeline {
+
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .day {
+    margin: 0 20px;
+  }
+}
+
+.wrapper {
+  height: 300px;
+  //background-color: red;
+  overflow: auto;
+}
+
+.track {
+  height: 120px;
+  position: relative;
+  margin: 35px 0px;
+  transition: height 0.3s ease;
+  .item {
+    position: absolute;
+  }
+}

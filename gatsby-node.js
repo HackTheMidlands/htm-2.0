@@ -31,7 +31,7 @@
 //                 posts.forEach((post, index) => {
 //                     createPage({
 //                         path: `/blog/${post.node.slug}/`,
-//                         component: blogPost,
+//                         components: blogPost,
 //                         context: {
 //                             slug: post.node.slug,
 //                         },
@@ -40,7 +40,7 @@
 //
 //                 createPage({
 //                     path: '/events/htm-5',
-//                     component: hackathonTemplate,
+//                     components: hackathonTemplate,
 //                 });
 //             }),
 //         );

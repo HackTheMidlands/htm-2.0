@@ -1,0 +1,33 @@
+@import "../../styles/helpers/make-property";
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin: 20px auto 6vw auto;
+}
+
+.main, .back {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.main {
+  @include make-property('font-size', 45px);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.back {
+  @include make-property('font-size', 89px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #081C64;
+  opacity: .56;
+  z-index: 1;
+}

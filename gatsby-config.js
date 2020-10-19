@@ -52,5 +52,6 @@ module.exports = {
                 trackingId: "UA-177286572-1",
             },
         },
+        `gatsby-optional-chaining`,
     ],
 };

@@ -1,0 +1,48 @@
+@import "../../styles/helpers/make-property";
+
+.header {
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  margin-bottom: 9vw;
+}
+
+.video {
+  width: 68vw;
+  margin: auto;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.feature-text {
+  @include make-property('font-size', 200px);
+  font-weight: 900;
+  color: #081C64;
+  text-align: center;
+  margin: 0;
+  line-height: 100px;
+  opacity: .88;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+}
+
+.feature-text-top {
+  @extend .feature-text;
+  top: -40px;
+}
+
+.feature-text-bottom {
+  @extend .feature-text;
+  bottom: 0;
+}
+
+.videoComponent {
+  position: relative;
+  z-index: 5;
+}

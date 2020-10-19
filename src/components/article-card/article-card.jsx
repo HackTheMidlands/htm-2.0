@@ -16,7 +16,7 @@ import style from './article-card.module.scss';
 // Image imports
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

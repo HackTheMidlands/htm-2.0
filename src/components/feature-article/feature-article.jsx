@@ -18,7 +18,7 @@ import style from './feature-article.module.scss';
 import WaveImage from './assets/wave.svg';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

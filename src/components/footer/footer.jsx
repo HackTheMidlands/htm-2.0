@@ -38,7 +38,7 @@ const socialIcons = [
 ];
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

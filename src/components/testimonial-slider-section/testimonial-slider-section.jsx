@@ -16,7 +16,7 @@ import Wave from './assets/wave.svg';
 import { TestimonialBox } from '../testimonial-box/testimonial-box';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

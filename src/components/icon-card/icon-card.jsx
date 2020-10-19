@@ -14,7 +14,7 @@ import style from './icon-card.module.scss';
 // Image imports
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

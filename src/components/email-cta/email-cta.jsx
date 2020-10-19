@@ -18,7 +18,7 @@ import GreenTriangle from './assets/green-triangle.inline.svg';
 import CircleImage from './assets/circle.inline.svg';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

@@ -45,7 +45,7 @@ const calculateColWidth = (arrayLength, breakpoint) => {
 };
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

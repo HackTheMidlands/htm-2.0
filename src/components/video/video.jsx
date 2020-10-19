@@ -16,13 +16,13 @@ import VideoDotGrid from './assets/video-dot-grid.svg';
 
 import Play from './assets/play.inline.svg';
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor
  */
 export const Video = ({
-    sources, poster, autoPlay, controls, unsupportedText,
+    sources, poster, autoPlay, controls, unsupportedText, className,
 }) => {
     const videoRef = useRef();
 
@@ -44,7 +44,7 @@ export const Video = ({
 
     return (
         <>
-            <div className={classNames([style.videoWrapper, { [`${style.playing}`]: playing }])}>
+            <div className={classNames([className, style.videoWrapper, { [`${style.playing}`]: playing }])}>
                 <div onClick={playButtonClick} style={{ opacity: playing ? 0 : 1 }}>
                     <Play className={style.play} />
                 </div>
