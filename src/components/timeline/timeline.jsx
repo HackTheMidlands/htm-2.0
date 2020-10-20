@@ -44,13 +44,14 @@ export const Timeline = props => {
         googleCalendarId,
     } = data.site.siteMetadata;
 
-    const { data: gcalTimelineData = {} } = useSWR(
+    const { data: gcalTimelineData } = useSWR(
         'calendar-events',
         async () => {
             let out = await fetch(
                 `https://www.googleapis.com/calendar/v3/calendars/${googleCalendarId}/events?key=${googleCalendarApiKey}`
             )
                 .then(resp => {
+                    console.log('I have loaded');
                     if (resp.ok) {
                         return resp.json();
                     } else {
@@ -73,19 +74,25 @@ export const Timeline = props => {
                                 date: moment(event.start.dateTime).format(
                                     'DD/MM/YY'
                                 ),
-                                events: [ev],
+                                events: [event_data],
                             };
                         }
                         return timeline;
                     }, {});
                 })
-                .catch(() => {});
+                .catch((e) => {
+                    console.log('error...');
+                    console.log(e);
+                });
+            console.log('Finished....');
+            console.log(out);
             return out;
         },
         {
             initialData: timelineData
         }
     );
+
     const firstLoad = useRef(true);
     const wrapper = useRef(null);
     const track = useRef(null);
@@ -147,7 +154,7 @@ export const Timeline = props => {
     };
 
     useEffect(() => {
-        if (firstLoad.current) {
+        if (true) {
             firstLoad.current = false;
             let timelineDays = Object.keys(gcalTimelineData);
             timelineDays = timelineDays.map((day) => {
@@ -185,7 +192,7 @@ export const Timeline = props => {
             setTrackHeight(maxHeight);
         }
 
-    }, [timelineEvents]);
+    }, [timelineEvents, gcalTimelineData]);
 
     return (
         <div className={style.timeline}>

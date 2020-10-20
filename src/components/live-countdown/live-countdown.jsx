@@ -4,8 +4,8 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { graphql, useStaticQuery } from "gatsby"
-import useSWR from "swr"
+import { graphql, useStaticQuery } from 'gatsby';
+import useSWR from 'swr';
 
 // Helper imports
 
@@ -18,9 +18,9 @@ import styles from './live-countdown.module.scss';
 
 
 function googleCalendarURL(id, eventId, apiKey) {
-  return new URL(
-    `https://www.googleapis.com/calendar/v3/calendars/${id}/events/${eventId}?key=${apiKey}`
-  )
+    return new URL(
+        `https://www.googleapis.com/calendar/v3/calendars/${id}/events/${eventId}?key=${apiKey}`,
+    );
 }
 
 
@@ -31,7 +31,7 @@ function googleCalendarURL(id, eventId, apiKey) {
  * @constructor
  */
 export const LiveCountdown = ({ countdownToDate }) => {
-      const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
     query LiveCountdownQuery {
       site {
         siteMetadata {
@@ -43,44 +43,43 @@ export const LiveCountdown = ({ countdownToDate }) => {
         }
       }
     }
-  `)
+  `);
 
-  const {
-    eventStartString,
-    eventEndString,
-    googleCalendarApiKey, // gcp key restricted to the calendar api and requests from https://hackthemidlands.com
-    googleCalendarId,
-    googleCalendarEventID,
-  } = data.site.siteMetadata
+    const {
+        eventStartString,
+        eventEndString,
+        googleCalendarApiKey, // gcp key restricted to the calendar api and requests from https://hackthemidlands.com
+        googleCalendarId,
+        googleCalendarEventID,
+    } = data.site.siteMetadata;
 
-  const { data: times } = useSWR(
-    "event-countdown",
-    async () => {
-      let resp = await fetch(
-            googleCalendarURL(
-              googleCalendarId,
-              googleCalendarEventID,
-              googleCalendarApiKey
-            )
-      )
-      if (resp.ok) {
-        let json = await resp.json()
-        return {
-          start: moment(json.start.dateTime),
-          end: moment(json.end.dateTime),
-        }
-      } else {
-        return { start: moment(eventStartString), end: moment(eventEndString) }
-      }
-    },
-    {
-      initialData: {
-        start: moment(eventStartString),
-        end: moment(eventEndString),
-      },
-      revalidateOnMount: true,
-    }
-  )
+    const { data: times } = useSWR(
+        'event-countdown',
+        async () => {
+            const resp = await fetch(
+                googleCalendarURL(
+                    googleCalendarId,
+                    googleCalendarEventID,
+                    googleCalendarApiKey,
+                ),
+            );
+            if (resp.ok) {
+                const json = await resp.json();
+                return {
+                    start: moment(json.start.dateTime),
+                    end: moment(json.end.dateTime),
+                };
+            }
+            return { start: moment(eventStartString), end: moment(eventEndString) };
+        },
+        {
+            initialData: {
+                start: moment(eventStartString),
+                end: moment(eventEndString),
+            },
+            revalidateOnMount: true,
+        },
+    );
 
     const [countdown, setCountdown] = useState({
         days: 0,
@@ -92,7 +91,7 @@ export const LiveCountdown = ({ countdownToDate }) => {
     const calculateCountdownValues = () => {
         const current = moment();
         const currentUnix = current.unix();
-        
+
         const diffTime = currentUnix < times.start.unix() ? times.start.unix() - currentUnix : times.end.unix() - currentUnix;
         const duration = moment.duration(diffTime, 'seconds');
         setCountdown({
