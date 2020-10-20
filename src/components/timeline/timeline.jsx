@@ -1,11 +1,11 @@
 // Module Imports
-import React, {
-    useEffect, useState, useRef, useMemo,
-} from 'react';
+import React, { useEffect, useState, useRef, useMemo } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { graphql, useStaticQuery } from 'gatsby';
+import useSWR from 'swr';
 
 // Helper imports
 
@@ -27,7 +27,65 @@ import { timelineData } from '../../data/timeline';
  * @returns {*}
  * @constructor
  */
-export const Timeline = (props) => {
+export const Timeline = props => {
+    const data = useStaticQuery(graphql`
+        query TimelineQuery {
+            site {
+                siteMetadata {
+                    googleCalendarId: googleCalendarId
+                    googleCalendarApiKey: googleCalendarApiKey
+                }
+            }
+        }
+    `);
+
+    const {
+        googleCalendarApiKey, // gcp key restricted to the calendar api and requests from https://hackthemidlands.com
+        googleCalendarId,
+    } = data.site.siteMetadata;
+
+    const { data: gcalTimelineData } = useSWR(
+        'calendar-events',
+        async () => {
+            let out = await fetch(
+                `https://www.googleapis.com/calendar/v3/calendars/${googleCalendarId}/events?key=${googleCalendarApiKey}`
+            )
+                .then(resp => {
+                    if (resp.ok) {
+                        return resp.json();
+                    } else {
+                        return {};
+                    }
+                })
+                .then(json => {
+                    return json.items.reduce((timeline, event) => {
+                        const event_data = {
+                            name: event.summary,
+                            time: moment(event.start.dateTime).format('hh:mm'),
+                            owner: event.summary,
+                        };
+                        const day = moment(event.start.dateTime).format('dddd');
+                        if (day in timeline) {
+                            timeline[day].events.push(event_data);
+                        } else {
+                            timeline[day] = {
+                                name: day,
+                                date: moment(event.start.dateTime).format(
+                                    'DD/MM/YY'
+                                ),
+                                events: [ev],
+                            };
+                        }
+                        return timeline;
+                    }, {});
+                })
+                .catch(() => {});
+            return out;
+        },
+        {
+            initialData: timelineData
+        }
+    );
     const firstLoad = useRef(true);
     const wrapper = useRef(null);
     const track = useRef(null);

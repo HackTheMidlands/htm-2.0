@@ -54,7 +54,7 @@ export const LiveCountdown = ({ countdownToDate }) => {
   } = data.site.siteMetadata
 
   const { data: times } = useSWR(
-    "event-data",
+    "event-countdown",
     async () => {
       let resp = await fetch(
             googleCalendarURL(
