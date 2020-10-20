@@ -44,7 +44,7 @@ export const Timeline = props => {
         googleCalendarId,
     } = data.site.siteMetadata;
 
-    const { data: gcalTimelineData } = useSWR(
+    const { data: gcalTimelineData = {} } = useSWR(
         'calendar-events',
         async () => {
             let out = await fetch(
@@ -104,7 +104,7 @@ export const Timeline = props => {
      */
     const getEventsForDay = ({ today, date }) => {
         const todayDate = today ? moment() : moment(date, 'DD/MM/YY');
-        const daysData = Object.values(timelineData);
+        const daysData = Object.values(gcalTimelineData);
         return daysData.find((day) => todayDate.isSame(moment(day.date, 'DD/MM/YY'), 'day'))?.events || [];
     };
 
@@ -149,13 +149,13 @@ export const Timeline = props => {
     useEffect(() => {
         if (firstLoad.current) {
             firstLoad.current = false;
-            let timelineDays = Object.keys(timelineData);
+            let timelineDays = Object.keys(gcalTimelineData);
             timelineDays = timelineDays.map((day) => {
-                const { name, date, events } = timelineData[day];
+                const { name, date, events } = gcalTimelineData[day];
                 const parsedDate = moment(date, 'DD/MM/YY');
                 const isSameDay = moment().isSame(parsedDate, 'day');
                 if (isSameDay) {
-                    setActiveDay(timelineData[day]);
+                    setActiveDay(gcalTimelineData[day]);
                     setTimelineEvents(events);
                 }
                 return {
