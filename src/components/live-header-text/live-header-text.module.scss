@@ -19,6 +19,10 @@
   color: white;
   position: relative;
   z-index: 2;
+  
+  @media screen and (max-width: 650px) {
+    @include make-property('font-size', 45px);
+  }
 }
 
 .back {
@@ -30,4 +34,7 @@
   color: #081C64;
   opacity: .56;
   z-index: 1;
+  @media screen and (max-width: 650px) {
+    @include make-property('font-size', 60px);
+  }
 }

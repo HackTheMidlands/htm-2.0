@@ -34,12 +34,11 @@ export const LivePageHeader = (props) => {
         new window.Twitch.Player("twitch-embed", {
             width: '100%',
             height: '100%',
-            channel: 'jacksepticeye',
+            channel: 'htm_live',
         });
     };
 
     useEffect(() => {
-
         if (firstLoad.current && typeof window !== 'undefined' && window.Twitch) {
             initTwitch();
             firstLoad.current = false;

@@ -44,7 +44,7 @@ export const LiveFaq = ({ cards }) => {
                     <Col lg={9} lgOffset={1}>
                         <div className={classNames([style.cardWrapper])} ref={gridRef}>
                             { cards.map(({ title, body }, index) => (
-                                <div className={classNames(['masonary-item', style.item])} style={{ width: '50%' }}>
+                                <div className={classNames(['masonary-item', style.item])}>
                                     <FaqCard key={`${title}_${index}`} title={title} body={body} number={index + 1} />
                                 </div>
                             )) }

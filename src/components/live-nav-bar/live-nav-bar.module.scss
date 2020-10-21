@@ -15,8 +15,8 @@
   padding: 5px 0;
   max-width: 1800px;
   margin: 0 auto;
-  padding-left: 85px !important;
-  padding-right: 85px !important;
+  //padding-left: 85px !important;
+  //padding-right: 85px !important;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
@@ -28,6 +28,7 @@
   display: flex;
   align-items: center;
   width: 40%;
+  flex-wrap: wrap;
 }
 
 .right {
@@ -39,6 +40,7 @@
   text-transform: uppercase;
   color: white;
   font-weight: 700;
+  margin: 10px auto;
 }
 
 .leftItem {
