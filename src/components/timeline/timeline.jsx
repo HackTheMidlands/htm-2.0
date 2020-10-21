@@ -28,6 +28,7 @@ import { timelineData } from '../../data/timeline';
  * @constructor
  */
 export const Timeline = props => {
+    const host_regex = /(?<=Host: )(.*$)/m;
     const data = useStaticQuery(graphql`
         query TimelineQuery {
             site {
@@ -59,10 +60,12 @@ export const Timeline = props => {
                 })
                 .then(json => {
                     return json.items.reduce((timeline, event) => {
+                        const m = host_regex.exec(event.description)
+                        const time = moment(event.start.dateTime, 'YYYY-MM-DDTHH:mm:ssZZ').format('HH:mm');
                         const event_data = {
                             name: event.summary,
-                            time: moment(event.start.dateTime).format('HH:MM'),
-                            owner: event.summary,
+                            time,
+                            owner: m !== null ? m[0] : event.summary,
                         };
                         const day = moment(event.start.dateTime).format('dddd');
                         if (day in timeline) {
@@ -114,7 +117,6 @@ export const Timeline = props => {
 
     const renderTimelineItem = (events) => useMemo(() => events.map(({ name, time, owner }) => {
         if (activeDay) {
-        console.log('render event', name, time, owner)
             const { date } = activeDay;
             const currentDay = moment(activeDay.date, 'DD/MM/YY');
             const currentTime = currentDay.startOf('hour');
