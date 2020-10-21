@@ -83,12 +83,11 @@ export const Timeline = props => {
                     console.log('error...');
                     console.error(e);
                 });
-            console.log('Finished....');
-            console.log(out);
             return out;
         },
         {
-            initialData: timelineData
+            initialData: timelineData,
+            revalidateOnMount: true
         }
     );
 
@@ -157,7 +156,6 @@ export const Timeline = props => {
             let timelineDays = Object.keys(gcalTimelineData);
             timelineDays = timelineDays.map((day) => {
                 const { name, date, events } = gcalTimelineData[day];
-                console.log('weekday', name, date, moment(date, 'DD/MM/YY').day())
                 const parsedDate = moment(date, 'DD/MM/YY');
                 const isSameDay = moment().isSame(parsedDate, 'day');
                 if (isSameDay) {
@@ -171,7 +169,6 @@ export const Timeline = props => {
                     date,
                 };
             });
-            console.log(timelineDays)
             setDays(timelineDays);
 
     }, [gcalTimelineData])
