@@ -16,10 +16,11 @@ import style from './timeline-time.module.scss';
 /**
  * Timeline time track at bottom of timeline
  * @param spaceBetween
+ * @param currentDay
  * @returns {*}
  * @constructor
  */
-export const TimelineTime = ({ spaceBetween }) => {
+export const TimelineTime = ({ spaceBetween, currentDay }) => {
     const [times, setTimes] = useState([]);
     const [currentHour, setCurrentHour] = useState(0);
 
@@ -36,12 +37,12 @@ export const TimelineTime = ({ spaceBetween }) => {
     return (
         <div className={style.timeTrack}>
             <div className={style.line} />
-            <div className={style.activeLine} style={{ left: currentHour * spaceBetween }} />
+            { currentDay && (<div className={style.activeLine} style={{ left: currentHour * spaceBetween }} />) }
             { times.map((time) => (
                 <div
                     key={time}
                     className={classNames([style.time, {
-                        [`${style.active}`]: currentHour === parseInt(time.split(':')[0], 10),
+                        [`${style.active}`]: currentHour === parseInt(time.split(':')[0], 10) && currentDay,
                     }])}
                 >
                     <div className={style.ball} />
@@ -55,11 +56,11 @@ export const TimelineTime = ({ spaceBetween }) => {
 // Prop definitions
 TimelineTime.propTypes = {
     spaceBetween: PropTypes.number,
-    state: PropTypes.oneOf(['active', 'inactive']),
+    currentDay: PropTypes.bool,
 };
 
 // Default props
 TimelineTime.defaultProps = {
     spaceBetween: 300,
-    state: 'inactive',
+    currentDay: false,
 };

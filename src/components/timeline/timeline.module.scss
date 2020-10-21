@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   .day {
     margin: 0 20px;
@@ -23,7 +24,22 @@
   position: relative;
   margin: 35px 0px;
   transition: height 0.3s ease;
+  scroll-behavior: smooth;
   .item {
     position: absolute;
+  }
+}
+
+.noEvents {
+  margin: 20px auto;
+  img {
+    width: 100px;
+    margin: auto;
+  }
+  h3 {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
   }
 }
