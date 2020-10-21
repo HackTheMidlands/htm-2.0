@@ -51,7 +51,6 @@ export const Timeline = props => {
                 `https://www.googleapis.com/calendar/v3/calendars/${googleCalendarId}/events?key=${googleCalendarApiKey}`
             )
                 .then(resp => {
-                    console.log('I have loaded');
                     if (resp.ok) {
                         return resp.json();
                     } else {
@@ -62,7 +61,7 @@ export const Timeline = props => {
                     return json.items.reduce((timeline, event) => {
                         const event_data = {
                             name: event.summary,
-                            time: moment(event.start.dateTime).format('hh:mm'),
+                            time: moment(event.start.dateTime).format('HH:MM'),
                             owner: event.summary,
                         };
                         const day = moment(event.start.dateTime).format('dddd');
@@ -82,7 +81,7 @@ export const Timeline = props => {
                 })
                 .catch((e) => {
                     console.log('error...');
-                    console.log(e);
+                    console.error(e);
                 });
             console.log('Finished....');
             console.log(out);
@@ -93,7 +92,6 @@ export const Timeline = props => {
         }
     );
 
-    const firstLoad = useRef(true);
     const wrapper = useRef(null);
     const track = useRef(null);
 
@@ -117,6 +115,7 @@ export const Timeline = props => {
 
     const renderTimelineItem = (events) => useMemo(() => events.map(({ name, time, owner }) => {
         if (activeDay) {
+        console.log('render event', name, time, owner)
             const { date } = activeDay;
             const currentDay = moment(activeDay.date, 'DD/MM/YY');
             const currentTime = currentDay.startOf('hour');
@@ -142,6 +141,7 @@ export const Timeline = props => {
         if (state === 'inactive') {
             const newDays = days.map((d) => {
                 if (d.key === key) {
+                    setActiveDay(d)
                     d.state = 'active';
                 } else {
                     d.state = 'inactive';
@@ -154,11 +154,10 @@ export const Timeline = props => {
     };
 
     useEffect(() => {
-        if (true) {
-            firstLoad.current = false;
             let timelineDays = Object.keys(gcalTimelineData);
             timelineDays = timelineDays.map((day) => {
                 const { name, date, events } = gcalTimelineData[day];
+                console.log('weekday', name, date, moment(date, 'DD/MM/YY').day())
                 const parsedDate = moment(date, 'DD/MM/YY');
                 const isSameDay = moment().isSame(parsedDate, 'day');
                 if (isSameDay) {
@@ -172,14 +171,12 @@ export const Timeline = props => {
                     date,
                 };
             });
+            console.log(timelineDays)
             setDays(timelineDays);
 
-            if (wrapper.current) {
-                const now = moment().hour();
-                wrapper.current.scroll(now * spaceBetweenPoints, 0);
-            }
-        }
+    }, [gcalTimelineData])
 
+    useEffect(() => {
         if (track.current) {
             let maxHeight = 0;
             const children = Array.from(track.current.children);
@@ -191,8 +188,12 @@ export const Timeline = props => {
             })
             setTrackHeight(maxHeight);
         }
+            if (wrapper.current) {
+                const now = moment().hour();
+                wrapper.current.scroll(now * spaceBetweenPoints, 0);
+            }
 
-    }, [timelineEvents, gcalTimelineData]);
+    }, [timelineEvents]);
 
     return (
         <div className={style.timeline}>
