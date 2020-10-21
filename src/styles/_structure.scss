@@ -1,5 +1,9 @@
 @import "./variables";
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #373F49;
   background: var(--background);

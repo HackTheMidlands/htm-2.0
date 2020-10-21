@@ -85,21 +85,21 @@ const Live = (props) => {
                 <LiveCountdown countdownToDate={dateTo} />
             </section>
 
-            <section className={style.section}>
+            <section className={style.section} id="discord">
                 <LiveHeaderText text="Join Us" />
                 <LiveDiscord />
             </section>
 
-            <section className={style.section}>
+            <section className={style.section} id="challenges">
                 <LiveHeaderText text="Challenges" />
             </section>
 
-            <section className={style.section}>
+            <section className={style.section} id="timeline">
                 <LiveHeaderText text="Timeline" />
                 <Timeline />
             </section>
 
-            <section className={style.section}>
+            <section className={style.section} id="faq">
                 <LiveFaq cards={faqData} />
             </section>
         </main>

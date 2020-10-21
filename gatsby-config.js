@@ -47,12 +47,12 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: 'gatsby-plugin-google-analytics',
             options: {
                 trackingId: 'UA-177286572-1',
             },
         },
-        `gatsby-optional-chaining`,
+        'gatsby-optional-chaining',
         {
             resolve: 'gatsby-plugin-load-script',
             options: {
