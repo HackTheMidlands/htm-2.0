@@ -1,11 +1,11 @@
 // Module Imports
-import React, {
-    useEffect, useState, useRef, useMemo,
-} from 'react';
+import React, { useEffect, useState, useRef, useMemo } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { graphql, useStaticQuery } from 'gatsby';
+import useSWR from 'swr';
 
 // Helper imports
 
@@ -27,8 +27,73 @@ import { timelineData } from '../../data/timeline';
  * @returns {*}
  * @constructor
  */
-export const Timeline = (props) => {
-    const firstLoad = useRef(true);
+export const Timeline = props => {
+    const host_regex = /(?<=Host: )(.*$)/m;
+    const data = useStaticQuery(graphql`
+        query TimelineQuery {
+            site {
+                siteMetadata {
+                    googleCalendarId: googleCalendarId
+                    googleCalendarApiKey: googleCalendarApiKey
+                }
+            }
+        }
+    `);
+
+    const {
+        googleCalendarApiKey, // gcp key restricted to the calendar api and requests from https://hackthemidlands.com
+        googleCalendarId,
+    } = data.site.siteMetadata;
+
+    const { data: gcalTimelineData } = useSWR(
+        'calendar-events',
+        async () => {
+            let out = await fetch(
+                `https://www.googleapis.com/calendar/v3/calendars/${googleCalendarId}/events?key=${googleCalendarApiKey}`
+            )
+                .then(resp => {
+                    if (resp.ok) {
+                        return resp.json();
+                    } else {
+                        return {};
+                    }
+                })
+                .then(json => {
+                    return json.items.reduce((timeline, event) => {
+                        const m = host_regex.exec(event.description)
+                        const time = moment(event.start.dateTime, 'YYYY-MM-DDTHH:mm:ssZZ').format('HH:mm');
+                        const event_data = {
+                            name: event.summary,
+                            time,
+                            owner: m !== null ? m[0] : event.summary,
+                        };
+                        const day = moment(event.start.dateTime).format('dddd');
+                        if (day in timeline) {
+                            timeline[day].events.push(event_data);
+                        } else {
+                            timeline[day] = {
+                                name: day,
+                                date: moment(event.start.dateTime).format(
+                                    'DD/MM/YY'
+                                ),
+                                events: [event_data],
+                            };
+                        }
+                        return timeline;
+                    }, {});
+                })
+                .catch((e) => {
+                    console.log('error...');
+                    console.error(e);
+                });
+            return out;
+        },
+        {
+            initialData: timelineData,
+            revalidateOnMount: true
+        }
+    );
+
     const wrapper = useRef(null);
     const track = useRef(null);
 
@@ -46,7 +111,7 @@ export const Timeline = (props) => {
      */
     const getEventsForDay = ({ today, date }) => {
         const todayDate = today ? moment() : moment(date, 'DD/MM/YY');
-        const daysData = Object.values(timelineData);
+        const daysData = Object.values(gcalTimelineData);
         return daysData.find((day) => todayDate.isSame(moment(day.date, 'DD/MM/YY'), 'day'))?.events || [];
     };
 
@@ -77,6 +142,7 @@ export const Timeline = (props) => {
         if (state === 'inactive') {
             const newDays = days.map((d) => {
                 if (d.key === key) {
+                    setActiveDay(d)
                     d.state = 'active';
                 } else {
                     d.state = 'inactive';
@@ -89,15 +155,13 @@ export const Timeline = (props) => {
     };
 
     useEffect(() => {
-        if (firstLoad.current) {
-            firstLoad.current = false;
-            let timelineDays = Object.keys(timelineData);
+            let timelineDays = Object.keys(gcalTimelineData);
             timelineDays = timelineDays.map((day) => {
-                const { name, date, events } = timelineData[day];
+                const { name, date, events } = gcalTimelineData[day];
                 const parsedDate = moment(date, 'DD/MM/YY');
                 const isSameDay = moment().isSame(parsedDate, 'day');
                 if (isSameDay) {
-                    setActiveDay(timelineData[day]);
+                    setActiveDay(gcalTimelineData[day]);
                     setTimelineEvents(events);
                 }
                 return {
@@ -109,12 +173,9 @@ export const Timeline = (props) => {
             });
             setDays(timelineDays);
 
-            if (wrapper.current) {
-                const now = moment().hour();
-                wrapper.current.scroll(now * spaceBetweenPoints, 0);
-            }
-        }
+    }, [gcalTimelineData])
 
+    useEffect(() => {
         if (track.current) {
             let maxHeight = 0;
             const children = Array.from(track.current.children);
@@ -126,6 +187,10 @@ export const Timeline = (props) => {
             })
             setTrackHeight(maxHeight);
         }
+            if (wrapper.current) {
+                const now = moment().hour();
+                wrapper.current.scroll(now * spaceBetweenPoints, 0);
+            }
 
     }, [timelineEvents]);
 

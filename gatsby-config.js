@@ -2,6 +2,8 @@ require('dotenv').config({
     path: `.env.${process.env.NODE_ENV}`,
 });
 
+const settings = require('./src/data/site.json');
+
 // const contentfulConfig = {
 //     spaceId: process.env.CONTENTFUL_SPACE_ID,
 //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -24,9 +26,7 @@ require('dotenv').config({
 // }
 
 module.exports = {
-    siteMetadata: {
-        title: 'HackTheMidlands',
-    },
+    siteMetadata: settings.meta,
     pathPrefix: '/gatsby-contentful-starter',
     plugins: [
         'gatsby-transformer-remark',
@@ -49,7 +49,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "UA-177286572-1",
+                trackingId: 'UA-177286572-1',
             },
         },
         `gatsby-optional-chaining`,
