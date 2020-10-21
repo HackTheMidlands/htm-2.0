@@ -121,12 +121,7 @@ export const Timeline = props => {
     };
 
     const renderTimelineItem = (events) => useMemo(() => {
-        if (events.length === 0) {
-            setNoEvents(true);
-            return;
-        } else {
-            setNoEvents(false)
-        }
+        setNoEvents(events.length === 0);
         return events.map(({ id, name, time, owner }) => {
             if (activeDay) {
                 const { date } = activeDay;
@@ -168,23 +163,24 @@ export const Timeline = props => {
     };
 
     useEffect(() => {
-            let timelineDays = Object.keys(gcalTimelineData);
-            timelineDays = timelineDays.map((day) => {
-                const { name, date, events } = gcalTimelineData[day];
-                const parsedDate = moment(date, 'DD/MM/YY');
-                const isSameDay = moment().isSame(parsedDate, 'day');
-                if (isSameDay) {
-                    setActiveDay(gcalTimelineData[day]);
-                    setTimelineEvents(events);
-                }
-                return {
-                    key: day,
-                    name,
-                    state: isSameDay ? 'active' : 'inactive',
-                    date,
-                };
-            });
-            setDays(timelineDays);
+        let timelineDays = Object.keys(gcalTimelineData);
+            setNoEvents(timelineDays.length === 0)
+        timelineDays = timelineDays.map((day) => {
+            const { name, date, events } = gcalTimelineData[day];
+            const parsedDate = moment(date, 'DD/MM/YY');
+            const isSameDay = moment().isSame(parsedDate, 'day');
+            if (isSameDay) {
+                setActiveDay(gcalTimelineData[day]);
+                setTimelineEvents(events);
+            }
+            return {
+                key: day,
+                name,
+                state: isSameDay ? 'active' : 'inactive',
+                date,
+            };
+        });
+        setDays(timelineDays);
     }, [gcalTimelineData])
 
     useEffect(() => {
