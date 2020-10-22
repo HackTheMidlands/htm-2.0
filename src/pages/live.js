@@ -1,11 +1,13 @@
 import React from 'react';
 import moment from 'moment';
+import { graphql } from 'gatsby';
 
 // Style import
 import style from './live.module.scss';
 
 // Data
 import { faqData } from '../data/faq';
+import challengeData from '../data/challenges/challenges.json';
 
 // Components
 import { LiveHeaderText } from '../components/live-header-text/live-header-text';
@@ -17,6 +19,7 @@ import { LiveDiscord } from '../components/live-discord/live-discord';
 import { Timeline } from '../components/timeline/timeline';
 import { LiveFaq } from '../components/live-faq/live-faq';
 import { Seo } from '../components/seo/seo';
+import { LiveChallenges } from '../components/live-challenges/live-challenges'
 
 
 // Image imports
@@ -92,6 +95,7 @@ const Live = (props) => {
 
             <section className={style.section} id="challenges">
                 <LiveHeaderText text="Challenges" />
+                <LiveChallenges challenges={challengeData} />
             </section>
 
             <section className={style.section} id="timeline">

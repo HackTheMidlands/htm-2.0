@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Making IT Good For Society",
+    "sponsor": "BCS Birmingham Branch",
+    "logo": "/images/challenges/logos/bcs.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/bcs.jpg"
+  },
+  {
+    "name": "Make Us Laugh",
+    "sponsor": "Majestic",
+    "logo": "/images/challenges/logos/majestic.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/majestic.jpg"
+  },
+  {
+    "name": "Best Financial Hack",
+    "sponsor": "Capital One",
+    "logo": "/images/challenges/logos/capital-one.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/capital-one.jpg"
+  },
+  {
+    "name": "Educating Young People About Cyber Security",
+    "sponsor": "BT",
+    "logo": "/images/challenges/logos/bt.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/bt.jpg"
+  },
+  {
+    "name": "Supporting The Fight Against COVID-19",
+    "sponsor": "Capgemini",
+    "logo": "/images/challenges/logos/capgemini.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/capgemini.jpg"
+  },
+  {
+    "name": "Best Use Of Serverless Technology",
+    "sponsor": "Kainos",
+    "logo": "/images/challenges/logos/kainos.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/kainos.jpg"
+  },
+  {
+    "name": "Supporting Personal Mental Health",
+    "sponsor": "The Fusion Group",
+    "logo": "/images/challenges/logos/fusion.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/fusion.jpg"
+  },
+  {
+    "name": "Helping Your Local Community",
+    "sponsor": "Northrop Grumman",
+    "logo": "/images/challenges/logos/northrop-grumman.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/northrop.jpg"
+  },
+  {
+    "name": "Make Something Boring, Fun",
+    "sponsor": "20i",
+    "logo": "/images/challenges/logos/20i.png",
+    "logoBackground": "#C1CCC4",
+    "featureImage": "/images/challenges/feature-images/20i.jpg"
+  }
+]

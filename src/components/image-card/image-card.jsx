@@ -15,15 +15,21 @@ import style from './image-card.module.scss';
 // Image imports
 
 /**
- * MissionBlock components
- * @param props
+ * Image card component
+ * @param name
+ * @param image
+ * @param children
+ * @param headerStyle
  * @returns {*}
  * @constructor
  */
-export const ImageCard = ({ name, image, children }) => (
-    <article className={style.imageCard}>
-        <div className={style.header}>
+export const ImageCard = ({
+    name, image, children, componentStyle, headerStyle, overlay,
+}) => (
+    <article className={style.imageCard} style={componentStyle}>
+        <div className={style.header} style={headerStyle}>
             <img src={image} className={style.image} alt={name} />
+            { overlay && (<div className={style.overlay} style={{ backgroundColor: overlay }} />) }
         </div>
         <div className={style.content}>
             { children }
@@ -36,9 +42,13 @@ ImageCard.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string.isRequired,
     children: PropTypes.string.isRequired,
+    headerStyle: PropTypes.object,
+    overlay: PropTypes.string,
 };
 
 // Default props
 ImageCard.defaultProps = {
     name: uniqud('image-card'),
+    headerStyle: {},
+    overlay: null,
 };
