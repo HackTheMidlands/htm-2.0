@@ -19,7 +19,7 @@ import { LiveDiscord } from '../components/live-discord/live-discord';
 import { Timeline } from '../components/timeline/timeline';
 import { LiveFaq } from '../components/live-faq/live-faq';
 import { Seo } from '../components/seo/seo';
-import { LiveChallenges } from '../components/live-challenges/live-challenges'
+import { LiveChallenges } from '../components/live-challenges/live-challenges';
 
 
 // Image imports
@@ -28,6 +28,12 @@ import Majestic from '../assets/img/logos/white/majestic.png';
 import Northrop from '../assets/img/logos/white/northrop-grumman.png';
 import Kainos from '../assets/img/logos/white/kainos.png';
 import Capgemini from '../assets/img/logos/white/capgemini.png';
+import Bt from '../assets/img/logos/white/bt.png';
+import Fusion from '../assets/img/logos/white/fusion.png';
+import TwentyI from '../assets/img/logos/white/20i.png';
+import Mike from '../assets/img/logos/white/mike.png';
+import ChamberOfCommerce from '../assets/img/logos/white/chamber-of-commerce.png';
+import Bcs from '../assets/img/logos/white/bcs.png';
 
 const dateTo = moment('2020-10-22');
 
@@ -58,8 +64,38 @@ const companyLogos = [
         link: '',
     },
     {
-        alt: 'Other',
+        alt: 'Northrop',
         url: Northrop,
+        link: '',
+    },
+    {
+        alt: 'BT',
+        url: Bt,
+        link: 'https://bt.com',
+    },
+    {
+        alt: 'Fusion',
+        url: Fusion,
+        link: '',
+    },
+    {
+        alt: '20i',
+        url: TwentyI,
+        link: '',
+    },
+    {
+        alt: 'Mike Elsmore',
+        url: Mike,
+        link: '',
+    },
+    {
+        alt: 'Northrop',
+        url: ChamberOfCommerce,
+        link: '',
+    },
+    {
+        alt: 'BCS',
+        url: Bcs,
         link: '',
     },
 ];
@@ -70,44 +106,42 @@ const companyLogos = [
  * @returns {*}
  * @constructor
  */
-const Live = (props) => {
-    return (
-        <main className={style.page}>
-            <Seo title="HTM 5.0 Live" />
+const Live = (props) => (
+    <main className={style.page}>
+        <Seo title="HTM 5.0 Live" />
 
-            <LiveNavBar />
+        <LiveNavBar />
 
-            <LivePageHeader />
+        <LivePageHeader />
 
-            <section className={style.section}>
-                <LogoStrip logos={companyLogos} />
-            </section>
+        <section className={style.section}>
+            <LogoStrip logos={companyLogos} />
+        </section>
 
 
-            <section className={style.section}>
-                <LiveCountdown countdownToDate={dateTo} />
-            </section>
+        <section className={style.section}>
+            <LiveCountdown countdownToDate={dateTo} />
+        </section>
 
-            <section className={style.section} id="discord">
-                <LiveHeaderText text="Join Us" />
-                <LiveDiscord />
-            </section>
+        <section className={style.section} id="discord">
+            <LiveHeaderText text="Join Us" />
+            <LiveDiscord />
+        </section>
 
-            <section className={style.section} id="challenges">
-                <LiveHeaderText text="Challenges" />
-                <LiveChallenges challenges={challengeData} />
-            </section>
+        <section className={style.section} id="challenges">
+            <LiveHeaderText text="Challenges" />
+            <LiveChallenges challenges={challengeData} />
+        </section>
 
-            <section className={style.section} id="timeline">
-                <LiveHeaderText text="Timeline" />
-                <Timeline />
-            </section>
+        <section className={style.section} id="timeline">
+            <LiveHeaderText text="Timeline" />
+            <Timeline />
+        </section>
 
-            <section className={style.section} id="faq">
-                <LiveFaq cards={faqData} />
-            </section>
-        </main>
-    );
-};
+        <section className={style.section} id="faq">
+            <LiveFaq cards={faqData} />
+        </section>
+    </main>
+);
 
 export default Live;
