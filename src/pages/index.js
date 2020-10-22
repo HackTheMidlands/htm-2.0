@@ -64,7 +64,7 @@ const eventDetails = [
     {
         icon: DiscordSquareIcon,
         title: 'Participate with Discord',
-        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.com/invite/kx9azme" target="_blank">join the server</a> to get involved.',
+        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
         colour: 'rgba(114, 137, 218, .5)',
     },
     // {
@@ -102,6 +102,11 @@ const testimonials = [
 
 const gold = [
     {
+        image: '/sponsors/bcs.png',
+        name: 'BCS Birmingham',
+        link: 'https://www.bcs.org/membership/member-communities/birmingham-branch',
+    },
+    {
         image: '/sponsors/majestic.png',
         name: 'Majestic',
         link: 'https://majestic.com',
@@ -111,11 +116,11 @@ const gold = [
         name: 'Capital One',
         link: 'https://capitalone.com',
     },
-    // {
-    //     image: 'https://www.bjss.com/wp-content/uploads/BJSS-870x460.png',
-    //     name: 'BJSS',
-    //     link: 'https://bjss.com',
-    // },
+    {
+        image: '/sponsors/BT_Logo_Indigo_RGB.svg',
+        name: 'BT',
+        link: 'https://bt.com',
+    },
 ];
 
 const silver = [
@@ -134,18 +139,28 @@ const silver = [
         name: 'Capgemini',
         link: 'https://www.capgemini.com/',
     },
+    {
+        image: '/sponsors/kainos.png',
+        name: 'Kainos',
+        link: 'https://www.kainos.com/',
+    },
+    {
+        image: '/sponsors/fusion-meetup.png',
+        name: 'Fusion Meetup',
+        link: 'https://thefusionhub.co.uk/',
+    },
 ];
 
 const bronze = [
     {
-        image: '/sponsors/fusion-meetup.png',
-        name: 'Fusion Meetup',
-        link: 'https://www.meetup.com/Fusion-Technology-Meetup-Birmingham/',
-    },
-    {
         image: 'https://raw.githubusercontent.com/ukmadlz/ukmadlz.github.io/02bab2c5e1b57f67adf916c234a63e4de27a5e02/assets/images/mike-elsmore.svg',
         name: 'Mike Elsmore',
         link: 'https://elsmore.me/',
+    },
+    {
+        image: '/sponsors/Chambers_of_Commerce.png',
+        name: 'Chambers of Commerce',
+        link: '/',
     },
 ];
 
@@ -156,6 +171,26 @@ const partners = [
         image: 'https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.svg',
         name: 'sponsor',
         link: 'https://mlh.io',
+    },
+    {
+        image: 'https://github.com/CSSUoB/resources/raw/master/logo/CSS%20Logo%20-%20Colour%20-%20Background%20-%20Bold.svg',
+        name: 'sponsor',
+        link: 'https://cssbham.com/',
+    },
+    {
+        image: '/sponsors/DSC_UOB.png',
+        name: 'sponsor',
+        link: 'https://dsc.community.dev/university-of-birmingham/',
+    },
+    {
+        image: '/sponsors/gdn_blue.png',
+        name: 'sponsor',
+        link: 'https://gdn.gg/',
+    },
+    {
+        image: '/sponsors/echoAR.png',
+        name: 'echoAR',
+        link: 'https://www.echoar.xyz/',
     },
 ];
 
@@ -322,5 +357,93 @@ const Index = (props) => {
         </Layout>
     );
 };
+
+
+// const Index = (props) => (
+//     <Layout>
+//
+//         <HeroHeader>
+//             <Grid>
+//                 <Row>
+//                     <Col xs={12} sm={10} smOffset={1}>
+//                         <h1 className={style.headerTitle}>HackTheMidlands 5.0</h1>
+//                         <ul className={style.eventInfoList}>
+//                             <li className={style.eventInfoListItem}>
+//                                 <LocationInfo />
+//                                 <p>Virtual Event</p>
+//                             </li>
+//                             <li className={style.eventInfoListItem}>
+//                                 <CalendarIcon />
+//                                 <p>Thursday 22nd - Sunday 25th October, 2020</p>
+//                             </li>
+//                         </ul>
+//                         <div className={style.headerButtons}>
+//                             <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank">
+//                                 <Button theme="orange">Get tickets</Button>
+//                             </a>
+//                             <a href="/sponsorship.pdf" target="_blank">
+//                                 <Button theme="whiteSolid">Sponsor</Button>
+//                             </a>
+//                             <a href="/speak" target="_blank">
+//                                 <Button theme="whiteSolid">Speak</Button>
+//                             </a>
+//                             <a href="https://discord.gg/hackthemidlands" target="_blank" style={{ textDecoration: 'none' }}>
+//                                 <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0" border="2px solid #4f66bd">Join Discord</ButtonWithIcon>
+//                             </a>
+//                         </div>
+//                     </Col>
+//                 </Row>
+//             </Grid>
+//         </HeroHeader>
+//
+//         <section className={style.featureVideo}>
+//             <Grid>
+//                 <Row>
+//                     <Col lg={8} lgOffset={2}>
+//                         <Video sources={sources} poster={poster} controls={false} />
+//                     </Col>
+//                 </Row>
+//             </Grid>
+//         </section>
+//
+//         {/*<EventIntroStatistics*/}
+//         {/*    statOne={{ statistic: '300+', text: 'Attendees' }}*/}
+//         {/*    statTwo={{ statistic: '400', text: 'Projects made' }}*/}
+//         {/*/>*/}
+//
+//         <IndexIntro title={intro.title} body={intro.body} />
+//
+//         <EventInfo>
+//             <Grid>
+//                 <Row>
+//                     <Col lg={10} lgOffset={1}>
+//                         <Row>
+//                             { eventDetails.map(({ icon, title, body, colour }) => (
+//                                 <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
+//                                     <IconCard key={title} body={body} icon={icon} title={title} colour={colour} />
+//                                 </Col>
+//                             ))}
+//                         </Row>
+//                     </Col>
+//                 </Row>
+//             </Grid>
+//         </EventInfo>
+//
+//         {/*<EventLocation />*/}
+//
+//         {/*<TestimonialSliderSection testimonials={testimonials} />*/}
+//
+//         <SponsorsSection goldTier={gold} silverTier={silver} bronzeTier={bronze} digitalTier={digital} partners={partners} />
+//
+//         <SponsorCta />
+//
+//         <TicketsSection tickets={tickets} />
+//
+//         <FaqSection questions={qa} />
+//
+//         <StayConnectedSection />
+//
+//     </Layout>
+// );
 
 export default Index;
