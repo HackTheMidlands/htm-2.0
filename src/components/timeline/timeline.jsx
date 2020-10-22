@@ -75,10 +75,12 @@ export const Timeline = props => {
                     return json.items.reduce((timeline, event) => {
                         const owner = event.description !== undefined ? event.description.match(host_regex)[1] : ''
                         const time = moment(event.start.dateTime, 'YYYY-MM-DDTHH:mm:ssZZ').format('HH:mm');
+                        const endTime = moment(event.end.dateTime, 'YYYY-MM-DDTHH:mm:ssZZ').format('HH:mm');
                         const event_data = {
                             id: event.id,
                             name: event.summary,
                             time,
+                            endTime,
                             owner,
                         };
                         const day = moment(event.start.dateTime).format('dddd');
@@ -122,7 +124,7 @@ export const Timeline = props => {
 
     const renderTimelineItem = (events) => useMemo(() => {
         setNoEvents(events.length === 0);
-        return events.map(({ id, name, time, owner }) => {
+        return events.map(({ id, name, time, endTime, owner }) => {
             if (activeDay) {
                 const { date } = activeDay;
                 const currentDay = moment(activeDay.date, 'DD/MM/YY');
@@ -138,7 +140,7 @@ export const Timeline = props => {
                         className={style.item}
                         style={{ transform: `translateX(${eventDiff * spaceBetweenPoints}px)` }}
                     >
-                        <TimelineItem time={time} owner={owner} name={name} state={state} />
+                        <TimelineItem time={time} endTime={endTime} owner={owner} name={name} state={state} />
                     </div>
                 );
             }
