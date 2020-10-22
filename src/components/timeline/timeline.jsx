@@ -29,7 +29,7 @@ import { timelineData } from '../../data/timeline';
  * @constructor
  */
 export const Timeline = props => {
-    const host_regex = /(?<=Host: )(.*$)/m;
+    const host_regex = /(?:Host: )(.*$)/m;
 
     const wrapper = useRef(null);
     const track = useRef(null);
@@ -73,13 +73,13 @@ export const Timeline = props => {
                 })
                 .then(json => {
                     return json.items.reduce((timeline, event) => {
-                        const m = host_regex.exec(event.description)
+                        const owner = event.description !== undefined ? event.description.match(host_regex)[1] : ''
                         const time = moment(event.start.dateTime, 'YYYY-MM-DDTHH:mm:ssZZ').format('HH:mm');
                         const event_data = {
                             id: event.id,
                             name: event.summary,
                             time,
-                            owner: m !== null ? m[0] : event.summary,
+                            owner,
                         };
                         const day = moment(event.start.dateTime).format('dddd');
                         if (day in timeline) {
@@ -98,7 +98,7 @@ export const Timeline = props => {
                 })
                 .catch((e) => {
                     console.log('error...');
-                    console.error(e);
+                    console.log(e);
                 });
             return out;
         },
