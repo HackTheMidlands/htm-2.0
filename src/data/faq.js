@@ -19,4 +19,8 @@ export const faqData = [
         title: 'When does the event start and end?',
         body: 'The event will start on the 22nd October at 7PM BST and finish at 9PM 25th October.',
     },
+    {
+        title: 'When is the opening ceremony?',
+        body: 'The grand opening ceremony will start at 7:00PM BST on Thursday 22nd October. For more see the timeline above 🔥',
+    },
 ];
