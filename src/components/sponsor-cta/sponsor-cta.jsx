@@ -19,7 +19,7 @@ import SponsorImage from './assets/sponsor-graphic.png';
 import RevolvingHearts from '../../assets/gifs/revolving_hearts.gif';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

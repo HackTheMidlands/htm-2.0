@@ -20,7 +20,7 @@ import TicketLocked from './assets/ticket-locked.inline.svg';
 import TicketExternal from './assets/external.inline.svg';
 
 /**
- * Ticket component
+ * Ticket components
  * @param ticketName
  * @param releaseDate
  * @param expireDate

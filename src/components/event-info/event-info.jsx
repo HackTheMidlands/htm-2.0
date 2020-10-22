@@ -19,7 +19,7 @@ import EventPicThree from './assets/event-pic-three.jpg';
 import UnicornGif from '../../assets/gifs/unicorn.gif';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

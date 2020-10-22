@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import moment from 'moment';
+import { Link, navigate } from 'gatsby';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 // Style import
 import style from './index.module.scss';
@@ -20,7 +23,7 @@ import { SponsorCta } from '../components/sponsor-cta/sponsor-cta';
 import { TicketsSection } from '../components/tickets-section/tickets-section';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
-import { IndexIntro } from '../components/index-intro/index-intro'
+import { IndexIntro } from '../components/index-intro/index-intro';
 
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
@@ -30,11 +33,12 @@ import DiscordSquareIcon from './assets/discord-square.svg';
 import FoodAndDrinkIcon from './assets/food-and-drink.svg';
 import SafeguardingIcon from './assets/safeguarding.svg';
 import EntryRequirementsIcon from './assets/entry.svg';
+import PartyFace from '../assets/gifs/partying_face.gif';
 
 import DemoVideo from '../components/video/assets/example-video.mp4';
 import HTMVideo from '../assets/hero-video.mp4';
-import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon'
-import Discord from '../assets/img/discord-white.svg'
+import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
+import Discord from '../assets/img/discord-white.svg';
 
 const sources = [
     {
@@ -233,6 +237,15 @@ const qa = [
     },
 ];
 
+const MySwal = withReactContent(Swal);
+
+const ModalContent = () => (
+    <div className={style.modal}>
+        <img src={PartyFace} alt="Party face animated emoji" />
+        <h2>HTM 5.0 is Live!</h2>
+        <p>We&apos;re now live, head over to <Link to="/live" onClick={() => MySwal.close()}>our live page</Link> to watch our stream and keep up to speed with our awesome event!</p>
+    </div>
+)
 
 /**
  * Hackathon template
@@ -240,91 +253,109 @@ const qa = [
  * @returns {*}
  * @constructor
  */
-const Index = (props) => (
-    <Layout>
+const Index = (props) => {
+    useEffect(() => {
+        MySwal.fire({
+            html: ModalContent(),
+            showCancelButton: true,
+            confirmButtonText: 'Head To Live Page!',
+            confirmButtonColor: '#449AFD',
+            cancelButtonText: 'Stay Here',
+            cancelButtonColor: '#FF7365',
+        }).then(({ isConfirmed }) => {
+            MySwal.close();
+            if (isConfirmed) {
+                navigate('/live');
+            }
+        });
+    }), [];
+    return (
+        <Layout>
+            <HeroHeader>
+                <Grid>
+                    <Row>
+                        <Col xs={12} sm={10} smOffset={1}>
+                            <h1 className={style.headerTitle}>HackTheMidlands 5.0</h1>
+                            <ul className={style.eventInfoList}>
+                                <li className={style.eventInfoListItem}>
+                                    <LocationInfo />
+                                    <p>Virtual Event</p>
+                                </li>
+                                <li className={style.eventInfoListItem}>
+                                    <CalendarIcon />
+                                    <p>Thursday 22nd - Sunday 25th October, 2020</p>
+                                </li>
+                            </ul>
+                            <div className={style.headerButtons}>
+                                <Link to="/live" target="_blank">
+                                    <Button theme="orange">View Live Page</Button>
+                                </Link>
+                                {/* <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank"> */}
+                                {/*    <Button theme="orange">Get tickets</Button> */}
+                                {/* </a> */}
+                                {/* <a href="/sponsorship.pdf" target="_blank"> */}
+                                {/*    <Button theme="whiteSolid">Sponsor</Button> */}
+                                {/* </a> */}
+                                <a href="https://discord.gg/kx9azme" target="_blank" style={{ textDecoration: 'none' }}>
+                                    <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0" border="2px solid #4f66bd">Join Discord</ButtonWithIcon>
+                                </a>
+                            </div>
+                        </Col>
+                    </Row>
+                </Grid>
+            </HeroHeader>
 
-        <HeroHeader>
-            <Grid>
-                <Row>
-                    <Col xs={12} sm={10} smOffset={1}>
-                        <h1 className={style.headerTitle}>HackTheMidlands 5.0</h1>
-                        <ul className={style.eventInfoList}>
-                            <li className={style.eventInfoListItem}>
-                                <LocationInfo />
-                                <p>Virtual Event</p>
-                            </li>
-                            <li className={style.eventInfoListItem}>
-                                <CalendarIcon />
-                                <p>Thursday 22nd - Sunday 25th October, 2020</p>
-                            </li>
-                        </ul>
-                        <div className={style.headerButtons}>
-                            <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank">
-                                <Button theme="orange">Get tickets</Button>
-                            </a>
-                            <a href="/sponsorship.pdf" target="_blank">
-                                <Button theme="whiteSolid">Sponsor</Button>
-                            </a>
-                            <a href="/speak" target="_blank">
-                                <Button theme="whiteSolid">Speak</Button>
-                            </a>
-                            <a href="https://discord.gg/hackthemidlands" target="_blank" style={{ textDecoration: 'none' }}>
-                                <ButtonWithIcon icon={Discord} name="Discord" backgroundColor="#6F87E0" border="2px solid #4f66bd">Join Discord</ButtonWithIcon>
-                            </a>
-                        </div>
-                    </Col>
-                </Row>
-            </Grid>
-        </HeroHeader>
+            <section className={style.featureVideo}>
+                <Grid>
+                    <Row>
+                        <Col lg={8} lgOffset={2}>
+                            <Video sources={sources} poster={poster} controls={false} />
+                        </Col>
+                    </Row>
+                </Grid>
+            </section>
 
-        <section className={style.featureVideo}>
-            <Grid>
-                <Row>
-                    <Col lg={8} lgOffset={2}>
-                        <Video sources={sources} poster={poster} controls={false} />
-                    </Col>
-                </Row>
-            </Grid>
-        </section>
+            {/* <EventIntroStatistics */}
+            {/*    statOne={{ statistic: '300+', text: 'Attendees' }} */}
+            {/*    statTwo={{ statistic: '400', text: 'Projects made' }} */}
+            {/* /> */}
 
-        {/*<EventIntroStatistics*/}
-        {/*    statOne={{ statistic: '300+', text: 'Attendees' }}*/}
-        {/*    statTwo={{ statistic: '400', text: 'Projects made' }}*/}
-        {/*/>*/}
+            <IndexIntro title={intro.title} body={intro.body} />
 
-        <IndexIntro title={intro.title} body={intro.body} />
+            <EventInfo>
+                <Grid>
+                    <Row>
+                        <Col lg={10} lgOffset={1}>
+                            <Row>
+                                { eventDetails.map(({
+                                    icon, title, body, colour,
+                                }) => (
+                                    <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
+                                        <IconCard key={title} body={body} icon={icon} title={title} colour={colour} />
+                                    </Col>
+                                ))}
+                            </Row>
+                        </Col>
+                    </Row>
+                </Grid>
+            </EventInfo>
 
-        <EventInfo>
-            <Grid>
-                <Row>
-                    <Col lg={10} lgOffset={1}>
-                        <Row>
-                            { eventDetails.map(({ icon, title, body, colour }) => (
-                                <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
-                                    <IconCard key={title} body={body} icon={icon} title={title} colour={colour} />
-                                </Col>
-                            ))}
-                        </Row>
-                    </Col>
-                </Row>
-            </Grid>
-        </EventInfo>
+            {/* <EventLocation /> */}
 
-        {/*<EventLocation />*/}
+            {/* <TestimonialSliderSection testimonials={testimonials} /> */}
 
-        {/*<TestimonialSliderSection testimonials={testimonials} />*/}
+            <SponsorsSection goldTier={gold} silverTier={silver} bronzeTier={bronze} digitalTier={digital} partners={partners} />
 
-        <SponsorsSection goldTier={gold} silverTier={silver} bronzeTier={bronze} digitalTier={digital} partners={partners} />
+            <SponsorCta />
 
-        <SponsorCta />
+            <TicketsSection tickets={tickets} />
 
-        <TicketsSection tickets={tickets} />
+            <FaqSection questions={qa} />
 
-        <FaqSection questions={qa} />
+            <StayConnectedSection />
 
-        <StayConnectedSection />
-
-    </Layout>
-);
+        </Layout>
+    );
+};
 
 export default Index;

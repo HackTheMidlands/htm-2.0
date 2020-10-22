@@ -14,7 +14,7 @@ import style from './example.module.scss';
 // Image imports
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

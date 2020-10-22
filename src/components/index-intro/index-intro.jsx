@@ -18,7 +18,7 @@ import HeartGif from '../../assets/gifs/sparkling_heart.gif';
 import SmileWithHeart from '../../assets/gifs/smiling_face_with_hearts.gif';
 
 /**
- * Index intro component
+ * Index intro components
  * @param title
  * @param body
  * @returns {*}

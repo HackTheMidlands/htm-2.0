@@ -19,7 +19,7 @@ import Shapes from './assets/shapes.svg';
 import DotGrid from './assets/dot-grid.svg';
 
 /**
- * IndexFeatures component
+ * IndexFeatures components
  * @param props
  * @returns {*}
  * @constructor

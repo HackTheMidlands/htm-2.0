@@ -17,7 +17,7 @@ import LocationIcon from './assets/location.svg';
 import CalendarIcon from './assets/calendar.svg';
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor

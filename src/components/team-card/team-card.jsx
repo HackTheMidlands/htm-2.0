@@ -14,7 +14,7 @@ import style from './team-card.module.scss';
 // Image imports
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param image
  * @param name
  * @param nickname

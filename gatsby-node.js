@@ -31,7 +31,7 @@
 //                 posts.forEach((post, index) => {
 //                     createPage({
 //                         path: `/blog/${post.node.slug}/`,
-//                         component: blogPost,
+//                         components: blogPost,
 //                         context: {
 //                             slug: post.node.slug,
 //                         },
@@ -40,9 +40,24 @@
 //
 //                 createPage({
 //                     path: '/events/htm-5',
-//                     component: hackathonTemplate,
+//                     components: hackathonTemplate,
 //                 });
 //             }),
 //         );
 //     });
 // };
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+    if (stage === 'build-html') {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /masonry-layout/,
+                        use: loaders.null(),
+                    },
+                ],
+            },
+        });
+    }
+};

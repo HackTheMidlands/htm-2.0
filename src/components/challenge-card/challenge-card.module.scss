@@ -1,0 +1,27 @@
+@import "../../styles/helpers/make-property";
+
+.eventName {
+  margin: 0 auto 5px auto;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+  position: relative;
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+}
+
+.eventName {
+  margin-top: 15px;
+  @include make-property('font-size', 25px);
+  @include make-property('line-height', 30px);
+}

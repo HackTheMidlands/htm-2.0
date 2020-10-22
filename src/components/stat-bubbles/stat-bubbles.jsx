@@ -21,7 +21,7 @@ const StatBubble = ({ statistic, text, type }) => (
 );
 
 /**
- * MissionBlock component
+ * MissionBlock components
  * @param props
  * @returns {*}
  * @constructor
