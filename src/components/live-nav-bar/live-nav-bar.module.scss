@@ -19,6 +19,9 @@
   //padding-right: 85px !important;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  @media screen and (max-width: 500px){
+    justify-content: center;
+  }
 }
 
 .left, .right {
@@ -29,6 +32,9 @@
   align-items: center;
   width: 40%;
   flex-wrap: wrap;
+  @media screen and (max-width: 500px){
+    display: none;
+  }
 }
 
 .right {
