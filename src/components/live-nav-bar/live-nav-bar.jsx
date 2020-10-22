@@ -61,7 +61,9 @@ export const LiveNavBar = (props) => {
                                 </li>
                             </ul>
                             <div className={styles.logo}>
-                                <img src={Logo} alt="HackTheMidlands logo" className={styles.logo} style={{ width: navScrolled ? '90px' : '120px' }} />
+                                <Link to="/">
+                                    <img src={Logo} alt="HackTheMidlands logo" className={styles.logo} style={{ width: navScrolled ? '90px' : '120px' }} />
+                                </Link>
                             </div>
                             <ul className={styles.right}>
                                 <li className={styles.rightItem}>
