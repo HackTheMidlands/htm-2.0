@@ -243,6 +243,7 @@ export const Timeline = props => {
                             </div>
                             <TimelineTime currentDay={activeDay && moment(activeDay.date, 'DD/MM/YY').isSame(moment(), 'day')} />
                         </div>
+                        <p className={style.adjust}>Timezones are adjusted to your local time</p>
                     </Col>
                 </Row>
 
