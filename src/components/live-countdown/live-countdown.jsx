@@ -102,6 +102,16 @@ export const LiveCountdown = ({ countdownToDate }) => {
         });
     };
 
+    const RenderText = () => {
+        const current = moment();
+        const currentUnix = current.unix();
+
+        if (currentUnix < times.start.unix()) {
+            return 'Event Begins In';
+        }
+        return 'Event Ends In';
+    };
+
     useEffect(() => {
         const countdownInterval = setInterval(calculateCountdownValues, 1000);
 
@@ -114,7 +124,7 @@ export const LiveCountdown = ({ countdownToDate }) => {
         <Grid fluid>
             <Row>
                 <Col xl={12}>
-                    <h3 className={styles.title}>Event Begins In</h3>
+                    <h3 className={styles.title}>{ RenderText() }</h3>
                 </Col>
             </Row>
             <Row>
