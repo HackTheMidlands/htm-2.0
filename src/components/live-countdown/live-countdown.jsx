@@ -95,10 +95,10 @@ export const LiveCountdown = ({ countdownToDate }) => {
         const diffTime = currentUnix < times.start.unix() ? times.start.unix() - currentUnix : times.end.unix() - currentUnix;
         const duration = moment.duration(diffTime, 'seconds');
         setCountdown({
-            days: duration.days(),
-            hours: duration.hours(),
-            minutes: duration.minutes(),
-            seconds: duration.seconds(),
+            days: Math.max(0, duration.days()),
+            hours: Math.max(0, duration.hours()),
+            minutes: Math.max(0, duration.minutes()),
+            seconds: Math.max(0, duration.seconds()),
         });
     };
 
