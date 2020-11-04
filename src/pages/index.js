@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import moment from 'moment';
 import { Link, navigate } from 'gatsby';
-import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 // Style import
@@ -237,16 +236,6 @@ const qa = [
     },
 ];
 
-const MySwal = withReactContent(Swal);
-
-const ModalContent = () => (
-    <div className={style.modal}>
-        <img src={PartyFace} alt="Party face animated emoji" />
-        <h2>HTM 5.0 is Live!</h2>
-        <p>We&apos;re now live, head over to <Link to="/live" onClick={() => MySwal.close()}>our live page</Link> to watch our stream and keep up to speed with our awesome event!</p>
-    </div>
-)
-
 /**
  * Hackathon template
  * @param props
@@ -254,21 +243,6 @@ const ModalContent = () => (
  * @constructor
  */
 const Index = (props) => {
-    useEffect(() => {
-        MySwal.fire({
-            html: ModalContent(),
-            showCancelButton: true,
-            confirmButtonText: 'Head To Live Page!',
-            confirmButtonColor: '#449AFD',
-            cancelButtonText: 'Stay Here',
-            cancelButtonColor: '#FF7365',
-        }).then(({ isConfirmed }) => {
-            MySwal.close();
-            if (isConfirmed) {
-                navigate('/live');
-            }
-        });
-    }), [];
     return (
         <Layout>
             <HeroHeader>
