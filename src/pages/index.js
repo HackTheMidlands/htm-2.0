@@ -99,99 +99,15 @@ const testimonials = [
     },
 ];
 
-const gold = [
-    {
-        image: '/sponsors/bcs.png',
-        name: 'BCS Birmingham',
-        link: 'https://www.bcs.org/membership/member-communities/birmingham-branch',
-    },
-    {
-        image: '/sponsors/majestic.png',
-        name: 'Majestic',
-        link: 'https://majestic.com',
-    },
-    {
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Capital_One_logo.svg/1200px-Capital_One_logo.svg.png',
-        name: 'Capital One',
-        link: 'https://capitalone.com',
-    },
-    {
-        image: '/sponsors/BT_Logo_Indigo_RGB.svg',
-        name: 'BT',
-        link: 'https://bt.com',
-    },
-];
+const gold = [];
 
-const silver = [
-    {
-        image: '/sponsors/northrop-grumman.png',
-        name: 'Northrop Grumman',
-        link: 'https://www.northropgrumman.com/',
-    },
-    {
-        image: '/sponsors/20i.svg',
-        name: '20i',
-        link: 'https://www.20i.com/',
-    },
-    {
-        image: '/sponsors/capgemini.png',
-        name: 'Capgemini',
-        link: 'https://www.capgemini.com/',
-    },
-    {
-        image: '/sponsors/kainos.png',
-        name: 'Kainos',
-        link: 'https://www.kainos.com/',
-    },
-    {
-        image: '/sponsors/fusion-meetup.png',
-        name: 'Fusion Meetup',
-        link: 'https://thefusionhub.co.uk/',
-    },
-];
+const silver = [];
 
-const bronze = [
-    {
-        image: 'https://raw.githubusercontent.com/ukmadlz/ukmadlz.github.io/02bab2c5e1b57f67adf916c234a63e4de27a5e02/assets/images/mike-elsmore.svg',
-        name: 'Mike Elsmore',
-        link: 'https://elsmore.me/',
-    },
-    {
-        image: '/sponsors/Chambers_of_Commerce.png',
-        name: 'Chambers of Commerce',
-        link: '/',
-    },
-];
+const bronze = [];
 
 const digital = [];
 
-const partners = [
-    {
-        image: 'https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.svg',
-        name: 'sponsor',
-        link: 'https://mlh.io',
-    },
-    {
-        image: 'https://github.com/CSSUoB/resources/raw/master/logo/CSS%20Logo%20-%20Colour%20-%20Background%20-%20Bold.svg',
-        name: 'sponsor',
-        link: 'https://cssbham.com/',
-    },
-    {
-        image: '/sponsors/DSC_UOB.png',
-        name: 'sponsor',
-        link: 'https://dsc.community.dev/university-of-birmingham/',
-    },
-    {
-        image: '/sponsors/gdn_blue.png',
-        name: 'sponsor',
-        link: 'https://gdn.gg/',
-    },
-    {
-        image: '/sponsors/echoAR.png',
-        name: 'echoAR',
-        link: 'https://www.echoar.xyz/',
-    },
-];
+const partners = [];
 
 const tickets = [
     {
