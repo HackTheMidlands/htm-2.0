@@ -109,29 +109,7 @@ const digital = [];
 
 const partners = [];
 
-const tickets = [
-    {
-        ticketName: 'HTM 2020 Virtual',
-        releaseDate: moment('07/09/2020 12:00:00', 'DD/MM/YYYY hh:mm:ss'),
-        expireDate: moment().add(2, 'months'),
-        state: 'active',
-        link: 'https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070',
-    },
-    // {
-    //     ticketName: 'Wave Two',
-    //     releaseDate: moment().subtract(10, 'days'),
-    //     expireDate: moment().subtract(1, 'days'),
-    //     state: 'active',
-    //     link: 'https://google.com',
-    // },
-    // {
-    //     ticketName: 'Wave Three',
-    //     releaseDate: moment().subtract(2, 'days'),
-    //     expireDate: moment().add(30, 'days'),
-    //     state: 'active',
-    //     link: 'https://google.com',
-    // },
-];
+const tickets = [];
 
 const qa = [
     {
