@@ -57,7 +57,7 @@ const eventDetails = [
     {
         icon: TimeIcon,
         title: 'Date & Time',
-        body: 'The event will run online via Discord between the 22nd - 26th October 2020. Don\'t miss out!',
+        body: 'The event will run online via Discord between the 28th - 31st October 2021. Don\'t miss out!',
         colour: 'rgba(165, 254, 162, .5)',
     },
     {
