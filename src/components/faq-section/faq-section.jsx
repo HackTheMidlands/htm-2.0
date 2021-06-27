@@ -44,7 +44,7 @@ export const FaqSection = ({ questions }) => {
                 </Row>
                 <Row>
                     { questions.map(({ question, answer }, index) => (
-                        <Col lg={6}>
+                        <Col lg={6} key={index}>
                             <div className={classNames([style.qa, {
                                 [`${style.active}`]: index === active,
                             }])}

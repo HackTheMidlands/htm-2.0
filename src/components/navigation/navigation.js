@@ -44,18 +44,18 @@ const Navigation = () => (
 
 
     <nav role="navigation" className={styles.navigation}>
-        <a
-            className={styles.badge}
-            id="mlh-trust-badge"
-            href="https://mlh.io/seasons/2021/events"
-            target="_blank"
-        >
-            <img
-                src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
-                alt="Major League Hacking 2021 Hackathon Season"
-                style={{ width: '100%' }}
-            />
-        </a>
+        {/* <a */}
+        {/*     className={styles.badge} */}
+        {/*     id="mlh-trust-badge" */}
+        {/*     href="https://mlh.io/seasons/2021/events" */}
+        {/*     target="_blank" */}
+        {/* > */}
+        {/*     <img */}
+        {/*         src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" */}
+        {/*         alt="Major League Hacking 2021 Hackathon Season" */}
+        {/*         style={{ width: '100%' }} */}
+        {/*     /> */}
+        {/* </a> */}
         <Grid fluid>
             <Row between="xs" middle="xs" style={{ marginLeft: '3vw', marginRight: '3vw' }}>
                 <Col>
@@ -77,15 +77,15 @@ const Navigation = () => (
                 {/*        )) } */}
                 {/*    </ul> */}
                 {/* </Col> */}
-                <Col>
-                    <div className={styles.button}>
-                        <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank">
-                            <Button theme="orange" size="small">
-                                Get Tickets
-                            </Button>
-                        </a>
-                    </div>
-                </Col>
+                {/* <Col> */}
+                {/*     <div className={styles.button}> */}
+                {/*         <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank"> */}
+                {/*             <Button theme="orange" size="small"> */}
+                {/*                 Get Tickets */}
+                {/*             </Button> */}
+                {/*         </a> */}
+                {/*     </div> */}
+                {/* </Col> */}
             </Row>
         </Grid>
 

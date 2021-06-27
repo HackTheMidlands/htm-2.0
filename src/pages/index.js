@@ -54,24 +54,24 @@ const intro = {
 };
 
 const EventDetails = ({ eventStart, eventEnd }) => {
-  const details = [
-    {
-      icon: TimeIcon,
-      title: 'Date & Time',
-      body: `The event will run online via Discord between the ${moment(
-        eventStart
-      ).format('Do')} - ${moment(eventEnd).format(
-        'Do MMMM YYYY'
-      )}. Don\'t miss out!`,
-      colour: 'rgba(165, 254, 162, .5)',
-    },
-    {
-      icon: DiscordSquareIcon,
-      title: 'Participate with Discord',
-      body:
+    const details = [
+        {
+            icon: TimeIcon,
+            title: 'Date & Time',
+            body: `The event will run online via Discord between the ${moment(
+                eventStart,
+            ).format('Do')} - ${moment(eventEnd).format(
+                'Do MMMM YYYY',
+            )}. Don\'t miss out!`,
+            colour: 'rgba(165, 254, 162, .5)',
+        },
+        {
+            icon: DiscordSquareIcon,
+            title: 'Participate with Discord',
+            body:
         'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
-      colour: 'rgba(114, 137, 218, .5)',
-    },
+            colour: 'rgba(114, 137, 218, .5)',
+        },
     // {
     //     icon: SafeguardingIcon,
     //     title: 'Safeguarding',
@@ -82,36 +82,38 @@ const EventDetails = ({ eventStart, eventEnd }) => {
     //     title: 'Entry Requirements',
     //     body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.',
     // },
-  ]
-  return (
-    <EventInfo>
-      <Grid>
-        <Row>
-          <Col lg={10} lgOffset={1}>
-            <Row>
-              {details.map(({ icon, title, body, colour }) => (
-                <Col
-                  sm={12}
-                  md={6}
-                  className={style.eventDetailItem}
-                  key={title}
-                >
-                  <IconCard
-                    key={title}
-                    body={body}
-                    icon={icon}
-                    title={title}
-                    colour={colour}
-                  />
-                </Col>
-              ))}
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
-    </EventInfo>
-  )
-}
+    ];
+    return (
+        <EventInfo>
+            <Grid>
+                <Row>
+                    <Col lg={10} lgOffset={1}>
+                        <Row>
+                            {details.map(({
+                                icon, title, body, colour,
+                            }) => (
+                                <Col
+                                    sm={12}
+                                    md={6}
+                                    className={style.eventDetailItem}
+                                    key={title}
+                                >
+                                    <IconCard
+                                        key={title}
+                                        body={body}
+                                        icon={icon}
+                                        title={title}
+                                        colour={colour}
+                                    />
+                                </Col>
+                            ))}
+                        </Row>
+                    </Col>
+                </Row>
+            </Grid>
+        </EventInfo>
+    );
+};
 
 const testimonials = [
     {
@@ -201,9 +203,9 @@ const Index = (props) => {
                                 </li>
                             </ul>
                             <div className={style.headerButtons}>
-                                <Link to="/live" target="_blank">
-                                    <Button theme="orange">View Live Page</Button>
-                                </Link>
+                                {/*<Link to="/live" target="_blank"> */}
+                                   {/* <Button theme="orange">View Live Page</Button> */}
+                               {/* </Link> */}
                                 {/* <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank"> */}
                                 {/*    <Button theme="orange">Get tickets</Button> */}
                                 {/* </a> */}
@@ -236,23 +238,7 @@ const Index = (props) => {
 
             <IndexIntro title={intro.title} body={intro.body} />
 
-            <EventInfo>
-                <Grid>
-                    <Row>
-                        <Col lg={10} lgOffset={1}>
-                            <Row>
-                                { eventDetails.map(({
-                                    icon, title, body, colour,
-                                }) => (
-                                    <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
-                                        <IconCard key={title} body={body} icon={icon} title={title} colour={colour} />
-                                    </Col>
-                                ))}
-                            </Row>
-                        </Col>
-                    </Row>
-                </Grid>
-            </EventInfo>
+            <EventDetails eventStart={eventStart} eventEnd={eventEnd} />
 
             {/* <EventLocation /> */}
 
@@ -262,7 +248,7 @@ const Index = (props) => {
 
             <SponsorCta />
 
-            <TicketsSection tickets={tickets} />
+            {/* <TicketsSection tickets={tickets} /> */}
 
             <FaqSection questions={qa} />
 
