@@ -25,7 +25,7 @@ import RevolvingHearts from '../../assets/gifs/revolving_hearts.gif';
  * @constructor
  */
 export const SponsorCta = (props) => (
-    <section className={style.section}>
+    <section id="sponsor-cta" className={style.section}>
         <Grid fluid>
             <Row middle="xs">
                 <Col sm={10} smOffset={1} md={6} mdOffset={0} className={style.textCol}>

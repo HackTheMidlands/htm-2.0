@@ -68,7 +68,7 @@ export const Footer = (props) => (
                     <ul className={style.list}>
                         <li><Link to="/team">The Team</Link></li>
                         <li><Link to="/#mission">Mission</Link></li>
-                        <li><Link to="/sponsor">Sponsor</Link></li>
+                        <li><Link to="/#sponsor-cta">Sponsor</Link></li>
                     </ul>
                 </Col>
                 <Col lg={3}>
