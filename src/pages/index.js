@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import moment from 'moment';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import withReactContent from 'sweetalert2-react-content';
 
 // Style import
@@ -53,18 +53,24 @@ const intro = {
     body: 'Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process.',
 };
 
-const eventDetails = [
+const EventDetails = ({ eventStart, eventEnd }) => {
+  const details = [
     {
-        icon: TimeIcon,
-        title: 'Date & Time',
-        body: 'The event will run online via Discord between the 28th - 31st October 2021. Don\'t miss out!',
-        colour: 'rgba(165, 254, 162, .5)',
+      icon: TimeIcon,
+      title: 'Date & Time',
+      body: `The event will run online via Discord between the ${moment(
+        eventStart
+      ).format('Do')} - ${moment(eventEnd).format(
+        'Do MMMM YYYY'
+      )}. Don\'t miss out!`,
+      colour: 'rgba(165, 254, 162, .5)',
     },
     {
-        icon: DiscordSquareIcon,
-        title: 'Participate with Discord',
-        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
-        colour: 'rgba(114, 137, 218, .5)',
+      icon: DiscordSquareIcon,
+      title: 'Participate with Discord',
+      body:
+        'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
+      colour: 'rgba(114, 137, 218, .5)',
     },
     // {
     //     icon: SafeguardingIcon,
@@ -76,7 +82,36 @@ const eventDetails = [
     //     title: 'Entry Requirements',
     //     body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.',
     // },
-];
+  ]
+  return (
+    <EventInfo>
+      <Grid>
+        <Row>
+          <Col lg={10} lgOffset={1}>
+            <Row>
+              {details.map(({ icon, title, body, colour }) => (
+                <Col
+                  sm={12}
+                  md={6}
+                  className={style.eventDetailItem}
+                  key={title}
+                >
+                  <IconCard
+                    key={title}
+                    body={body}
+                    icon={icon}
+                    title={title}
+                    colour={colour}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+      </Grid>
+    </EventInfo>
+  )
+}
 
 const testimonials = [
     {
@@ -137,6 +172,17 @@ const qa = [
  * @constructor
  */
 const Index = (props) => {
+    const data = useStaticQuery(graphql`
+    query IndexEventTimeQuery {
+      site {
+        siteMetadata {
+          eventStart: eventStart
+          eventEnd: eventEnd
+        }
+      }
+    }
+  `);
+    const { eventStart, eventEnd } = data.site.siteMetadata;
     return (
         <Layout>
             <HeroHeader>
@@ -151,7 +197,7 @@ const Index = (props) => {
                                 </li>
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
-                                    <p>Thursday 22nd - Sunday 25th October, 2020</p>
+                                    <p>{moment(eventStart).format('dddd Do')} - {moment(eventEnd).format('Do MMMM YYYY')}</p>
                                 </li>
                             </ul>
                             <div className={style.headerButtons}>
