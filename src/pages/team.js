@@ -20,12 +20,10 @@ import Fraser from './assets/htm-people/FraserWade.jpg';
 import Helena from './assets/htm-people/HelenaBower.jpg';
 import Hugh from './assets/htm-people/HughWells.jpg';
 import Jon from './assets/htm-people/jon.jpg';
-import JonK from './assets/htm-people/JonKingsley.jpg';
 import Justin from './assets/htm-people/JustinChadwell.jpg';
 import Liam from './assets/htm-people/LiamSorta.jpg';
 import Likkan from './assets/htm-people/LikkanChung.jpg';
 import Tom from './assets/htm-people/TomGoodman.jpg';
-import Will from './assets/htm-people/WillRussell.jpg';
 import Avery from './assets/htm-people/AveryCunningham.jpg';
 import Jacob from './assets/htm-people/JaconWilson.jpg';
 
@@ -67,22 +65,10 @@ const teamMembers = [
         position: 'Web and CTF Lead',
     },
     {
-        image: Will,
-        name: 'Will Russell',
-        nickname: 'Dongle Boi',
-        position: 'Outreach and Engagement Lead',
-    },
-    {
         image: Fraser,
         name: 'Fraser Wade',
         nickname: 'Mesh Router Fanatic',
         position: 'Networking Lead',
-    },
-    {
-        image: JonK,
-        name: 'Jon Kingsley',
-        nickname: 'Theatre Kid',
-        position: 'Stage Manager',
     },
     {
         image: DanielS,

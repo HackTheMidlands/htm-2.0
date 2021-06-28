@@ -25,12 +25,12 @@ import RevolvingHearts from '../../assets/gifs/revolving_hearts.gif';
  * @constructor
  */
 export const SponsorCta = (props) => (
-    <section className={style.section}>
+    <section id="sponsor-cta" className={style.section}>
         <Grid fluid>
             <Row middle="xs">
                 <Col sm={10} smOffset={1} md={6} mdOffset={0} className={style.textCol}>
                     <h2 className={style.title}>Fancy sponsoring something special and showing some <span><img src={RevolvingHearts} className={style.hearts} /></span>?</h2>
-                    <p>Without the help of our sponsors HackTheMidlands simply would not be possible. Our sponsors are wonderful, have loads of experience and are here to help! We will be releasing more sponsors as we get closer to the event, and if you're interested in becoming a sponsor for HackTheMidlands 2020 then please register your interest below</p>
+                    <p>Without the help of our sponsors HackTheMidlands simply would not be possible. Our sponsors are wonderful, have loads of experience and are here to help! We will be releasing more sponsors as we get closer to the event, and if you're interested in becoming a sponsor for HackTheMidlands 2021 then please register your interest below</p>
                     <a href="/sponsorship.pdf" target="_blank">
                         <Button theme="orange" name="Sponsor sign up">Sponsor us</Button>
                     </a>

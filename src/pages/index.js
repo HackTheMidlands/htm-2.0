@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import moment from 'moment';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import withReactContent from 'sweetalert2-react-content';
 
 // Style import
@@ -53,19 +53,25 @@ const intro = {
     body: 'Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process.',
 };
 
-const eventDetails = [
-    {
-        icon: TimeIcon,
-        title: 'Date & Time',
-        body: 'The event will run online via Discord between the 22nd - 26th October 2020. Don\'t miss out!',
-        colour: 'rgba(165, 254, 162, .5)',
-    },
-    {
-        icon: DiscordSquareIcon,
-        title: 'Participate with Discord',
-        body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
-        colour: 'rgba(114, 137, 218, .5)',
-    },
+const EventDetails = ({ eventStart, eventEnd }) => {
+    const details = [
+        {
+            icon: TimeIcon,
+            title: 'Date & Time',
+            body: `The event will run online via Discord between the ${moment(
+                eventStart,
+            ).format('Do')} - ${moment(eventEnd).format(
+                'Do MMMM YYYY',
+            )}. Don\'t miss out!`,
+            colour: 'rgba(165, 254, 162, .5)',
+        },
+        {
+            icon: DiscordSquareIcon,
+            title: 'Participate with Discord',
+            body:
+        'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
+            colour: 'rgba(114, 137, 218, .5)',
+        },
     // {
     //     icon: SafeguardingIcon,
     //     title: 'Safeguarding',
@@ -76,7 +82,38 @@ const eventDetails = [
     //     title: 'Entry Requirements',
     //     body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.',
     // },
-];
+    ];
+    return (
+        <EventInfo>
+            <Grid>
+                <Row>
+                    <Col lg={10} lgOffset={1}>
+                        <Row>
+                            {details.map(({
+                                icon, title, body, colour,
+                            }) => (
+                                <Col
+                                    sm={12}
+                                    md={6}
+                                    className={style.eventDetailItem}
+                                    key={title}
+                                >
+                                    <IconCard
+                                        key={title}
+                                        body={body}
+                                        icon={icon}
+                                        title={title}
+                                        colour={colour}
+                                    />
+                                </Col>
+                            ))}
+                        </Row>
+                    </Col>
+                </Row>
+            </Grid>
+        </EventInfo>
+    );
+};
 
 const testimonials = [
     {
@@ -99,123 +136,17 @@ const testimonials = [
     },
 ];
 
-const gold = [
-    {
-        image: '/sponsors/bcs.png',
-        name: 'BCS Birmingham',
-        link: 'https://www.bcs.org/membership/member-communities/birmingham-branch',
-    },
-    {
-        image: '/sponsors/majestic.png',
-        name: 'Majestic',
-        link: 'https://majestic.com',
-    },
-    {
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Capital_One_logo.svg/1200px-Capital_One_logo.svg.png',
-        name: 'Capital One',
-        link: 'https://capitalone.com',
-    },
-    {
-        image: '/sponsors/BT_Logo_Indigo_RGB.svg',
-        name: 'BT',
-        link: 'https://bt.com',
-    },
-];
+const gold = [];
 
-const silver = [
-    {
-        image: '/sponsors/northrop-grumman.png',
-        name: 'Northrop Grumman',
-        link: 'https://www.northropgrumman.com/',
-    },
-    {
-        image: '/sponsors/20i.svg',
-        name: '20i',
-        link: 'https://www.20i.com/',
-    },
-    {
-        image: '/sponsors/capgemini.png',
-        name: 'Capgemini',
-        link: 'https://www.capgemini.com/',
-    },
-    {
-        image: '/sponsors/kainos.png',
-        name: 'Kainos',
-        link: 'https://www.kainos.com/',
-    },
-    {
-        image: '/sponsors/fusion-meetup.png',
-        name: 'Fusion Meetup',
-        link: 'https://thefusionhub.co.uk/',
-    },
-];
+const silver = [];
 
-const bronze = [
-    {
-        image: 'https://raw.githubusercontent.com/ukmadlz/ukmadlz.github.io/02bab2c5e1b57f67adf916c234a63e4de27a5e02/assets/images/mike-elsmore.svg',
-        name: 'Mike Elsmore',
-        link: 'https://elsmore.me/',
-    },
-    {
-        image: '/sponsors/Chambers_of_Commerce.png',
-        name: 'Chambers of Commerce',
-        link: '/',
-    },
-];
+const bronze = [];
 
 const digital = [];
 
-const partners = [
-    {
-        image: 'https://static.mlh.io/brand-assets/logo/official/mlh-logo-color.svg',
-        name: 'sponsor',
-        link: 'https://mlh.io',
-    },
-    {
-        image: 'https://github.com/CSSUoB/resources/raw/master/logo/CSS%20Logo%20-%20Colour%20-%20Background%20-%20Bold.svg',
-        name: 'sponsor',
-        link: 'https://cssbham.com/',
-    },
-    {
-        image: '/sponsors/DSC_UOB.png',
-        name: 'sponsor',
-        link: 'https://dsc.community.dev/university-of-birmingham/',
-    },
-    {
-        image: '/sponsors/gdn_blue.png',
-        name: 'sponsor',
-        link: 'https://gdn.gg/',
-    },
-    {
-        image: '/sponsors/echoAR.png',
-        name: 'echoAR',
-        link: 'https://www.echoar.xyz/',
-    },
-];
+const partners = [];
 
-const tickets = [
-    {
-        ticketName: 'HTM 2020 Virtual',
-        releaseDate: moment('07/09/2020 12:00:00', 'DD/MM/YYYY hh:mm:ss'),
-        expireDate: moment().add(2, 'months'),
-        state: 'active',
-        link: 'https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070',
-    },
-    // {
-    //     ticketName: 'Wave Two',
-    //     releaseDate: moment().subtract(10, 'days'),
-    //     expireDate: moment().subtract(1, 'days'),
-    //     state: 'active',
-    //     link: 'https://google.com',
-    // },
-    // {
-    //     ticketName: 'Wave Three',
-    //     releaseDate: moment().subtract(2, 'days'),
-    //     expireDate: moment().add(30, 'days'),
-    //     state: 'active',
-    //     link: 'https://google.com',
-    // },
-];
+const tickets = [];
 
 const qa = [
     {
@@ -243,13 +174,24 @@ const qa = [
  * @constructor
  */
 const Index = (props) => {
+    const data = useStaticQuery(graphql`
+    query IndexEventTimeQuery {
+      site {
+        siteMetadata {
+          eventStart: eventStart
+          eventEnd: eventEnd
+        }
+      }
+    }
+  `);
+    const { eventStart, eventEnd } = data.site.siteMetadata;
     return (
         <Layout>
             <HeroHeader>
                 <Grid>
                     <Row>
                         <Col xs={12} sm={10} smOffset={1}>
-                            <h1 className={style.headerTitle}>HackTheMidlands 5.0</h1>
+                            <h1 className={style.headerTitle}>HackTheMidlands 6.0</h1>
                             <ul className={style.eventInfoList}>
                                 <li className={style.eventInfoListItem}>
                                     <LocationInfo />
@@ -257,13 +199,13 @@ const Index = (props) => {
                                 </li>
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
-                                    <p>Thursday 22nd - Sunday 25th October, 2020</p>
+                                    <p>{moment(eventStart).format('dddd Do')} - {moment(eventEnd).format('Do MMMM YYYY')}</p>
                                 </li>
                             </ul>
                             <div className={style.headerButtons}>
-                                <Link to="/live" target="_blank">
-                                    <Button theme="orange">View Live Page</Button>
-                                </Link>
+                                {/*<Link to="/live" target="_blank"> */}
+                                   {/* <Button theme="orange">View Live Page</Button> */}
+                               {/* </Link> */}
                                 {/* <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank"> */}
                                 {/*    <Button theme="orange">Get tickets</Button> */}
                                 {/* </a> */}
@@ -296,23 +238,7 @@ const Index = (props) => {
 
             <IndexIntro title={intro.title} body={intro.body} />
 
-            <EventInfo>
-                <Grid>
-                    <Row>
-                        <Col lg={10} lgOffset={1}>
-                            <Row>
-                                { eventDetails.map(({
-                                    icon, title, body, colour,
-                                }) => (
-                                    <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
-                                        <IconCard key={title} body={body} icon={icon} title={title} colour={colour} />
-                                    </Col>
-                                ))}
-                            </Row>
-                        </Col>
-                    </Row>
-                </Grid>
-            </EventInfo>
+            <EventDetails eventStart={eventStart} eventEnd={eventEnd} />
 
             {/* <EventLocation /> */}
 
@@ -322,7 +248,7 @@ const Index = (props) => {
 
             <SponsorCta />
 
-            <TicketsSection tickets={tickets} />
+            {/* <TicketsSection tickets={tickets} /> */}
 
             <FaqSection questions={qa} />
 
