@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Link } from 'gatsby';
 import styles from './navigation.module.scss';
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/HTM_Main_Transparent.png';
 
 // Components
 import { Button } from '../button/button';

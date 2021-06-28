@@ -191,7 +191,7 @@ const Index = (props) => {
                 <Grid>
                     <Row>
                         <Col xs={12} sm={10} smOffset={1}>
-                            <h1 className={style.headerTitle}>HackTheMidlands 5.0</h1>
+                            <h1 className={style.headerTitle}>HackTheMidlands 6.0</h1>
                             <ul className={style.eventInfoList}>
                                 <li className={style.eventInfoListItem}>
                                     <LocationInfo />
