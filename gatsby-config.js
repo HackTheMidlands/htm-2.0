@@ -27,13 +27,23 @@ const settings = require('./src/data/site.json');
 
 module.exports = {
     siteMetadata: settings.meta,
-    pathPrefix: '/gatsby-contentful-starter',
+    // pathPrefix: '/gatsby-contentful-starter',
     plugins: [
-        'gatsby-transformer-remark',
-        'gatsby-transformer-sharp',
+        // 'gatsby-transformer-remark',
+        // 'gatsby-transformer-sharp',
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sharp',
-        'gatsby-plugin-sass',
+        // 'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+       cssLoaderOptions: {
+         esModule: false,
+         modules: {
+           namedExport: false,
+         },
+       },
+     },
+    },
         // {
         //     resolve: 'gatsby-source-contentful',
         //     options: contentfulConfig,
@@ -46,18 +56,18 @@ module.exports = {
                 },
             },
         },
-        {
-            resolve: 'gatsby-plugin-google-analytics',
-            options: {
-                trackingId: 'UA-177286572-1',
-            },
-        },
-        'gatsby-optional-chaining',
-        {
-            resolve: 'gatsby-plugin-load-script',
-            options: {
-                src: 'https://player.twitch.tv/js/embed/v1.js',
-            },
-        },
+        // {
+            // resolve: 'gatsby-plugin-google-analytics',
+            // options: {
+                // trackingId: 'UA-177286572-1',
+            // },
+        // },
+        // 'gatsby-optional-chaining',
+        // {
+            // resolve: 'gatsby-plugin-load-script',
+            // options: {
+                // src: 'https://player.twitch.tv/js/embed/v1.js',
+            // },
+        // },
     ],
 };
