@@ -18,7 +18,7 @@ const Team = () => {
                     nickname
                     name
                     image {
-                        gatsbyImageData
+                        gatsbyImageData(placeholder: BLURRED)
                     }
                     position
                 }
@@ -52,7 +52,8 @@ const Team = () => {
                                     lg={3}
                                     md={6}
                                     sm={12}
-                                    style={{ marginBottom: '20px' }}>
+                                    style={{ marginBottom: '20px' }}
+                                    key={name}>
                                     <TeamCard
                                         image={image.gatsbyImageData}
                                         name={name}

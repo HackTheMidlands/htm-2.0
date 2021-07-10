@@ -28,7 +28,7 @@ export const TeamCard = ({
 }) => (
     <div className={style.card}>
         <div className={style.imageWrapper}>
-            <GatsbyImage className={style.image} alt={name} src={image} />
+            <GatsbyImage className={style.image} alt={name} image={image} />
         </div>
         <div className={style.meta}>
             <p className={style.name}>{ name }</p>
@@ -40,7 +40,7 @@ export const TeamCard = ({
 
 // Prop definitions
 TeamCard.propTypes = {
-    image: PropTypes.string.isRequired,
+    image: PropTypes.object.isRequired,
     name: PropTypes.string.isRequired,
     nickname: PropTypes.string,
     position: PropTypes.string,
