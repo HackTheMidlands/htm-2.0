@@ -1,5 +1,10 @@
 {
-  "trailingComma": "es5",
-  "semi": false,
-  "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "jsxBracketSameLine": true,
+    "semi": true,
+    "importOrderSeparation": true,
+    "experimentalBabelParserPluginsList": ["jsx", "typescript"]
 }
