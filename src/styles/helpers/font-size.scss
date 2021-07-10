@@ -8,8 +8,10 @@
  */
 
 // Function for converting a px based font-size to rem.
+@use "sass:math";
+
 @function calculateRem($size) {
-  @return $size / 16px * 1rem;
+  @return math.div($size, 16px) * 1rem;
 }
 
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
