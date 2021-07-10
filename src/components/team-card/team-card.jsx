@@ -1,6 +1,7 @@
 // Module Imports
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { GatsbyImage } from "gatsby-plugin-image"
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -27,7 +28,7 @@ export const TeamCard = ({
 }) => (
     <div className={style.card}>
         <div className={style.imageWrapper}>
-            <img className={style.image} alt={name} src={image} />
+            <GatsbyImage className={style.image} alt={name} src={image} />
         </div>
         <div className={style.meta}>
             <p className={style.name}>{ name }</p>
