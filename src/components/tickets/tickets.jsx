@@ -1,19 +1,15 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
 import { Ticket, ticketPropTypes } from '../ticket/ticket';
-
 // Style imports
 import style from './tickets.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
-
 
 /**
  * Collate singular tickets
@@ -23,7 +19,7 @@ import style from './tickets.module.scss';
  */
 export const Tickets = ({ tickets }) => (
     <div className={style.tickets}>
-        { tickets.map((ticket) => (
+        {tickets.map((ticket) => (
             <div className={style.ticket}>
                 <Ticket key={ticket.ticketName} {...ticket} />
             </div>
@@ -33,9 +29,11 @@ export const Tickets = ({ tickets }) => (
 
 // Prop definitions
 Tickets.propTypes = {
-    tickets: PropTypes.arrayOf(PropTypes.shape({
-        ...ticketPropTypes,
-    })).isRequired,
+    tickets: PropTypes.arrayOf(
+        PropTypes.shape({
+            ...ticketPropTypes,
+        }),
+    ).isRequired,
 };
 
 // Default props

@@ -1,20 +1,16 @@
 // Module Imports
-import React, { useRef, useState } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './video.module.scss';
-
+import Play from './assets/play.inline.svg';
 // Image imports
 import VideoDotGrid from './assets/video-dot-grid.svg';
+// Helper imports
+// Component imports
+// Style imports
+import style from './video.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useRef, useState } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
-import Play from './assets/play.inline.svg';
 /**
  * MissionBlock components
  * @param props
@@ -22,7 +18,12 @@ import Play from './assets/play.inline.svg';
  * @constructor
  */
 export const Video = ({
-    sources, poster, autoPlay, controls, unsupportedText, className,
+    sources,
+    poster,
+    autoPlay,
+    controls,
+    unsupportedText,
+    className,
 }) => {
     const videoRef = useRef();
 
@@ -44,8 +45,15 @@ export const Video = ({
 
     return (
         <>
-            <div className={classNames([className, style.videoWrapper, { [`${style.playing}`]: playing }])}>
-                <div onClick={playButtonClick} style={{ opacity: playing ? 0 : 1 }}>
+            <div
+                className={classNames([
+                    className,
+                    style.videoWrapper,
+                    { [`${style.playing}`]: playing },
+                ])}>
+                <div
+                    onClick={playButtonClick}
+                    style={{ opacity: playing ? 0 : 1 }}>
                     <Play className={style.play} />
                 </div>
                 <video
@@ -54,21 +62,30 @@ export const Video = ({
                     autoPlay={autoPlay}
                     controls={controls || playing}
                     onPause={onVideoPause}
-                    poster={poster}
-                >
-                    { sources.map(({ src, type }) => (
+                    poster={poster}>
+                    {sources.map(({ src, type }) => (
                         <source key={src} src={src} type={type} />
                     ))}
-                    { unsupportedText }
+                    {unsupportedText}
                 </video>
-                <div className={style.dotGrid} style={{ backgroundImage: `url('${VideoDotGrid}')`, opacity: playing ? 0 : 1, pointerEvents: playing ? 'none' : 'all' }} />
+                <div
+                    className={style.dotGrid}
+                    style={{
+                        backgroundImage: `url('${VideoDotGrid}')`,
+                        opacity: playing ? 0 : 1,
+                        pointerEvents: playing ? 'none' : 'all',
+                    }}
+                />
             </div>
             <p
-                className={classNames([style.closeText, {
-                    [`${style.showCloseText}`]: playing,
-                }])}
-                onClick={stopVideo}
-            >Close Video
+                className={classNames([
+                    style.closeText,
+                    {
+                        [`${style.showCloseText}`]: playing,
+                    },
+                ])}
+                onClick={stopVideo}>
+                Close Video
             </p>
         </>
     );
@@ -76,10 +93,12 @@ export const Video = ({
 
 // Prop definitions
 Video.propTypes = {
-    sources: PropTypes.arrayOf(PropTypes.shape({
-        src: PropTypes.string,
-        type: PropTypes.string,
-    })).isRequired,
+    sources: PropTypes.arrayOf(
+        PropTypes.shape({
+            src: PropTypes.string,
+            type: PropTypes.string,
+        }),
+    ).isRequired,
     poster: PropTypes.string,
     autoPlay: PropTypes.bool,
     controls: PropTypes.bool,

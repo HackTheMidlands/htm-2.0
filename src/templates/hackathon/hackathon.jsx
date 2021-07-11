@@ -1,39 +1,35 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import Helmet from 'react-helmet';
-import get from 'lodash/get';
-import Img from 'gatsby-image';
-import moment from 'moment';
-
-// Style import
-import style from './hackathon.module.scss';
-
+import { Button } from '../../components/button/button';
+import { EventInfo } from '../../components/event-info/event-info';
+import { EventIntroStatistics } from '../../components/event-intro-statistics/event-intro-statistics';
+import { EventLocation } from '../../components/event-location/event-location';
+import { FaqSection } from '../../components/faq-section/faq-section';
+import { HeroHeader } from '../../components/hero-header/hero-header';
+import { IconCard } from '../../components/icon-card/icon-card';
 // Components
 import Layout from '../../components/layout/layout.js';
-import { HeroHeader } from '../../components/hero-header/hero-header';
-import { Button } from '../../components/button/button';
-import { Video } from '../../components/video/video';
-import { EventIntroStatistics } from '../../components/event-intro-statistics/event-intro-statistics';
-import { EventInfo } from '../../components/event-info/event-info';
-import { IconCard } from '../../components/icon-card/icon-card';
-import { EventLocation } from '../../components/event-location/event-location';
-import { TestimonialSliderSection } from '../../components/testimonial-slider-section/testimonial-slider-section';
-import { SponsorsSection } from '../../components/sponsors-section/sponsors-section';
 import { SponsorCta } from '../../components/sponsor-cta/sponsor-cta';
+import { SponsorsSection } from '../../components/sponsors-section/sponsors-section';
+import { StayConnectedSection } from '../../components/stay-connected-section/stay-connected-section';
+import { TestimonialSliderSection } from '../../components/testimonial-slider-section/testimonial-slider-section';
 import { TicketsSection } from '../../components/tickets-section/tickets-section';
-import { FaqSection } from '../../components/faq-section/faq-section';
-import { StayConnectedSection } from '../../components/stay-connected-section/stay-connected-section'
-
+import DemoVideo from '../../components/video/assets/example-video.mp4';
+import { Video } from '../../components/video/video';
+import CalendarIcon from './assets/calendar.inline.svg';
+import EntryRequirementsIcon from './assets/entry.svg';
+import FoodAndDrinkIcon from './assets/food-and-drink.svg';
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
-import CalendarIcon from './assets/calendar.inline.svg';
-import TimeIcon from './assets/time.svg';
-import FoodAndDrinkIcon from './assets/food-and-drink.svg';
 import SafeguardingIcon from './assets/safeguarding.svg';
-import EntryRequirementsIcon from './assets/entry.svg';
-
-import DemoVideo from '../../components/video/assets/example-video.mp4';
+import TimeIcon from './assets/time.svg';
+// Style import
+import style from './hackathon.module.scss';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import get from 'lodash/get';
+import moment from 'moment';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import Helmet from 'react-helmet';
 
 const sources = [
     {
@@ -199,7 +195,6 @@ const qa = [
  */
 const HackathonTemplate = (props) => (
     <Layout>
-
         <HeroHeader style={{ paddingBottom: '500px' }}>
             <Grid>
                 <Row>
@@ -244,9 +239,18 @@ const HackathonTemplate = (props) => (
                 <Row>
                     <Col lg={10} lgOffset={1}>
                         <Row>
-                            { eventDetails.map(({ icon, title, body }) => (
-                                <Col sm={12} md={6} className={style.eventDetailItem} key={title}>
-                                    <IconCard key={title} body={body} icon={icon} title={title} />
+                            {eventDetails.map(({ icon, title, body }) => (
+                                <Col
+                                    sm={12}
+                                    md={6}
+                                    className={style.eventDetailItem}
+                                    key={title}>
+                                    <IconCard
+                                        key={title}
+                                        body={body}
+                                        icon={icon}
+                                        title={title}
+                                    />
                                 </Col>
                             ))}
                         </Row>
@@ -259,7 +263,12 @@ const HackathonTemplate = (props) => (
 
         <TestimonialSliderSection testimonials={testimonials} />
 
-        <SponsorsSection goldTier={gold} silverTier={silver} bronzeTier={bronze} partners={partners} />
+        <SponsorsSection
+            goldTier={gold}
+            silverTier={silver}
+            bronzeTier={bronze}
+            partners={partners}
+        />
 
         <SponsorCta />
 
@@ -268,7 +277,6 @@ const HackathonTemplate = (props) => (
         <FaqSection questions={qa} />
 
         <StayConnectedSection />
-
     </Layout>
 );
 

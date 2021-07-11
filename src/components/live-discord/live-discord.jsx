@@ -1,18 +1,14 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import styles from './live-discord.module.scss';
-
 // Image imports
 import Background from './assets/background.svg';
+// Helper imports
+// Component imports
+// Style imports
+import styles from './live-discord.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * Live Discord components
@@ -22,7 +18,10 @@ import Background from './assets/background.svg';
  */
 export const LiveDiscord = (props) => (
     <div className={styles.discord}>
-        <div className={styles.background} style={{ backgroundImage: `url(${Background})` }} />
+        <div
+            className={styles.background}
+            style={{ backgroundImage: `url(${Background})` }}
+        />
         <iframe
             src="https://discordapp.com/widget?id=304313295165325323&theme=dark"
             width="350"

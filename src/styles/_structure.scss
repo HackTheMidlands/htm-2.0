@@ -1,43 +1,44 @@
-@import "./variables";
+@import './variables';
 
-html, body {
-  scroll-behavior: smooth;
+html,
+body {
+    scroll-behavior: smooth;
 }
 
 body {
-  color: #373F49;
-  background: var(--background);
-  margin: 0;
+    color: #373f49;
+    background: var(--background);
+    margin: 0;
 }
 
 img {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 a {
-  color: currentColor;
+    color: currentColor;
 }
 
 .wrapper {
-  width: calc(100% - 10vmin);
-  margin: 0 auto;
-  padding: 5vmin 0;
+    width: calc(100% - 10vmin);
+    margin: 0 auto;
+    padding: 5vmin 0;
 }
 
 .container-fluid {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding-left: 85px !important;
-  padding-right: 85px !important;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-left: 85px !important;
+    padding-right: 85px !important;
 
-  @media screen and (max-width: $mdBreakpointMin)  {
-    padding-left: 50px !important;
-    padding-right: 50px !important;
-  }
+    @media screen and (max-width: $mdBreakpointMin) {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
 
-  @media screen and (max-width: $smBreakpointMin)  {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
+    @media screen and (max-width: $smBreakpointMin) {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
 }

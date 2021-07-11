@@ -1,64 +1,64 @@
-@import "../../styles/helpers/make-property";
-@import "../../styles/variables";
+@import '../../styles/helpers/make-property';
+@import '../../styles/variables';
 
 .container {
-  display: inline-block;
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%);
+    display: inline-block;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
 }
 
 .bubbles {
-  display: inline-block;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
-  li:nth-child(1) {
-    margin-left: 170px;
-    display: inline-flex;
-    @media screen and (max-width: $lgBreakpointMin) {
-      margin-left: 0;
+    li:nth-child(1) {
+        margin-left: 170px;
+        display: inline-flex;
+        @media screen and (max-width: $lgBreakpointMin) {
+            margin-left: 0;
+        }
     }
-  }
 
-  li:nth-child(2) {
-    margin-top: -10px;
-  }
+    li:nth-child(2) {
+        margin-top: -10px;
+    }
 }
 
 .bubble {
-  width: 228px;
-  height: 228px;
-  border-radius: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  display: inline-flex;
+    width: 228px;
+    height: 228px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: inline-flex;
 }
 
 .solid {
-  background-color: var(--secondary);
-  border: 5px solid var(--secondary);
-  color: white;
+    background-color: var(--secondary);
+    border: 5px solid var(--secondary);
+    color: white;
 }
 
 .outline {
-  border: 5px solid var(--primary);
-  background-color: transparent;
+    border: 5px solid var(--primary);
+    background-color: transparent;
 
-  .stat {
-    color: var(--primary);
-  }
+    .stat {
+        color: var(--primary);
+    }
 }
 
 .stat {
-  @include make-property('font-size', 60px);
-  font-weight: 700;
-  margin: 0;
+    @include make-property('font-size', 60px);
+    font-weight: 700;
+    margin: 0;
 }
 
 .text {
-  @include make-property('font-size', 21px);
-  margin: 0;
+    @include make-property('font-size', 21px);
+    margin: 0;
 }

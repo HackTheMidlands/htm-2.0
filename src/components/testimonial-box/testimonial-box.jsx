@@ -1,16 +1,12 @@
 // Module Imports
-import React, { useEffect, useState, useRef } from 'react';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './testimonial-box.module.scss';
-
 // Image imports
 import QuoteIcon from './assets/quote.inline.svg';
+// Helper imports
+// Component imports
+// Style imports
+import style from './testimonial-box.module.scss';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState, useRef } from 'react';
 
 /**
  * Testimonial box
@@ -21,9 +17,7 @@ import QuoteIcon from './assets/quote.inline.svg';
  * @returns {*}
  * @constructor
  */
-export const TestimonialBox = ({
-    image, name, source, children: body,
-}) => {
+export const TestimonialBox = ({ image, name, source, children: body }) => {
     const imageRef = useRef(null);
     useEffect(() => {
         imageRef.current.style = {
@@ -41,15 +35,20 @@ export const TestimonialBox = ({
     });
     return (
         <div className={style.box}>
-            <div className={style.quote}><QuoteIcon /></div>
-            <header className={style.header}>
-                <img ref={imageRef} className={style.image} src={image} alt={`${name} profile picture`} />
-                <h4 className={style.name}>{ name }</h4>
-                <p className={style.source}>{ source }</p>
-            </header>
-            <div className={style.content}>
-                { body }
+            <div className={style.quote}>
+                <QuoteIcon />
             </div>
+            <header className={style.header}>
+                <img
+                    ref={imageRef}
+                    className={style.image}
+                    src={image}
+                    alt={`${name} profile picture`}
+                />
+                <h4 className={style.name}>{name}</h4>
+                <p className={style.source}>{source}</p>
+            </header>
+            <div className={style.content}>{body}</div>
         </div>
     );
 };

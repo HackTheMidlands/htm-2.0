@@ -1,14 +1,11 @@
 // Module Imports
-import React from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import style from './timeline-item.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 // Image imports
 
@@ -22,13 +19,13 @@ import style from './timeline-item.module.scss';
  * @returns {*}
  * @constructor
  */
-export const TimelineItem = ({
-    name, time, endTime, owner, state,
-}) => (
+export const TimelineItem = ({ name, time, endTime, owner, state }) => (
     <div className={classNames([style.timelineItem, style[state]])}>
-        <h3 className={style.name}>{ name }</h3>
-        <p className={style.time}>{ time } - { endTime }</p>
-        <p className={style.owner}>{ owner }</p>
+        <h3 className={style.name}>{name}</h3>
+        <p className={style.time}>
+            {time} - {endTime}
+        </p>
+        <p className={style.owner}>{owner}</p>
     </div>
 );
 

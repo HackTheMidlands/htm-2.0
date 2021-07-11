@@ -164,7 +164,10 @@ const Index = (props) => {
             }
         }
     `);
-    const qa = data.allContentfulQa.nodes.map(({question, answer}) => ({ question, 'answer': answer.answer}));
+    const qa = data.allContentfulQa.nodes.map(({ question, answer }) => ({
+        question,
+        answer: answer.answer,
+    }));
     const { title, video } = data.contentfulPage;
     const sources = [
         {
@@ -173,12 +176,12 @@ const Index = (props) => {
         },
     ];
 
-const sponsors = data.allContentfulSponsor.nodes;
-            const gold = sponsors.filter(sponsor => sponsor.tier === "gold")
-            const silver = sponsors.filter(sponsor => sponsor.tier === "silver")
-            const bronze = sponsors.filter(sponsor => sponsor.tier === "bronze")
-            const digital = sponsors.filter(sponsor => sponsor.tier === "digital")
-            const partners = sponsors.filter(sponsor => sponsor.tier === "partner")
+    const sponsors = data.allContentfulSponsor.nodes;
+    const gold = sponsors.filter((sponsor) => sponsor.tier === 'gold');
+    const silver = sponsors.filter((sponsor) => sponsor.tier === 'silver');
+    const bronze = sponsors.filter((sponsor) => sponsor.tier === 'bronze');
+    const digital = sponsors.filter((sponsor) => sponsor.tier === 'digital');
+    const partners = sponsors.filter((sponsor) => sponsor.tier === 'partner');
 
     const { eventStart, eventEnd } = data.site.siteMetadata;
     return (

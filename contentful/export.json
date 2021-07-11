@@ -250,9 +250,7 @@
                     "required": false,
                     "validations": [
                         {
-                            "linkContentType": [
-                                "person"
-                            ]
+                            "linkContentType": ["person"]
                         }
                     ],
                     "disabled": false,
@@ -282,11 +280,7 @@
                         "type": "Symbol",
                         "validations": [
                             {
-                                "in": [
-                                    "general",
-                                    "javascript",
-                                    "static-sites"
-                                ]
+                                "in": ["general", "javascript", "static-sites"]
                             }
                         ]
                     }
@@ -619,9 +613,7 @@
                     "en-US": "2017-05-12T00:00+02:00"
                 },
                 "tags": {
-                    "en-US": [
-                        "javascript"
-                    ]
+                    "en-US": ["javascript"]
                 }
             }
         },
@@ -707,9 +699,7 @@
                     "en-US": "2017-05-15T00:00+02:00"
                 },
                 "tags": {
-                    "en-US": [
-                        "general"
-                    ]
+                    "en-US": ["general"]
                 }
             }
         },
@@ -795,10 +785,7 @@
                     "en-US": "2017-05-16T00:00+02:00"
                 },
                 "tags": {
-                    "en-US": [
-                        "javascript",
-                        "static-sites"
-                    ]
+                    "en-US": ["javascript", "static-sites"]
                 }
             }
         }
@@ -1104,9 +1091,7 @@
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": [
-                        "create"
-                    ],
+                    "actions": ["create"],
                     "constraint": {
                         "and": [
                             {
@@ -1122,9 +1107,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1140,9 +1123,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1158,9 +1139,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "create"
-                    ],
+                    "actions": ["create"],
                     "constraint": {
                         "and": [
                             {
@@ -1176,9 +1155,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1194,9 +1171,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1212,9 +1187,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": []
             },
@@ -1253,9 +1226,7 @@
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1271,9 +1242,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1289,9 +1258,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": "all"
             },
@@ -1362,9 +1329,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": []
             },
@@ -1403,9 +1368,7 @@
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": [
-                        "create"
-                    ],
+                    "actions": ["create"],
                     "constraint": {
                         "and": [
                             {
@@ -1421,9 +1384,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "create"
-                    ],
+                    "actions": ["create"],
                     "constraint": {
                         "and": [
                             {
@@ -1439,9 +1400,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1465,9 +1424,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1498,9 +1455,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "delete"
-                    ],
+                    "actions": ["delete"],
                     "constraint": {
                         "and": [
                             {
@@ -1524,9 +1479,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1550,9 +1503,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1583,9 +1534,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "delete"
-                    ],
+                    "actions": ["delete"],
                     "constraint": {
                         "and": [
                             {
@@ -1609,9 +1558,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": []
             },
@@ -1650,9 +1597,7 @@
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1668,9 +1613,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1686,9 +1629,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1711,9 +1652,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1736,9 +1675,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": []
             },
@@ -1777,9 +1714,7 @@
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1795,9 +1730,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1813,9 +1746,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1838,9 +1769,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1863,9 +1792,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": []
             },
@@ -1904,9 +1831,7 @@
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1922,9 +1847,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "read"
-                    ],
+                    "actions": ["read"],
                     "constraint": {
                         "and": [
                             {
@@ -1940,9 +1863,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1965,9 +1886,7 @@
                 },
                 {
                     "effect": "allow",
-                    "actions": [
-                        "update"
-                    ],
+                    "actions": ["update"],
                     "constraint": {
                         "and": [
                             {
@@ -1990,9 +1909,7 @@
                 }
             ],
             "permissions": {
-                "ContentModel": [
-                    "read"
-                ],
+                "ContentModel": ["read"],
                 "Settings": [],
                 "ContentDelivery": []
             },

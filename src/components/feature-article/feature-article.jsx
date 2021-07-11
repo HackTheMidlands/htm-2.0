@@ -1,21 +1,17 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import { navigate } from 'gatsby';
-
 // Helper imports
-
 // Component imports
 import { ArticleCard } from '../article-card/article-card';
 import { Button } from '../button/button';
-
-// Style imports
-import style from './feature-article.module.scss';
-
 // Image imports
 import WaveImage from './assets/wave.svg';
+// Style imports
+import style from './feature-article.module.scss';
+import classNames from 'classnames';
+import { navigate } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -24,20 +20,35 @@ import WaveImage from './assets/wave.svg';
  * @constructor
  */
 export const FeatureArticle = ({
-    title, body, button: { text: buttonText, link: buttonLink }, article: {
-        title: articleTitle, image: articleImage, body: articleBody, link: articleLink,
+    title,
+    body,
+    button: { text: buttonText, link: buttonLink },
+    article: {
+        title: articleTitle,
+        image: articleImage,
+        body: articleBody,
+        link: articleLink,
     },
 }) => (
-    <section className={style.featureSection} style={{ backgroundImage: `url('${WaveImage}')` }}>
+    <section
+        className={style.featureSection}
+        style={{ backgroundImage: `url('${WaveImage}')` }}>
         <Grid fluid>
             <Row>
                 <Col className={style.textCol} xs={12} lg={4}>
-                    <h2 className={style.title}>{ title }</h2>
-                    <p className={style.body}>{ body }</p>
-                    <Button theme="orange" onClick={() => navigate(buttonLink)}>{ buttonText }</Button>
+                    <h2 className={style.title}>{title}</h2>
+                    <p className={style.body}>{body}</p>
+                    <Button theme="orange" onClick={() => navigate(buttonLink)}>
+                        {buttonText}
+                    </Button>
                 </Col>
                 <Col className={style.textContent} xs={12} lg={7} lgOffset={1}>
-                    <ArticleCard body={articleBody} image={articleImage} title={articleTitle} link={articleLink} />
+                    <ArticleCard
+                        body={articleBody}
+                        image={articleImage}
+                        title={articleTitle}
+                        link={articleLink}
+                    />
                 </Col>
             </Row>
         </Grid>

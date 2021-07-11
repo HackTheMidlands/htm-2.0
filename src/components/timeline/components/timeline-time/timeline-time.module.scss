@@ -1,50 +1,50 @@
-@import "../../../../styles/helpers/make-property";
+@import '../../../../styles/helpers/make-property';
 
 .timeTrack {
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 }
 
 .time {
-  width: 300px;
-  min-width: 300px;
-  color: rgba(255, 255, 255, 0.4);
-  @include make-property('font-size', 22px);
-  position: relative;
-  z-index: 3;
+    width: 300px;
+    min-width: 300px;
+    color: rgba(255, 255, 255, 0.4);
+    @include make-property('font-size', 22px);
+    position: relative;
+    z-index: 3;
 }
 
 .ball {
-  width: 22px;
-  height: 22px;
-  background-color: white;
-  box-shadow: 0 0 22px rgba(#449AFD, .5);
-  border-radius: 100%;
-  margin-bottom: 34px;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    box-shadow: 0 0 22px rgba(#449afd, 0.5);
+    border-radius: 100%;
+    margin-bottom: 34px;
 }
 
 .active {
-  color: rgba(255, 255, 255, 1);
-  .ball {
-    background-color: #3B66FA;
-  }
+    color: rgba(255, 255, 255, 1);
+    .ball {
+        background-color: #3b66fa;
+    }
 }
 
 .line {
-  position: absolute;
-  top: 11px;
-  left: 0;
-  width: calc(300px * 24);
-  height: 2px;
-  background-color: white;
-  z-index: 1;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: calc(300px * 24);
+    height: 2px;
+    background-color: white;
+    z-index: 1;
 }
 
 .activeLine {
-  position: absolute;
-  top: 11px;
-  width: 300px;
-  height: 2px;
-  background-color: var(--primary);
-  z-index: 2;
+    position: absolute;
+    top: 11px;
+    width: 300px;
+    height: 2px;
+    background-color: var(--primary);
+    z-index: 2;
 }

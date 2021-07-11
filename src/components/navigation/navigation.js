@@ -1,11 +1,10 @@
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Link } from 'gatsby';
-import styles from './navigation.module.scss';
 import Logo from '../../assets/img/HTM_Main_Transparent.png';
-
 // Components
 import { Button } from '../button/button';
+import styles from './navigation.module.scss';
+import { Link } from 'gatsby';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const navigationItems = [
     {
@@ -41,8 +40,6 @@ const navigationItems = [
 ];
 
 const Navigation = () => (
-
-
     <nav role="navigation" className={styles.navigation}>
         {/* <a */}
         {/*     className={styles.badge} */}
@@ -57,7 +54,10 @@ const Navigation = () => (
         {/*     /> */}
         {/* </a> */}
         <Grid fluid>
-            <Row between="xs" middle="xs" style={{ marginLeft: '3vw', marginRight: '3vw' }}>
+            <Row
+                between="xs"
+                middle="xs"
+                style={{ marginLeft: '3vw', marginRight: '3vw' }}>
                 <Col>
                     <Link to="/">
                         <img className={styles.logo} src={Logo} alt="Logo" />
@@ -88,7 +88,6 @@ const Navigation = () => (
                 {/* </Col> */}
             </Row>
         </Grid>
-
     </nav>
 );
 

@@ -1,43 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
-@import "variables";
+@import 'variables';
 
-@import "../styles/helpers/make-property";
+@import '../styles/helpers/make-property';
 
 html {
-  font-size: $baseFontSize;
+    font-size: $baseFontSize;
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
-  font-size: 1em;
-  line-height: 1.65;
-  color: var(--textColour);
-  background: #eee;
-  margin: 0;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1em;
+    line-height: 1.65;
+    color: var(--textColour);
+    background: #eee;
+    margin: 0;
 }
 
 h1 {
-  @include make-property('font-size', 55px);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  @include make-property('line-height', 68px);
+    @include make-property('font-size', 55px);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    @include make-property('line-height', 68px);
 }
 
 h2 {
-  @include make-property('font-size', 45px);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  @include make-property('line-height', 58px);
+    @include make-property('font-size', 45px);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    @include make-property('line-height', 58px);
 }
 
 h3 {
-  @include make-property('font-size', 35px);
-  font-weight: 700;
-  margin-bottom: 1rem;
+    @include make-property('font-size', 35px);
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 h4 {
-  @include make-property('font-size', 25px);
-  font-weight: 700;
-  margin-bottom: 1rem;
+    @include make-property('font-size', 25px);
+    font-weight: 700;
+    margin-bottom: 1rem;
 }

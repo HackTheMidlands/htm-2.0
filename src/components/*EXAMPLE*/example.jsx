@@ -1,15 +1,12 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import style from './example.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -21,9 +18,7 @@ import style from './example.module.scss';
  */
 export const Example = (props) => {
     console.log(props);
-    return (
-        <div />
-    );
+    return <div />;
 };
 
 // Prop definitions

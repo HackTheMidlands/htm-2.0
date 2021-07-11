@@ -1,45 +1,46 @@
 section.section {
-  position: relative;
-  margin-top: 60px;
-  padding-top: 130px;
-  background-size: 95% 45%;
-  background-position: top center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  padding-bottom: 220px;
-  margin-bottom: -120px;
+    position: relative;
+    margin-top: 60px;
+    padding-top: 130px;
+    background-size: 95% 45%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-bottom: 220px;
+    margin-bottom: -120px;
 
-  @media screen and (max-width: 600px) {
-    margin-top: 0;
-    padding-top: 100px;
-  }
+    @media screen and (max-width: 600px) {
+        margin-top: 0;
+        padding-top: 100px;
+    }
 }
 
 .title {
-  text-align: center;
-  margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .diagonal {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  margin-top: 300px;
-  @media screen and (min-width: 1500px) {
-    margin-top: 210px;
-  }
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 300px;
+    @media screen and (min-width: 1500px) {
+        margin-top: 210px;
+    }
 }
 
-.greenCircle, .dotGrid {
-  position: absolute;
+.greenCircle,
+.dotGrid {
+    position: absolute;
 }
 
 .dotGrid {
-  top: 100px;
-  left: 20vw
+    top: 100px;
+    left: 20vw;
 }
 
 .greenCircle {
-  right: 22vw;
-  top: 60px;
+    right: 22vw;
+    top: 60px;
 }

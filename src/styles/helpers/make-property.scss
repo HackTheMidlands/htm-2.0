@@ -1,31 +1,30 @@
 @use "sass:math";
 
-@import "../variables";
+@import '../variables';
 
 $baseSize: $baseFontSize;
 
 // Get the int value from a string (example 12px -> 12)
 @function strip-units($number) {
-  @return math.div($number, $number * 0 + 1);
+    @return math.div($number, $number * 0 + 1);
 }
 
 @mixin make-property($property, $value) {
+    $px: 0;
+    $rem: 0;
 
-  $px: 0;
-  $rem: 0;
+    @if (unit($value) == 'px') {
+        $size: strip-units($value);
+        $px: $size + px;
+        $rem: math.div($size, strip-units($baseSize)) + rem;
+    }
 
-  @if (unit($value) == "px") {
-    $size: strip-units($value);
-    $px: $size + px;
-    $rem: math.div($size, strip-units($baseSize)) + rem;
-  }
+    @if (unit($value) == 'rem') {
+        $size: strip-units($value);
+        $px: ($size * strip-units($baseSize)) + px;
+        $rem: $size + rem;
+    }
 
-  @if (unit($value) == "rem") {
-    $size: strip-units($value);
-    $px: ($size * strip-units($baseSize)) + px;
-    $rem: $size + rem;
-  }
-
-  #{$property}: $px;
-  #{$property}: $rem;
+    #{$property}: $px;
+    #{$property}: $rem;
 }

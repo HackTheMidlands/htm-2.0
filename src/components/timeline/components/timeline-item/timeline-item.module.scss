@@ -1,57 +1,58 @@
-@import "../../../../styles/helpers/make-property";
+@import '../../../../styles/helpers/make-property';
 
 .timelineItem {
-  border-radius: 8px;
-  min-width: 175px;
-  max-width: 250px;
-  background-color: white;
-  padding: 12px 15px;
-  transform: scale(1);
-  transition: all 0.3s ease;
-  opacity: 1;
-  animation: entry .7s ease;
+    border-radius: 8px;
+    min-width: 175px;
+    max-width: 250px;
+    background-color: white;
+    padding: 12px 15px;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    opacity: 1;
+    animation: entry 0.7s ease;
 
-  &:hover {
-    transform: scale(1.07);
-  }
+    &:hover {
+        transform: scale(1.07);
+    }
 }
 
 .name {
-  color: #4A4848;
-  @include make-property('font-size', 18px);
-  margin: 0;
+    color: #4a4848;
+    @include make-property('font-size', 18px);
+    margin: 0;
 }
 
 .time {
-  color: var(--primary);
-  @include make-property('font-size', 16px);
-  margin: 0;
+    color: var(--primary);
+    @include make-property('font-size', 16px);
+    margin: 0;
 }
 
 .owner {
-  color: #4953A0;
-  @include make-property('font-size', 16px);
-  margin: 0;
+    color: #4953a0;
+    @include make-property('font-size', 16px);
+    margin: 0;
 }
 
 .inactive {
-
 }
 
 .active {
-  background-color: var(--primary);
-  .name, .time, .owner {
-    color: white;
-  }
+    background-color: var(--primary);
+    .name,
+    .time,
+    .owner {
+        color: white;
+    }
 }
 
 @keyframes entry {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }

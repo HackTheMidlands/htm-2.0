@@ -1,64 +1,63 @@
 .timeline {
-
 }
 
 .days {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-  .day {
-    margin: 0 20px;
-  }
+    .day {
+        margin: 0 20px;
+    }
 }
 
 .wrapper {
-  height: 300px;
-  //background-color: red;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 20px;
+    height: 300px;
+    //background-color: red;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
 
-  &::-webkit-scrollbar {
-    height: 5px;               /* width of the entire scrollbar */
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;        /* color of the tracking area */
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: white;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-  }
+    &::-webkit-scrollbar {
+        height: 5px; /* width of the entire scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent; /* color of the tracking area */
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: white; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+    }
 }
 
 .track {
-  height: 120px;
-  position: relative;
-  margin: 35px 0px;
-  transition: height 0.3s ease;
-  scroll-behavior: smooth;
-  .item {
-    position: absolute;
-  }
+    height: 120px;
+    position: relative;
+    margin: 35px 0px;
+    transition: height 0.3s ease;
+    scroll-behavior: smooth;
+    .item {
+        position: absolute;
+    }
 }
 
 .noEvents {
-  margin: 20px auto;
-  img {
-    width: 100px;
-    margin: auto;
-  }
-  h3 {
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    margin: 0;
-  }
+    margin: 20px auto;
+    img {
+        width: 100px;
+        margin: auto;
+    }
+    h3 {
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        margin: 0;
+    }
 }
 
 .adjust {
-  text-align: center;
-  color: white;
-  opacity: .4;
+    text-align: center;
+    color: white;
+    opacity: 0.4;
 }

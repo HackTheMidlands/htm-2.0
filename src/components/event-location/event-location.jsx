@@ -1,24 +1,20 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './event-location.module.scss';
-
+import DiagonalLine from './assets/diaganol-line.svg';
+import GreenCircle from './assets/green-circle.inline.svg';
+import LocationMarker from './assets/location-marker.inline.svg';
 // Image imports
 import MapImage from './assets/map.jpg';
-import DiagonalLine from './assets/diaganol-line.svg';
-import StationIcon from './assets/station.inline.svg';
-import LocationMarker from './assets/location-marker.inline.svg';
 import ArrowRightIcon from './assets/orange-arrow-right.inline.svg';
 import PinkTriangle from './assets/pink-triangle.inline.svg';
-import GreenCircle from './assets/green-circle.inline.svg';
+import StationIcon from './assets/station.inline.svg';
+// Helper imports
+// Component imports
+// Style imports
+import style from './event-location.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -32,14 +28,20 @@ export const EventLocation = ({ title, address, nearbyStations }) => (
         <Grid fluid style={{ position: 'relative', zIndex: 1 }}>
             <Row>
                 <Col xs={12}>
-                    <h3 className={style.title}>{ title }</h3>
+                    <h3 className={style.title}>{title}</h3>
                 </Col>
             </Row>
             <Row bottom="lg">
                 <Col lg={8} style={{ position: 'relative' }}>
-                    <img className={style.map} src={MapImage} alt="HTM location on map" />
+                    <img
+                        className={style.map}
+                        src={MapImage}
+                        alt="HTM location on map"
+                    />
                     <div className={style.planJourney}>
-                        <a href="https://goo.gl/maps/pAThZ8JpXXYJUnwy6" target="_blank">
+                        <a
+                            href="https://goo.gl/maps/pAThZ8JpXXYJUnwy6"
+                            target="_blank">
                             <p>Plan my journey</p>
                             <ArrowRightIcon />
                         </a>
@@ -51,12 +53,16 @@ export const EventLocation = ({ title, address, nearbyStations }) => (
                     <ul className={style.locationInfo}>
                         <li className={style.locationItem}>
                             <LocationMarker className={style.icon} />
-                            <p>{ address }</p>
+                            <p>{address}</p>
                         </li>
-                        { nearbyStations.map((station) => (
+                        {nearbyStations.map((station) => (
                             <li className={style.locationItem} key={station}>
                                 <StationIcon className={style.icon} />
-                                <p dangerouslySetInnerHTML={{ __html: station }} />
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: station,
+                                    }}
+                                />
                             </li>
                         ))}
                     </ul>
@@ -77,5 +83,8 @@ EventLocation.propTypes = {
 EventLocation.defaultProps = {
     title: 'Find us',
     address: 'Millennium Point, Curzon St, Birmingham, B4 7XG',
-    nearbyStations: ['Birmingham New St <br>1 mile (15 minute walk)', 'Birmingham Moor St <br>0.7 mile (11 minute walk)'],
+    nearbyStations: [
+        'Birmingham New St <br>1 mile (15 minute walk)',
+        'Birmingham Moor St <br>0.7 mile (11 minute walk)',
+    ],
 };

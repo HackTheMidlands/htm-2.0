@@ -1,27 +1,27 @@
 .iconCard {
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .06);
-  position: relative;
-  background-color: white;
-  margin: 43px 0 0 30px;
-  padding: 14px 14px 14px 70px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    position: relative;
+    background-color: white;
+    margin: 43px 0 0 30px;
+    padding: 14px 14px 14px 70px;
 }
 
 .icon {
-  width: 85px;
-  height: 85px;
-  transform: translate(-35%, -35%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 10px;
+    width: 85px;
+    height: 85px;
+    transform: translate(-35%, -35%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
 }
 
 .title {
-  margin: -5px auto 0 auto;
+    margin: -5px auto 0 auto;
 }
 
 .body {
-  margin: 0;
-  padding-top: 9px;
+    margin: 0;
+    padding-top: 9px;
 }

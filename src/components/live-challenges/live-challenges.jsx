@@ -1,16 +1,13 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
 import { ChallengeCard } from '../challenge-card/challenge-card';
-
 // Style imports
 import style from './live-challenges.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -24,18 +21,23 @@ export const LiveChallenges = ({ challenges }) => (
     <div className={style.challenges}>
         <Grid fluid>
             <Row>
-                { challenges.map(({
-                    name, sponsor, logo, logoBackground, featureImage,
-                }) => (
-                    <Col lg={4} md={6} sm={12}>
-                        <div className={style.challengeItem}>
-                            <ChallengeCard image={featureImage} logoBackground={logoBackground} logo={logo} name={name} sponsorName={sponsor} />
-                        </div>
-                    </Col>
-                )) }
+                {challenges.map(
+                    ({ name, sponsor, logo, logoBackground, featureImage }) => (
+                        <Col lg={4} md={6} sm={12}>
+                            <div className={style.challengeItem}>
+                                <ChallengeCard
+                                    image={featureImage}
+                                    logoBackground={logoBackground}
+                                    logo={logo}
+                                    name={name}
+                                    sponsorName={sponsor}
+                                />
+                            </div>
+                        </Col>
+                    ),
+                )}
             </Row>
         </Grid>
-
     </div>
 );
 

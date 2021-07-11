@@ -1,15 +1,12 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import style from './icon-card.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -19,12 +16,15 @@ import style from './icon-card.module.scss';
  * @returns {*}
  * @constructor
  */
-export const IconCard = ({
-    icon, title, body, colour,
-}) => (
+export const IconCard = ({ icon, title, body, colour }) => (
     <div className={style.iconCard}>
-        <img className={style.icon} src={icon} alt={title} style={{ boxShadow: `0 3px 25px ${colour}` }} />
-        <h4 className={style.title}>{ title }</h4>
+        <img
+            className={style.icon}
+            src={icon}
+            alt={title}
+            style={{ boxShadow: `0 3px 25px ${colour}` }}
+        />
+        <h4 className={style.title}>{title}</h4>
         <p className={style.body} dangerouslySetInnerHTML={{ __html: body }} />
     </div>
 );
