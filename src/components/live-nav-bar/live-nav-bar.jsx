@@ -1,19 +1,15 @@
 // Module Imports
-import React, { useEffect, useState } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import styles from './live-nav-bar.module.scss';
-
 // Image imports
 import Logo from '../../assets/img/logo.png';
+// Helper imports
+// Component imports
+// Style imports
+import styles from './live-nav-bar.module.scss';
+import classNames from 'classnames';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -22,7 +18,6 @@ import Logo from '../../assets/img/logo.png';
  * @constructor
  */
 export const LiveNavBar = (props) => {
-
     const [navScrolled, setNavScrolled] = useState(false);
 
     const onScroll = () => {
@@ -47,32 +42,54 @@ export const LiveNavBar = (props) => {
             <Grid fluid>
                 <Row>
                     <Col xs={12}>
-                        <nav className={styles.nav} style={{ paddingTop: navScrolled ? '10px' : null, paddingBottom: navScrolled ? '10px' : null, }}>
+                        <nav
+                            className={styles.nav}
+                            style={{
+                                paddingTop: navScrolled ? '10px' : null,
+                                paddingBottom: navScrolled ? '10px' : null,
+                            }}>
                             <ul className={styles.left}>
                                 <li className={styles.leftItem}>
-                                    <Link to="/live#challenges" style={{ textDecoration: 'none' }}>
+                                    <Link
+                                        to="/live#challenges"
+                                        style={{ textDecoration: 'none' }}>
                                         Challenges
                                     </Link>
                                 </li>
                                 <li className={styles.leftItem}>
-                                    <Link to="/live#timeline" style={{ textDecoration: 'none' }}>
+                                    <Link
+                                        to="/live#timeline"
+                                        style={{ textDecoration: 'none' }}>
                                         Timeline
                                     </Link>
                                 </li>
                             </ul>
                             <div className={styles.logo}>
                                 <Link to="/">
-                                    <img src={Logo} alt="HackTheMidlands logo" className={styles.logo} style={{ width: navScrolled ? '90px' : '120px' }} />
+                                    <img
+                                        src={Logo}
+                                        alt="HackTheMidlands logo"
+                                        className={styles.logo}
+                                        style={{
+                                            width: navScrolled
+                                                ? '90px'
+                                                : '120px',
+                                        }}
+                                    />
                                 </Link>
                             </div>
                             <ul className={styles.right}>
                                 <li className={styles.rightItem}>
-                                    <Link to="/live#discord" style={{ textDecoration: 'none' }}>
+                                    <Link
+                                        to="/live#discord"
+                                        style={{ textDecoration: 'none' }}>
                                         Discord
                                     </Link>
                                 </li>
                                 <li className={styles.rightItem}>
-                                    <Link to="/live#faq" style={{ textDecoration: 'none' }}>
+                                    <Link
+                                        to="/live#faq"
+                                        style={{ textDecoration: 'none' }}>
                                         FAQ
                                     </Link>
                                 </li>

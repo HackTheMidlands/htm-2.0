@@ -8,12 +8,12 @@ export const faqData = [
         body: 'A computer 💻, a Discord account 👾, and a passion to get involved 🔥 We’d recommend a headset to communicate with your team, but that’s not essential! 🎧',
     },
     {
-        title: 'What if I don\'t know how to code?',
-        body: 'That is not a problem! A great way to learn how to code is by attending a hackathon 👩‍💻 It\'s an event for like-minded people to share what they are interested in and teach each-other what they are passionate about, whether it\'s coding, electronics or anything else you want to know about 💡 You never know what new skill you might pick up! You can also ask specific questions to our mentors and other participants in the Discord server 🙋 We’re all here to help!',
+        title: "What if I don't know how to code?",
+        body: "That is not a problem! A great way to learn how to code is by attending a hackathon 👩‍💻 It's an event for like-minded people to share what they are interested in and teach each-other what they are passionate about, whether it's coding, electronics or anything else you want to know about 💡 You never know what new skill you might pick up! You can also ask specific questions to our mentors and other participants in the Discord server 🙋 We’re all here to help!",
     },
     {
-        title: 'I don\'t have a team',
-        body: 'Don\'t worry! Many people don\'t have a team when they turn up to a hackathon. We have a dedicated channel on our Discord server (#looking-for-team) where people are looking for teams, and teams are looking for members, and we’ll be running an icebreaker session 🧊 to help you find teams on the day👋',
+        title: "I don't have a team",
+        body: "Don't worry! Many people don't have a team when they turn up to a hackathon. We have a dedicated channel on our Discord server (#looking-for-team) where people are looking for teams, and teams are looking for members, and we’ll be running an icebreaker session 🧊 to help you find teams on the day👋",
     },
     {
         title: 'When does the event start and end?',

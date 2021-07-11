@@ -1,24 +1,20 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import { GatsbyImage } from "gatsby-plugin-image"
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './sponsors-section.module.scss';
-
+import SparkleGif from '../../assets/gifs/sparkles.gif';
+import BronzeMedal from './assets/bronze.png';
+import DigitalMedal from './assets/digital.png';
 // Image imports
 import GoldMedal from './assets/gold.png';
-import BronzeMedal from './assets/bronze.png';
-import SilverMedal from './assets/silver.png';
 import PartnerMedal from './assets/partner.inline.svg';
-import DigitalMedal from './assets/digital.png';
-import SparkleGif from '../../assets/gifs/sparkles.gif';
+import SilverMedal from './assets/silver.png';
+// Helper imports
+// Component imports
+// Style imports
+import style from './sponsors-section.module.scss';
+import classNames from 'classnames';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const calculateGridCols = (tier) => tier.map(() => '1fr').join(' ');
 
@@ -26,24 +22,31 @@ const ComingSoon = ({ tier }) => (
     <p className={style.comingSoon}>More {tier} sponsors coming soon!</p>
 );
 
-        const Sponsors = ({sponsors, tier}) => {
-        if(sponsors.length > 0) {
-        return sponsors.map((sponsor) => <div>
+const Sponsors = ({ sponsors, tier }) => {
+    if (sponsors.length > 0) {
+        return sponsors.map((sponsor) => (
             <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                {sponsor.image && <GatsbyImage alt={sponsor.name} image={sponsor.image.gatsbyImageData} />}
+                {sponsor.image && (
+                    <GatsbyImage
+                        alt={sponsor.name}
+                        image={sponsor.image.gatsbyImageData}
+                    />
+                )}
             </a>
-        </div>
-        );
-            } else {
-                return <ComingSoon tier={tier}/>
-            }
-        } 
+        ));
+    } else {
+        return <ComingSoon tier={tier} />;
+    }
+};
 
 export const SponsorsSection = ({
-    goldTier, silverTier, bronzeTier, digitalTier, partners,
+    goldTier,
+    silverTier,
+    bronzeTier,
+    digitalTier,
+    partners,
 }) => (
     <section className={style.section}>
-
         <Grid fluid>
             <Row>
                 <Col xs={12}>
@@ -54,33 +57,52 @@ export const SponsorsSection = ({
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img src={GoldMedal} alt="Gold Medal" className={style.medal} />
+                        <img
+                            src={GoldMedal}
+                            alt="Gold Medal"
+                            className={style.medal}
+                        />
                         <h2>Gold</h2>
                     </div>
                     <div className={style.gold}>
-                        <Sponsors sponsors={goldTier} tier="gold"/>
+                        <Sponsors sponsors={goldTier} tier="gold" />
                     </div>
                 </Col>
             </Row>
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img src={SilverMedal} alt="Silver Medal" className={style.medal} />
+                        <img
+                            src={SilverMedal}
+                            alt="Silver Medal"
+                            className={style.medal}
+                        />
                         <h2>Silver</h2>
                     </div>
                     <div className={style.silver}>
-                        <Sponsors sponsors={silverTier} tier="silver"/>
+                        <Sponsors sponsors={silverTier} tier="silver" />
                     </div>
                 </Col>
             </Row>
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img src={BronzeMedal} alt="Bronze Medal" className={style.medal} />
+                        <img
+                            src={BronzeMedal}
+                            alt="Bronze Medal"
+                            className={style.medal}
+                        />
                         <h2>Bronze</h2>
                     </div>
-                    <div className={style.bronze} style={{ gridTemplateColumns: bronzeTier.length < 4 ? '1fr '.repeat(bronzeTier.length) : '1fr' }}>
-                        <Sponsors sponsors={bronzeTier} tier="bronze"/>
+                    <div
+                        className={style.bronze}
+                        style={{
+                            gridTemplateColumns:
+                                bronzeTier.length < 4
+                                    ? '1fr '.repeat(bronzeTier.length)
+                                    : '1fr',
+                        }}>
+                        <Sponsors sponsors={bronzeTier} tier="bronze" />
                     </div>
                 </Col>
             </Row>
@@ -111,12 +133,11 @@ export const SponsorsSection = ({
                         <h2>Partners</h2>
                     </div>
                     <div className={style.partners}>
-                        <Sponsors sponsors={partners} tier="partner"/>
+                        <Sponsors sponsors={partners} tier="partner" />
                     </div>
                 </Col>
             </Row>
         </Grid>
-
     </section>
 );
 

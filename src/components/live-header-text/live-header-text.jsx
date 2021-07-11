@@ -1,15 +1,12 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import styles from './live-header-text.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -23,8 +20,8 @@ import styles from './live-header-text.module.scss';
  */
 export const LiveHeaderText = ({ text, style, className }) => (
     <div className={classNames([styles.container, className])} style={style}>
-        <h1 className={styles.back}>{ text }</h1>
-        <h1 className={styles.main}>{ text }</h1>
+        <h1 className={styles.back}>{text}</h1>
+        <h1 className={styles.main}>{text}</h1>
     </div>
 );
 

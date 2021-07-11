@@ -1,15 +1,15 @@
 $colours: (
-  "primary": #449AFD,
-  "secondary": #3B66FA,
-  "lightPurple": #425FEA,
-  "orange": #FF7365,
-  "background": #EFF6FF,
-  "textColour": #4A4848,
-  "inputBlue": #F5FBFF,
+    'primary': #449afd,
+    'secondary': #3b66fa,
+    'lightPurple': #425fea,
+    'orange': #ff7365,
+    'background': #eff6ff,
+    'textColour': #4a4848,
+    'inputBlue': #f5fbff,
 );
 
 :root {
-  @each $colour, $value in $colours {
-    --#{$colour}: #{$value}
-  }
+    @each $colour, $value in $colours {
+        --#{$colour}: #{$value};
+    }
 }

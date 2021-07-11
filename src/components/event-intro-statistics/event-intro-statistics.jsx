@@ -1,19 +1,15 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './event-intro-statistics.module.scss';
 import { StatBubbles } from '../stat-bubbles/stat-bubbles';
-
 // Types
 import { statPropTemplate } from '../stat-bubbles/stat-bubbles';
+// Helper imports
+// Component imports
+// Style imports
+import style from './event-intro-statistics.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -26,21 +22,16 @@ import { statPropTemplate } from '../stat-bubbles/stat-bubbles';
  * @returns {*}
  * @constructor
  */
-export const EventIntroStatistics = ({
-    title, body, statOne, statTwo,
-}) => (
+export const EventIntroStatistics = ({ title, body, statOne, statTwo }) => (
     <section id="event-welcome-and-statistics" className={style.intro}>
         <Grid fluid>
             <Row>
                 <Col md={12} lg={6} className={style.textCol}>
-                    <h2 className={style.title}>{ title }</h2>
-                    <p className={style.body}>{ body }</p>
+                    <h2 className={style.title}>{title}</h2>
+                    <p className={style.body}>{body}</p>
                 </Col>
                 <Col md={12} lg={5} lgOffset={1} className={style.bubblesCol}>
-                    <StatBubbles
-                        statOne={statOne}
-                        statTwo={statTwo}
-                    />
+                    <StatBubbles statOne={statOne} statTwo={statTwo} />
                 </Col>
             </Row>
         </Grid>

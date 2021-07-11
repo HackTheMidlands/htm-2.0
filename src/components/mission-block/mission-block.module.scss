@@ -1,132 +1,129 @@
-@import "../../styles/variables";
-@import "../../styles/helpers/make-property";
+@import '../../styles/variables';
+@import '../../styles/helpers/make-property';
 
 .mission {
-  margin-top: 300px;
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    margin-top: 300px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .grid {
-  position: relative;
-  top: -80px;
+    position: relative;
+    top: -80px;
 }
 
 .title {
-  padding-right: 8vw;
-  margin-bottom: 45px;
-  @media screen and (max-width: 990px) {
-    padding-right: 0;
-  }
+    padding-right: 8vw;
+    margin-bottom: 45px;
+    @media screen and (max-width: 990px) {
+        padding-right: 0;
+    }
 }
 
 .body {
-
 }
 
 .image {
-  $borderRadius: 12px;
-  position: relative;
-
-  .featureImage {
-    border-radius: $borderRadius;
+    $borderRadius: 12px;
     position: relative;
-    z-index: 2;
-  }
 
-  .dotGrid {
-    position: absolute;
-    right: -50%;
-    bottom: -50%;
-    width: 308px;
-    height: 280px;
-    transform: translate(-100%, -50%);
-    z-index: 1;
-
-    @media screen and (max-width: $lgBreakpointMin) {
-      right: 5%;
-      transform: translate(0, -50%);
+    .featureImage {
+        border-radius: $borderRadius;
+        position: relative;
+        z-index: 2;
     }
-  }
 
-  .greenCircleLarge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    width: 215px;
-    height: 215px;
-    z-index: 1;
-  }
+    .dotGrid {
+        position: absolute;
+        right: -50%;
+        bottom: -50%;
+        width: 308px;
+        height: 280px;
+        transform: translate(-100%, -50%);
+        z-index: 1;
 
-  &:after {
-    content: '';
-    border-radius: $borderRadius;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--lightPurple);
-    opacity: .36;
+        @media screen and (max-width: $lgBreakpointMin) {
+            right: 5%;
+            transform: translate(0, -50%);
+        }
+    }
 
-  }
+    .greenCircleLarge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 215px;
+        height: 215px;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        border-radius: $borderRadius;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--lightPurple);
+        opacity: 0.36;
+    }
 }
 
 .statistics {
-  list-style-type: none;
-  padding-left: 10px;
-  margin-top: 31px;
-  .statisticItem {
-    border-left: 5px solid var(--primary);
-    padding-left: 14px;
-    margin-bottom: 29px;
-    font-weight: 600;
-    @include make-property('font-size', 25px);
-    &:last-of-type {
-      margin-bottom: 0;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-top: 31px;
+    .statisticItem {
+        border-left: 5px solid var(--primary);
+        padding-left: 14px;
+        margin-bottom: 29px;
+        font-weight: 600;
+        @include make-property('font-size', 25px);
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
-  }
-
 }
 
 .textCol {
-  margin-top: 250px;
-  @media screen and (max-width: $lgBreakpointMin){
-    order: 2;
-    margin-top: 50px;
-  }
+    margin-top: 250px;
+    @media screen and (max-width: $lgBreakpointMin) {
+        order: 2;
+        margin-top: 50px;
+    }
 }
 
 .imageCol {
-  @media screen and (max-width: $lgBreakpointMin){
-    order: 1;
-  }
+    @media screen and (max-width: $lgBreakpointMin) {
+        order: 1;
+    }
 }
 
 .shape {
-  position: absolute;
+    position: absolute;
 }
 
 .orangeSquare {
-  @extend .shape;
-  width: 64px;
-  height: 64px;
-  left: -3vw;
-  top: -2vw;
+    @extend .shape;
+    width: 64px;
+    height: 64px;
+    left: -3vw;
+    top: -2vw;
 }
 
 .greenTriangle {
-  @extend .shape;
-  width: 84px;
-  height: 77px;
-  right: -4vw;
-  top: 5vw;
-  @media screen and (max-width: $lgBreakpointMin) {
-    right: 0;
-    top: -5vw;
-  }
+    @extend .shape;
+    width: 84px;
+    height: 77px;
+    right: -4vw;
+    top: 5vw;
+    @media screen and (max-width: $lgBreakpointMin) {
+        right: 0;
+        top: -5vw;
+    }
 }

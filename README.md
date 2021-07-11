@@ -13,6 +13,7 @@ If you would like to contribute to this website either ask to become part of the
 3. Run `gatsby develop`
 
 ## Deploying
+
 To deploy the site, make a pull request or commit against master. Once merged in the website will automatically deploy live to production.
 
 ## Crucial Commands

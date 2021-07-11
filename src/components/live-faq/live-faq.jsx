@@ -1,21 +1,16 @@
 // Module Imports
-import React, { useEffect, useRef } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
+import { FaqCard } from '../faq-card/faq-card';
 // Helper imports
-
 // Component imports
 import { LiveHeaderText } from '../live-header-text/live-header-text';
-import { FaqCard } from '../faq-card/faq-card';
-
-// Style imports
-import style from './live-faq.module.scss';
-
 // Image imports
 import Background from './assets/background.svg';
-
+// Style imports
+import style from './live-faq.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useEffect, useRef } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 export const LiveFaq = ({ cards }) => {
     const gridRef = useRef(null);
@@ -35,19 +30,32 @@ export const LiveFaq = ({ cards }) => {
     }, []);
 
     return (
-        <div className={style.liveFaq} style={{ backgroundImage: `url(${Background})` }}>
+        <div
+            className={style.liveFaq}
+            style={{ backgroundImage: `url(${Background})` }}>
             <Grid fluid>
                 <Row>
                     <Col lg={2}>
                         <LiveHeaderText text="FAQ" />
                     </Col>
                     <Col lg={9} lgOffset={1}>
-                        <div className={classNames([style.cardWrapper])} ref={gridRef}>
-                            { cards.map(({ title, body }, index) => (
-                                <div className={classNames(['masonary-item', style.item])}>
-                                    <FaqCard key={`${title}_${index}`} title={title} body={body} number={index + 1} />
+                        <div
+                            className={classNames([style.cardWrapper])}
+                            ref={gridRef}>
+                            {cards.map(({ title, body }, index) => (
+                                <div
+                                    className={classNames([
+                                        'masonary-item',
+                                        style.item,
+                                    ])}>
+                                    <FaqCard
+                                        key={`${title}_${index}`}
+                                        title={title}
+                                        body={body}
+                                        number={index + 1}
+                                    />
                                 </div>
-                            )) }
+                            ))}
                         </div>
                     </Col>
                 </Row>

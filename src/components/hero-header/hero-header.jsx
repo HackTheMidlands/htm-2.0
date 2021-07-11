@@ -1,12 +1,11 @@
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import DefaultHeroImage from './assets/default-hero.jpg';
+import ShapeBackgroundImage from './assets/shape-background.svg';
+import WaveBottomImage from './assets/wave.svg';
+import style from './hero-header.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
-import style from './hero-header.module.scss';
-import DefaultHeroImage from './assets/default-hero.jpg';
-import WaveBottomImage from './assets/wave.svg';
-import ShapeBackgroundImage from './assets/shape-background.svg';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * Hero header components
@@ -19,14 +18,26 @@ import ShapeBackgroundImage from './assets/shape-background.svg';
  * @constructor
  */
 export const HeroHeader = ({
-    children, image, height, className, style: elStyle,
+    children,
+    image,
+    height,
+    className,
+    style: elStyle,
 }) => (
-    <header className={classNames([style.header, className])} style={{ height, backgroundImage: `url('${image}')`, ...elStyle }}>
-        <img src={ShapeBackgroundImage} className={style.shapeBackground} alt="Shape background" />
-        <div style={{ position: 'relative' }}>
-          { children }
-        </div>
-        <img src={WaveBottomImage} className={style.wave} alt="Wave at bottom" />
+    <header
+        className={classNames([style.header, className])}
+        style={{ height, backgroundImage: `url('${image}')`, ...elStyle }}>
+        <img
+            src={ShapeBackgroundImage}
+            className={style.shapeBackground}
+            alt="Shape background"
+        />
+        <div style={{ position: 'relative' }}>{children}</div>
+        <img
+            src={WaveBottomImage}
+            className={style.wave}
+            alt="Wave at bottom"
+        />
     </header>
 );
 

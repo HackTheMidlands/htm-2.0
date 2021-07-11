@@ -1,10 +1,9 @@
 {
-    "name": "gatsby-contentful-starter",
-    "description": "Starter Contentful Gatsby Blog",
-    "version": "1.0.0",
-    "author": "Stefan Judis <stefanjudis@gmail.com>",
+    "name": "hackthemidlands-website",
+    "description": "HackTheMidlands Website",
+    "version": "2.0.0",
     "bugs": {
-        "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
+        "url": "https://github.com/hackthemidlands/htm-2.0/issues"
     },
     "resolutions": {
         "graphql": "^15.4.0",

@@ -1,18 +1,14 @@
 // Module Imports
-import React, { useEffect, useRef } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-
+import HTMVideo from '../../assets/hero-video.mp4';
 // Helper imports
-
 // Component imports
 import { Video } from '../video/video';
-
-// Style imports
-import styles from './live-page-header.module.scss';
-
 // Image imports
 import Background from './assets/background.svg';
-import HTMVideo from '../../assets/hero-video.mp4';
+// Style imports
+import styles from './live-page-header.module.scss';
+import React, { useEffect, useRef } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const sources = [
     {
@@ -31,7 +27,7 @@ export const LivePageHeader = (props) => {
     const firstLoad = useRef(true);
 
     const initTwitch = () => {
-        new window.Twitch.Player("twitch-embed", {
+        new window.Twitch.Player('twitch-embed', {
             width: '100%',
             height: '100%',
             channel: 'htm_live',
@@ -39,13 +35,19 @@ export const LivePageHeader = (props) => {
     };
 
     useEffect(() => {
-        if (firstLoad.current && typeof window !== 'undefined' && window.Twitch) {
+        if (
+            firstLoad.current &&
+            typeof window !== 'undefined' &&
+            window.Twitch
+        ) {
             initTwitch();
             firstLoad.current = false;
         }
     }, []);
     return (
-        <header className={styles.header} style={{ backgroundImage: `url(${Background})` }}>
+        <header
+            className={styles.header}
+            style={{ backgroundImage: `url(${Background})` }}>
             <div className={styles.video}>
                 <h1 className={styles.featureTextTop}>HTM 5.0</h1>
                 <div className={styles.embed}>

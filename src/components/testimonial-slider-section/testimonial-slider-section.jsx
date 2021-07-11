@@ -1,19 +1,15 @@
 // Module Imports
-import React, { useState, useEffect } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './testimonial-slider-section.module.scss';
-import Wave from './assets/wave.svg';
-
 // Image imports
 import { TestimonialBox } from '../testimonial-box/testimonial-box';
+import Wave from './assets/wave.svg';
+// Helper imports
+// Component imports
+// Style imports
+import style from './testimonial-slider-section.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -31,17 +27,19 @@ export const TestimonialSliderSection = ({ title, testimonials }) => {
     const bubbleNumberTwo = () => Math.floor(Math.random() * 50) + 75;
 
     // Generate the border css property
-    const generateBorder = (func) => `${func()}% ${func()}% ${func()}% / ${func()}% ${func()}% ${func()}%`;
+    const generateBorder = (func) =>
+        `${func()}% ${func()}% ${func()}% / ${func()}% ${func()}% ${func()}%`;
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const index = activeIndex === testimonials.length - 1 ? 0 : activeIndex + 1;
+            const index =
+                activeIndex === testimonials.length - 1 ? 0 : activeIndex + 1;
             setActiveIndex(index);
         }, 5000);
 
-        return (() => {
+        return () => {
             clearInterval(interval);
-        });
+        };
     });
 
     const body = testimonials[activeIndex].body;
@@ -52,22 +50,33 @@ export const TestimonialSliderSection = ({ title, testimonials }) => {
             <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
                 <Row>
                     <Col lg={4}>
-                        <TestimonialBox name={testimonials[activeIndex].name} source={testimonials[activeIndex].source} image={testimonials[activeIndex].image}>
-                            { body }
+                        <TestimonialBox
+                            name={testimonials[activeIndex].name}
+                            source={testimonials[activeIndex].source}
+                            image={testimonials[activeIndex].image}>
+                            {body}
                         </TestimonialBox>
                     </Col>
                     <Col lg={6} lgOffset={1}>
-                        <h2>{ title }</h2>
+                        <h2>{title}</h2>
                         <ul className={style.peopleList}>
-                            { testimonials.map(({ name, image }, index) => (
+                            {testimonials.map(({ name, image }, index) => (
                                 <li
-                                    className={classNames([style.person, {
-                                        [`${style.active}`]: index === activeIndex,
-                                    }])}
-                                    style={{ '--bubble': generateBorder(bubbleNumberOne), '--bubble-two': generateBorder(bubbleNumberTwo) }}
+                                    className={classNames([
+                                        style.person,
+                                        {
+                                            [`${style.active}`]:
+                                                index === activeIndex,
+                                        },
+                                    ])}
+                                    style={{
+                                        '--bubble':
+                                            generateBorder(bubbleNumberOne),
+                                        '--bubble-two':
+                                            generateBorder(bubbleNumberTwo),
+                                    }}
                                     onClick={() => setActiveIndex(index)}
-                                    key={name}
-                                >
+                                    key={name}>
                                     <img src={image} alt={name} />
                                 </li>
                             ))}
@@ -82,12 +91,14 @@ export const TestimonialSliderSection = ({ title, testimonials }) => {
 // Prop definitions
 TestimonialSliderSection.propTypes = {
     title: PropTypes.string,
-    testimonials: PropTypes.arrayOf(PropTypes.shape({
-        name: PropTypes.string,
-        source: PropTypes.string,
-        image: PropTypes.string,
-        body: PropTypes.string,
-    })).isRequired,
+    testimonials: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string,
+            source: PropTypes.string,
+            image: PropTypes.string,
+            body: PropTypes.string,
+        }),
+    ).isRequired,
 };
 
 // Default props

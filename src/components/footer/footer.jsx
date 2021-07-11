@@ -1,22 +1,18 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Link } from 'gatsby';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
-// Helper imports
-
-// Component imports
-
-// Style imports
-import style from './footer.module.scss';
-
+import DiscordIcon from './assets/discord.inline.svg';
+import FacebookIcon from './assets/facebook.inline.svg';
+import InstagramIcon from './assets/instagram.inline.svg';
 // Image imports
 import TwitterIcon from './assets/twitter.inline.svg';
-import FacebookIcon from './assets/facebook.inline.svg';
-import DiscordIcon from './assets/discord.inline.svg';
-import InstagramIcon from './assets/instagram.inline.svg';
+// Helper imports
+// Component imports
+// Style imports
+import style from './footer.module.scss';
+import classNames from 'classnames';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const socialIcons = [
     {
@@ -34,7 +30,6 @@ const socialIcons = [
         icon: DiscordIcon,
         link: 'https://discord.gg/hackthemidlands',
     },
-
 ];
 
 /**
@@ -52,7 +47,7 @@ export const Footer = (props) => (
                 </Col>
                 <Col xs>
                     <ul className={style.socialIcons}>
-                        { socialIcons.map(({ name, icon: Icon, link }) => (
+                        {socialIcons.map(({ name, icon: Icon, link }) => (
                             <li key={name}>
                                 <a href={link} target="_blank">
                                     <Icon className={style.socialIcon} />
@@ -66,22 +61,40 @@ export const Footer = (props) => (
                 <Col lg={3}>
                     <h4 className={style.listTitle}>Company</h4>
                     <ul className={style.list}>
-                        <li><Link to="/team">The Team</Link></li>
-                        <li><Link to="/#mission">Mission</Link></li>
-                        <li><Link to="/#sponsor-cta">Sponsor</Link></li>
+                        <li>
+                            <Link to="/team">The Team</Link>
+                        </li>
+                        <li>
+                            <Link to="/#mission">Mission</Link>
+                        </li>
+                        <li>
+                            <Link to="/#sponsor-cta">Sponsor</Link>
+                        </li>
                     </ul>
                 </Col>
                 <Col lg={3}>
                     <h4 className={style.listTitle}>Event</h4>
                     <ul className={style.list}>
-                        <li><Link to="/#tickets">Tickets</Link></li>
-                        <li><Link to="/#faq">FAQ</Link></li>
-                        <li><Link to="/#community">Community</Link></li>
+                        <li>
+                            <Link to="/#tickets">Tickets</Link>
+                        </li>
+                        <li>
+                            <Link to="/#faq">FAQ</Link>
+                        </li>
+                        <li>
+                            <Link to="/#community">Community</Link>
+                        </li>
                     </ul>
                 </Col>
             </Row>
             <Row className={style.cic}>
-                <span>HackTheMidlands is a private limited company (company number <Link to="https://beta.companieshouse.gov.uk/company/12166335">12166335</Link>) limited by guarantee without share capital.</span>
+                <span>
+                    HackTheMidlands is a private limited company (company number{' '}
+                    <Link to="https://beta.companieshouse.gov.uk/company/12166335">
+                        12166335
+                    </Link>
+                    ) limited by guarantee without share capital.
+                </span>
             </Row>
         </Grid>
     </footer>

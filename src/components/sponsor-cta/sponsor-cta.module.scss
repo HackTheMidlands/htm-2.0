@@ -1,35 +1,35 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 section.section {
-  margin: 50px auto;
+    margin: 50px auto;
 }
 
 .image {
-  max-width: 400px;
-  margin: auto;
+    max-width: 400px;
+    margin: auto;
 }
 
 .imageCol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media screen and (max-width: $mdBreakpointMin) {
-    order: 1;
-    align-items: flex-start;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: $mdBreakpointMin) {
+        order: 1;
+        align-items: flex-start;
+    }
 }
 
 .textCol {
-  @media screen and (max-width: $mdBreakpointMin) {
-    order: 2;
-  }
+    @media screen and (max-width: $mdBreakpointMin) {
+        order: 2;
+    }
 }
 
 .title {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .hearts {
-  width: 40px;
-  display: inline-block;
+    width: 40px;
+    display: inline-block;
 }

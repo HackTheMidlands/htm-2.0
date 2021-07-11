@@ -1,15 +1,12 @@
 // Module Imports
-import React, { useEffect, useState } from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import moment from 'moment';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import style from './timeline-time.module.scss';
+import classNames from 'classnames';
+import moment from 'moment';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 
 // Image imports
 
@@ -37,16 +34,26 @@ export const TimelineTime = ({ spaceBetween, currentDay }) => {
     return (
         <div className={style.timeTrack}>
             <div className={style.line} />
-            { currentDay && (<div className={style.activeLine} style={{ left: currentHour * spaceBetween }} />) }
-            { times.map((time) => (
+            {currentDay && (
+                <div
+                    className={style.activeLine}
+                    style={{ left: currentHour * spaceBetween }}
+                />
+            )}
+            {times.map((time) => (
                 <div
                     key={time}
-                    className={classNames([style.time, {
-                        [`${style.active}`]: currentHour === parseInt(time.split(':')[0], 10) && currentDay,
-                    }])}
-                >
+                    className={classNames([
+                        style.time,
+                        {
+                            [`${style.active}`]:
+                                currentHour ===
+                                    parseInt(time.split(':')[0], 10) &&
+                                currentDay,
+                        },
+                    ])}>
                     <div className={style.ball} />
-                    { time }
+                    {time}
                 </div>
             ))}
         </div>

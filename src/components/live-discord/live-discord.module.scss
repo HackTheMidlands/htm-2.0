@@ -1,22 +1,22 @@
 .discord {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  //padding-bottom: 100px;
-  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //padding-bottom: 100px;
+    position: relative;
 }
 
 .background {
-  position: absolute;
-  width: 100%;
-  height: 417.75px;
-  top: -150px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+    position: absolute;
+    width: 100%;
+    height: 417.75px;
+    top: -150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 .iFrame {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }

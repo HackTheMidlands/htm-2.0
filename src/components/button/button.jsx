@@ -1,19 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-
 import styles from './button.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export const Button = ({
-    name, theme, type, size, children, disabled, onClick,
+    name,
+    theme,
+    type,
+    size,
+    children,
+    disabled,
+    onClick,
 }) => (
     <button
         name={name}
         type={type}
         className={classNames([styles.button, styles[theme], styles[size]])}
         disabled={disabled}
-        onClick={onClick}
-    >
+        onClick={onClick}>
         {children}
     </button>
 );

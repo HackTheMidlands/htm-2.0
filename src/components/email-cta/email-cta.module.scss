@@ -1,84 +1,84 @@
-@import "../../styles/helpers/make-property";
-@import "../../styles/variables";
+@import '../../styles/helpers/make-property';
+@import '../../styles/variables';
 
 .email {
-  padding: 200px 0;
-  overflow: hidden;
+    padding: 200px 0;
+    overflow: hidden;
 
-  @media screen and (max-width: $smBreakpointMin) {
-    padding: 100px 0;
-  }
+    @media screen and (max-width: $smBreakpointMin) {
+        padding: 100px 0;
+    }
 }
 
 .emailBox {
-  border-radius: 10px;
-  box-shadow: 0 0 60px rgba(68, 154, 253, .11);
-  padding: 50px 100px;
-  background-color: white;
-  text-align: center;
-  position: relative;
-  z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0 0 60px rgba(68, 154, 253, 0.11);
+    padding: 50px 100px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
 
-  @media screen and (max-width: $mdBreakpointMin) {
-    padding: 50px 40px;
-  }
+    @media screen and (max-width: $mdBreakpointMin) {
+        padding: 50px 40px;
+    }
 }
 
 .emailIcon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 88px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 88px;
 }
 
 .input {
-  @include make-property('font-size', 18px);
-  padding: 10px 15px;
-  border: none;
-  background-color: var(--inputBlue);
-  border-radius: 5px;
-  margin-bottom: 5px;
-  &::placeholder {
-    color: #AFCDDD;
-  }
+    @include make-property('font-size', 18px);
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--inputBlue);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    &::placeholder {
+        color: #afcddd;
+    }
 }
 
 .button {
-  @include make-property('font-size', 18px);
-  padding: 10px 15px;
-  background-color: #DEF3FF;
-  color: #449AFD;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  margin-left: 10px;
+    @include make-property('font-size', 18px);
+    padding: 10px 15px;
+    background-color: #def3ff;
+    color: #449afd;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 .title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .dotGrid {
-  position: absolute;
-  width: 308px;
-  height: 280px;
-  top: -60px;
-  left: -60px;
-  z-index: 1;
+    position: absolute;
+    width: 308px;
+    height: 280px;
+    top: -60px;
+    left: -60px;
+    z-index: 1;
 }
 
 .greenTriangle {
-  position: absolute;
-  right: -70px;
-  bottom: -60px;
-  width: 150px;
-  z-index: 3;
+    position: absolute;
+    right: -70px;
+    bottom: -60px;
+    width: 150px;
+    z-index: 3;
 }
 
 .circleImage {
-  position: absolute;
-  left: -7vw;
-  bottom: -100px;
-  width: 100px;
+    position: absolute;
+    left: -7vw;
+    bottom: -100px;
+    width: 100px;
 }

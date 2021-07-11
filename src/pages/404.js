@@ -1,7 +1,6 @@
-import React from 'react';
-
-import Layout from '../components/layout/layout';
 import { HeroHeader } from '../components/hero-header/hero-header';
+import Layout from '../components/layout/layout';
+import React from 'react';
 
 const Missing = () => (
     <Layout>

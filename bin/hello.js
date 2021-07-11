@@ -1,5 +1,5 @@
-const chalk = require('chalk')
-const pkg = require('../package.json')
+const chalk = require('chalk');
+const pkg = require('../package.json');
 
 console.log(`
 
@@ -15,16 +15,16 @@ ${chalk.yellow.bold('yarn run setup')} automates the following steps for you:
 When this is done run:
 
 ${chalk.yellow(
-  'yarn run dev'
+    'yarn run dev',
 )} to start a development environment at ${chalk.green('localhost:8000')}
 
 or
 
 ${chalk.yellow(
-  'yarn run build'
+    'yarn run build',
 )} to create a production ready static site in ${chalk.green('./public')}
 
 For further information check the readme of the project
 (https://github.com/contentful-userland/gatsby-contentful-starter)
 
-`)
+`);

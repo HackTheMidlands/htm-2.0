@@ -1,75 +1,73 @@
 section.section {
-  position: relative;
-  margin-top: 150px;
+    position: relative;
+    margin-top: 150px;
 }
 
 .peopleList {
-  padding: 0;
-  margin-top: 120px;
+    padding: 0;
+    margin-top: 120px;
 }
 
 .person {
-  position: relative;
-  display: inline-block;
-  margin: 26px;
-  cursor: pointer;
-  img {
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
     position: relative;
-    object-fit: cover;
-    z-index: 1;
-  }
+    display: inline-block;
+    margin: 26px;
+    cursor: pointer;
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        position: relative;
+        object-fit: cover;
+        z-index: 1;
+    }
 
-  &:before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #192ED8;
-    border-radius: var(--bubble);
-    opacity: .4;
-    transition: all .6s ease;
-  }
-
-  &:after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background-color: #6D7BEB;
-    border-radius: var(--bubble-two);
-    opacity: .4;
-    transition: all 1s ease;
-  }
-
-  &.active {
     &:before {
-      $size: 130px;
-      width: $size;
-      height: $size;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #192ed8;
+        border-radius: var(--bubble);
+        opacity: 0.4;
+        transition: all 0.6s ease;
     }
 
     &:after {
-      $size: 140px;
-      width: $size;
-      height: $size;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: #6d7beb;
+        border-radius: var(--bubble-two);
+        opacity: 0.4;
+        transition: all 1s ease;
     }
 
+    &.active {
+        &:before {
+            $size: 130px;
+            width: $size;
+            height: $size;
+        }
 
-  }
+        &:after {
+            $size: 140px;
+            width: $size;
+            height: $size;
+        }
+    }
 }
 
 .wave {
-  position: absolute;
-  top: 2vw;
-  left: 0;
-  width: 100%;
+    position: absolute;
+    top: 2vw;
+    left: 0;
+    width: 100%;
 }

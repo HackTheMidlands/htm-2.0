@@ -1,20 +1,16 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
 import { ImageCard } from '../image-card/image-card';
-
-// Style imports
-import style from './challenge-card.module.scss';
-
+import CalendarIcon from './assets/calendar.svg';
 // Image imports
 import LocationIcon from './assets/location.svg';
-import CalendarIcon from './assets/calendar.svg';
+// Style imports
+import style from './challenge-card.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * Card for challenges
@@ -28,13 +24,21 @@ import CalendarIcon from './assets/calendar.svg';
  * @constructor
  */
 export const ChallengeCard = ({
-    image, logo, logoBackground, name, sponsorName,
+    image,
+    logo,
+    logoBackground,
+    name,
+    sponsorName,
 }) => (
-    <ImageCard image={image} headerStyle={{ height: '190px' }} overlay="#3B66FA" componentStyle={{ height: '100%' }}>
+    <ImageCard
+        image={image}
+        headerStyle={{ height: '190px' }}
+        overlay="#3B66FA"
+        componentStyle={{ height: '100%' }}>
         <div className={style.logo} style={{ backgroundColor: logoBackground }}>
             <img src={logo} alt={sponsorName} />
         </div>
-        <h4 className={style.eventName}>{ name }</h4>
+        <h4 className={style.eventName}>{name}</h4>
     </ImageCard>
 );
 
@@ -48,5 +52,4 @@ ChallengeCard.propTypes = {
 };
 
 // Default props
-ChallengeCard.defaultProps = {
-};
+ChallengeCard.defaultProps = {};

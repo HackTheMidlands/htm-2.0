@@ -1,15 +1,12 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import style from './faq-card.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -23,8 +20,8 @@ import style from './faq-card.module.scss';
 export const FaqCard = ({ title, body }) => (
     <div className={style.card}>
         <p className={style.number}>Q</p>
-        <p className={style.title}> { title }</p>
-        <p className={style.body}>{ body }</p>
+        <p className={style.title}> {title}</p>
+        <p className={style.body}>{body}</p>
     </div>
 );
 
@@ -36,5 +33,4 @@ FaqCard.propTypes = {
 };
 
 // Default props
-FaqCard.defaultProps = {
-};
+FaqCard.defaultProps = {};

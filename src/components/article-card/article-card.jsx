@@ -1,17 +1,14 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Link } from 'gatsby';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-
 // Helper imports
-
 // Component imports
 import { ImageCard } from '../image-card/image-card';
-
 // Style imports
 import style from './article-card.module.scss';
+import classNames from 'classnames';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -21,13 +18,13 @@ import style from './article-card.module.scss';
  * @returns {*}
  * @constructor
  */
-export const ArticleCard = ({
-    image, title, body, link,
-}) => (
+export const ArticleCard = ({ image, title, body, link }) => (
     <ImageCard image={image}>
-        <h4 className={style.title}>{ title }</h4>
-        <p>{ body }</p>
-        <Link to={link} className={style.link}>Read More</Link>
+        <h4 className={style.title}>{title}</h4>
+        <p>{body}</p>
+        <Link to={link} className={style.link}>
+            Read More
+        </Link>
     </ImageCard>
 );
 

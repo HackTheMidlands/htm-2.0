@@ -1,16 +1,13 @@
 // Module Imports
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import uniqud from 'uniqid';
-
 // Helper imports
-
 // Component imports
-
 // Style imports
 import style from './image-card.module.scss';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import uniqud from 'uniqid';
 
 // Image imports
 
@@ -24,16 +21,24 @@ import style from './image-card.module.scss';
  * @constructor
  */
 export const ImageCard = ({
-    name, image, children, componentStyle, headerStyle, overlay,
+    name,
+    image,
+    children,
+    componentStyle,
+    headerStyle,
+    overlay,
 }) => (
     <article className={style.imageCard} style={componentStyle}>
         <div className={style.header} style={headerStyle}>
             <img src={image} className={style.image} alt={name} />
-            { overlay && (<div className={style.overlay} style={{ backgroundColor: overlay }} />) }
+            {overlay && (
+                <div
+                    className={style.overlay}
+                    style={{ backgroundColor: overlay }}
+                />
+            )}
         </div>
-        <div className={style.content}>
-            { children }
-        </div>
+        <div className={style.content}>{children}</div>
     </article>
 );
 
