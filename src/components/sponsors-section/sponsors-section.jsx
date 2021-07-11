@@ -1,5 +1,4 @@
 // Module Imports
-import SparkleGif from '../../assets/gifs/sparkles.gif';
 import BronzeMedal from './assets/bronze.png';
 import DigitalMedal from './assets/digital.png';
 // Image imports
@@ -50,7 +49,7 @@ export const SponsorsSection = ({
         <Grid fluid>
             <Row>
                 <Col xs={12}>
-                    <img src={SparkleGif} className={style.sparkleGif} />
+                    <img src='/images/gifs/sparkles.gif' className={style.sparkleGif} />
                     <h2 className={style.title}>Our Sponsors</h2>
                 </Col>
             </Row>

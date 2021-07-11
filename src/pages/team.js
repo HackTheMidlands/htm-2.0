@@ -3,7 +3,8 @@ import { HeroHeader } from '../components/hero-header/hero-header';
 import Layout from '../components/layout/layout';
 import { TeamCard } from '../components/team-card/team-card';
 // Assets
-import FireGif from './assets/fire.gif';
+import FireGif from './assets/fire.webp';
+import { StaticImage } from "gatsby-plugin-image"
 // Style
 import style from './team.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';

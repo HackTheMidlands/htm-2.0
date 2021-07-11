@@ -1,5 +1,3 @@
-// Module Imports
-import RevolvingHearts from '../../assets/gifs/revolving_hearts.gif';
 // Helper imports
 // Component imports
 import { Button } from '../button/button';
@@ -34,7 +32,7 @@ export const SponsorCta = (props) => (
                         Fancy sponsoring something special and showing some{' '}
                         <span>
                             <img
-                                src={RevolvingHearts}
+                                src='/images/gifs/revolving_hearts.gif'
                                 className={style.hearts}
                             />
                         </span>

@@ -1,4 +1,3 @@
-import PartyFace from '../assets/gifs/partying_face.gif';
 import HTMVideo from '../assets/hero-video.mp4';
 import Discord from '../assets/img/discord-white.svg';
 import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';

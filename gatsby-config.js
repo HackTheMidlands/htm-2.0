@@ -7,7 +7,6 @@ const settings = require('./src/data/site.json');
 const contentfulConfig = {
     spaceId: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    forceFullSync: true,
 };
 
 // if you want to use the preview API please define
