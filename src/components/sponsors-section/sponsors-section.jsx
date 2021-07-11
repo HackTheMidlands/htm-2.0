@@ -1,6 +1,7 @@
 // Module Imports
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { GatsbyImage } from "gatsby-plugin-image"
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -25,6 +26,19 @@ const ComingSoon = ({ tier }) => (
     <p className={style.comingSoon}>More {tier} sponsors coming soon!</p>
 );
 
+        const Sponsors = ({sponsors, tier}) => {
+        if(sponsors.length > 0) {
+        return sponsors.map((sponsor) => <div>
+            <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                {sponsor.image && <GatsbyImage alt={sponsor.name} image={sponsor.image.gatsbyImageData} />}
+            </a>
+        </div>
+        );
+            } else {
+                return <ComingSoon tier={tier}/>
+            }
+        } 
+
 export const SponsorsSection = ({
     goldTier, silverTier, bronzeTier, digitalTier, partners,
 }) => (
@@ -44,17 +58,8 @@ export const SponsorsSection = ({
                         <h2>Gold</h2>
                     </div>
                     <div className={style.gold}>
-                        { goldTier.length > 0 && goldTier.map((sponsor) => (
-                            <div>
-                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={sponsor.image} alt={sponsor.name} />
-                                </a>
-                            </div>
-                        ))}
+                        <Sponsors sponsors={goldTier} tier="gold"/>
                     </div>
-                    { goldTier.length === 0 && (
-                      <ComingSoon tier="gold" />
-                    )}
                 </Col>
             </Row>
             <Row>
@@ -64,16 +69,7 @@ export const SponsorsSection = ({
                         <h2>Silver</h2>
                     </div>
                     <div className={style.silver}>
-                        { silverTier.length > 0 && silverTier.map((sponsor) => (
-                            <div>
-                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={sponsor.image} alt={sponsor.name} />
-                                </a>
-                            </div>
-                        ))}
-                        { silverTier.length === 0 && (
-                          <ComingSoon tier="silver" />
-                        )}
+                        <Sponsors sponsors={silverTier} tier="silver"/>
                     </div>
                 </Col>
             </Row>
@@ -84,16 +80,7 @@ export const SponsorsSection = ({
                         <h2>Bronze</h2>
                     </div>
                     <div className={style.bronze} style={{ gridTemplateColumns: bronzeTier.length < 4 ? '1fr '.repeat(bronzeTier.length) : '1fr' }}>
-                        { bronzeTier.length > 0 && bronzeTier.map((sponsor) => (
-                            <div>
-                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={sponsor.image} alt={sponsor.name} />
-                                </a>
-                            </div>
-                        ))}
-                        { bronzeTier.length === 0 && (
-                          <ComingSoon tier="bronze" />
-                        )}
+                        <Sponsors sponsors={bronzeTier} tier="bronze"/>
                     </div>
                 </Col>
             </Row>
@@ -124,16 +111,7 @@ export const SponsorsSection = ({
                         <h2>Partners</h2>
                     </div>
                     <div className={style.partners}>
-                        { partners.length > 0 && partners.map((sponsor) => (
-                            <div>
-                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={sponsor.image} alt={sponsor.name} />
-                                </a>
-                            </div>
-                        ))}
-                        { partners.length === 0 && (
-                          <ComingSoon tier="partner" />
-                        )}
+                        <Sponsors sponsors={partners} tier="partner"/>
                     </div>
                 </Col>
             </Row>
@@ -143,7 +121,7 @@ export const SponsorsSection = ({
 );
 
 const sponsorPropTypes = PropTypes.shape({
-    image: PropTypes.string,
+    image: PropTypes.object,
     name: PropTypes.string,
     link: PropTypes.string,
 });
