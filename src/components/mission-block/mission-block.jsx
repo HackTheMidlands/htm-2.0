@@ -1,11 +1,11 @@
 // Module Imports
-import EventImage from '../../assets/img/event-pictures/workshop.jpg';
 import DotGrid from './assets/dot-grid.svg';
 import GreenCircleLarge from './assets/green-circle-large-glow.svg';
 import GreenTriangle from './assets/green-triangle-glow.svg';
 import OrangeSquare from './assets/orange-square.svg';
 // Image imports
 import WaveBackground from './assets/wave.svg';
+import { StaticImage } from 'gatsby-plugin-image';
 // Helper imports
 // Component imports
 // Style imports
@@ -19,12 +19,11 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
  * Mission block
  * @param title
  * @param body
- * @param image
  * @param statistics
  * @returns {*}
  * @constructor
  */
-export const MissionBlock = ({ title, body, image, statistics }) => (
+export const MissionBlock = ({ title, body, statistics }) => (
     <section
         className={style.mission}
         style={{ backgroundImage: `url('${WaveBackground}')` }}>
@@ -64,9 +63,9 @@ export const MissionBlock = ({ title, body, image, statistics }) => (
                             alt="Green circle"
                             className={style.greenCircleLarge}
                         />
-                        <img
+                        <StaticImage
                             className={style.featureImage}
-                            src={image}
+                            src='../../assets/img/event-pictures/workshop.jpg'
                             alt="Mission image"
                         />
                         <img
@@ -100,7 +99,6 @@ MissionBlock.propTypes = {
 MissionBlock.defaultProps = {
     title: 'Creating a safe and inclusive place for all',
     body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-    image: EventImage,
     statistics: [
         '5 Annual Hackathons',
         '1,000 + Hackers Attended',

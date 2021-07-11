@@ -1,8 +1,6 @@
 // Image imports
 import DiagonalLine from './assets/diagonal-line.svg';
-import EventPicOne from './assets/evebt-pic-one.jpg';
-import EventPicThree from './assets/event-pic-three.jpg';
-import EventPicTwo from './assets/event-pic-two.jpg';
+import { StaticImage } from 'gatsby-plugin-image';
 // Helper imports
 // Component imports
 // Style imports
@@ -44,13 +42,13 @@ export const EventInfo = ({ title, body, children }) => (
                 <Col lg={7} className={style.imageCol}>
                     <Row>
                         <Col md={12} lg={5} className={style.imageColOne}>
-                            <img
-                                src={EventPicOne}
+                        <StaticImage
+                                src='./assets/evebt-pic-one.jpg'
                                 className={style.image}
                                 alt="Pic one"
                             />
-                            <img
-                                src={EventPicThree}
+                        <StaticImage
+                                src='./assets/evebt-pic-two.jpg'
                                 className={classNames([
                                     style.image,
                                     style.imageTwo,
@@ -59,8 +57,8 @@ export const EventInfo = ({ title, body, children }) => (
                             />
                         </Col>
                         <Col md={12} lg={7}>
-                            <img
-                                src={EventPicTwo}
+                        <StaticImage
+                                src='./assets/evebt-pic-three.jpg'
                                 className={classNames([
                                     style.image,
                                     style.imageThree,

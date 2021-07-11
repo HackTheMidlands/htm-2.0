@@ -22,7 +22,7 @@ export const IndexIntro = ({ title, body }) => (
         <Row>
             <Col lg={7} md={9} sm={12} style={{ position: 'relative' }}>
                 <StaticImage src='./assets/hex-grid.png' className={style.hex} alt="Hexagon grid" />
-                    <img src='/images/webp/sparkling_heart.webp' className={style.heartGif} />
+                <img src='/images/webp/sparkling_heart.webp' className={style.heartGif} />
             </Col>
         </Row>
         <Row className={style.textBlock}>
