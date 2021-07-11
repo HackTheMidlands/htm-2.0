@@ -1,16 +1,7 @@
-// Module Imports
-import BronzeMedal from './assets/bronze.png';
-import DigitalMedal from './assets/digital.png';
-// Image imports
-import GoldMedal from './assets/gold.png';
 import PartnerMedal from './assets/partner.inline.svg';
-import SilverMedal from './assets/silver.png';
-// Helper imports
-// Component imports
-// Style imports
 import style from './sponsors-section.module.scss';
 import classNames from 'classnames';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -58,8 +49,8 @@ export const SponsorsSection = ({
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img
-                            src={GoldMedal}
+                        <StaticImage
+                            src='./assets/gold.png'
                             alt="Gold Medal"
                             className={style.medal}
                         />
@@ -73,8 +64,8 @@ export const SponsorsSection = ({
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img
-                            src={SilverMedal}
+                        <StaticImage
+                            src='./assets/silver.png'
                             alt="Silver Medal"
                             className={style.medal}
                         />
@@ -88,8 +79,8 @@ export const SponsorsSection = ({
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img
-                            src={BronzeMedal}
+                        <StaticImage
+                            src='./assets/bronze.png'
                             alt="Bronze Medal"
                             className={style.medal}
                         />

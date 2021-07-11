@@ -1,4 +1,5 @@
 import Logo from '../../assets/img/HTM_Main_Transparent.png';
+import { StaticImage } from 'gatsby-plugin-image';
 // Components
 import { Button } from '../button/button';
 import styles from './navigation.module.scss';
@@ -60,7 +61,11 @@ const Navigation = () => (
                 style={{ marginLeft: '3vw', marginRight: '3vw' }}>
                 <Col>
                     <Link to="/">
-                        <img className={styles.logo} src={Logo} alt="Logo" />
+                        <StaticImage
+                            src='../../assets/img/HTM_Main_Transparent.png'
+                            alt="Logo"
+                            className={styles.logo}
+                        />
                     </Link>
                 </Col>
                 {/* <Col style={{ display: 'flex', justifyContent: 'center' }}> */}
