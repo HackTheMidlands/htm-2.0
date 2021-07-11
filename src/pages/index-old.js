@@ -9,10 +9,9 @@ import { MissionBlock } from '../components/mission-block/mission-block';
 import { UpcomingEvents } from '../components/upcoming-events/upcoming-events';
 // Styles
 import style from './index-old.module.scss';
-import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 import Helmet from 'react-helmet';
 
 const events = [
@@ -53,35 +52,29 @@ const IndexOld = (props) => {
         <Layout location={props.location}>
             <div>
                 <Helmet title={siteTitle} />
-
                 <HeroHeader className={style.header}>
                     <Grid fluid>
                         <Row center="xs">
                             <Col xs={8}>
                                 <h1>
                                     Lorem ipsum dolor sit amet, consetetur
-                                    sadipscing elitr
+                                    sadipscing elitr{' '}
                                 </h1>
                                 <p>
                                     Lorem ipsum dolor sit amet, consetetur
                                     sadipscing elitr, sed diam nonumy eirmod
                                     tempor invidunt ut labore et dolore magna
-                                    aliquyam erat
+                                    aliquyam erat{' '}
                                 </p>
                                 <Button theme="orange">Get involved</Button>
                             </Col>
                         </Row>
                     </Grid>
                 </HeroHeader>
-
                 <IndexFeatures />
-
                 <MissionBlock />
-
                 <UpcomingEvents events={events} />
-
                 <EmailCta />
-
                 <FeatureArticle />
             </div>
         </Layout>

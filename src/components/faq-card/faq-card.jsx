@@ -3,10 +3,8 @@
 // Component imports
 // Style imports
 import style from './faq-card.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 

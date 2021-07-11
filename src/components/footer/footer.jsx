@@ -1,18 +1,15 @@
 // Module Imports
 import DiscordIcon from './assets/discord.inline.svg';
 import FacebookIcon from './assets/facebook.inline.svg';
-import InstagramIcon from './assets/instagram.inline.svg';
 // Image imports
 import TwitterIcon from './assets/twitter.inline.svg';
 // Helper imports
 // Component imports
 // Style imports
 import style from './footer.module.scss';
-import classNames from 'classnames';
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const socialIcons = [
     {

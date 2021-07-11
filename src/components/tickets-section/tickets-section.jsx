@@ -13,7 +13,7 @@ import GreenCircle from './assets/green-circle.inline.svg';
 import style from './tickets-section.module.scss';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * Tickets section for display purposes
@@ -31,7 +31,12 @@ export const TicketsSection = ({ tickets }) => (
             alt="Diagonal background graphic"
             className={style.diagonal}
         />
-        <Grid fluid style={{ position: 'relative', zIndex: 1 }}>
+        <Grid
+            fluid
+            style={{
+                position: 'relative',
+                zIndex: 1,
+            }}>
             <Row>
                 <Col lg={12}>
                     <h2 className={style.title}>Tickets</h2>

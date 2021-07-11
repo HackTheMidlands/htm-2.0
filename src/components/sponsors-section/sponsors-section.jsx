@@ -1,10 +1,9 @@
 import PartnerMedal from './assets/partner.inline.svg';
 import style from './sponsors-section.module.scss';
-import classNames from 'classnames';
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const calculateGridCols = (tier) => tier.map(() => '1fr').join(' ');
 
@@ -40,8 +39,13 @@ export const SponsorsSection = ({
         <Grid fluid>
             <Row>
                 <Col xs={12}>
-                    <video autoPlay loop muted playsInline className={style.sparkleGif}>
-                        <source src='/images/sparkles.webm' type="video/webm" />
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={style.sparkleGif}>
+                        <source src="/images/sparkles.webm" type="video/webm" />
                     </video>
                     <h2 className={style.title}>Our Sponsors</h2>
                 </Col>
@@ -50,7 +54,7 @@ export const SponsorsSection = ({
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
                         <StaticImage
-                            src='./assets/gold.png'
+                            src="./assets/gold.png"
                             alt="Gold Medal"
                             className={style.medal}
                         />
@@ -65,7 +69,7 @@ export const SponsorsSection = ({
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
                         <StaticImage
-                            src='./assets/silver.png'
+                            src="./assets/silver.png"
                             alt="Silver Medal"
                             className={style.medal}
                         />
@@ -80,7 +84,7 @@ export const SponsorsSection = ({
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
                         <StaticImage
-                            src='./assets/bronze.png'
+                            src="./assets/bronze.png"
                             alt="Bronze Medal"
                             className={style.medal}
                         />

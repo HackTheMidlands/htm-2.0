@@ -6,7 +6,7 @@ import style from './faq-section.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 // Image imports
 

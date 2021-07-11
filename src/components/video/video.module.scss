@@ -4,6 +4,7 @@
     position: relative;
     transition: all 0.3s ease;
     transform: scale(0.8);
+
     &::before {
         content: '';
         position: absolute;
@@ -46,6 +47,7 @@ video.video {
 
 .playing {
     transform: scale(1);
+
     &::before {
         transition: all 0.3s ease;
         opacity: 0;

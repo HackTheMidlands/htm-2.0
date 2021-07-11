@@ -1,9 +1,5 @@
 import Layout from '../components/layout/layout';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import get from 'lodash/get';
 import React from 'react';
-import Helmet from 'react-helmet';
 
 class BlogPostTemplate extends React.Component {
     render() {

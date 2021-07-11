@@ -5,7 +5,6 @@ import style from './hero-header.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * Hero header components
@@ -26,7 +25,11 @@ export const HeroHeader = ({
 }) => (
     <header
         className={classNames([style.header, className])}
-        style={{ height, backgroundImage: `url('${image}')`, ...elStyle }}>
+        style={{
+            height,
+            backgroundImage: `url('${image}')`,
+            ...elStyle,
+        }}>
         <img
             src={ShapeBackgroundImage}
             className={style.shapeBackground}

@@ -1,12 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectangle_59" data-name="Rectangle 59" width="20" height="20" transform="translate(280 9227)" fill="#fff" stroke="#707070" stroke-width="1"/>
-    </clipPath>
-  </defs>
-  <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(-280 -9227)" clip-path="url(#clip-path)">
-    <g id="twitter" transform="translate(277.525 9224.487)">
-      <path id="_x30_4.Twitter" d="M22.475,6.3a8.411,8.411,0,0,1-2.35.65,4,4,0,0,0,1.8-2.275,8.634,8.634,0,0,1-2.6,1,4.1,4.1,0,0,0-7.1,2.8,3.749,3.749,0,0,0,.1.925A11.541,11.541,0,0,1,3.9,5.125,4.114,4.114,0,0,0,5.15,10.6a3.937,3.937,0,0,1-1.85-.5,4.143,4.143,0,0,0,3.275,4.075,4.5,4.5,0,0,1-1.85.075A4.117,4.117,0,0,0,8.55,17.1a8.26,8.26,0,0,1-6.075,1.7,11.566,11.566,0,0,0,6.3,1.85A11.565,11.565,0,0,0,20.425,9a3.692,3.692,0,0,0-.025-.525A8.138,8.138,0,0,0,22.475,6.3Z" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+     viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="clip-path">
+            <rect id="Rectangle_59" data-name="Rectangle 59" width="20" height="20" transform="translate(280 9227)"
+                  fill="#fff" stroke="#707070" stroke-width="1"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(-280 -9227)" clip-path="url(#clip-path)">
+        <g id="twitter" transform="translate(277.525 9224.487)">
+            <path id="_x30_4.Twitter"
+                  d="M22.475,6.3a8.411,8.411,0,0,1-2.35.65,4,4,0,0,0,1.8-2.275,8.634,8.634,0,0,1-2.6,1,4.1,4.1,0,0,0-7.1,2.8,3.749,3.749,0,0,0,.1.925A11.541,11.541,0,0,1,3.9,5.125,4.114,4.114,0,0,0,5.15,10.6a3.937,3.937,0,0,1-1.85-.5,4.143,4.143,0,0,0,3.275,4.075,4.5,4.5,0,0,1-1.85.075A4.117,4.117,0,0,0,8.55,17.1a8.26,8.26,0,0,1-6.075,1.7,11.566,11.566,0,0,0,6.3,1.85A11.565,11.565,0,0,0,20.425,9a3.692,3.692,0,0,0-.025-.525A8.138,8.138,0,0,0,22.475,6.3Z"
+                  fill="#fff"/>
+        </g>
     </g>
-  </g>
 </svg>

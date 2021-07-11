@@ -9,11 +9,8 @@ import { ButtonWithIcon } from '../button-with-icon/button-with-icon';
 import SocialIcons from './assets/social-icons.svg';
 // Style imports
 import style from './stay-connected-section.module.scss';
-import classNames from 'classnames';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * Stay connected section
@@ -31,15 +28,19 @@ export const StayConnectedSection = (props) => (
                     md={6}
                     mdOffset={0}
                     className={style.textCol}>
-
-                    <video autoPlay loop muted playsInline className={style.gif}>
-                        <source src='/images/penguin.webm' type="video/webm" />
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={style.animate}>
+                        <source src="/images/penguin.webm" type="video/webm" />
                     </video>
                     <h2 className={style.title}>Get involved with us</h2>
                     <p>
                         We’ll be posting all of our updates over on our socials
                         so be sure to give us a follow, and join the Discord
-                        server to participate 💖 We’ll see you there! ✨
+                        server to participate 💖 We’ll see you there! ✨{' '}
                     </p>
                     <div className={style.buttons}>
                         <a

@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85">
-  <g id="Group_92" data-name="Group 92" transform="translate(-792 -2567)">
-    <rect id="Rectangle_28" data-name="Rectangle 28" width="85" height="85" rx="10" transform="translate(792 2567)" fill="#fcda8e"/>
-    <path id="Icon_map-food" data-name="Icon map-food" d="M44,13.639,40.463,41.4H28.5L24.974,13.5h14.6l2.886-9.969,1.636.493-2.769,9.594ZM23.283,29.7s.447-3.6-5.756-3.6H7.649c-6.194,0-5.755,3.6-5.755,3.6ZM1.894,37.8s-.438,3.6,5.755,3.6h9.879c6.2,0,5.756-3.6,5.756-3.6ZM22.355,36a2.07,2.07,0,0,0,1.835-2.249A2.067,2.067,0,0,0,22.355,31.5H2.736A2.071,2.071,0,0,0,.9,33.751,2.074,2.074,0,0,0,2.736,36Z" transform="translate(812.1 2587.469)" fill="#cb9b30"/>
-  </g>
+    <g id="Group_92" data-name="Group 92" transform="translate(-792 -2567)">
+        <rect id="Rectangle_28" data-name="Rectangle 28" width="85" height="85" rx="10" transform="translate(792 2567)"
+              fill="#fcda8e"/>
+        <path id="Icon_map-food" data-name="Icon map-food"
+              d="M44,13.639,40.463,41.4H28.5L24.974,13.5h14.6l2.886-9.969,1.636.493-2.769,9.594ZM23.283,29.7s.447-3.6-5.756-3.6H7.649c-6.194,0-5.755,3.6-5.755,3.6ZM1.894,37.8s-.438,3.6,5.755,3.6h9.879c6.2,0,5.756-3.6,5.756-3.6ZM22.355,36a2.07,2.07,0,0,0,1.835-2.249A2.067,2.067,0,0,0,22.355,31.5H2.736A2.071,2.071,0,0,0,.9,33.751,2.074,2.074,0,0,0,2.736,36Z"
+              transform="translate(812.1 2587.469)" fill="#cb9b30"/>
+    </g>
 </svg>

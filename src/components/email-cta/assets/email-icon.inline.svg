@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88">
-  <g id="Group_36" data-name="Group 36" transform="translate(-639 -3139)">
-    <circle id="Ellipse_13" data-name="Ellipse 13" cx="44" cy="44" r="44" transform="translate(639 3139)" fill="#c9ffe4"/>
-    <path id="Icon_material-mail" data-name="Icon material-mail" d="M30,6H6A3,3,0,0,0,3.015,9L3,27a3.009,3.009,0,0,0,3,3H30a3.009,3.009,0,0,0,3-3V9A3.009,3.009,0,0,0,30,6Zm0,6L18,19.5,6,12V9l12,7.5L30,9Z" transform="translate(664.8 3165)" fill="#42c985"/>
-  </g>
+    <g id="Group_36" data-name="Group 36" transform="translate(-639 -3139)">
+        <circle id="Ellipse_13" data-name="Ellipse 13" cx="44" cy="44" r="44" transform="translate(639 3139)"
+                fill="#c9ffe4"/>
+        <path id="Icon_material-mail" data-name="Icon material-mail"
+              d="M30,6H6A3,3,0,0,0,3.015,9L3,27a3.009,3.009,0,0,0,3,3H30a3.009,3.009,0,0,0,3-3V9A3.009,3.009,0,0,0,30,6Zm0,6L18,19.5,6,12V9l12,7.5L30,9Z"
+              transform="translate(664.8 3165)" fill="#42c985"/>
+    </g>
 </svg>

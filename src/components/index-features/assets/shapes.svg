@@ -1,36 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="833.564" height="320.105" viewBox="0 0 833.564 320.105">
-  <defs>
-    <filter id="Ellipse_6" x="744.564" y="88.105" width="89" height="89" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="7.5" result="blur"/>
-      <feFlood flood-color="#31ff73"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Ellipse_7" x="501.564" y="231.105" width="89" height="89" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
-      <feFlood flood-color="#95d1f2"/>
-      <feComposite operator="in" in2="blur-2"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_183" data-name="Group 183" transform="translate(-297.936 -848.395)">
-    <g transform="matrix(1, 0, 0, 1, 297.94, 848.39)" filter="url(#Ellipse_6)">
-      <g id="Ellipse_6-2" data-name="Ellipse 6" transform="translate(767.06 110.61)" fill="none" stroke="rgba(154,255,169,0.42)" stroke-width="9">
-        <circle cx="22" cy="22" r="22" stroke="none"/>
-        <circle cx="22" cy="22" r="17.5" fill="none"/>
-      </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="833.564" height="320.105"
+     viewBox="0 0 833.564 320.105">
+    <defs>
+        <filter id="Ellipse_6" x="744.564" y="88.105" width="89" height="89" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="7.5" result="blur"/>
+            <feFlood flood-color="#31ff73"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Ellipse_7" x="501.564" y="231.105" width="89" height="89" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+            <feFlood flood-color="#95d1f2"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_183" data-name="Group 183" transform="translate(-297.936 -848.395)">
+        <g transform="matrix(1, 0, 0, 1, 297.94, 848.39)" filter="url(#Ellipse_6)">
+            <g id="Ellipse_6-2" data-name="Ellipse 6" transform="translate(767.06 110.61)" fill="none"
+               stroke="rgba(154,255,169,0.42)" stroke-width="9">
+                <circle cx="22" cy="22" r="22" stroke="none"/>
+                <circle cx="22" cy="22" r="17.5" fill="none"/>
+            </g>
+        </g>
+        <g id="Rectangle_13" data-name="Rectangle 13" transform="matrix(0.788, -0.616, 0.616, 0.788, 297.936, 875.484)"
+           fill="none" stroke="#ffc9c9" stroke-width="7" opacity="0.3">
+            <rect width="44" height="44" rx="8" stroke="none"/>
+            <rect x="3.5" y="3.5" width="37" height="37" rx="4.5" fill="none"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 297.94, 848.39)" filter="url(#Ellipse_7)">
+            <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(524.06 253.61)" fill="none"
+               stroke="rgba(202,236,255,0.45)" stroke-width="9">
+                <circle cx="22" cy="22" r="22" stroke="none"/>
+                <circle cx="22" cy="22" r="17.5" fill="none"/>
+            </g>
+        </g>
     </g>
-    <g id="Rectangle_13" data-name="Rectangle 13" transform="matrix(0.788, -0.616, 0.616, 0.788, 297.936, 875.484)" fill="none" stroke="#ffc9c9" stroke-width="7" opacity="0.3">
-      <rect width="44" height="44" rx="8" stroke="none"/>
-      <rect x="3.5" y="3.5" width="37" height="37" rx="4.5" fill="none"/>
-    </g>
-    <g transform="matrix(1, 0, 0, 1, 297.94, 848.39)" filter="url(#Ellipse_7)">
-      <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(524.06 253.61)" fill="none" stroke="rgba(202,236,255,0.45)" stroke-width="9">
-        <circle cx="22" cy="22" r="22" stroke="none"/>
-        <circle cx="22" cy="22" r="17.5" fill="none"/>
-      </g>
-    </g>
-  </g>
 </svg>

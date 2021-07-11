@@ -1,14 +1,14 @@
 // Image imports
 import DiagonalLine from './assets/diagonal-line.svg';
-import { StaticImage } from 'gatsby-plugin-image';
 // Helper imports
 // Component imports
 // Style imports
 import style from './event-info.module.scss';
 import classNames from 'classnames';
+import { StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -19,11 +19,21 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 export const EventInfo = ({ title, body, children }) => (
     <section className={style.eventSection}>
         <img src={DiagonalLine} className={style.line} alt="Diagonal line" />
-        <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
+        <Grid
+            fluid
+            style={{
+                zIndex: 1,
+                position: 'relative',
+            }}>
             <Row>
                 <Col lg={5} className={style.textCol}>
-                    <video autoPlay loop muted playsInline className={style.unicornGif}>
-                        <source src='/images/unicorn.webm' type="video/webm" />
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={style.unicornGif}>
+                        <source src="/images/unicorn.webm" type="video/webm" />
                     </video>
                     <h2 className={style.title}>{title}</h2>
                     <p>
@@ -38,19 +48,19 @@ export const EventInfo = ({ title, body, children }) => (
                             target="_blank">
                             here
                         </a>
-                        ).
+                        ).{' '}
                     </p>
                 </Col>
                 <Col lg={7} className={style.imageCol}>
                     <Row>
                         <Col md={12} lg={5} className={style.imageColOne}>
-                        <StaticImage
-                                src='assets/event-pic-one.jpg'
+                            <StaticImage
+                                src="assets/event-pic-one.jpg"
                                 className={style.image}
                                 alt="Pic one"
                             />
-                        <StaticImage
-                                src='assets/event-pic-two.jpg'
+                            <StaticImage
+                                src="assets/event-pic-two.jpg"
                                 className={classNames([
                                     style.image,
                                     style.imageTwo,
@@ -59,8 +69,8 @@ export const EventInfo = ({ title, body, children }) => (
                             />
                         </Col>
                         <Col md={12} lg={7}>
-                        <StaticImage
-                                src='assets/event-pic-three.jpg'
+                            <StaticImage
+                                src="assets/event-pic-three.jpg"
                                 className={classNames([
                                     style.image,
                                     style.imageThree,

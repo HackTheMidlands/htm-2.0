@@ -8,8 +8,8 @@ import Wave from './assets/wave.svg';
 import style from './testimonial-slider-section.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState, useEffect } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import React, { useEffect, useState } from 'react';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -47,7 +47,12 @@ export const TestimonialSliderSection = ({ title, testimonials }) => {
     return (
         <section className={style.section}>
             <img className={style.wave} src={Wave} alt="Wave" />
-            <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
+            <Grid
+                fluid
+                style={{
+                    zIndex: 1,
+                    position: 'relative',
+                }}>
                 <Row>
                     <Col lg={4}>
                         <TestimonialBox

@@ -1,12 +1,10 @@
-import main from '../../styles/main.scss';
+import '../../styles/main.scss';
 import Container from '../container/container';
 import { Footer } from '../footer/footer';
 import Navigation from '../navigation/navigation';
 import { Seo } from '../seo/seo';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 const Layout = (props) => {
     const { title } = props;

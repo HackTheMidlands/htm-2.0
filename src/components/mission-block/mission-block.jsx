@@ -5,15 +5,14 @@ import GreenTriangle from './assets/green-triangle-glow.svg';
 import OrangeSquare from './assets/orange-square.svg';
 // Image imports
 import WaveBackground from './assets/wave.svg';
-import { StaticImage } from 'gatsby-plugin-image';
 // Helper imports
 // Component imports
 // Style imports
 import style from './mission-block.module.scss';
-import classNames from 'classnames';
+import { StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * Mission block
@@ -65,7 +64,7 @@ export const MissionBlock = ({ title, body, statistics }) => (
                         />
                         <StaticImage
                             className={style.featureImage}
-                            src='../../assets/img/event-pictures/workshop.jpg'
+                            src="../../assets/img/event-pictures/workshop.jpg"
                             alt="Mission image"
                         />
                         <img

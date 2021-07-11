@@ -1,24 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="183" height="183" viewBox="0 0 183 183">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ff7365;
-        opacity: 0.679;
-      }
+<svg xmlns="http://www.w3.org/2000/svg" width="183" height="183"
+     viewBox="0 0 183 183">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: #ff7365;
+            opacity: 0.679;
+            }
 
-      .cls-2 {
-        filter: url(#Subtraction_5);
-      }
-    </style>
-    <filter id="Subtraction_5" x="0" y="0" width="183" height="183" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="13" result="blur"/>
-      <feFlood flood-color="#ff7365" flood-opacity="0.525"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
-    <path id="Subtraction_5-2" data-name="Subtraction 5" class="cls-1" d="M52.5,105a52.255,52.255,0,0,1-29.353-8.966,52.654,52.654,0,0,1-19.021-23.1,52.431,52.431,0,0,1,4.84-49.788,52.654,52.654,0,0,1,23.1-19.021,52.431,52.431,0,0,1,49.788,4.84,52.654,52.654,0,0,1,19.021,23.1,52.431,52.431,0,0,1-4.84,49.788,52.654,52.654,0,0,1-23.1,19.021A52.17,52.17,0,0,1,52.5,105Zm0-83.222a30.626,30.626,0,1,0,11.958,2.414A30.53,30.53,0,0,0,52.5,21.778Z" transform="translate(39 39)"/>
-  </g>
+            .cls-2 {
+            filter: url(#Subtraction_5);
+            }
+        </style>
+        <filter id="Subtraction_5" x="0" y="0" width="183" height="183" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="13" result="blur"/>
+            <feFlood flood-color="#ff7365" flood-opacity="0.525"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+        <path id="Subtraction_5-2" data-name="Subtraction 5" class="cls-1"
+              d="M52.5,105a52.255,52.255,0,0,1-29.353-8.966,52.654,52.654,0,0,1-19.021-23.1,52.431,52.431,0,0,1,4.84-49.788,52.654,52.654,0,0,1,23.1-19.021,52.431,52.431,0,0,1,49.788,4.84,52.654,52.654,0,0,1,19.021,23.1,52.431,52.431,0,0,1-4.84,49.788,52.654,52.654,0,0,1-23.1,19.021A52.17,52.17,0,0,1,52.5,105Zm0-83.222a30.626,30.626,0,1,0,11.958,2.414A30.53,30.53,0,0,0,52.5,21.778Z"
+              transform="translate(39 39)"/>
+    </g>
 </svg>

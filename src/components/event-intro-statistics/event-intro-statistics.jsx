@@ -1,15 +1,13 @@
 // Module Imports
-import { StatBubbles } from '../stat-bubbles/stat-bubbles';
 // Types
-import { statPropTemplate } from '../stat-bubbles/stat-bubbles';
+import { StatBubbles, statPropTemplate } from '../stat-bubbles/stat-bubbles';
 // Helper imports
 // Component imports
 // Style imports
 import style from './event-intro-statistics.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 // Image imports
 

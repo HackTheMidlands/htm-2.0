@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16.667" viewBox="0 0 15 16.667">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #3c3c3c;
-      }
-    </style>
-  </defs>
-  <path id="Icon_material-event-note" data-name="Icon material-event-note" class="cls-1" d="M16.167,9H7.833v1.667h8.333Zm1.667-5.833H17V1.5H15.333V3.167H8.667V1.5H7V3.167H6.167A1.659,1.659,0,0,0,4.508,4.833L4.5,16.5a1.666,1.666,0,0,0,1.667,1.667H17.833A1.672,1.672,0,0,0,19.5,16.5V4.833A1.672,1.672,0,0,0,17.833,3.167Zm0,13.333H6.167V7.333H17.833Zm-4.167-4.167H7.833V14h5.833Z" transform="translate(-4.5 -1.5)"/>
+    <defs>
+        <style>
+            .cls-1 {
+            fill: #3c3c3c;
+            }
+        </style>
+    </defs>
+    <path id="Icon_material-event-note" data-name="Icon material-event-note" class="cls-1"
+          d="M16.167,9H7.833v1.667h8.333Zm1.667-5.833H17V1.5H15.333V3.167H8.667V1.5H7V3.167H6.167A1.659,1.659,0,0,0,4.508,4.833L4.5,16.5a1.666,1.666,0,0,0,1.667,1.667H17.833A1.672,1.672,0,0,0,19.5,16.5V4.833A1.672,1.672,0,0,0,17.833,3.167Zm0,13.333H6.167V7.333H17.833Zm-4.167-4.167H7.833V14h5.833Z"
+          transform="translate(-4.5 -1.5)"/>
 </svg>

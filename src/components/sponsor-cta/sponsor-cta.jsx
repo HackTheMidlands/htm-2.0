@@ -2,15 +2,11 @@
 // Component imports
 import { Button } from '../button/button';
 // Image imports
-import HeartImage from './assets/heart.inline.svg';
 import SponsorImage from './assets/sponsor-graphic.png';
 // Style imports
 import style from './sponsor-cta.module.scss';
-import classNames from 'classnames';
-import { navigate } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -31,9 +27,17 @@ export const SponsorCta = (props) => (
                     <h2 className={style.title}>
                         Fancy sponsoring something special and showing some{' '}
                         <span>
-                    <video autoPlay loop muted playsInline className={style.hearts}>
-                        <source src='/images/revolving_hearts.webm' type="video/webm" />
-                    </video>
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className={style.hearts}>
+                                <source
+                                    src="/images/revolving_hearts.webm"
+                                    type="video/webm"
+                                />
+                            </video>
                         </span>
                         ?
                     </h2>
@@ -44,7 +48,7 @@ export const SponsorCta = (props) => (
                         releasing more sponsors as we get closer to the event,
                         and if you're interested in becoming a sponsor for
                         HackTheMidlands 2021 then please register your interest
-                        below
+                        below{' '}
                     </p>
                     <a href="/sponsorship.pdf" target="_blank">
                         <Button theme="orange" name="Sponsor sign up">

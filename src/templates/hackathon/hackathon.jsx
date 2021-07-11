@@ -23,13 +23,9 @@ import SafeguardingIcon from './assets/safeguarding.svg';
 import TimeIcon from './assets/time.svg';
 // Style import
 import style from './hackathon.module.scss';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import get from 'lodash/get';
 import moment from 'moment';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import Helmet from 'react-helmet';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const sources = [
     {
@@ -218,7 +214,6 @@ const HackathonTemplate = (props) => (
                 </Row>
             </Grid>
         </HeroHeader>
-
         <section className={style.featureVideo}>
             <Grid>
                 <Row>
@@ -228,12 +223,16 @@ const HackathonTemplate = (props) => (
                 </Row>
             </Grid>
         </section>
-
         <EventIntroStatistics
-            statOne={{ statistic: '300+', text: 'Attendees' }}
-            statTwo={{ statistic: '400', text: 'Projects made' }}
+            statOne={{
+                statistic: '300+',
+                text: 'Attendees',
+            }}
+            statTwo={{
+                statistic: '400',
+                text: 'Projects made',
+            }}
         />
-
         <EventInfo>
             <Grid>
                 <Row>
@@ -258,24 +257,17 @@ const HackathonTemplate = (props) => (
                 </Row>
             </Grid>
         </EventInfo>
-
         <EventLocation />
-
         <TestimonialSliderSection testimonials={testimonials} />
-
         <SponsorsSection
             goldTier={gold}
             silverTier={silver}
             bronzeTier={bronze}
             partners={partners}
         />
-
         <SponsorCta />
-
         <TicketsSection tickets={tickets} />
-
         <FaqSection questions={qa} />
-
         <StayConnectedSection />
     </Layout>
 );

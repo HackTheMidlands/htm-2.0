@@ -1,9 +1,6 @@
 import Discord from '../assets/img/discord-white.svg';
 import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
-import { Button } from '../components/button/button';
 import { EventInfo } from '../components/event-info/event-info';
-import { EventIntroStatistics } from '../components/event-intro-statistics/event-intro-statistics';
-import { EventLocation } from '../components/event-location/event-location';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { HeroHeader } from '../components/hero-header/hero-header';
 import { IconCard } from '../components/icon-card/icon-card';
@@ -13,24 +10,18 @@ import Layout from '../components/layout/layout.js';
 import { SponsorCta } from '../components/sponsor-cta/sponsor-cta';
 import { SponsorsSection } from '../components/sponsors-section/sponsors-section';
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
-import { TestimonialSliderSection } from '../components/testimonial-slider-section/testimonial-slider-section';
-import { TicketsSection } from '../components/tickets-section/tickets-section';
 import { Video } from '../components/video/video';
 import CalendarIcon from './assets/calendar.inline.svg';
 import DiscordSquareIcon from './assets/discord-square.svg';
-import EntryRequirementsIcon from './assets/entry.svg';
-import FoodAndDrinkIcon from './assets/food-and-drink.svg';
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
-import SafeguardingIcon from './assets/safeguarding.svg';
 import TimeIcon from './assets/time.svg';
 // Style import
 import style from './index.module.scss';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import moment from 'moment';
-import React, { useEffect } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import withReactContent from 'sweetalert2-react-content';
+import React from 'react';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const intro = {
     title: '<mark>Learn</mark>, <mark>build</mark> and <mark>share</mark> your amazing ideas in a welcoming community',
@@ -228,33 +219,23 @@ const Index = (props) => {
                     </Row>
                 </Grid>
             </HeroHeader>
-
             <section className={style.featureVideo}>
                 <Grid>
                     <Row>
                         <Col lg={8} lgOffset={2}>
-                            <Video
-                                sources={sources}
-                                controls={false}
-                            />
+                            <Video sources={sources} controls={false} />
                         </Col>
                     </Row>
                 </Grid>
             </section>
-
             {/* <EventIntroStatistics */}
             {/*    statOne={{ statistic: '300+', text: 'Attendees' }} */}
             {/*    statTwo={{ statistic: '400', text: 'Projects made' }} */}
             {/* /> */}
-
             <IndexIntro title={intro.title} body={intro.body} />
-
             <EventDetails eventStart={eventStart} eventEnd={eventEnd} />
-
             {/* <EventLocation /> */}
-
             {/* <TestimonialSliderSection testimonials={testimonials} /> */}
-
             <SponsorsSection
                 goldTier={gold}
                 silverTier={silver}
@@ -262,13 +243,9 @@ const Index = (props) => {
                 digitalTier={digital}
                 partners={partners}
             />
-
             <SponsorCta />
-
             {/* <TicketsSection tickets={tickets} /> */}
-
             <FaqSection questions={qa} />
-
             <StayConnectedSection />
         </Layout>
     );
