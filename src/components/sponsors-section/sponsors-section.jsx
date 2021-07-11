@@ -49,7 +49,9 @@ export const SponsorsSection = ({
         <Grid fluid>
             <Row>
                 <Col xs={12}>
-                    <img src='/images/gifs/sparkles.gif' className={style.sparkleGif} />
+                    <video autoPlay loop muted playsInline className={style.sparkleGif}>
+                        <source src='/images/sparkles.webm' type="video/webm" />
+                    </video>
                     <h2 className={style.title}>Our Sponsors</h2>
                 </Col>
             </Row>

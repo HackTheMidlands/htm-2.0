@@ -1,5 +1,4 @@
 // Module Imports
-import Penguin from '../../assets/gifs/penguin.gif';
 import Discord from '../../assets/img/discord-white.svg';
 import Facebook from '../../assets/img/facebook-white.svg';
 import Twitter from '../../assets/img/twitter-white.svg';
@@ -32,7 +31,10 @@ export const StayConnectedSection = (props) => (
                     md={6}
                     mdOffset={0}
                     className={style.textCol}>
-                    <img src={Penguin} className={style.gif} />
+
+                    <video autoPlay loop muted playsInline className={style.gif}>
+                        <source src='/images/penguin.webm' type="video/webm" />
+                    </video>
                     <h2 className={style.title}>Get involved with us</h2>
                     <p>
                         We’ll be posting all of our updates over on our socials

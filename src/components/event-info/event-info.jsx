@@ -22,7 +22,9 @@ export const EventInfo = ({ title, body, children }) => (
         <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
             <Row>
                 <Col lg={5} className={style.textCol}>
-                    <img src='/images/gifs/unicorn.gif' className={style.unicornGif} />
+                    <video autoPlay loop muted playsInline className={style.unicornGif}>
+                        <source src='/images/unicorn.webm' type="video/webm" />
+                    </video>
                     <h2 className={style.title}>{title}</h2>
                     <p>
                         During the event, people aged 14+ of all skill levels

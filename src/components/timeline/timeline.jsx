@@ -1,13 +1,7 @@
-// Module Imports
-// Image imports
-import Eyes from '../../assets/img/eyes.gif';
 import { timelineData } from '../../data/timeline';
-// Helper imports
-// Component imports
 import { TimelineDay } from './components/timeline-day/timeline-day';
 import { TimelineItem } from './components/timeline-item/timeline-item';
 import { TimelineTime } from './components/timeline-time/timeline-time';
-// Style imports
 import style from './timeline.module.scss';
 import classNames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -258,7 +252,9 @@ export const Timeline = (props) => {
                     <Col lg={12}>
                         {noEvents && (
                             <div className={style.noEvents}>
-                                <img src={Eyes} alt="Wandering eyes emoji" />
+                                <video autoPlay loop muted playsInline>
+                                    <source src='/images/eyes.webm' type="video/webm" />
+                                </video>
                                 <h3>I can&apos;t find any events...</h3>
                             </div>
                         )}

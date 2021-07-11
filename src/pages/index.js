@@ -1,4 +1,3 @@
-import HTMVideo from '../assets/hero-video.mp4';
 import Discord from '../assets/img/discord-white.svg';
 import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
 import { Button } from '../components/button/button';
@@ -16,7 +15,6 @@ import { SponsorsSection } from '../components/sponsors-section/sponsors-section
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
 import { TestimonialSliderSection } from '../components/testimonial-slider-section/testimonial-slider-section';
 import { TicketsSection } from '../components/tickets-section/tickets-section';
-import DemoVideo from '../components/video/assets/example-video.mp4';
 import { Video } from '../components/video/video';
 import CalendarIcon from './assets/calendar.inline.svg';
 import DiscordSquareIcon from './assets/discord-square.svg';
@@ -33,8 +31,6 @@ import moment from 'moment';
 import React, { useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import withReactContent from 'sweetalert2-react-content';
-
-const poster = '/images/cover.jpg';
 
 const intro = {
     title: '<mark>Learn</mark>, <mark>build</mark> and <mark>share</mark> your amazing ideas in a welcoming community',
@@ -239,7 +235,6 @@ const Index = (props) => {
                         <Col lg={8} lgOffset={2}>
                             <Video
                                 sources={sources}
-                                poster={poster}
                                 controls={false}
                             />
                         </Col>

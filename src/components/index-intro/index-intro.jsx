@@ -22,7 +22,9 @@ export const IndexIntro = ({ title, body }) => (
         <Row>
             <Col lg={7} md={9} sm={12} style={{ position: 'relative' }}>
                 <StaticImage src='./assets/hex-grid.png' className={style.hex} alt="Hexagon grid" />
-                <img src='/images/webp/sparkling_heart.webp' className={style.heartGif} />
+                <video autoPlay loop muted playsInline className={style.heartGif}>
+                    <source src='/images/sparkling_heart.webm' type="video/webm" />
+                </video>
             </Col>
         </Row>
         <Row className={style.textBlock}>
@@ -33,16 +35,13 @@ export const IndexIntro = ({ title, body }) => (
                 mdOffset={4}
                 sm={12}
                 style={{ position: 'relative' }}>
-                <img
-                    src='/images/webp/partying_face.webp'
-                    className={style.partyGif}
-                    alt="Party hat"
-                />
-                <img
-                    src='/images/webp/smiling_face_with_hearts.webp'
-                    className={style.smileHeart}
-                    alt="Smiling face with hearts"
-                />
+
+                <video autoPlay loop muted playsInline className={style.partyGif}>
+                    <source src='/images/partying_face.webm' type="video/webm" />
+                </video>
+                <video autoPlay loop muted playsInline className={style.smileHeart}>
+                    <source src='/images/smiling_face_with_hearts.webm' type="video/webm" />
+                </video>
                 <h2
                     className={style.title}
                     dangerouslySetInnerHTML={{ __html: title }}

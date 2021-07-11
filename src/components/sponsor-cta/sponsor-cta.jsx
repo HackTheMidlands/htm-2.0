@@ -31,10 +31,9 @@ export const SponsorCta = (props) => (
                     <h2 className={style.title}>
                         Fancy sponsoring something special and showing some{' '}
                         <span>
-                            <img
-                                src='/images/gifs/revolving_hearts.gif'
-                                className={style.hearts}
-                            />
+                    <video autoPlay loop muted playsInline className={style.hearts}>
+                        <source src='/images/revolving_hearts.webm' type="video/webm" />
+                    </video>
                         </span>
                         ?
                     </h2>
