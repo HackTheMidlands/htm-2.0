@@ -25,19 +25,14 @@ const ComingSoon = ({ tier }) => (
 const Sponsors = ({ sponsors, tier }) => {
     if (sponsors.length > 0) {
         return sponsors.map((sponsor) => (
-            <div>
-                <a
-                    href={sponsor.link}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    {sponsor.image && (
-                        <GatsbyImage
-                            alt={sponsor.name}
-                            image={sponsor.image.gatsbyImageData}
-                        />
-                    )}
-                </a>
-            </div>
+            <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                {sponsor.image && (
+                    <GatsbyImage
+                        alt={sponsor.name}
+                        image={sponsor.image.gatsbyImageData}
+                    />
+                )}
+            </a>
         ));
     } else {
         return <ComingSoon tier={tier} />;

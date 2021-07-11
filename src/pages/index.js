@@ -158,7 +158,7 @@ const Index = (props) => {
                     link
                     tier
                     image {
-                        gatsbyImageData
+                        gatsbyImageData(placeholder: BLURRED)
                     }
                 }
             }
