@@ -45,12 +45,12 @@ export const EventInfo = ({ title, body, children }) => (
                     <Row>
                         <Col md={12} lg={5} className={style.imageColOne}>
                         <StaticImage
-                                src='./assets/evebt-pic-one.jpg'
+                                src='assets/event-pic-one.jpg'
                                 className={style.image}
                                 alt="Pic one"
                             />
                         <StaticImage
-                                src='./assets/evebt-pic-two.jpg'
+                                src='assets/event-pic-two.jpg'
                                 className={classNames([
                                     style.image,
                                     style.imageTwo,
@@ -60,7 +60,7 @@ export const EventInfo = ({ title, body, children }) => (
                         </Col>
                         <Col md={12} lg={7}>
                         <StaticImage
-                                src='./assets/evebt-pic-three.jpg'
+                                src='assets/event-pic-three.jpg'
                                 className={classNames([
                                     style.image,
                                     style.imageThree,
