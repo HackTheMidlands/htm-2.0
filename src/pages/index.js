@@ -121,16 +121,6 @@ const testimonials = [
     },
 ];
 
-const gold = [];
-
-const silver = [];
-
-const bronze = [];
-
-const digital = [];
-
-const partners = [];
-
 const tickets = [];
 
 /**
@@ -162,10 +152,19 @@ const Index = (props) => {
                     }
                 }
             }
+            allContentfulSponsor {
+                nodes {
+                    name
+                    link
+                    tier
+                    image {
+                        gatsbyImageData
+                    }
+                }
+            }
         }
     `);
     const qa = data.allContentfulQa.nodes.map(({question, answer}) => ({ question, 'answer': answer.answer}));
-            console.log(qa);
     const { title, video } = data.contentfulPage;
     const sources = [
         {
@@ -173,6 +172,13 @@ const Index = (props) => {
             type: 'video/mp4',
         },
     ];
+
+const sponsors = data.allContentfulSponsor.nodes;
+            const gold = sponsors.filter(sponsor => sponsor.tier === "gold")
+            const silver = sponsors.filter(sponsor => sponsor.tier === "silver")
+            const bronze = sponsors.filter(sponsor => sponsor.tier === "bronze")
+            const digital = sponsors.filter(sponsor => sponsor.tier === "digital")
+            const partners = sponsors.filter(sponsor => sponsor.tier === "partner")
 
     const { eventStart, eventEnd } = data.site.siteMetadata;
     return (
