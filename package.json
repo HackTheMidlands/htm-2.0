@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.6",
+        "date-fns": "^2.22.1",
         "gatsby": "^3.9.0",
         "gatsby-image": "^3.8.0",
         "gatsby-plugin-image": "^1.9.0",

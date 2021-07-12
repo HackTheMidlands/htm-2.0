@@ -19,7 +19,7 @@ import TimeIcon from './assets/time.svg';
 // Style import
 import style from './index.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
-import moment from 'moment';
+import { format } from 'date-fns'
 import React from 'react';
 import { Col, Grid, Row } from 'react-flexbox-grid';
 
@@ -33,11 +33,12 @@ const EventDetails = ({ eventStart, eventEnd }) => {
         {
             icon: TimeIcon,
             title: 'Date & Time',
-            body: `The event will run online via Discord between the ${moment(
-                eventStart,
-            ).format('Do')} - ${moment(eventEnd).format(
-                'Do MMMM YYYY',
-            )}. Don\'t miss out!`,
+            body: `The event will run online via Discord between the ${format(
+                new Date(eventStart),
+            'do')} - ${format(new Date(eventEnd),
+                'do MMMM yyyy',
+              
+            )}. Don't miss out!`,
             colour: 'rgba(165, 254, 162, .5)',
         },
         {
@@ -185,9 +186,9 @@ const Index = (props) => {
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
                                     <p>
-                                        {moment(eventStart).format('dddd Do')} -{' '}
-                                        {moment(eventEnd).format(
-                                            'Do MMMM YYYY',
+                                        {format(new Date(eventStart),'do')} - {' '}
+                                        {format(new Date(eventEnd),
+                                            'do MMMM yyyy',
                                         )}
                                     </p>
                                 </li>
@@ -205,7 +206,7 @@ const Index = (props) => {
                                 <a
                                     href="https://discord.gg/kx9azme"
                                     target="_blank"
-                                    style={{ textDecoration: 'none' }}>
+                                    style={{ textDecoration: 'none' }} rel="noreferrer">
                                     <ButtonWithIcon
                                         icon={Discord}
                                         name="Discord"

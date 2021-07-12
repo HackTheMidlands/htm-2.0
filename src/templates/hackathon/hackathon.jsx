@@ -23,9 +23,9 @@ import SafeguardingIcon from './assets/safeguarding.svg';
 import TimeIcon from './assets/time.svg';
 // Style import
 import style from './hackathon.module.scss';
-import moment from 'moment';
 import React from 'react';
 import { Col, Grid, Row } from 'react-flexbox-grid';
+import { addDays, subDays } from "date-fns";
 
 const sources = [
     {
@@ -140,25 +140,26 @@ const partners = [
     },
 ];
 
+const now = new Date();
 const tickets = [
     {
         ticketName: 'Wave One',
-        releaseDate: moment().subtract(30, 'days'),
-        expireDate: moment().subtract(10, 'days'),
+        releaseDate: subDays(now, 30),
+        expireDate: subDays(now, 10),
         state: 'sold out',
         link: 'https://google.com',
     },
     {
         ticketName: 'Wave Two',
-        releaseDate: moment().subtract(10, 'days'),
-        expireDate: moment().subtract(1, 'days'),
+        releaseDate: subDays(now, 10),
+        expireDate: subDays(now, 1),
         state: 'active',
         link: 'https://google.com',
     },
     {
         ticketName: 'Wave Three',
-        releaseDate: moment().subtract(2, 'days'),
-        expireDate: moment().add(30, 'days'),
+        releaseDate: subDays(now, 2),
+        expireDate: addDays(now, 30),
         state: 'active',
         link: 'https://google.com',
     },
@@ -185,11 +186,10 @@ const qa = [
 
 /**
  * Hackathon template
- * @param props
  * @returns {*}
  * @constructor
  */
-const HackathonTemplate = (props) => (
+const HackathonTemplate = () => (
     <Layout>
         <HeroHeader style={{ paddingBottom: '500px' }}>
             <Grid>
