@@ -11,10 +11,9 @@ import StationIcon from './assets/station.inline.svg';
 // Component imports
 // Style imports
 import style from './event-location.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -25,7 +24,12 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 export const EventLocation = ({ title, address, nearbyStations }) => (
     <section className={style.section}>
         <img src={DiagonalLine} className={style.diagonalLine} alt="Line" />
-        <Grid fluid style={{ position: 'relative', zIndex: 1 }}>
+        <Grid
+            fluid
+            style={{
+                position: 'relative',
+                zIndex: 1,
+            }}>
             <Row>
                 <Col xs={12}>
                     <h3 className={style.title}>{title}</h3>
@@ -41,7 +45,7 @@ export const EventLocation = ({ title, address, nearbyStations }) => (
                     <div className={style.planJourney}>
                         <a
                             href="https://goo.gl/maps/pAThZ8JpXXYJUnwy6"
-                            target="_blank">
+                            target="_blank" rel="noreferrer">
                             <p>Plan my journey</p>
                             <ArrowRightIcon />
                         </a>

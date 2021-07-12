@@ -1,18 +1,14 @@
-// Module Imports
-import UnicornGif from '../../assets/gifs/unicorn.gif';
 // Image imports
 import DiagonalLine from './assets/diagonal-line.svg';
-import EventPicOne from './assets/evebt-pic-one.jpg';
-import EventPicThree from './assets/event-pic-three.jpg';
-import EventPicTwo from './assets/event-pic-two.jpg';
 // Helper imports
 // Component imports
 // Style imports
 import style from './event-info.module.scss';
 import classNames from 'classnames';
+import { StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -23,10 +19,22 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 export const EventInfo = ({ title, body, children }) => (
     <section className={style.eventSection}>
         <img src={DiagonalLine} className={style.line} alt="Diagonal line" />
-        <Grid fluid style={{ zIndex: 1, position: 'relative' }}>
+        <Grid
+            fluid
+            style={{
+                zIndex: 1,
+                position: 'relative',
+            }}>
             <Row>
                 <Col lg={5} className={style.textCol}>
-                    <img src={UnicornGif} className={style.unicornGif} />
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={style.unicornGif}>
+                        <source src="/images/unicorn.webm" type="video/webm" />
+                    </video>
                     <h2 className={style.title}>{title}</h2>
                     <p>
                         During the event, people aged 14+ of all skill levels
@@ -37,22 +45,22 @@ export const EventInfo = ({ title, body, children }) => (
                         great explanation{' '}
                         <a
                             href="https://mlh.io/faq#what-is-a-hackathon"
-                            target="_blank">
+                            target="_blank" rel="noreferrer">
                             here
                         </a>
-                        ).
+                        ).{' '}
                     </p>
                 </Col>
                 <Col lg={7} className={style.imageCol}>
                     <Row>
                         <Col md={12} lg={5} className={style.imageColOne}>
-                            <img
-                                src={EventPicOne}
+                            <StaticImage
+                                src="assets/event-pic-one.jpg"
                                 className={style.image}
                                 alt="Pic one"
                             />
-                            <img
-                                src={EventPicThree}
+                            <StaticImage
+                                src="assets/event-pic-two.jpg"
                                 className={classNames([
                                     style.image,
                                     style.imageTwo,
@@ -61,8 +69,8 @@ export const EventInfo = ({ title, body, children }) => (
                             />
                         </Col>
                         <Col md={12} lg={7}>
-                            <img
-                                src={EventPicTwo}
+                            <StaticImage
+                                src="assets/event-pic-three.jpg"
                                 className={classNames([
                                     style.image,
                                     style.imageThree,

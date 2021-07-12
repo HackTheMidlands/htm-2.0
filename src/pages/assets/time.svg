@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85">
-  <g id="Group_87" data-name="Group 87" transform="translate(-186 -2567)">
-    <rect id="Rectangle_26" data-name="Rectangle 26" width="85" height="85" rx="10" transform="translate(186 2567)" fill="#a5ffa2"/>
-    <path id="Icon_material-access-time" data-name="Icon material-access-time" d="M22.481,3.75A18.75,18.75,0,1,0,41.25,22.5,18.741,18.741,0,0,0,22.481,3.75ZM22.5,37.5a15,15,0,1,1,15-15A15,15,0,0,1,22.5,37.5Zm.938-24.375H20.625v11.25l9.844,5.906,1.406-2.306-8.437-5.006Z" transform="translate(206.5 2587)" fill="#46b742"/>
-  </g>
+    <g id="Group_87" data-name="Group 87" transform="translate(-186 -2567)">
+        <rect id="Rectangle_26" data-name="Rectangle 26" width="85" height="85" rx="10" transform="translate(186 2567)"
+              fill="#a5ffa2"/>
+        <path id="Icon_material-access-time" data-name="Icon material-access-time"
+              d="M22.481,3.75A18.75,18.75,0,1,0,41.25,22.5,18.741,18.741,0,0,0,22.481,3.75ZM22.5,37.5a15,15,0,1,1,15-15A15,15,0,0,1,22.5,37.5Zm.938-24.375H20.625v11.25l9.844,5.906,1.406-2.306-8.437-5.006Z"
+              transform="translate(206.5 2587)" fill="#46b742"/>
+    </g>
 </svg>

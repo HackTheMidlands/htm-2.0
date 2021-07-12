@@ -1,3 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="9.689" height="121" viewBox="0 0 9.689 121">
-  <path id="Subtraction_15" data-name="Subtraction 15" d="M723,121h-2.688V0H722a6.957,6.957,0,0,0,2.053,4.948A6.952,6.952,0,0,0,729,7a7,7,0,0,0,1-.071V114a7.008,7.008,0,0,0-7,7Z" transform="translate(-720.311)" fill="#fff"/>
+    <path id="Subtraction_15" data-name="Subtraction 15"
+          d="M723,121h-2.688V0H722a6.957,6.957,0,0,0,2.053,4.948A6.952,6.952,0,0,0,729,7a7,7,0,0,0,1-.071V114a7.008,7.008,0,0,0-7,7Z"
+          transform="translate(-720.311)" fill="#fff"/>
 </svg>

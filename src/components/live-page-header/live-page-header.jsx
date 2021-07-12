@@ -2,13 +2,11 @@
 import HTMVideo from '../../assets/hero-video.mp4';
 // Helper imports
 // Component imports
-import { Video } from '../video/video';
 // Image imports
 import Background from './assets/background.svg';
 // Style imports
 import styles from './live-page-header.module.scss';
 import React, { useEffect, useRef } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const sources = [
     {

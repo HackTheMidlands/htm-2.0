@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1363.734" height="464.351" viewBox="0 0 1363.734 464.351">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.47" y1="0.211" x2="0.516" y2="0.71" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#dbe8fa"/>
-      <stop offset="1" stop-color="#eff6ff"/>
-    </linearGradient>
-  </defs>
-  <path id="Path_37" data-name="Path 37" d="M5258,2052.142l1363.734-127.35v464.351H5258Z" transform="translate(-5258 -1924.792)" fill="url(#linear-gradient)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1363.734" height="464.351"
+     viewBox="0 0 1363.734 464.351">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.47" y1="0.211" x2="0.516" y2="0.71"
+                        gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#dbe8fa"/>
+            <stop offset="1" stop-color="#eff6ff"/>
+        </linearGradient>
+    </defs>
+    <path id="Path_37" data-name="Path 37" d="M5258,2052.142l1363.734-127.35v464.351H5258Z"
+          transform="translate(-5258 -1924.792)" fill="url(#linear-gradient)"/>
 </svg>

@@ -7,7 +7,6 @@ const settings = require('./src/data/site.json');
 const contentfulConfig = {
     spaceId: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    forceFullSync: true,
 };
 
 // if you want to use the preview API please define
@@ -30,7 +29,24 @@ module.exports = {
     siteMetadata: settings.meta,
     plugins: [
         `gatsby-plugin-image`,
-        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    formats: [`auto`, `webp`],
+                    placeholder: `blurred`,
+                    quality: 50,
+                    breakpoints: [750, 1080, 1366, 1920],
+                    backgroundColor: `transparent`,
+                    tracedSVGOptions: {},
+                    blurredOptions: {},
+                    jpgOptions: {},
+                    pngOptions: {},
+                    webpOptions: {},
+                    avifOptions: {},
+                },
+            },
+        },
         `gatsby-transformer-sharp`, // Needed for dynamic images
         'gatsby-plugin-react-helmet',
         {
@@ -56,5 +72,20 @@ module.exports = {
                 },
             },
         },
-    ],
+        {
+            resolve: `gatsby-plugin-gatsby-cloud`,
+            options: {
+                headers: {
+                    "/images/*": [
+                        "Cache-Control: public, max-age=31536000, immutable",
+                    ],
+                }, // option to add more headers. `Link` headers are transformed by the below criteria
+                allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+                mergeSecurityHeaders: true, // boolean to turn off the default security headers
+                mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+                mergeCachingHeaders: true, // boolean to turn off the default caching headers
+                transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+                generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+            },
+        },    ],
 };

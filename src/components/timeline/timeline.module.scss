@@ -22,9 +22,11 @@
     &::-webkit-scrollbar {
         height: 5px; /* width of the entire scrollbar */
     }
+
     &::-webkit-scrollbar-track {
         background: transparent; /* color of the tracking area */
     }
+
     &::-webkit-scrollbar-thumb {
         background-color: white; /* color of the scroll thumb */
         border-radius: 20px; /* roundness of the scroll thumb */
@@ -37,6 +39,7 @@
     margin: 35px 0px;
     transition: height 0.3s ease;
     scroll-behavior: smooth;
+
     .item {
         position: absolute;
     }
@@ -44,10 +47,12 @@
 
 .noEvents {
     margin: 20px auto;
+
     img {
         width: 100px;
         margin: auto;
     }
+
     h3 {
         color: white;
         text-align: center;

@@ -7,10 +7,8 @@ import CalendarIcon from './assets/calendar.svg';
 import LocationIcon from './assets/location.svg';
 // Style imports
 import style from './event-card.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components

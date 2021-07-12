@@ -1,20 +1,12 @@
-// Module Imports
-// Image imports
-import Eyes from '../../assets/img/eyes.gif';
 import { timelineData } from '../../data/timeline';
-// Helper imports
-// Component imports
 import { TimelineDay } from './components/timeline-day/timeline-day';
 import { TimelineItem } from './components/timeline-item/timeline-item';
 import { TimelineTime } from './components/timeline-time/timeline-time';
-// Style imports
 import style from './timeline.module.scss';
-import classNames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import moment from 'moment';
-import PropTypes from 'prop-types';
-import React, { useEffect, useState, useRef, useMemo } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 import useSWR from 'swr';
 
 /**
@@ -246,19 +238,27 @@ export const Timeline = (props) => {
                                         state={state}
                                         className={style.day}
                                         onClick={() =>
-                                            onDayClicked({ key, state, date })
+                                            onDayClicked({
+                                                key,
+                                                state,
+                                                date,
+                                            })
                                         }
                                     />
                                 ))}
                         </div>
                     </Col>
                 </Row>
-
                 <Row>
                     <Col lg={12}>
                         {noEvents && (
                             <div className={style.noEvents}>
-                                <img src={Eyes} alt="Wandering eyes emoji" />
+                                <video autoPlay loop muted playsInline>
+                                    <source
+                                        src="/images/eyes.webm"
+                                        type="video/webm"
+                                    />
+                                </video>
                                 <h3>I can&apos;t find any events...</h3>
                             </div>
                         )}
@@ -280,7 +280,7 @@ export const Timeline = (props) => {
                             />
                         </div>
                         <p className={style.adjust}>
-                            Timezones are adjusted to your local time
+                            Timezones are adjusted to your local time{' '}
                         </p>
                     </Col>
                 </Row>

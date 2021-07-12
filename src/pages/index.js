@@ -1,11 +1,6 @@
-import PartyFace from '../assets/gifs/partying_face.gif';
-import HTMVideo from '../assets/hero-video.mp4';
 import Discord from '../assets/img/discord-white.svg';
 import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
-import { Button } from '../components/button/button';
 import { EventInfo } from '../components/event-info/event-info';
-import { EventIntroStatistics } from '../components/event-intro-statistics/event-intro-statistics';
-import { EventLocation } from '../components/event-location/event-location';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { HeroHeader } from '../components/hero-header/hero-header';
 import { IconCard } from '../components/icon-card/icon-card';
@@ -15,27 +10,18 @@ import Layout from '../components/layout/layout.js';
 import { SponsorCta } from '../components/sponsor-cta/sponsor-cta';
 import { SponsorsSection } from '../components/sponsors-section/sponsors-section';
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
-import { TestimonialSliderSection } from '../components/testimonial-slider-section/testimonial-slider-section';
-import { TicketsSection } from '../components/tickets-section/tickets-section';
-import DemoVideo from '../components/video/assets/example-video.mp4';
 import { Video } from '../components/video/video';
 import CalendarIcon from './assets/calendar.inline.svg';
 import DiscordSquareIcon from './assets/discord-square.svg';
-import EntryRequirementsIcon from './assets/entry.svg';
-import FoodAndDrinkIcon from './assets/food-and-drink.svg';
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
-import SafeguardingIcon from './assets/safeguarding.svg';
 import TimeIcon from './assets/time.svg';
 // Style import
 import style from './index.module.scss';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import moment from 'moment';
-import React, { useEffect } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import withReactContent from 'sweetalert2-react-content';
-
-const poster = '/images/cover.jpg';
+import { graphql, useStaticQuery } from 'gatsby';
+import { format } from 'date-fns'
+import React from 'react';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const intro = {
     title: '<mark>Learn</mark>, <mark>build</mark> and <mark>share</mark> your amazing ideas in a welcoming community',
@@ -47,17 +33,18 @@ const EventDetails = ({ eventStart, eventEnd }) => {
         {
             icon: TimeIcon,
             title: 'Date & Time',
-            body: `The event will run online via Discord between the ${moment(
-                eventStart,
-            ).format('Do')} - ${moment(eventEnd).format(
-                'Do MMMM YYYY',
-            )}. Don\'t miss out!`,
+            body: `The event will run online via Discord between the ${format(
+                new Date(eventStart),
+            'do')} - ${format(new Date(eventEnd),
+                'do MMMM yyyy',
+              
+            )}. Don't miss out!`,
             colour: 'rgba(165, 254, 162, .5)',
         },
         {
             icon: DiscordSquareIcon,
             title: 'Participate with Discord',
-            body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
+            body: 'We’re running this years event through discord. Make sure to <a rel="noreferrer" style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
             colour: 'rgba(114, 137, 218, .5)',
         },
         // {
@@ -199,9 +186,9 @@ const Index = (props) => {
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
                                     <p>
-                                        {moment(eventStart).format('dddd Do')} -{' '}
-                                        {moment(eventEnd).format(
-                                            'Do MMMM YYYY',
+                                        {format(new Date(eventStart),'do')} - {' '}
+                                        {format(new Date(eventEnd),
+                                            'do MMMM yyyy',
                                         )}
                                     </p>
                                 </li>
@@ -219,7 +206,7 @@ const Index = (props) => {
                                 <a
                                     href="https://discord.gg/kx9azme"
                                     target="_blank"
-                                    style={{ textDecoration: 'none' }}>
+                                    style={{ textDecoration: 'none' }} rel="noreferrer">
                                     <ButtonWithIcon
                                         icon={Discord}
                                         name="Discord"
@@ -233,34 +220,23 @@ const Index = (props) => {
                     </Row>
                 </Grid>
             </HeroHeader>
-
             <section className={style.featureVideo}>
                 <Grid>
                     <Row>
                         <Col lg={8} lgOffset={2}>
-                            <Video
-                                sources={sources}
-                                poster={poster}
-                                controls={false}
-                            />
+                            <Video sources={sources} controls={false} />
                         </Col>
                     </Row>
                 </Grid>
             </section>
-
             {/* <EventIntroStatistics */}
             {/*    statOne={{ statistic: '300+', text: 'Attendees' }} */}
             {/*    statTwo={{ statistic: '400', text: 'Projects made' }} */}
             {/* /> */}
-
             <IndexIntro title={intro.title} body={intro.body} />
-
             <EventDetails eventStart={eventStart} eventEnd={eventEnd} />
-
             {/* <EventLocation /> */}
-
             {/* <TestimonialSliderSection testimonials={testimonials} /> */}
-
             <SponsorsSection
                 goldTier={gold}
                 silverTier={silver}
@@ -268,13 +244,9 @@ const Index = (props) => {
                 digitalTier={digital}
                 partners={partners}
             />
-
             <SponsorCta />
-
             {/* <TicketsSection tickets={tickets} /> */}
-
             <FaqSection questions={qa} />
-
             <StayConnectedSection />
         </Layout>
     );

@@ -1,14 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366.452" height="444.685" viewBox="0 0 1366.452 444.685">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: url(#linear-gradient);
-      }
-    </style>
-    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.888" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#dbe7fa"/>
-    </linearGradient>
-  </defs>
-  <path id="Path_22" data-name="Path 22" class="cls-1" d="M0,2890.513s301.317,43.271,700.37-102.664,666.081,92.173,666.081,92.173v-428.2H0Z" transform="translate(0 -2451.824)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1366.452" height="444.685"
+     viewBox="0 0 1366.452 444.685">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: url(#linear-gradient);
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.888" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="1" stop-color="#dbe7fa"/>
+        </linearGradient>
+    </defs>
+    <path id="Path_22" data-name="Path 22" class="cls-1"
+          d="M0,2890.513s301.317,43.271,700.37-102.664,666.081,92.173,666.081,92.173v-428.2H0Z"
+          transform="translate(0 -2451.824)"/>
 </svg>

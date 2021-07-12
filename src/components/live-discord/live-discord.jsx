@@ -5,10 +5,7 @@ import Background from './assets/background.svg';
 // Component imports
 // Style imports
 import styles from './live-discord.module.scss';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * Live Discord components

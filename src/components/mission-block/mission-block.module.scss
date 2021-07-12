@@ -78,12 +78,14 @@
     list-style-type: none;
     padding-left: 10px;
     margin-top: 31px;
+
     .statisticItem {
         border-left: 5px solid var(--primary);
         padding-left: 14px;
         margin-bottom: 29px;
         font-weight: 600;
         @include make-property('font-size', 25px);
+
         &:last-of-type {
             margin-bottom: 0;
         }

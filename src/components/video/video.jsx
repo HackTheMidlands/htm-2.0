@@ -9,7 +9,6 @@ import style from './video.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -85,7 +84,7 @@ export const Video = ({
                     },
                 ])}
                 onClick={stopVideo}>
-                Close Video
+                Close Video{' '}
             </p>
         </>
     );

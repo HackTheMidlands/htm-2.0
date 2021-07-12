@@ -1,20 +1,9 @@
-// Module Imports
-import SparkleGif from '../../assets/gifs/sparkles.gif';
-import BronzeMedal from './assets/bronze.png';
-import DigitalMedal from './assets/digital.png';
-// Image imports
-import GoldMedal from './assets/gold.png';
 import PartnerMedal from './assets/partner.inline.svg';
-import SilverMedal from './assets/silver.png';
-// Helper imports
-// Component imports
-// Style imports
 import style from './sponsors-section.module.scss';
-import classNames from 'classnames';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const calculateGridCols = (tier) => tier.map(() => '1fr').join(' ');
 
@@ -25,7 +14,11 @@ const ComingSoon = ({ tier }) => (
 const Sponsors = ({ sponsors, tier }) => {
     if (sponsors.length > 0) {
         return sponsors.map((sponsor) => (
-            <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+            <a
+                key={sponsor.name}
+                href={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer">
                 {sponsor.image && (
                     <GatsbyImage
                         alt={sponsor.name}
@@ -50,15 +43,22 @@ export const SponsorsSection = ({
         <Grid fluid>
             <Row>
                 <Col xs={12}>
-                    <img src={SparkleGif} className={style.sparkleGif} />
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={style.sparkleGif}>
+                        <source src="/images/sparkles.webm" type="video/webm" />
+                    </video>
                     <h2 className={style.title}>Our Sponsors</h2>
                 </Col>
             </Row>
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img
-                            src={GoldMedal}
+                        <StaticImage
+                            src="./assets/gold.png"
                             alt="Gold Medal"
                             className={style.medal}
                         />
@@ -72,8 +72,8 @@ export const SponsorsSection = ({
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img
-                            src={SilverMedal}
+                        <StaticImage
+                            src="./assets/silver.png"
                             alt="Silver Medal"
                             className={style.medal}
                         />
@@ -87,8 +87,8 @@ export const SponsorsSection = ({
             <Row>
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
-                        <img
-                            src={BronzeMedal}
+                        <StaticImage
+                            src="./assets/bronze.png"
                             alt="Bronze Medal"
                             className={style.medal}
                         />

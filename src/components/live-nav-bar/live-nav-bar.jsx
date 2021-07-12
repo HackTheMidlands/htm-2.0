@@ -5,11 +5,9 @@ import Logo from '../../assets/img/logo.png';
 // Component imports
 // Style imports
 import styles from './live-nav-bar.module.scss';
-import classNames from 'classnames';
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components

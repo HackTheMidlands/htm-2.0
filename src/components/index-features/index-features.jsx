@@ -9,10 +9,8 @@ import ShareIcon from './assets/share.svg';
 // Component imports
 // Style imports
 import style from './index-features.module.scss';
-import classNames from 'classnames';
-import PropTypes, { shape } from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * IndexFeatures components
@@ -48,7 +46,7 @@ export const IndexFeatures = (props) => {
                 <Row center="sm" className={style.header}>
                     <Col xs={12} sm={6} style={{ position: 'relative' }}>
                         <h2 className={style.sectionTitle}>
-                            We’re committed to inspiring young minds
+                            We’re committed to inspiring young minds{' '}
                         </h2>
                         <img src={DotGrid} className={style.dotGrid} />
                     </Col>

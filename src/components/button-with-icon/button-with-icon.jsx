@@ -3,10 +3,8 @@
 // Component imports
 // Style imports
 import style from './button-with-icon.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 
@@ -28,7 +26,11 @@ export const ButtonWithIcon = ({
     <button
         className={style.button}
         onClick={onClick}
-        style={{ color, backgroundColor, border }}>
+        style={{
+            color,
+            backgroundColor,
+            border,
+        }}>
         <img src={icon} alt={name} className={style.icon} />
         <div className={style.divider} style={{ backgroundColor: color }} />
         <p className={style.text} style={{ color }}>

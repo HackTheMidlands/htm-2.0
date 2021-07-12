@@ -3,11 +3,9 @@
 // Component imports
 // Style imports
 import style from './team-card.module.scss';
-import classNames from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 

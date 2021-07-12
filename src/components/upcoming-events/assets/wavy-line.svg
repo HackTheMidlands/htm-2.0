@@ -1,11 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="209.927" height="43.552" viewBox="0 0 209.927 43.552">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #b5d8ff;
-      }
-    </style>
-  </defs>
-  <path id="Path_53" data-name="Path 53" class="cls-1" d="M208.692,2396.928s-50.027,8.046-99.471-21.129-70.955-24.922-110.108,0" transform="translate(1.155 -2354.986)"/>
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #b5d8ff;
+            }
+        </style>
+    </defs>
+    <path id="Path_53" data-name="Path 53" class="cls-1"
+          d="M208.692,2396.928s-50.027,8.046-99.471-21.129-70.955-24.922-110.108,0"
+          transform="translate(1.155 -2354.986)"/>
 </svg>

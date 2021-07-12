@@ -4,10 +4,8 @@
 import { Ticket, ticketPropTypes } from '../ticket/ticket';
 // Style imports
 import style from './tickets.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 // Image imports
 

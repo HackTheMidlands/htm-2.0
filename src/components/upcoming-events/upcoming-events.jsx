@@ -9,10 +9,9 @@ import Wave from './assets/wave.svg';
 import WavyLineImage from './assets/wavy-line.svg';
 // Style imports
 import style from './upcoming-events.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const calculateColWidth = (arrayLength, breakpoint) => {
     if (breakpoint === 'lg') {

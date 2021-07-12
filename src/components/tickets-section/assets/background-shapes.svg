@@ -1,36 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="823.564" height="261" viewBox="0 0 823.564 261">
-  <defs>
-    <filter id="Ellipse_31" x="261.564" y="172" width="89" height="89" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="7.5" result="blur"/>
-      <feFlood flood-color="#95d1f2"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Ellipse_30" x="734.564" y="0" width="89" height="89" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
-      <feFlood flood-color="#31ff73"/>
-      <feComposite operator="in" in2="blur-2"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_189" data-name="Group 189" transform="translate(-185.936 -7399.5)">
-    <g transform="matrix(1, 0, 0, 1, 185.94, 7399.5)" filter="url(#Ellipse_31)">
-      <g id="Ellipse_31-2" data-name="Ellipse 31" transform="translate(284.06 194.5)" fill="none" stroke="rgba(202,236,255,0.45)" stroke-width="9">
-        <circle cx="22" cy="22" r="22" stroke="none"/>
-        <circle cx="22" cy="22" r="17.5" fill="none"/>
-      </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="823.564" height="261"
+     viewBox="0 0 823.564 261">
+    <defs>
+        <filter id="Ellipse_31" x="261.564" y="172" width="89" height="89" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="7.5" result="blur"/>
+            <feFlood flood-color="#95d1f2"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Ellipse_30" x="734.564" y="0" width="89" height="89" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+            <feFlood flood-color="#31ff73"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_189" data-name="Group 189" transform="translate(-185.936 -7399.5)">
+        <g transform="matrix(1, 0, 0, 1, 185.94, 7399.5)" filter="url(#Ellipse_31)">
+            <g id="Ellipse_31-2" data-name="Ellipse 31" transform="translate(284.06 194.5)" fill="none"
+               stroke="rgba(202,236,255,0.45)" stroke-width="9">
+                <circle cx="22" cy="22" r="22" stroke="none"/>
+                <circle cx="22" cy="22" r="17.5" fill="none"/>
+            </g>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 185.94, 7399.5)" filter="url(#Ellipse_30)">
+            <g id="Ellipse_30-2" data-name="Ellipse 30" transform="translate(757.06 22.5)" fill="none"
+               stroke="rgba(154,255,169,0.42)" stroke-width="9">
+                <circle cx="22" cy="22" r="22" stroke="none"/>
+                <circle cx="22" cy="22" r="17.5" fill="none"/>
+            </g>
+        </g>
+        <g id="Rectangle_15" data-name="Rectangle 15" transform="matrix(0.788, -0.616, 0.616, 0.788, 185.936, 7440.484)"
+           fill="none" stroke="#ffc9c9" stroke-width="7" opacity="0.49">
+            <rect width="44" height="44" rx="8" stroke="none"/>
+            <rect x="3.5" y="3.5" width="37" height="37" rx="4.5" fill="none"/>
+        </g>
     </g>
-    <g transform="matrix(1, 0, 0, 1, 185.94, 7399.5)" filter="url(#Ellipse_30)">
-      <g id="Ellipse_30-2" data-name="Ellipse 30" transform="translate(757.06 22.5)" fill="none" stroke="rgba(154,255,169,0.42)" stroke-width="9">
-        <circle cx="22" cy="22" r="22" stroke="none"/>
-        <circle cx="22" cy="22" r="17.5" fill="none"/>
-      </g>
-    </g>
-    <g id="Rectangle_15" data-name="Rectangle 15" transform="matrix(0.788, -0.616, 0.616, 0.788, 185.936, 7440.484)" fill="none" stroke="#ffc9c9" stroke-width="7" opacity="0.49">
-      <rect width="44" height="44" rx="8" stroke="none"/>
-      <rect x="3.5" y="3.5" width="37" height="37" rx="4.5" fill="none"/>
-    </g>
-  </g>
 </svg>

@@ -11,9 +11,9 @@ import TicketLocked from './assets/ticket-locked.inline.svg';
 // Style imports
 import style from './ticket.module.scss';
 import classNames from 'classnames';
-import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { isBefore, isAfter, format } from "date-fns";
 
 /**
  * Ticket components
@@ -32,9 +32,9 @@ export const Ticket = ({
     link,
     state,
 }) => {
-    state = expireDate.isBefore(moment())
+    state = isBefore(expireDate,new Date())
         ? 'finished'
-        : releaseDate.isAfter(moment())
+        : isAfter(releaseDate,new Date())
         ? 'locked'
         : state;
 
@@ -64,7 +64,7 @@ export const Ticket = ({
                     <p>{ticketName}</p>
                     <span>
                         <p>
-                            Releasing: {releaseDate.format('DD/MM/YY@hh:mm a')}
+                            Releasing: {format(releaseDate,'DD/MM/YY@hh:mm a')}
                         </p>
                     </span>
                 </div>
@@ -118,8 +118,8 @@ export const Ticket = ({
 
 export const ticketPropTypes = {
     ticketName: PropTypes.string.isRequired,
-    releaseDate: PropTypes.instanceOf(moment).isRequired,
-    expireDate: PropTypes.instanceOf(moment).isRequired,
+    releaseDate: PropTypes.instanceOf(Date).isRequired,
+    expireDate: PropTypes.instanceOf(Date).isRequired,
     link: PropTypes.string.isRequired,
     state: PropTypes.oneOf(['active', 'locked', 'sold out']),
 };

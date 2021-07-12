@@ -24,9 +24,11 @@ $gridGap: 10px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
     div img {
         margin: 30px auto;
     }
+
     //img {
     //  max-width: 180px;
     //}
@@ -34,9 +36,11 @@ $gridGap: 10px;
         padding: 20px;
         box-sizing: border-box;
     }
+
     @media screen and (max-width: $mdBreakpointMin) {
         margin-bottom: 20px;
     }
+
     & > a {
         padding: $gridGap;
     }
@@ -46,9 +50,10 @@ $gridGap: 10px;
     & > div {
         width: 100%;
     }
+
     img {
         max-width: 300px;
-        max-height: 80vh;
+        max-height: 60vh;
     }
 }
 
@@ -59,9 +64,10 @@ $gridGap: 10px;
             width: calc(100% / 2);
         }
     }
+
     img {
         max-width: 287px;
-        max-height: 60vh;
+        max-height: 30vh;
     }
 }
 
@@ -73,6 +79,7 @@ $gridGap: 10px;
             width: calc(100% / 3);
         }
     }
+
     img {
         max-width: 220px;
         max-height: 140px;
@@ -92,6 +99,7 @@ $gridGap: 10px;
 .sparkleGif {
     margin: auto;
     width: 150px;
+    display: block;
 }
 
 .comingSoon {

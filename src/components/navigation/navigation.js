@@ -1,10 +1,9 @@
-import Logo from '../../assets/img/HTM_Main_Transparent.png';
 // Components
-import { Button } from '../button/button';
 import styles from './navigation.module.scss';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const navigationItems = [
     {
@@ -57,10 +56,17 @@ const Navigation = () => (
             <Row
                 between="xs"
                 middle="xs"
-                style={{ marginLeft: '3vw', marginRight: '3vw' }}>
+                style={{
+                    marginLeft: '3vw',
+                    marginRight: '3vw',
+                }}>
                 <Col>
                     <Link to="/">
-                        <img className={styles.logo} src={Logo} alt="Logo" />
+                        <StaticImage
+                            src="../../assets/img/HTM_Main_Transparent.png"
+                            alt="Logo"
+                            className={styles.logo}
+                        />
                     </Link>
                 </Col>
                 {/* <Col style={{ display: 'flex', justifyContent: 'center' }}> */}

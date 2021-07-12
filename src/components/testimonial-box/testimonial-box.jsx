@@ -6,7 +6,7 @@ import QuoteIcon from './assets/quote.inline.svg';
 // Style imports
 import style from './testimonial-box.module.scss';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 /**
  * Testimonial box

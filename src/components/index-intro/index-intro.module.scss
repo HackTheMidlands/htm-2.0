@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+
 .intro {
     margin: 100px auto 200px auto;
 
@@ -22,6 +23,7 @@
 
 .title {
     text-transform: capitalize;
+
     mark {
         background-color: transparent;
         color: var(--primary);

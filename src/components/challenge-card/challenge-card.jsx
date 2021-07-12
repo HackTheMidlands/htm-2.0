@@ -2,15 +2,11 @@
 // Helper imports
 // Component imports
 import { ImageCard } from '../image-card/image-card';
-import CalendarIcon from './assets/calendar.svg';
 // Image imports
-import LocationIcon from './assets/location.svg';
 // Style imports
 import style from './challenge-card.module.scss';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /**
  * Card for challenges

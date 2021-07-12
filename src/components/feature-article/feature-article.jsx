@@ -7,11 +7,10 @@ import { Button } from '../button/button';
 import WaveImage from './assets/wave.svg';
 // Style imports
 import style from './feature-article.module.scss';
-import classNames from 'classnames';
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components

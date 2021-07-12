@@ -1,14 +1,10 @@
 import { HeroHeader } from '../components/hero-header/hero-header';
-// Components
 import Layout from '../components/layout/layout';
 import { TeamCard } from '../components/team-card/team-card';
-// Assets
-import FireGif from './assets/fire.gif';
-// Style
 import style from './team.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 const Team = () => {
     const data = useStaticQuery(graphql`
@@ -33,15 +29,24 @@ const Team = () => {
             <HeroHeader style={{ paddingBottom: '20vw' }}>
                 <h1 className={style.title}>Meet The Team</h1>
             </HeroHeader>
-
             <section className={style.team}>
                 <Grid fluid>
                     <Row>
                         <Col lg={6} lgOffset={3}>
-                            <img src={FireGif} className={style.fire} />
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className={style.fire}>
+                                <source
+                                    src="/images/fire.webm"
+                                    type="video/webm"
+                                />
+                            </video>
                             <h2 className={style.teamTitle}>
                                 We couldn&apos;t do it without these amazing
-                                people
+                                people{' '}
                             </h2>
                         </Col>
                     </Row>

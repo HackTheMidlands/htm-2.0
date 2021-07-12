@@ -3,12 +3,11 @@
 // Component imports
 // Style imports
 import styles from './live-countdown.module.scss';
-import classNames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 import useSWR from 'swr';
 
 // Image imports

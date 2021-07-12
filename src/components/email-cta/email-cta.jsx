@@ -8,10 +8,8 @@ import GreenTriangle from './assets/green-triangle.inline.svg';
 // Component imports
 // Style imports
 import style from './email-cta.module.scss';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * MissionBlock components
@@ -33,7 +31,7 @@ export const EmailCta = (props) => {
                         <div className={style.emailBox}>
                             <EmailIcon className={style.emailIcon} />
                             <h2 className={style.title}>
-                                Never miss out on new from Us
+                                Never miss out on new from Us{' '}
                             </h2>
                             <input
                                 className={style.input}
