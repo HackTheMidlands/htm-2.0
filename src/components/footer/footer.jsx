@@ -46,7 +46,7 @@ export const Footer = (props) => (
                     <ul className={style.socialIcons}>
                         {socialIcons.map(({ name, icon: Icon, link }) => (
                             <li key={name}>
-                                <a href={link} target="_blank">
+                                <a href={link} target="_blank" rel="noreferrer">
                                     <Icon className={style.socialIcon} />
                                 </a>
                             </li>

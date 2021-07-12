@@ -45,7 +45,7 @@ export const EventLocation = ({ title, address, nearbyStations }) => (
                     <div className={style.planJourney}>
                         <a
                             href="https://goo.gl/maps/pAThZ8JpXXYJUnwy6"
-                            target="_blank">
+                            target="_blank" rel="noreferrer">
                             <p>Plan my journey</p>
                             <ArrowRightIcon />
                         </a>

@@ -45,7 +45,7 @@ export const EventInfo = ({ title, body, children }) => (
                         great explanation{' '}
                         <a
                             href="https://mlh.io/faq#what-is-a-hackathon"
-                            target="_blank">
+                            target="_blank" rel="noreferrer">
                             here
                         </a>
                         ).{' '}
