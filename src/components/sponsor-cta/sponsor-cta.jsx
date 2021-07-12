@@ -5,6 +5,7 @@ import { Button } from '../button/button';
 import SponsorImage from './assets/sponsor-graphic.png';
 // Style imports
 import style from './sponsor-cta.module.scss';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Col, Grid, Row } from 'react-flexbox-grid';
 
@@ -64,8 +65,8 @@ export const SponsorCta = (props) => (
                     lg={5}
                     lgOffset={1}
                     className={style.imageCol}>
-                    <img
-                        src={SponsorImage}
+                    <StaticImage
+                        src="./assets/sponsor-graphic.png"
                         alt="Illustration of two people using a computer"
                         className={style.image}
                     />

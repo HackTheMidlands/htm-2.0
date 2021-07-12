@@ -14,7 +14,11 @@ const ComingSoon = ({ tier }) => (
 const Sponsors = ({ sponsors, tier }) => {
     if (sponsors.length > 0) {
         return sponsors.map((sponsor) => (
-            <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+            <a
+                key={sponsor.name}
+                href={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer">
                 {sponsor.image && (
                     <GatsbyImage
                         alt={sponsor.name}

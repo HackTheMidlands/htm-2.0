@@ -1,24 +1,18 @@
-// Module Imports
 import Discord from '../../assets/img/discord-white.svg';
 import Facebook from '../../assets/img/facebook-white.svg';
 import Twitter from '../../assets/img/twitter-white.svg';
-// Helper imports
-// Component imports
 import { ButtonWithIcon } from '../button-with-icon/button-with-icon';
-// Image imports
-import SocialIcons from './assets/social-icons.svg';
-// Style imports
 import style from './stay-connected-section.module.scss';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Col, Grid, Row } from 'react-flexbox-grid';
 
 /**
  * Stay connected section
- * @param props
  * @returns {*}
  * @constructor
  */
-export const StayConnectedSection = (props) => (
+export const StayConnectedSection = () => (
     <section className={style.section} id="community">
         <Grid fluid>
             <Row middle="xs">
@@ -46,7 +40,8 @@ export const StayConnectedSection = (props) => (
                         <a
                             href="https://discord.gg/hackthemidlands"
                             target="_blank"
-                            style={{ textDecoration: 'none' }}>
+                            style={{ textDecoration: 'none' }}
+                            rel="noreferrer">
                             <ButtonWithIcon
                                 icon={Discord}
                                 name="Discord"
@@ -57,7 +52,8 @@ export const StayConnectedSection = (props) => (
                         <a
                             href="https://www.facebook.com/hackthemidlands"
                             target="_blank"
-                            style={{ textDecoration: 'none' }}>
+                            style={{ textDecoration: 'none' }}
+                            rel="noreferrer">
                             <ButtonWithIcon
                                 icon={Facebook}
                                 name="Facebook"
@@ -68,7 +64,8 @@ export const StayConnectedSection = (props) => (
                         <a
                             href="https://twitter.com/HackTheMidlands"
                             target="_blank"
-                            style={{ textDecoration: 'none' }}>
+                            style={{ textDecoration: 'none' }}
+                            rel="noreferrer">
                             <ButtonWithIcon
                                 icon={Twitter}
                                 name="Twitter"
@@ -88,8 +85,8 @@ export const StayConnectedSection = (props) => (
                     lg={3}
                     lgOffset={3}
                     className={style.imageCol}>
-                    <img
-                        src={SocialIcons}
+                    <StaticImage
+                        src="./assets/social-icons.svg"
                         className={style.icons}
                         alt="Social icon bubbles for Facebook, Instagram, Twitter and Discord"
                     />

@@ -39,7 +39,10 @@ const Team = () => {
                                 muted
                                 playsInline
                                 className={style.fire}>
-                                <source src="/images/fire.webm" type="video/webm" />
+                                <source
+                                    src="/images/fire.webm"
+                                    type="video/webm"
+                                />
                             </video>
                             <h2 className={style.teamTitle}>
                                 We couldn&apos;t do it without these amazing
