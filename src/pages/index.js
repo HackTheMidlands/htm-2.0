@@ -44,7 +44,7 @@ const EventDetails = ({ eventStart, eventEnd }) => {
         {
             icon: DiscordSquareIcon,
             title: 'Participate with Discord',
-            body: 'We’re running this years event through discord. Make sure to <a style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
+            body: 'We’re running this years event through discord. Make sure to <a rel="noreferrer" style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
             colour: 'rgba(114, 137, 218, .5)',
         },
         // {
