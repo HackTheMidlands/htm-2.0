@@ -18,7 +18,7 @@ if (process.env.CONTENTFUL_HOST) {
 }
 
 const { spaceId, accessToken } = contentfulConfig;
-//
+
 if (!spaceId || !accessToken) {
     throw new Error(
         'Contentful spaceId and the access token need to be provided.',
@@ -49,6 +49,19 @@ module.exports = {
         },
         `gatsby-transformer-sharp`, // Needed for dynamic images
         'gatsby-plugin-react-helmet',
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `HackTheMidlands`,
+                short_name: `HTM`,
+                start_url: `/`,
+                background_color: `#eff6ff`,
+                theme_color: `#449afd`,
+                display: `standalone`,
+                icon: 'static/logo.png',
+
+            },
+        },
         {
             resolve: `gatsby-plugin-sass`,
             options: {
@@ -87,5 +100,7 @@ module.exports = {
                 transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
                 generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
             },
-        },    ],
+        },
+        `gatsby-plugin-sitemap`
+    ],
 };

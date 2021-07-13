@@ -17,10 +17,12 @@
         "gatsby-image": "^3.8.0",
         "gatsby-plugin-gatsby-cloud": "^2.9.0",
         "gatsby-plugin-image": "^1.9.0",
+        "gatsby-plugin-manifest": "^3.9.0",
         "gatsby-plugin-react-helmet": "^4.9.0",
         "gatsby-plugin-react-svg": "^3.0.1",
         "gatsby-plugin-sass": "^4.9.0",
         "gatsby-plugin-sharp": "^3.9.0",
+        "gatsby-plugin-sitemap": "^4.5.0",
         "gatsby-source-contentful": "^5.9.0",
         "gatsby-transformer-sharp": "^3.9.0",
         "lodash": "^4.17.19",
@@ -51,7 +53,8 @@
     "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
     "keywords": [
         "gatsby",
-        "contentful"
+        "contentful",
+        "hackthemidlands"
     ],
     "license": "MIT",
     "main": "n/a",
@@ -62,14 +65,10 @@
     "scripts": {
         "dev": "npm run develop",
         "develop": "gatsby develop",
+        "start": "npm run develop",
         "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-        "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier -w . *.js **/*.js **/*.jsx **/*.scss",
         "build": "gatsby build",
-        "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-        "fix": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --fix *.js src/**/*.js src/**/*.jsx",
-        "start": "npm run develop",
-        "heroku-postbuild": "gatsby build",
-        "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf "
+        "fix": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --fix *.js src/**/*.js src/**/*.jsx"
     }
 }
