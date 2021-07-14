@@ -59,7 +59,6 @@ module.exports = {
                 theme_color: `#449afd`,
                 display: `standalone`,
                 icon: 'static/logo.png',
-
             },
         },
         {
@@ -89,8 +88,8 @@ module.exports = {
             resolve: `gatsby-plugin-gatsby-cloud`,
             options: {
                 headers: {
-                    "/images/*": [
-                        "Cache-Control: public, max-age=31536000, immutable",
+                    '/images/*': [
+                        'Cache-Control: public, max-age=31536000, immutable',
                     ],
                 }, // option to add more headers. `Link` headers are transformed by the below criteria
                 allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
@@ -101,6 +100,6 @@ module.exports = {
                 generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
             },
         },
-        `gatsby-plugin-sitemap`
+        `gatsby-plugin-advanced-sitemap`,
     ],
 };
