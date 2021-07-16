@@ -56,11 +56,13 @@ export const EventInfo = ({ title, body, children }) => (
                         <Col md={12} lg={5} className={style.imageColOne}>
                             <StaticImage
                                 src="assets/event-pic-one.jpg"
+                                quality={20}
                                 className={style.image}
                                 alt="Pic one"
                             />
                             <StaticImage
                                 src="assets/event-pic-two.jpg"
+                                quality={20}
                                 className={classNames([
                                     style.image,
                                     style.imageTwo,
@@ -71,6 +73,7 @@ export const EventInfo = ({ title, body, children }) => (
                         <Col md={12} lg={7}>
                             <StaticImage
                                 src="assets/event-pic-three.jpg"
+                                quality={20}
                                 className={classNames([
                                     style.image,
                                     style.imageThree,
