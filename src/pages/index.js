@@ -204,7 +204,7 @@ const Index = (props) => {
                                 {/*    <Button theme="whiteSolid">Sponsor</Button> */}
                                 {/* </a> */}
                                 <a
-                                    href="https://discord.gg/kx9azme"
+                                    href="https://discord.gg/hackthemidlands"
                                     target="_blank"
                                     style={{ textDecoration: 'none' }} rel="noreferrer">
                                     <ButtonWithIcon
