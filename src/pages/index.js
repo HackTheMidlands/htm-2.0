@@ -1,5 +1,6 @@
 import Discord from '../assets/img/discord-white.svg';
 import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
+import { Button } from '../components/button/button';
 import { EventInfo } from '../components/event-info/event-info';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { HeroHeader } from '../components/hero-header/hero-header';
