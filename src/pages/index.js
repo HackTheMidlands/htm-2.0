@@ -197,9 +197,9 @@ const Index = (props) => {
                                 {/*<Link to="/live" target="_blank"> */}
                                 {/* <Button theme="orange">View Live Page</Button> */}
                                 {/* </Link> */}
-                                {/* <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank"> */}
-                                {/*    <Button theme="orange">Get tickets</Button> */}
-                                {/* </a> */}
+                                <a href="https://www.eventbrite.co.uk/e/hackthemidlands-60-tickets-165469310161" target="_blank">
+                                   <Button theme="orange">Get tickets</Button>
+                                </a>
                                 {/* <a href="/sponsorship.pdf" target="_blank"> */}
                                 {/*    <Button theme="whiteSolid">Sponsor</Button> */}
                                 {/* </a> */}
