@@ -1,5 +1,6 @@
 import Discord from '../assets/img/discord-white.svg';
 import { ButtonWithIcon } from '../components/button-with-icon/button-with-icon';
+import { Button } from '../components/button/button';
 import { EventInfo } from '../components/event-info/event-info';
 import { FaqSection } from '../components/faq-section/faq-section';
 import { HeroHeader } from '../components/hero-header/hero-header';
@@ -197,9 +198,9 @@ const Index = (props) => {
                                 {/*<Link to="/live" target="_blank"> */}
                                 {/* <Button theme="orange">View Live Page</Button> */}
                                 {/* </Link> */}
-                                {/* <a href="https://www.eventbrite.co.uk/e/hackthemidlands-50-tickets-111222359070" target="_blank"> */}
-                                {/*    <Button theme="orange">Get tickets</Button> */}
-                                {/* </a> */}
+                                <a href="https://www.eventbrite.co.uk/e/hackthemidlands-60-tickets-165469310161" target="_blank">
+                                   <Button theme="orange">Get tickets</Button>
+                                </a>
                                 {/* <a href="/sponsorship.pdf" target="_blank"> */}
                                 {/*    <Button theme="whiteSolid">Sponsor</Button> */}
                                 {/* </a> */}
