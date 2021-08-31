@@ -12,7 +12,7 @@ const ComingSoon = ({ tier }) => (
 );
 
 const Sponsors = ({ sponsors, tier }) => {
-    if (sponsors.length > 0) {
+    if (!!sponsors && sponsors.length > 0) {
         return sponsors.map((sponsor) => (
             <a
                 key={sponsor.name}
@@ -33,6 +33,7 @@ const Sponsors = ({ sponsors, tier }) => {
 };
 
 export const SponsorsSection = ({
+    platinumTier,
     goldTier,
     silverTier,
     bronzeTier,
@@ -52,6 +53,24 @@ export const SponsorsSection = ({
                         <source src="/images/sparkles.webm" type="video/webm" />
                     </video>
                     <h2 className={style.title}>Our Sponsors</h2>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12}>
+                    <div className={style.sectionTitle}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={style.sparkleGif}>
+                        <source src="/images/crown.webm" type="video/webm" />
+                    </video>
+                        <h2>Platinum</h2>
+                    </div>
+                    <div className={style.platinum}>
+                        <Sponsors sponsors={platinumTier} tier="platinum" />
+                    </div>
                 </Col>
             </Row>
             <Row>
