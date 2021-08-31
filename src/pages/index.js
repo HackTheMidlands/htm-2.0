@@ -165,6 +165,7 @@ const Index = (props) => {
     ];
 
     const sponsors = data.allContentfulSponsor.nodes;
+    const platinum = sponsors.filter((sponsor) => sponsor.tier === 'platinum');
     const gold = sponsors.filter((sponsor) => sponsor.tier === 'gold');
     const silver = sponsors.filter((sponsor) => sponsor.tier === 'silver');
     const bronze = sponsors.filter((sponsor) => sponsor.tier === 'bronze');
@@ -239,6 +240,7 @@ const Index = (props) => {
             {/* <EventLocation /> */}
             {/* <TestimonialSliderSection testimonials={testimonials} /> */}
             <SponsorsSection
+                platinumTier={platinum}
                 goldTier={gold}
                 silverTier={silver}
                 bronzeTier={bronze}
