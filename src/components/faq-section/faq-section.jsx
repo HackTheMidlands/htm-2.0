@@ -55,7 +55,8 @@ export const FaqSection = ({ questions }) => {
                                     {question}
                                 </h4>
                                 <div className={style.hidden}>
-                                    <p className={style.body}>{answer}</p>
+                                    <div className={style.body}
+                                    dangerouslySetInnerHTML={{    __html: answer,  }}/>
                                 </div>
                             </div>
                         </Col>

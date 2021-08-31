@@ -28,6 +28,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
     siteMetadata: settings.meta,
     plugins: [
+        `gatsby-transformer-remark`,
         `gatsby-plugin-image`,
         {
             resolve: `gatsby-plugin-sharp`,
