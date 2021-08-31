@@ -136,7 +136,9 @@ const Index = (props) => {
                 nodes {
                     question
                     answer {
-                        answer
+                        childMarkdownRemark {
+                            html
+                        }
                     }
                 }
             }
@@ -154,7 +156,7 @@ const Index = (props) => {
     `);
     const qa = data.allContentfulQa.nodes.map(({ question, answer }) => ({
         question,
-        answer: answer.answer,
+        answer: answer.childMarkdownRemark.html,
     }));
     const { title, video } = data.contentfulPage;
     const sources = [
