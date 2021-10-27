@@ -19,7 +19,7 @@ import LocationInfo from './assets/location.inline.svg';
 import TimeIcon from './assets/time.svg';
 // Style import
 import style from './index.module.scss';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { format } from 'date-fns'
 import React from 'react';
 import { Col, Grid, Row } from 'react-flexbox-grid';
@@ -198,9 +198,9 @@ const Index = (props) => {
                                 </li>
                             </ul>
                             <div className={style.headerButtons}>
-                                {/*<Link to="/live" target="_blank"> */}
-                                {/* <Button theme="orange">View Live Page</Button> */}
-                                {/* </Link> */}
+                                <Link to="/live" target="_blank">
+                                 <Button theme="orange">View Live Page</Button>
+                                 </Link>
                                 <a href="https://www.eventbrite.co.uk/e/hackthemidlands-60-tickets-165469310161" target="_blank">
                                    <Button theme="orange">Get tickets</Button>
                                 </a>

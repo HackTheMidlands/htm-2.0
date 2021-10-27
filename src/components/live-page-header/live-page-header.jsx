@@ -1,5 +1,5 @@
 // Module Imports
-import HTMVideo from '../../assets/hero-video.mp4';
+// import HTMVideo from '../../assets/hero-video.mp4';
 // Helper imports
 // Component imports
 // Image imports
@@ -8,12 +8,12 @@ import Background from './assets/background.svg';
 import styles from './live-page-header.module.scss';
 import React, { useEffect, useRef } from 'react';
 
-const sources = [
-    {
-        src: HTMVideo,
-        type: 'video/mp4',
-    },
-];
+// const sources = [
+//     {
+//         src: HTMVideo,
+//         type: 'video/mp4',
+//     },
+// ];
 
 /**
  * MissionBlock components
@@ -47,7 +47,7 @@ export const LivePageHeader = (props) => {
             className={styles.header}
             style={{ backgroundImage: `url(${Background})` }}>
             <div className={styles.video}>
-                <h1 className={styles.featureTextTop}>HTM 5.0</h1>
+                <h1 className={styles.featureTextTop}>HTM 6.0</h1>
                 <div className={styles.embed}>
                     <div id="twitch-embed" style={{ height: '100%' }} />
                 </div>
