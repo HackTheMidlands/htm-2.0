@@ -47,7 +47,7 @@ export const LivePageHeader = (props) => {
             className={styles.header}
             style={{ backgroundImage: `url(${Background})` }}>
             <div className={styles.video}>
-                <h1 className={styles.featureTextTop}>HTM 5.0</h1>
+                <h1 className={styles.featureTextTop}>HTM 6.0</h1>
                 <div className={styles.embed}>
                     <div id="twitch-embed" style={{ height: '100%' }} />
                 </div>
