@@ -58,7 +58,9 @@ export const Timeline = (props) => {
                     }
                 })
                 .then((json) => {
-                    return json.items.reduce((timeline, event) => {
+                    return json.items.filter(event => {
+                            return event.start.dateTime > new Date('01/10/2021')
+                    }).reduce((timeline, event) => {
                         const owner =
                             event.description !== undefined
                                 ? event.description.match(host_regex)[1]
