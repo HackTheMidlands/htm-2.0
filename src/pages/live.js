@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { graphql } from 'gatsby';
 
 // Style import
 import style from './live.module.scss';
@@ -13,7 +12,7 @@ import challengeData from '../data/challenges/challenges.json';
 import { LiveHeaderText } from '../components/live-header-text/live-header-text';
 import { LiveNavBar } from '../components/live-nav-bar/live-nav-bar';
 import { LivePageHeader } from '../components/live-page-header/live-page-header';
-import { LogoStrip } from '../components/logo-strip/logo-strip';
+// import { LogoStrip } from '../components/logo-strip/logo-strip';
 import { LiveCountdown } from '../components/live-countdown/live-countdown';
 import { LiveDiscord } from '../components/live-discord/live-discord';
 import { Timeline } from '../components/timeline/timeline';
@@ -23,82 +22,82 @@ import { LiveChallenges } from '../components/live-challenges/live-challenges';
 
 
 // Image imports
-import CapitalOne from '../assets/img/logos/white/capital-one.png';
-import Majestic from '../assets/img/logos/white/majestic.png';
-import Northrop from '../assets/img/logos/white/northrop-grumman.png';
-import Kainos from '../assets/img/logos/white/kainos.png';
-import Capgemini from '../assets/img/logos/white/capgemini.png';
-import Bt from '../assets/img/logos/white/bt.png';
-import Fusion from '../assets/img/logos/white/fusion.png';
-import TwentyI from '../assets/img/logos/white/20i.png';
-import Mike from '../assets/img/logos/white/mike.png';
-import ChamberOfCommerce from '../assets/img/logos/white/chamber-of-commerce.png';
-import Bcs from '../assets/img/logos/white/bcs.png';
+// import CapitalOne from '../assets/img/logos/white/capital-one.png';
+// import Majestic from '../assets/img/logos/white/majestic.png';
+// import Northrop from '../assets/img/logos/white/northrop-grumman.png';
+// import Kainos from '../assets/img/logos/white/kainos.png';
+// import Capgemini from '../assets/img/logos/white/capgemini.png';
+// import Bt from '../assets/img/logos/white/bt.png';
+// import Fusion from '../assets/img/logos/white/fusion.png';
+// import TwentyI from '../assets/img/logos/white/20i.png';
+// import Mike from '../assets/img/logos/white/mike.png';
+// import ChamberOfCommerce from '../assets/img/logos/white/chamber-of-commerce.png';
+// import Bcs from '../assets/img/logos/white/bcs.png';
 
-const dateTo = moment('2020-10-22');
+const dateTo = moment('2021-10-22');
 
-const companyLogos = [
-    {
-        alt: 'Capital One',
-        url: CapitalOne,
-        link: '',
-    },
-    {
-        alt: 'Majestic',
-        url: Majestic,
-        link: '',
-    },
-    {
-        alt: 'Northrop',
-        url: Northrop,
-        link: '',
-    },
-    {
-        alt: 'Kainos',
-        url: Kainos,
-        link: '',
-    },
-    {
-        alt: 'Capgemini',
-        url: Capgemini,
-        link: '',
-    },
-    {
-        alt: 'Northrop',
-        url: Northrop,
-        link: '',
-    },
-    {
-        alt: 'BT',
-        url: Bt,
-        link: 'https://bt.com',
-    },
-    {
-        alt: 'Fusion',
-        url: Fusion,
-        link: '',
-    },
-    {
-        alt: '20i',
-        url: TwentyI,
-        link: '',
-    },
-    {
-        alt: 'Mike Elsmore',
-        url: Mike,
-        link: '',
-    },
-    {
-        alt: 'Northrop',
-        url: ChamberOfCommerce,
-        link: '',
-    },
-    {
-        alt: 'BCS',
-        url: Bcs,
-        link: '',
-    },
-];
+// const companyLogos = [
+//     {
+//         alt: 'Capital One',
+//         url: CapitalOne,
+//         link: '',
+//     },
+//     {
+//         alt: 'Majestic',
+//         url: Majestic,
+//         link: '',
+//     },
+//     {
+//         alt: 'Northrop',
+//         url: Northrop,
+//         link: '',
+//     },
+//     {
+//         alt: 'Kainos',
+//         url: Kainos,
+//         link: '',
+//     },
+//     {
+//         alt: 'Capgemini',
+//         url: Capgemini,
+//         link: '',
+//     },
+//     {
+//         alt: 'Northrop',
+//         url: Northrop,
+//         link: '',
+//     },
+//     {
+//         alt: 'BT',
+//         url: Bt,
+//         link: 'https://bt.com',
+//     },
+//     {
+//         alt: 'Fusion',
+//         url: Fusion,
+//         link: '',
+//     },
+//     {
+//         alt: '20i',
+//         url: TwentyI,
+//         link: '',
+//     },
+//     {
+//         alt: 'Mike Elsmore',
+//         url: Mike,
+//         link: '',
+//     },
+//     {
+//         alt: 'Northrop',
+//         url: ChamberOfCommerce,
+//         link: '',
+//     },
+//     {
+//         alt: 'BCS',
+//         url: Bcs,
+//         link: '',
+//     },
+// ];
 
 /**
  * Live page template
@@ -114,9 +113,9 @@ const Live = (props) => (
 
         <LivePageHeader />
 
-        <section className={style.section}>
-            <LogoStrip logos={companyLogos} />
-        </section>
+        {/*<section className={style.section}>*/}
+        {/*    <LogoStrip logos={companyLogos} />*/}
+        {/*</section>*/}
 
 
         <section className={style.section}>

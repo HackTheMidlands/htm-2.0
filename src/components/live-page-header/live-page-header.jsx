@@ -1,5 +1,5 @@
 // Module Imports
-import HTMVideo from '../../assets/hero-video.mp4';
+// import HTMVideo from '../../assets/hero-video.mp4';
 // Helper imports
 // Component imports
 // Image imports
@@ -8,12 +8,12 @@ import Background from './assets/background.svg';
 import styles from './live-page-header.module.scss';
 import React, { useEffect, useRef } from 'react';
 
-const sources = [
-    {
-        src: HTMVideo,
-        type: 'video/mp4',
-    },
-];
+// const sources = [
+//     {
+//         src: HTMVideo,
+//         type: 'video/mp4',
+//     },
+// ];
 
 /**
  * MissionBlock components
