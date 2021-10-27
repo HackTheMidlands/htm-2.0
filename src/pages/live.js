@@ -142,7 +142,6 @@ const Live = (props) => (
         {/*    <LiveFaq cards={faqData} />*/}
         {/*</section>*/}
     </main>
-  )
-};
+);
 
 export default Live;
