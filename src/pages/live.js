@@ -19,6 +19,7 @@ import { Timeline } from '../components/timeline/timeline';
 import { LiveFaq } from '../components/live-faq/live-faq';
 import { Seo } from '../components/seo/seo';
 import { LiveChallenges } from '../components/live-challenges/live-challenges';
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 // Image imports
@@ -107,7 +108,7 @@ const dateTo = moment('2021-10-22');
  */
 const Live = (props) => (
     <main className={style.page}>
-        <Seo title="HTM 5.0 Live" />
+        <Seo title="HTM 6.0 Live" />
 
         <LiveNavBar />
 
@@ -127,20 +128,21 @@ const Live = (props) => (
             <LiveDiscord />
         </section>
 
-        <section className={style.section} id="challenges">
-            <LiveHeaderText text="Challenges" />
-            <LiveChallenges challenges={challengeData} />
-        </section>
+        {/*<section className={style.section} id="challenges">*/}
+        {/*    <LiveHeaderText text="Challenges" />*/}
+        {/*    <LiveChallenges challenges={challengeData} />*/}
+        {/*</section>*/}
 
         <section className={style.section} id="timeline">
             <LiveHeaderText text="Timeline" />
             <Timeline />
         </section>
 
-        <section className={style.section} id="faq">
-            <LiveFaq cards={faqData} />
-        </section>
+        {/*<section className={style.section} id="faq">*/}
+        {/*    <LiveFaq cards={faqData} />*/}
+        {/*</section>*/}
     </main>
-);
+  )
+};
 
 export default Live;
