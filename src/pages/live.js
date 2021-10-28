@@ -128,10 +128,10 @@ const Live = (props) => (
             <LiveDiscord />
         </section>
 
-        {/*<section className={style.section} id="challenges">*/}
-        {/*    <LiveHeaderText text="Challenges" />*/}
-        {/*    <LiveChallenges challenges={challengeData} />*/}
-        {/*</section>*/}
+        <section className={style.section} id="challenges">
+            <LiveHeaderText text="Challenges" />
+            <LiveChallenges challenges={challengeData} />
+        </section>
 
         <section className={style.section} id="timeline">
             <LiveHeaderText text="Timeline" />
