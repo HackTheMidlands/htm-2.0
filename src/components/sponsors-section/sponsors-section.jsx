@@ -8,7 +8,7 @@ import { Col, Grid, Row } from 'react-flexbox-grid';
 const calculateGridCols = (tier) => tier.map(() => '1fr').join(' ');
 
 const ComingSoon = ({ tier }) => (
-    <p className={style.comingSoon}>More {tier} sponsors coming soon!</p>
+    <p className={style.comingSoon}>{tier} sponsors coming soon!</p>
 );
 
 const Sponsors = ({ sponsors, tier }) => {
