@@ -174,7 +174,7 @@ const Index = (props) => {
     const digital = sponsors.filter((sponsor) => sponsor.tier === 'digital');
     const partners = sponsors.filter((sponsor) => sponsor.tier === 'partner');
 
-    const { eventStart, eventEnd } = data.site.siteMetadata;
+    const { eventStart, eventEnd, showDate } = data.site.siteMetadata;
     return (
         <Layout>
             <HeroHeader>
@@ -182,21 +182,23 @@ const Index = (props) => {
                     <Row>
                         <Col xs={12} sm={10} smOffset={1}>
                             <h1 className={style.headerTitle}>{title}</h1>
-                            {/* <ul className={style.eventInfoList}>
+                            <ul className={style.eventInfoList}>
                                 <li className={style.eventInfoListItem}>
                                     <LocationInfo />
-                                    <p>Virtual Event</p>
+                                    <p><em>To be determined...</em></p>
                                 </li>
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
-                                    <p>
+                                    {showDate && 
+                                    (<p>
                                         {format(new Date(eventStart),'do')} - {' '}
                                         {format(new Date(eventEnd),
                                             'do MMMM yyyy',
                                         )}
-                                    </p>
+                                    </p>) || <p><em>To be determined...</em></p>
+                                    }
                                 </li>
-                            </ul> */}
+                            </ul>
                             <div className={style.headerButtons}>
                                 {/* <Link to="/live" target="_blank">
                                  <Button theme="orange">View Live Page</Button>

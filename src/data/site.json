@@ -4,6 +4,7 @@
         "siteUrl": "https://hackthemidlands.com",
         "eventStart": "2021-10-28 19:00",
         "eventEnd": "2021-10-31 19:00",
+        "showDate": false,
         "countdownCalendarId": "4980k4aspujqrjcjl19p4v6o7g@group.calendar.google.com",
         "googleCalendarId": "calendar@hackthemidlands.com",
         "googleCalendarApiKey": "AIzaSyAsr1gbJafUFaVkhh8oL_Sey6YyHMsMsdE",
