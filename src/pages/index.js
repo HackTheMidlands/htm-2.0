@@ -174,7 +174,7 @@ const Index = (props) => {
     const digital = sponsors.filter((sponsor) => sponsor.tier === 'digital');
     const partners = sponsors.filter((sponsor) => sponsor.tier === 'partner');
 
-    const { eventStart, eventEnd } = data.site.siteMetadata;
+    const { eventStart, eventEnd, showDate } = data.site.siteMetadata;
     return (
         <Layout>
             <HeroHeader>
@@ -185,25 +185,27 @@ const Index = (props) => {
                             <ul className={style.eventInfoList}>
                                 <li className={style.eventInfoListItem}>
                                     <LocationInfo />
-                                    <p>Virtual Event</p>
+                                    <p><em>To be determined...</em></p>
                                 </li>
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
-                                    <p>
+                                    {showDate && 
+                                    (<p>
                                         {format(new Date(eventStart),'do')} - {' '}
                                         {format(new Date(eventEnd),
                                             'do MMMM yyyy',
                                         )}
-                                    </p>
+                                    </p>) || <p><em>To be determined...</em></p>
+                                    }
                                 </li>
                             </ul>
                             <div className={style.headerButtons}>
-                                <Link to="/live" target="_blank">
+                                {/* <Link to="/live" target="_blank">
                                  <Button theme="orange">View Live Page</Button>
-                                 </Link>
-                                <a href="https://www.eventbrite.co.uk/e/hackthemidlands-60-tickets-165469310161" target="_blank">
+                                 </Link> */}
+                                {/* <a href="https://www.eventbrite.co.uk/e/hackthemidlands-60-tickets-165469310161" target="_blank">
                                    <Button theme="orange">Get tickets</Button>
-                                </a>
+                                </a> */}
                                 {/* <a href="/sponsorship.pdf" target="_blank"> */}
                                 {/*    <Button theme="whiteSolid">Sponsor</Button> */}
                                 {/* </a> */}
