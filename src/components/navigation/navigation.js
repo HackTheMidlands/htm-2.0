@@ -47,7 +47,7 @@ const Navigation = () => (
             target="_blank" rel="noreferrer"
         >
             <img
-                src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
+                src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg"
                 alt="Major League Hacking 2023 Hackathon Season"
                 style={{ width: '100%' }}
             />
