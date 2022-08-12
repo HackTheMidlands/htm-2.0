@@ -48,9 +48,10 @@
     min-width: 60px;
     position: fixed;
     top: 0;
-    right: 20px;
+    right: 50px;
+    width: 10%;
     z-index: 10000;
-    @media screen and (max-width: 874px) {
-        display: none;
-    }
+    // @media screen and (max-width: 874px) {
+    //     display: none;
+    // }
 }
