@@ -124,6 +124,9 @@ const Index = (props) => {
                 siteMetadata {
                     eventStart: eventStart
                     eventEnd: eventEnd
+                    showDate: showDate
+                    location: location
+                    showLocation: showLocation
                 }
             }
             contentfulPage(ref: { eq: "index" }) {
@@ -174,7 +177,7 @@ const Index = (props) => {
     const digital = sponsors.filter((sponsor) => sponsor.tier === 'digital');
     const partners = sponsors.filter((sponsor) => sponsor.tier === 'partner');
 
-    const { eventStart, eventEnd, showDate } = data.site.siteMetadata;
+    const { eventStart, eventEnd, showDate, location, showLocation } = data.site.siteMetadata;
     return (
         <Layout>
             <HeroHeader>
@@ -185,11 +188,11 @@ const Index = (props) => {
                             <ul className={style.eventInfoList}>
                                 <li className={style.eventInfoListItem}>
                                     <LocationInfo />
-                                    <p><em>To be determined...</em></p>
+                                    {showLocation ? <p>{location}</p> : <p><em>To be determined...</em></p>}
                                 </li>
                                 <li className={style.eventInfoListItem}>
                                     <CalendarIcon />
-                                    {showDate && 
+                                    {showDate &&
                                     (<p>
                                         {format(new Date(eventStart),'do')} - {' '}
                                         {format(new Date(eventEnd),
