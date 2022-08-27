@@ -1,5 +1,5 @@
 import '../../styles/main.scss';
-import Container from '../container/container';
+import { Container, Content as ContainerContent } from '../container/container';
 import { Footer } from '../footer/footer';
 import Navigation from '../navigation/navigation';
 import { Seo } from '../seo/seo';
@@ -21,7 +21,9 @@ const Layout = (props) => {
         <Container>
             <Seo />
             <Navigation />
-            {children}
+            <ContainerContent>
+                {children}
+            </ContainerContent>
             <Footer />
         </Container>
     );
