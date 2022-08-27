@@ -23,7 +23,9 @@ export const IconCard = ({ icon, title, body, colour }) => (
             style={{ boxShadow: `0 3px 25px ${colour}` }}
         />
         <h4 className={style.title}>{title}</h4>
-        <p className={style.body} dangerouslySetInnerHTML={{ __html: body }} />
+        <p className={style.body}>
+            {body}
+        </p>
     </div>
 );
 
