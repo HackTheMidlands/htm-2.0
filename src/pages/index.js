@@ -124,7 +124,7 @@ const testimonials = [
     },
 ];
 
-const tickets = [];
+// const tickets = [];
 
 /**
  * Hackathon template
