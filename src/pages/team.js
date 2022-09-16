@@ -26,7 +26,7 @@ const Team = () => {
 
     return (
         <Layout>
-            <HeroHeader style={{ paddingBottom: '20vw' }}>
+            <HeroHeader height="0" style={{ paddingBottom: '20vw' }}>
                 <h1 className={style.title}>Meet The Team</h1>
             </HeroHeader>
             <section className={style.team}>

@@ -12,11 +12,13 @@ import { SponsorCta } from '../components/sponsor-cta/sponsor-cta';
 import { SponsorsSection } from '../components/sponsors-section/sponsors-section';
 import { StayConnectedSection } from '../components/stay-connected-section/stay-connected-section';
 import { Video } from '../components/video/video';
-import CalendarIcon from './assets/calendar.inline.svg';
-import DiscordSquareIcon from './assets/discord-square.svg';
 // Image imports
 import LocationInfo from './assets/location.inline.svg';
+import CalendarIcon from './assets/calendar.inline.svg';
 import TimeIcon from './assets/time.svg';
+import DiscordIcon from './assets/discord-square.svg';
+import SafeguardingIcon from './assets/safeguarding.svg';
+import CodeOfConductIcon from './assets/entry.svg';
 // Style import
 import style from './index.module.scss';
 import { graphql, Link, useStaticQuery } from 'gatsby'
@@ -29,35 +31,48 @@ const intro = {
     body: 'Usually HackTheMidlands is a 24-hour hackathon, or “creative marathon”, which was founded in 2016. We provide a unique space for hundreds of passionate technologists like you to share their experiences, meet new people and learn something new - gaining valuable skills in the process.',
 };
 
-const EventDetails = ({ eventStart, eventEnd }) => {
+const EventDetails = ({ eventStart, eventEnd, location }) => {
     const details = [
         {
             icon: TimeIcon,
             title: 'Date & Time',
-            body: `The event will run online via Discord between the ${format(
-                new Date(eventStart),
-            'do')} - ${format(new Date(eventEnd),
-                'do MMMM yyyy',
-              
-            )}. Don't miss out!`,
+            body: (
+                <p>
+                    The event will run at {location} between the
+                    {format(new Date(eventStart), 'do')} - {format(new Date(eventEnd), 'do MMMM yyyy')}.
+                    Don't miss out!
+                </p>
+            ),
             colour: 'rgba(165, 254, 162, .5)',
         },
         {
-            icon: DiscordSquareIcon,
+            icon: DiscordIcon,
             title: 'Participate with Discord',
-            body: 'We’re running this years event through discord. Make sure to <a rel="noreferrer" style="color: #7289DA" href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.',
+            body: (
+                <p>
+                    We're active on Discord, and will be around to chat before and during the event! Make sure to <a rel="noreferrer" style={{color: "#7289DA"}} href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.
+                </p>
+            ),
             colour: 'rgba(114, 137, 218, .5)',
         },
-        // {
-        //     icon: SafeguardingIcon,
-        //     title: 'Safeguarding',
-        //     body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.',
-        // },
-        // {
-        //     icon: EntryRequirementsIcon,
-        //     title: 'Entry Requirements',
-        //     body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.',
-        // },
+        {
+            icon: CodeOfConductIcon,
+            title: 'Code of Conduct',
+            body: (
+                <p>
+                    We treat all our attendees, volunteers and organizers respectfully, following the <a rel="noreferrer" style={{color: "#7289DA"}} href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.
+                </p>
+            ),
+        },
+        {
+            icon: SafeguardingIcon,
+            title: 'Safeguarding',
+            body: (
+                <p>
+                    To find out more about our safeguarding policy, see <Link style={{color: "#7289DA"}} to="/safeguarding">here</Link>.
+                </p>
+            ),
+        },
     ];
     return (
         <EventInfo>
@@ -109,7 +124,7 @@ const testimonials = [
     },
 ];
 
-const tickets = [];
+// const tickets = [];
 
 /**
  * Hackathon template
@@ -243,7 +258,7 @@ const Index = (props) => {
             {/*    statTwo={{ statistic: '400', text: 'Projects made' }} */}
             {/* /> */}
             <IndexIntro title={intro.title} body={intro.body} />
-            <EventDetails eventStart={eventStart} eventEnd={eventEnd} />
+            <EventDetails eventStart={eventStart} eventEnd={eventEnd} location={location} />
             {/* <EventLocation /> */}
             {/* <TestimonialSliderSection testimonials={testimonials} /> */}
             <SponsorsSection
