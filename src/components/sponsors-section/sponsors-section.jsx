@@ -21,6 +21,7 @@ const Sponsors = ({ sponsors, tier }) => {
                 rel="noopener noreferrer">
                 {sponsor.image && (
                     <GatsbyImage
+                        className={style.sponsorImage}
                         alt={sponsor.name}
                         image={sponsor.image.gatsbyImageData}
                     />
@@ -38,6 +39,7 @@ export const SponsorsSection = ({
     silverTier,
     bronzeTier,
     digitalTier,
+    venueTier,
     partners,
 }) => (
     <section className={style.section}>
@@ -129,6 +131,21 @@ export const SponsorsSection = ({
                 <Col xs={12}>
                     <div className={style.sectionTitle}>
                         <StaticImage
+                            src="./assets/venue.png"
+                            alt="House"
+                            className={style.medal}
+                        />
+                        <h2>Venue Sponsor & Partner</h2>
+                    </div>
+                    <div className={style.venue}>
+                        <Sponsors sponsors={venueTier} tier="venue" />
+                    </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12}>
+                    <div className={style.sectionTitle}>
+                        <StaticImage
                             src="./assets/digital.png"
                             alt="Digital Medal"
                             className={style.medal}
@@ -167,6 +184,7 @@ SponsorsSection.propTypes = {
     silverTier: PropTypes.arrayOf(sponsorPropTypes),
     bronzeTier: PropTypes.arrayOf(sponsorPropTypes),
     digitalTier: PropTypes.arrayOf(sponsorPropTypes),
+    venueTier: PropTypes.arrayOf(sponsorPropTypes),
     partners: PropTypes.arrayOf(sponsorPropTypes),
 };
 
@@ -175,6 +193,7 @@ SponsorsSection.defaultProps = {
     goldTier: null,
     silverTier: null,
     bronzeTier: null,
-    partners: null,
     digitalTier: null,
+    venueTier: null,
+    partners: null,
 };

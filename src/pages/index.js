@@ -190,6 +190,7 @@ const Index = (props) => {
     const silver = sponsors.filter((sponsor) => sponsor.tier === 'silver');
     const bronze = sponsors.filter((sponsor) => sponsor.tier === 'bronze');
     const digital = sponsors.filter((sponsor) => sponsor.tier === 'digital');
+    const venue = sponsors.filter((sponsor) => sponsor.tier === 'venue');
     const partners = sponsors.filter((sponsor) => sponsor.tier === 'partner');
 
     const { eventStart, eventEnd, showDate, location, showLocation } = data.site.siteMetadata;
@@ -267,6 +268,7 @@ const Index = (props) => {
                 silverTier={silver}
                 bronzeTier={bronze}
                 digitalTier={digital}
+                venueTier={venue}
                 partners={partners}
             />
             <SponsorCta />
