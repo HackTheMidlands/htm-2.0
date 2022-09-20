@@ -19,6 +19,7 @@ $gridGap: 10px;
 .gold,
 .silver,
 .bronze,
+.digital,
 .partners {
     margin-bottom: 100px;
     display: flex;
@@ -86,6 +87,7 @@ $gridGap: 10px;
 }
 
 .bronze,
+.digital,
 .partners {
     & > div {
         width: calc(100% / 4);
