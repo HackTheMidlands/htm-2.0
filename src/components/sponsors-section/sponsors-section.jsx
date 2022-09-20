@@ -21,6 +21,7 @@ const Sponsors = ({ sponsors, tier }) => {
                 rel="noopener noreferrer">
                 {sponsor.image && (
                     <GatsbyImage
+                        className={style.sponsorImage}
                         alt={sponsor.name}
                         image={sponsor.image.gatsbyImageData}
                     />
@@ -136,7 +137,7 @@ export const SponsorsSection = ({
                         />
                         <h2>Venue Sponsor & Partner</h2>
                     </div>
-                    <div className={style.digital}>
+                    <div className={style.venue}>
                         <Sponsors sponsors={venueTier} tier="venue" />
                     </div>
                 </Col>

@@ -15,11 +15,20 @@ section.section {
 
 $gridGap: 10px;
 
+.sponsorImage {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .platinum,
 .gold,
 .silver,
 .bronze,
 .digital,
+.venue,
 .partners {
     margin-bottom: 100px;
     display: flex;
@@ -27,14 +36,11 @@ $gridGap: 10px;
     align-items: center;
     justify-content: center;
 
-    div img {
+    a {
         margin: 30px auto;
-    }
-
-    img {
+        display: block;
         width: auto;
         height: auto;
-        display: block;
     }
     & > div {
         padding: 20px;
@@ -50,54 +56,65 @@ $gridGap: 10px;
     }
 }
 
-.platinum {
-    & > div {
-        width: 100%;
-    }
-
-    img {
-        max-width: 500px;
-        max-height: 70vh;
-    }
-}
-
-.gold {
-    & > div {
-        width: 100%;
-    }
-
-    img {
-        max-width: 300px;
-        max-height: 40vh;
-    }
-}
-
+.platinum,
+.gold,
 .silver {
     & > div {
-        width: calc(100% / 3);
-        @media screen and (max-width: $mdBreakpointMin) {
-            width: calc(100% / 2);
-        }
-    }
-
-    img {
-        max-width: 287px;
-        max-height: 30vh;
+        width: 100%;
     }
 }
 
 .bronze,
 .digital,
-.partners {
+.partners,
+.venue {
     & > div {
         width: calc(100% / 4);
         @media screen and (max-width: $mdBreakpointMin) {
             width: calc(100% / 3);
         }
     }
+}
 
-    img {
-        max-width: 220px;
+.platinum {
+    a {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+.gold {
+    a {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+.silver {
+    a {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+.bronze {
+    a {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+
+.venue {
+    a {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+.digital,
+.partners {
+    a {
+        max-width: 140px;
         max-height: 140px;
     }
 }
