@@ -34,6 +34,8 @@ export const Timeline = (props) => {
                 siteMetadata {
                     googleCalendarId: googleCalendarId
                     googleCalendarApiKey: googleCalendarApiKey
+                    eventStartString: eventStart
+                    eventEndString: eventEnd
                 }
             }
         }
@@ -42,7 +44,11 @@ export const Timeline = (props) => {
     const {
         googleCalendarApiKey, // gcp key restricted to the calendar api and requests from https://hackthemidlands.com
         googleCalendarId,
+        eventStartString,
+        eventEndString,
     } = data.site.siteMetadata;
+    const startTime = new Date(eventStartString)
+    const endTime = new Date(eventEndString)
 
     const { data: gcalTimelineData } = useSWR(
         'calendar-events',
@@ -58,7 +64,10 @@ export const Timeline = (props) => {
                     }
                 })
                 .then((json) => {
-                    return json.items.filter(event => new Date(event.start.dateTime) > new Date('2021')).reduce((timeline, event) => {
+                        return json.items.filter(event => {
+                            const sTime = new Date(event.start.dateTime)
+                            return sTime >= startTime && sTime <= endTime
+                        }).reduce((timeline, event) => {
                         const owner =
                             event.description !== undefined
                                 ? event.description.match(host_regex)[1]
