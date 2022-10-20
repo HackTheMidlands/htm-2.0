@@ -136,7 +136,7 @@ return (
 
         <LiveNavBar />
 
-        <LivePageHeader />
+        {/*<LivePageHeader />*/}
 
         {/*<section className={style.section}>*/}
         {/*    <LogoStrip logos={companyLogos} />*/}
