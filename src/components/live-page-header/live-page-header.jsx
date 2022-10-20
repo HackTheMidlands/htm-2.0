@@ -7,6 +7,7 @@ import Background from './assets/background.svg';
 // Style imports
 import styles from './live-page-header.module.scss';
 import React, { useEffect, useRef } from 'react';
+import { graphql, useStaticQuery } from 'gatsby'
 
 // const sources = [
 //     {
@@ -22,6 +23,15 @@ import React, { useEffect, useRef } from 'react';
  * @constructor
  */
 export const LivePageHeader = (props) => {
+    const data = useStaticQuery(graphql`
+        query LivePageHeaderQuery {
+            site {
+                siteMetadata {
+                    eventId: eventId
+                }
+            }
+        }
+    `);
     const firstLoad = useRef(true);
 
     const initTwitch = () => {
@@ -47,7 +57,7 @@ export const LivePageHeader = (props) => {
             className={styles.header}
             style={{ backgroundImage: `url(${Background})` }}>
             <div className={styles.video}>
-                <h1 className={styles.featureTextTop}>HTM 6.0</h1>
+                <h1 className={styles.featureTextTop}>{`HTM ${data.site.siteMetadata.eventId}`}</h1>
                 <div className={styles.embed}>
                     <div id="twitch-embed" style={{ height: '100%' }} />
                 </div>

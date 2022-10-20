@@ -35,7 +35,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 // import ChamberOfCommerce from '../assets/img/logos/white/chamber-of-commerce.png';
 // import Bcs from '../assets/img/logos/white/bcs.png';
 
-const dateTo = moment('2021-10-22');
+const dateTo = moment('2022-10-30');
 
 // const companyLogos = [
 //     {
@@ -106,9 +106,19 @@ const dateTo = moment('2021-10-22');
  * @returns {*}
  * @constructor
  */
-const Live = (props) => (
+const Live = (props) => {
+    const data = useStaticQuery(graphql`
+        query LivePageQuery {
+            site {
+                siteMetadata {
+                    eventId: eventId
+                }
+            }
+        }
+    `);
+return (
     <main className={style.page}>
-        <Seo title="HTM 6.0 Live" />
+        <Seo title={`HTM ${data.site.siteMetadata.eventId} Live`} />
 
         <LiveNavBar />
 
@@ -142,6 +152,6 @@ const Live = (props) => (
         {/*    <LiveFaq cards={faqData} />*/}
         {/*</section>*/}
     </main>
-);
+)};
 
 export default Live;
