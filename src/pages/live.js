@@ -114,8 +114,22 @@ const Live = (props) => {
                     eventId: eventId
                 }
             }
+            allContentfulQa {
+                nodes {
+                    question
+                    answer {
+                        childMarkdownRemark {
+                            html
+                        }
+                    }
+                }
+            }
         }
     `);
+    const qa = data.allContentfulQa.nodes.map(({ question, answer }) => ({
+        title: question,
+        body: answer.childMarkdownRemark.html,
+    }));
 return (
     <main className={style.page}>
         <Seo title={`HTM ${data.site.siteMetadata.eventId} Live`} />
@@ -148,9 +162,9 @@ return (
             <Timeline />
         </section>
 
-        {/*<section className={style.section} id="faq">*/}
-        {/*    <LiveFaq cards={faqData} />*/}
-        {/*</section>*/}
+        <section className={style.section} id="faq">
+            <LiveFaq cards={qa} />
+        </section>
     </main>
 )};
 

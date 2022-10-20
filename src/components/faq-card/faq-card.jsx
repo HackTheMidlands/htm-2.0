@@ -19,7 +19,8 @@ export const FaqCard = ({ title, body }) => (
     <div className={style.card}>
         <p className={style.number}>Q</p>
         <p className={style.title}> {title}</p>
-        <p className={style.body}>{body}</p>
+        <div className={style.body}
+        dangerouslySetInnerHTML={{    __html: body,  }}/>
     </div>
 );
 
