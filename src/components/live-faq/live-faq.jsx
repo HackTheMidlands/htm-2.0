@@ -44,6 +44,7 @@ export const LiveFaq = ({ cards }) => {
                             ref={gridRef}>
                             {cards.map(({ title, body }, index) => (
                                 <div
+                                    key={`${title}_${index}`}
                                     className={classNames([
                                         'masonary-item',
                                         style.item,

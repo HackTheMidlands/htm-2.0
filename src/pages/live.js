@@ -35,7 +35,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 // import ChamberOfCommerce from '../assets/img/logos/white/chamber-of-commerce.png';
 // import Bcs from '../assets/img/logos/white/bcs.png';
 
-const dateTo = moment('2021-10-22');
+const dateTo = moment('2022-10-30');
 
 // const companyLogos = [
 //     {
@@ -106,13 +106,37 @@ const dateTo = moment('2021-10-22');
  * @returns {*}
  * @constructor
  */
-const Live = (props) => (
+const Live = (props) => {
+    const data = useStaticQuery(graphql`
+        query LivePageQuery {
+            site {
+                siteMetadata {
+                    eventId: eventId
+                }
+            }
+            allContentfulQa {
+                nodes {
+                    question
+                    answer {
+                        childMarkdownRemark {
+                            html
+                        }
+                    }
+                }
+            }
+        }
+    `);
+    const qa = data.allContentfulQa.nodes.map(({ question, answer }) => ({
+        title: question,
+        body: answer.childMarkdownRemark.html,
+    }));
+return (
     <main className={style.page}>
-        <Seo title="HTM 6.0 Live" />
+        <Seo title={`HTM ${data.site.siteMetadata.eventId} Live`} />
 
         <LiveNavBar />
 
-        <LivePageHeader />
+        {/*<LivePageHeader />*/}
 
         {/*<section className={style.section}>*/}
         {/*    <LogoStrip logos={companyLogos} />*/}
@@ -138,10 +162,10 @@ const Live = (props) => (
             <Timeline />
         </section>
 
-        {/*<section className={style.section} id="faq">*/}
-        {/*    <LiveFaq cards={faqData} />*/}
-        {/*</section>*/}
+        <section className={style.section} id="faq">
+            <LiveFaq cards={qa} />
+        </section>
     </main>
-);
+)};
 
 export default Live;

@@ -1,6 +1,7 @@
 {
     "meta": {
         "title": "HackTheMidlands",
+        "eventId": "7.0",
         "siteUrl": "https://hackthemidlands.com",
         "eventStart": "2022-10-29 10:00",
         "eventEnd": "2022-10-30 17:00",
@@ -10,6 +11,6 @@
         "countdownCalendarId": "4980k4aspujqrjcjl19p4v6o7g@group.calendar.google.com",
         "googleCalendarId": "calendar@hackthemidlands.com",
         "googleCalendarApiKey": "AIzaSyAsr1gbJafUFaVkhh8oL_Sey6YyHMsMsdE",
-        "googleCalendarEventID": "7v7okj2rbeju5f8026psvssp9b"
+        "googleCalendarEventID": "67kja120dlkelqig9ci2is4sni"
     }
 }
