@@ -150,6 +150,7 @@ export const Timeline = (props) => {
                         'Talk: Clean Concise Collaborative Code (Inspire)': 90,
                         'Talk: Intro to APIs: How to use Capital One Developer API (Learn)': 200,
                         'Talk: Figma Basics: How to create an Interactive UI (Learn)': 200,
+                        'Snyk Mini-CTF (Learn)': 90
 
                     }
                     return (
