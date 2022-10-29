@@ -148,8 +148,9 @@ export const Timeline = (props) => {
                     const state = sameTime === 0 ? 'active' : 'inactive';
                     const transforms = {
                         'Talk: Clean Concise Collaborative Code (Inspire)': 90,
-                        'Talk: Intro to APIs: How to use Capital One Developer API (Learn)': 200,
-                        'Talk: Figma Basics: How to create an Interactive UI (Learn)': 200,
+                        'Talk: Intro to APIs: How to use Capital One Developer API (Learn)': 150,
+                        'Talk: Figma Basics: How to create an Interactive UI (Learn)': 150,
+                        'Talk: A first look at OpenStreetMaps (Learn)': 150,
                         'Snyk Mini-CTF (Learn)': 90
 
                     }
