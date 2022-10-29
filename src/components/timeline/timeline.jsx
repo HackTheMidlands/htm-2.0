@@ -146,6 +146,12 @@ export const Timeline = (props) => {
                     const eventDiff = eventTime.diff(startOfDay, 'hours', true);
                     const sameTime = eventTime.diff(currentTime, 'hours');
                     const state = sameTime === 0 ? 'active' : 'inactive';
+                    const transforms = {
+                        'Talk: Clean Concise Collaborative Code (Inspire)': 90,
+                        'Talk: Intro to APIs: How to use Capital One Developer API (Learn)': 200,
+                        'Talk: Figma Basics: How to create an Interactive UI (Learn)': 200,
+
+                    }
                     return (
                         <div
                             key={id}
@@ -154,7 +160,7 @@ export const Timeline = (props) => {
                                 transform: `translate(${
                                     eventDiff * spaceBetweenPoints
                                 }px,${
-                                    ['Talk: Clean Concise Collaborative Code',].includes(name) ? 90 : 0
+                                    transforms[name] || 0
                                 }px)`,
                             }}>
                             <TimelineItem
