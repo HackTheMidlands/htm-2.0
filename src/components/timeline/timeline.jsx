@@ -154,7 +154,7 @@ export const Timeline = (props) => {
                                 transform: `translate(${
                                     eventDiff * spaceBetweenPoints
                                 }px,${
-                                    ['Talk: Clean Concise Collaborative Code',].includes(name) ? 100 : 0
+                                    ['Talk: Clean Concise Collaborative Code',].includes(name) ? 90 : 0
                                 }px)`,
                             }}>
                             <TimelineItem
