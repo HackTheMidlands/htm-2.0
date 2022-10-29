@@ -40,15 +40,6 @@ export const ImageCard = ({
     </article>
 );
 
-// Prop definitions
-ImageCard.propTypes = {
-    name: PropTypes.string,
-    image: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
-    headerStyle: PropTypes.object,
-    overlay: PropTypes.string,
-};
-
 // Default props
 ImageCard.defaultProps = {
     name: uniqud('image-card'),

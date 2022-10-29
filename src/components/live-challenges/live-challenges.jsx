@@ -22,7 +22,7 @@ export const LiveChallenges = ({ challenges }) => (
             <Row>
                 {challenges.map(
                     ({ name, sponsor, logo, logoBackground, featureImage }) => (
-                        <Col lg={4} md={6} sm={12}>
+                        <Col lg={4} md={6} sm={12} key={name} >
                             <div className={style.challengeItem}>
                                 <ChallengeCard
                                     image={featureImage}
