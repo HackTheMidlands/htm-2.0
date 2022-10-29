@@ -6,8 +6,8 @@
 }
 
 .time {
-    width: 300px;
-    min-width: 300px;
+    width: 500px;
+    min-width: 500px;
     color: rgba(255, 255, 255, 0.4);
     @include make-property('font-size', 22px);
     position: relative;
@@ -35,7 +35,7 @@
     position: absolute;
     top: 11px;
     left: 0;
-    width: calc(300px * 24);
+    width: calc(500px * 24);
     height: 2px;
     background-color: white;
     z-index: 1;
@@ -44,7 +44,7 @@
 .activeLine {
     position: absolute;
     top: 11px;
-    width: 300px;
+    width: 500px;
     height: 2px;
     background-color: var(--primary);
     z-index: 2;

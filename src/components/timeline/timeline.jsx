@@ -22,7 +22,7 @@ export const Timeline = (props) => {
     const track = useRef(null);
 
     const [activeDay, setActiveDay] = useState(null);
-    const [spaceBetweenPoints, setSpaceBetweenPoints] = useState(300);
+    const [spaceBetweenPoints, setSpaceBetweenPoints] = useState(500);
     const [days, setDays] = useState([]);
     const [timelineEvents, setTimelineEvents] = useState([]);
     const [trackHeight, setTrackHeight] = useState(0);
@@ -143,7 +143,7 @@ export const Timeline = (props) => {
                         `${date} ${time}`,
                         'DD/MM/YY HH:mm',
                     );
-                    const eventDiff = eventTime.diff(startOfDay, 'hours');
+                    const eventDiff = eventTime.diff(startOfDay, 'hours', true);
                     const sameTime = eventTime.diff(currentTime, 'hours');
                     const state = sameTime === 0 ? 'active' : 'inactive';
                     return (
@@ -151,8 +151,10 @@ export const Timeline = (props) => {
                             key={id}
                             className={style.item}
                             style={{
-                                transform: `translateX(${
+                                transform: `translate(${
                                     eventDiff * spaceBetweenPoints
+                                }px,${
+                                    ['Talk: Clean Concise Collaborative Code',].includes(name) ? 100 : 0
                                 }px)`,
                             }}>
                             <TimelineItem
@@ -279,6 +281,7 @@ export const Timeline = (props) => {
                                 {renderTimelineItem(timelineEvents)}
                             </div>
                             <TimelineTime
+                                spaceBetween={spaceBetweenPoints}
                                 currentDay={
                                     activeDay &&
                                     moment(activeDay.date, 'DD/MM/YY').isSame(
