@@ -1,1 +1,44 @@
-[]
+[
+    {
+        "sponsor": "BJSS",
+        "name": "Use Technology to Positively Impact our Wellbeing 😌",
+        "logo": "/images/challenges/logos/bjss.jpg",
+        "logoBackground": "#C1CCC4",
+        "featureImage": "/images/challenges/feature-images/kainos.jpg"
+    },
+    {
+        "sponsor": "Majestic",
+        "name":"Spoookiest Hack 👻 (no flashing imagery)",
+        "logo": "/images/challenges/logos/majestic.png",
+        "logoBackground": "#C1CCC4",
+        "featureImage": "/images/challenges/feature-images/spooky.jpg"
+    },
+    {
+        "sponsor": "Capgemini",
+        "name": "Fun! 🎉",
+        "logo": "/images/challenges/logos/capgemini.png",
+        "logoBackground": "#C1CCC4",
+        "featureImage": "/images/challenges/feature-images/20i.jpg"
+    },
+    {
+        "sponsor": "BCS",
+        "name": "Making IT Good for Society 💓",
+        "logoBackground": "#C1CCC4",
+        "logo": "/images/challenges/logos/bcs.png",
+     "featureImage": "/images/challenges/feature-images/bcs.jpg"
+    },
+    {
+        "sponsor": "CENTS",
+        "name":  "Reduce Waste in Transport 🚆",
+        "logoBackground": "#C1CCC4",
+        "logo": "/images/challenges/logos/cents.png",
+     "featureImage": "/images/challenges/feature-images/sustainability.jpg"
+    },
+    {
+     "sponsor": "Capital One",
+     "name": "Change Banking for Good 💰",
+    "logoBackground": "#C1CCC4",
+    "logo": "/images/challenges/logos/capital-one.png",
+     "featureImage": "/images/challenges/feature-images/capital-one.jpg"
+    }
+]
