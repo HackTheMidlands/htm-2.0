@@ -143,8 +143,11 @@ return (
         {/*</section>*/}
 
 
-        <section className={style.section}>
+        <section className={style.section} style={{
+            paddingTop: 100
+        }}>
             <LiveCountdown countdownToDate={dateTo} />
+            <LiveHeaderText text="Submit: hackthemidlands7.devpost.com" />
         </section>
 
         <section className={style.section} id="discord">
