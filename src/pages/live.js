@@ -147,7 +147,7 @@ return (
             paddingTop: 100
         }}>
             <LiveCountdown countdownToDate={dateTo} />
-            <LiveHeaderText text="Submit: hackthemidlands7.devpost.com" />
+            <LiveHeaderText text="Submit: hackthemidlands8.devpost.com" />
         </section>
 
         <section className={style.section} id="discord">
