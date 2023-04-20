@@ -40,7 +40,7 @@ const navigationItems = [
 
 const Navigation = () => (
     <nav role="navigation" className={styles.navigation}>
-        <a
+        /* <a
             className={styles.badge}
             id="mlh-trust-badge"
         href="https://mlh.io/eu?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=white" 
@@ -51,7 +51,7 @@ const Navigation = () => (
                 alt="Major League Hacking 2023 Hackathon Season"
                 style={{ width: '100%' }}
             />
-        </a>
+        </a> */
         <Grid fluid>
             <Row
                 between="xs"
