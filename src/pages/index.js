@@ -219,9 +219,11 @@ const Index = (props) => {
                                 </li>
                             </ul>
                             <div className={style.headerButtons}>
+                                {/* 
                                 <Link to="/live" target="_blank">
                                  <Button theme="orange">View Live Page</Button>
                                  </Link>
+                                */}
                                 <a href="https://www.eventbrite.co.uk/e/hackthemidlands-80-tickets-660326362927" target="_blank" rel="noreferrer">
                                    <Button theme="orange">Get tickets</Button>
                                 </a> 
