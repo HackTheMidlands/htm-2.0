@@ -48,8 +48,7 @@ export const SponsorCta = (props) => (
                         loads of experience and are here to help! We will be
                         releasing more sponsors as we get closer to the event,
                         and if you're interested in becoming a sponsor for
-                        HackTheMidlands 2021 then please register your interest
-                        below{' '}
+                        HackTheMidlands then please register your interest below
                     </p>
                     <a href="/sponsorship.pdf" target="_blank">
                         <Button theme="orange" name="Sponsor sign up">
