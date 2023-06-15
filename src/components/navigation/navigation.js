@@ -40,18 +40,18 @@ const navigationItems = [
 
 const Navigation = () => (
     <nav role="navigation" className={styles.navigation}>
-        /* <a
+        <a
             className={styles.badge}
             id="mlh-trust-badge"
-        href="https://mlh.io/eu?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=white" 
+            href="https://mlh.io/eu?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue" 
             target="_blank" rel="noreferrer"
         >
             <img
-                src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg"
-                alt="Major League Hacking 2023 Hackathon Season"
+                src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
+                alt="Major League Hacking 2024 Hackathon Season"
                 style={{ width: '100%' }}
             />
-        </a> */
+        </a>
         <Grid fluid>
             <Row
                 between="xs"
