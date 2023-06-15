@@ -38,7 +38,7 @@ const EventDetails = ({ eventStart, eventEnd, location }) => {
             title: 'Date & Time',
             body: (
                 <p>
-                    The event will run at {location} between the
+                    The event will run at {location} between the{" "}
                     {format(new Date(eventStart), 'do')} - {format(new Date(eventEnd), 'do MMMM yyyy')}.
                     Don't miss out!
                 </p>
