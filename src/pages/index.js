@@ -222,7 +222,7 @@ const Index = (props) => {
                                 <Link to="/live" target="_blank">
                                  <Button theme="orange">View Live Page</Button>
                                  </Link>
-                                {<a href="https://www.eventbrite.co.uk/e/hackthemidlands-80-tickets-660326362927" target="_blank" rel="noreferrer">
+                                <a href="https://www.eventbrite.co.uk/e/hackthemidlands-80-tickets-660326362927" target="_blank" rel="noreferrer">
                                    <Button theme="orange">Get tickets</Button>
                                 </a> 
                                 <a href="/sponsorship.pdf" target="_blank"> 
