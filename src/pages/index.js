@@ -202,6 +202,9 @@ const Index = (props) => {
                         <Col xs={12} sm={10} smOffset={1}>
                             <h1 className={style.headerTitle}>HackTheMidlands</h1>
                             <div className={style.headerButtons}>
+                                <Link to="/idk" target="_blank">
+                                 <Button theme="orange">Statement</Button>
+                                </Link>
                                 <a
                                     href="https://discord.gg/hackthemidlands"
                                     target="_blank"
