@@ -202,7 +202,7 @@ const Index = (props) => {
                         <Col xs={12} sm={10} smOffset={1}>
                             <h1 className={style.headerTitle}>HackTheMidlands</h1>
                             <div className={style.headerButtons}>
-                                <Link to="/idk" target="_blank">
+                                <Link to="/htm-8-statement" target="_blank">
                                  <Button theme="orange">Statement</Button>
                                 </Link>
                                 <a
