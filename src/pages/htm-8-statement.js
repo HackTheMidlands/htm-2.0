@@ -13,13 +13,12 @@ const Statement = () => {
     return (
         <Layout>
             <HeroHeader height="0" style={{ paddingBottom: '20vw' }}>
-                <h1 className={style.title}>Do you fancy a title here</h1>
+                <h1 className={style.title}>The Status of HackTheMidlands 8.0</h1>
             </HeroHeader>
             <section className={style.team}>
                 <Grid fluid>
                     <Row>
                         <div>
-                            <h2>Or down here</h2>
                             <p>
                                 IDK, I'm not responsible for the words
                             </p>
