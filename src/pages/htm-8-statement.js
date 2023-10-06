@@ -3,6 +3,8 @@ import Layout from '../components/layout/layout';
 import style from './team.module.scss';
 import React from 'react';
 import { Grid, Row } from 'react-flexbox-grid';
+import Logo from '../../static/logo.png';
+
 
 const Statement = () => {
 
@@ -12,13 +14,13 @@ const Statement = () => {
     return (
         <Layout>
             <HeroHeader height="0" style={{ paddingBottom: '20vw' }}>
-                <h1 className={style.title}>The Status of HackTheMidlands 8.0</h1>
+                <h1 className={style.title}>Statement on the Status of HackTheMidlands 8.0  📢</h1>
             </HeroHeader>
             <section className={style.team}>
                 <Grid fluid>
                     <Row>
                         <div>
-                            <p>Hey Everyone!</p>
+                            <p>Hey Everyone! 🦄 </p>
                             <p>
                                 We’re putting this out to give y’all an update about HackTheMidlands 8.0, and the future of HackTheMidlands on the whole. In advance, we know this isn’t the same kind of peppy and upbeat message we love to put out here at HackTheMidlands, but we want to be as candid and transparent as possible with everyone who has made HackTheMidlands so awesome over the last eight years.
                             </p>
@@ -47,7 +49,17 @@ const Statement = () => {
                                 All the best, and we look forward to seeing all of you at stuff we get up to in the future - keep in touch!
                             </p>
                             <p>
-                                <span style={{ fontWeight: "bold" }}> Tom, Liam, Helena, and the HackTheMidlands Team 💖 </span>
+                                <div style={{display: "flex"}}> 
+                                    <span>                                   
+                                        <img
+                                            src={Logo}
+                                            alt="HackTheMidlands logo"
+                                            className={style.logo}
+                                            style={{width:'90px', margin: "5px"}}
+                                        />
+                                    </span>
+                                    <span style={{ fontWeight: "bold", marginTop: "25px", marginLeft: "15px" }}> Tom, Liam, Helena, and the HackTheMidlands Team 💖 </span>
+                                </div>
                             </p>
                         </div>
                     </Row>
