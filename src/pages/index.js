@@ -200,36 +200,11 @@ const Index = (props) => {
                 <Grid>
                     <Row>
                         <Col xs={12} sm={10} smOffset={1}>
-                            <h1 className={style.headerTitle}>{title}</h1>
-                            <ul className={style.eventInfoList}>
-                                <li className={style.eventInfoListItem}>
-                                    <LocationInfo />
-                                    {showLocation ? <p>{location}</p> : <p><em>To be determined...</em></p>}
-                                </li>
-                                <li className={style.eventInfoListItem}>
-                                    <CalendarIcon />
-                                    {showDate &&
-                                    (<p>
-                                        {format(new Date(eventStart),'do')} - {' '}
-                                        {format(new Date(eventEnd),
-                                            'do MMMM yyyy',
-                                        )}
-                                    </p>) || <p><em>To be determined...</em></p>
-                                    }
-                                </li>
-                            </ul>
+                            <h1 className={style.headerTitle}>HackTheMidlands</h1>
                             <div className={style.headerButtons}>
-                                {/* 
-                                <Link to="/live" target="_blank">
-                                 <Button theme="orange">View Live Page</Button>
-                                 </Link>
-                                */}
-                                <a href="https://www.eventbrite.co.uk/e/hackthemidlands-80-tickets-660326362927" target="_blank" rel="noreferrer">
-                                   <Button theme="orange">Get tickets</Button>
-                                </a> 
-                                <a href="/sponsorship.pdf" target="_blank"> 
-                                    <Button theme="whiteSolid">Sponsor</Button>
-                                 </a> 
+                                <Link to="/htm-8-statement" target="_blank">
+                                 <Button theme="orange">Statement</Button>
+                                </Link>
                                 <a
                                     href="https://discord.gg/hackthemidlands"
                                     target="_blank"
