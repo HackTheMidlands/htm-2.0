@@ -43,7 +43,7 @@ const EventDetails = ({ eventStart, eventEnd, location }) => {
                 //     Don't miss out!
                 // </p>
                 <p>
-                    The event has been cancelled this yeah, see <Link style={{ color: "#7289DA" }} to="/htm-8-statement">our statement</Link>.
+                    The event has been cancelled this year, see <Link style={{ color: "#7289DA" }} to="/htm-8-statement">our statement</Link>.
                 </p>
             ),
             colour: 'rgba(165, 254, 162, .5)',
