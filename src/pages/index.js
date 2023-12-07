@@ -37,10 +37,13 @@ const EventDetails = ({ eventStart, eventEnd, location }) => {
             icon: TimeIcon,
             title: 'Date & Time',
             body: (
+                // <p>
+                //     The event will run at {location} between the{" "}
+                //     {format(new Date(eventStart), 'do')} - {format(new Date(eventEnd), 'do MMMM yyyy')}.
+                //     Don't miss out!
+                // </p>
                 <p>
-                    The event will run at {location} between the{" "}
-                    {format(new Date(eventStart), 'do')} - {format(new Date(eventEnd), 'do MMMM yyyy')}.
-                    Don't miss out!
+                    The event has been cancelled this yeah, see <Link style={{ color: "#7289DA" }} to="/htm-8-statement">our statement</Link>.
                 </p>
             ),
             colour: 'rgba(165, 254, 162, .5)',
@@ -50,7 +53,7 @@ const EventDetails = ({ eventStart, eventEnd, location }) => {
             title: 'Participate with Discord',
             body: (
                 <p>
-                    We're active on Discord, and will be around to chat before and during the event! Make sure to <a rel="noreferrer" style={{color: "#7289DA"}} href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.
+                    We're active on Discord, and will be around to chat before and during the event! Make sure to <a rel="noreferrer" style={{ color: "#7289DA" }} href="https://discord.gg/hackthemidlands" target="_blank">join the server</a> to get involved.
                 </p>
             ),
             colour: 'rgba(114, 137, 218, .5)',
@@ -60,7 +63,7 @@ const EventDetails = ({ eventStart, eventEnd, location }) => {
             title: 'Code of Conduct',
             body: (
                 <p>
-                    We treat all our attendees, volunteers and organizers respectfully, following the <a rel="noreferrer" style={{color: "#7289DA"}} href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.
+                    We treat all our attendees, volunteers and organizers respectfully, following the <a rel="noreferrer" style={{ color: "#7289DA" }} href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.
                 </p>
             ),
         },
@@ -69,7 +72,7 @@ const EventDetails = ({ eventStart, eventEnd, location }) => {
             title: 'Safeguarding',
             body: (
                 <p>
-                    To find out more about our safeguarding policy, see <Link style={{color: "#7289DA"}} to="/safeguarding">here</Link>.
+                    To find out more about our safeguarding policy, see <Link style={{ color: "#7289DA" }} to="/safeguarding">here</Link>.
                 </p>
             ),
         },
@@ -203,7 +206,7 @@ const Index = (props) => {
                             <h1 className={style.headerTitle}>HackTheMidlands</h1>
                             <div className={style.headerButtons}>
                                 <Link to="/htm-8-statement" target="_blank">
-                                 <Button theme="orange">Statement</Button>
+                                    <Button theme="orange">Statement</Button>
                                 </Link>
                                 <a
                                     href="https://discord.gg/hackthemidlands"
